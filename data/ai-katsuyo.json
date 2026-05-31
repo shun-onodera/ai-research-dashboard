@@ -1,0 +1,213 @@
+{
+  "theme": "AI活用",
+  "updated": "2026-05-31",
+  "description": "Anthropic・OpenAI・Google（DeepMind）が公開するAI活用ノウハウ記事を収集・要約。エージェント設計、プロンプト・コンテキスト設計、ツール設計、業務活用の指針をまとめています。出典はすべて各社の公式記事・ドキュメントです。",
+  "principles": {
+    "title": "AIを上手に任せるための7原則",
+    "subtitle": "各社の公式記事から抽出した、行動可能な運用原則",
+    "items": [
+      { "n": 1, "title": "まず最小構成で", "body": "高度な仕組みより、目的に足る最小の手段を選ぶ。複雑化は効果を確認できたときだけ。" },
+      { "n": 2, "title": "コンテキストは有限資源", "body": "情報を詰め込むほど精度は落ちる。高信号な最小集合に絞り、必要なときに必要な分だけ渡す。" },
+      { "n": 3, "title": "着手前に読み、計画を見せる", "body": "いきなり作らず、前提を読む→方針を提示→合意→実行。ずれたら止めて確認する。" },
+      { "n": 4, "title": "繰り返す手順はスキル化", "body": "同じ依頼が再来するなら、手順を型として保存して再利用する。" },
+      { "n": 5, "title": "出力は高信号・最小", "body": "冗長を避け、結論先出しで返す。ツールの返り値も必要な情報だけに絞る。" },
+      { "n": 6, "title": "長い作業は1単位ずつ進めて保存", "body": "数時間〜数日の作業は一気に作り込まず、1単位ごとに作って保存し、いつでも再開できる足場を残す。" },
+      { "n": 7, "title": "モデル世代で最適なプロンプトは変わる", "body": "「step by stepで考えて」等の旧来テクは最新の推論モデルでは不要・逆効果のことも。目的・制約・成功基準を渡す方向へ各社が収束。" }
+    ]
+  },
+  "categories": [
+    { "key": "agent", "label": "エージェント設計" },
+    { "key": "prompt", "label": "プロンプト設計" },
+    { "key": "context", "label": "コンテキスト設計" },
+    { "key": "tool", "label": "ツール設計" },
+    { "key": "usecase", "label": "業務活用" },
+    { "key": "output", "label": "成果物デザイン" }
+  ],
+  "sources": [
+    { "key": "anthropic", "label": "Anthropic" },
+    { "key": "openai", "label": "OpenAI" },
+    { "key": "google", "label": "Google" }
+  ],
+  "articles": [
+    {
+      "title": "効果的なエージェントの構築",
+      "source": "anthropic",
+      "publisher": "Anthropic Engineering",
+      "published": "2024-12-19",
+      "category": "agent",
+      "url": "https://www.anthropic.com/engineering/building-effective-agents",
+      "summary": "最も洗練されたシステムより、目的に合った最小のシステムを作るのが成功の鍵。ワークフロー（決め打ちの経路）とエージェント（動的判断）を区別し、プロンプトチェーン／ルーティング／並列化／オーケストレーター×ワーカー／評価者×最適化者の5パターンを使い分ける。",
+      "points": [
+        "ワークフロー＝予め決めた経路、エージェント＝LLMが動的に判断",
+        "5つの設計パターンを用途で使い分ける",
+        "単一LLM＋検索＋例示で足りるならエージェント化しない",
+        "原則はシンプルさ・透明性・よく整備されたツール"
+      ]
+    },
+    {
+      "title": "Claude Code ベストプラクティス",
+      "source": "anthropic",
+      "publisher": "Anthropic Engineering",
+      "published": "",
+      "category": "usecase",
+      "url": "https://www.anthropic.com/engineering/claude-code-best-practices",
+      "summary": "会話開始時に読み込ませる前提ファイル（CLAUDE.md）に規約・コマンド・手順を記述し、反復改善する。探索→計画→実装→コミットの型、テスト駆動、複数エージェントの役割分担が効く。具体的な指示ほど成功率が上がる。",
+      "points": [
+        "前提ファイルに規約・コマンド・手順を記述",
+        "探索→計画→実装→コミットの型",
+        "実装役とレビュー役で複数エージェントを分担",
+        "具体的な指示・視覚入力（スクショ）で精度向上"
+      ]
+    },
+    {
+      "title": "各チームのClaude Code活用",
+      "source": "anthropic",
+      "publisher": "Anthropic",
+      "published": "",
+      "category": "usecase",
+      "url": "https://www-cdn.anthropic.com/58284b19e702b49db9302d5b6f135ad8871e7658.pdf",
+      "summary": "Claude Codeはエンジニア専用ではない。営業・法務・デザイン・データなど非エンジニア部門が、コードの深い知識なしに自前ツールを作り業務を回している。文脈の言語化と具体的な指示が成否を分ける。",
+      "points": [
+        "非エンジニア部門が小ツールを内製",
+        "広告文の量産、モックの実装化、ダッシュボード構築",
+        "前提ファイル＋具体的指示が成功パターン",
+        "AIを協働者として扱い、抽象的な問いを渡す"
+      ]
+    },
+    {
+      "title": "Agent Skills（スキル化）",
+      "source": "anthropic",
+      "publisher": "Anthropic Engineering",
+      "published": "2025-10-16",
+      "category": "agent",
+      "url": "https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills",
+      "summary": "専門知識や手順をフォルダ＋指示ファイル＋スクリプトとして梱包し、必要なときだけ読み込ませる仕組み。段階的開示で有限のコンテキストを節約しつつ、無限に近い専門性を後付けできる。",
+      "points": [
+        "知識をモジュール化して再利用",
+        "段階的開示（名前→本文→詳細）でトークン節約",
+        "組織知の標準化・専門ワークフローに有効",
+        "アプリ／コード／APIで同じ形式が動く"
+      ]
+    },
+    {
+      "title": "コンテキストエンジニアリング",
+      "source": "anthropic",
+      "publisher": "Anthropic Engineering",
+      "published": "",
+      "category": "context",
+      "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "summary": "モデルに渡すトークン全体は有限資源。情報を詰め込むほど想起精度が落ちる。高信号な最小集合に絞り、事前に全部読み込まず必要なときに取得する。長い作業は要約・メモ化・サブエージェントで分割する。",
+      "points": [
+        "情報過多は逆効果（context rot）",
+        "都度取得（just-in-time）を優先",
+        "システム指示は適切な高度で最小十分に",
+        "長時間タスクは要約・メモ・分割で対応"
+      ]
+    },
+    {
+      "title": "エージェント向けツールの書き方",
+      "source": "anthropic",
+      "publisher": "Anthropic Engineering",
+      "published": "",
+      "category": "tool",
+      "url": "https://www.anthropic.com/engineering/writing-tools-for-agents",
+      "summary": "ツールは既存APIの1:1ラップではなく、エージェントの思考に沿った高インパクトな単位で設計する。出力はトークン効率良く、意味のある情報だけを返す。実ユースケースに基づく評価で反復改善する。",
+      "points": [
+        "ワークフロー単位で統合ツールを作る",
+        "返り値は高信号な情報だけに絞る",
+        "機械的IDより自然言語の識別子",
+        "実シナリオで評価し反復改善"
+      ]
+    },
+    {
+      "title": "プロンプトエンジニアリング要点",
+      "source": "anthropic",
+      "publisher": "Anthropic Docs",
+      "published": "",
+      "category": "prompt",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview",
+      "summary": "明確で具体的な指示、目的・背景の付与、例示、XMLタグによる構造化、拡張思考、出力フォーマット制御が基本。長い資料はプロンプトの冒頭に置くと品質が上がりやすい。",
+      "points": [
+        "明確で具体的な指示と目的の付与",
+        "多様な例示（multishot）で精度向上",
+        "XMLタグで要素を構造化",
+        "出力フォーマットを明示・拡張思考を活用"
+      ]
+    },
+    {
+      "title": "長時間エージェントのハーネス設計",
+      "source": "anthropic",
+      "publisher": "Anthropic Engineering",
+      "published": "2025-11-26",
+      "category": "agent",
+      "url": "https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents",
+      "summary": "数時間〜数日の作業ではコンテキストを跨ぐたびに記憶が失われる。進捗を外部ファイルに永続化し、毎回クリーンな状態から再開できる足場を用意する。一度に作り込まず1機能ずつ進める。",
+      "points": [
+        "進捗を外部ファイル（進捗ログ・機能リスト・Git）に永続化",
+        "初期化役と実行役の2段階方式",
+        "一度に1機能だけ実装する",
+        "完了を早合点せずテストで検証"
+      ]
+    },
+    {
+      "title": "エージェント構築の実践ガイド",
+      "source": "openai",
+      "publisher": "OpenAI",
+      "published": "",
+      "category": "agent",
+      "url": "https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf",
+      "summary": "エージェント＝LLMがツールを使い、ガードレールの中で自律的にタスクを完遂するシステム。まず単一エージェントで始め、複雑になってからマルチエージェント化する。指示の質とガードレール設計が要。",
+      "points": [
+        "複雑・判断を要するワークフローに適する",
+        "中核はモデル・ツール・指示の質",
+        "単一→必要時にマネージャー型/分散型へ",
+        "高リスク行動は人間の承認を挟む"
+      ]
+    },
+    {
+      "title": "推論モデルのベストプラクティス",
+      "source": "openai",
+      "publisher": "OpenAI API Docs",
+      "published": "",
+      "category": "prompt",
+      "url": "https://developers.openai.com/api/docs/guides/reasoning-best-practices",
+      "summary": "推論モデルとGPTモデルは優劣でなく用途が違う。推論モデルには高レベルの指示を、GPTモデルには精密な指示を、という逆の使い分けが要点。推論モデルに「step by stepで考えて」は不要・逆効果のこともある。",
+      "points": [
+        "推論モデルは複雑問題・戦略・専門領域に強い",
+        "GPTモデルは速度・コスト・定型タスクに強い",
+        "推論モデルはシンプルで直接的な指示が効く",
+        "多くの実務は両者の組み合わせが最適"
+      ]
+    },
+    {
+      "title": "Gemini プロンプト設計戦略",
+      "source": "google",
+      "publisher": "Google AI for Developers",
+      "published": "",
+      "category": "prompt",
+      "url": "https://ai.google.dev/gemini-api/docs/prompting-strategies",
+      "summary": "明確な指示・一貫した例示・必要な文脈の同梱が基本で、Anthropic／OpenAIと共通する普遍的な型。最新世代は過剰な手順指示より目的・制約・成功基準を渡す方向に揃ってきている。",
+      "points": [
+        "明確で具体的な指示と制約の明示",
+        "少数例（few-shot）は構造・形式を一貫させる",
+        "必要な文脈を同梱しXML/見出しで構造化",
+        "最新世代は目的・制約・成功基準を渡す方向"
+      ]
+    },
+    {
+      "title": "HTMLの圧倒的な有効性",
+      "source": "anthropic",
+      "publisher": "Claude / Anthropic（個人見解）",
+      "published": "2026-05",
+      "category": "output",
+      "url": "https://claude.com/blog/using-claude-code-the-unreasonable-effectiveness-of-html",
+      "summary": "人が「読む・比べる・判断する」成果物はMarkdownではなくHTMLで出す。AIに渡す素材や軽いメモはMarkdownでよい。表・図・操作・配置を1ファイルに収められるHTMLは、実際に読まれ判断に使われる。著者本人が個人の見解と明記している記事。",
+      "points": [
+        "判断の物差し: 人が読んで判断するものはHTML、AIに渡す素材はMarkdown",
+        "HTMLは情報密度・視認性・操作性・共有性で優位",
+        "1データ専用の使い捨て編集UIとしても有効（最後にMarkdown書き出し）",
+        "トークンは増えるが、実際に読まれる確率が上がり割に合う"
+      ]
+    }
+  ]
+}
