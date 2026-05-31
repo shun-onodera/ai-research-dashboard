@@ -75,21 +75,21 @@
     },
     {
       "title": "TWOSTONE&Sons", "source_label": "TWOSTONE&Sons", "category": "growth",
-      "published": "2024年8月期", "collected": "2026-05-31",
-      "fiscalPeriod": "2024年8月期 通期", "securitiesCode": "7352",
-      "revenue": 14290, "revenueUnit": "百万円", "yoyPct": 29.9, "opYoyPct": null, "opMargin": 3.3, "opProfit": 474, "opProfitUnit": "百万円",
-      "background": "エンジニア6万人超のDBを活用したマッチング事業の継続成長と単価引き上げで売上+29.9%。正社員エンジニア・コンサル人材の採用投資とロールアップM&Aで拡大、営業利益率3.3%。※Notion DBの確定通期は2024年8月期。",
-      "extra": "FY2026 1Qはエンジニア登録63,397名・稼働5,553名（過去最高）",
-      "source": "Notion競合業績データDB（IR: irbank.net/7352、2024年8月期通期）"
+      "published": "2025年8月期", "collected": "2026-05-31",
+      "fiscalPeriod": "2025年8月期 通期", "securitiesCode": "7352",
+      "revenue": 18077, "revenueUnit": "百万円", "yoyPct": 26.5, "opYoyPct": 72.7, "opMargin": 4.5, "opProfit": 819, "opProfitUnit": "百万円",
+      "background": "エンジニアマッチング事業が創業以来の最高値を更新し続け、売上+26.5%・営業利益+72.7%の高成長。コンサル・幹部人材・正社員エンジニアの採用投資（前年比+155%）を継続しつつ営業利益率4.5%。2026年8月期は営業利益+61.6%を見込む。",
+      "extra": "FY2026 1Qはエンジニア登録63,397名・稼働5,553名（過去最高）。FY2026予想 売上24,182百万円（+33.8%）",
+      "source": "Notion競合業績データDB（IR: irbank.net/7352、2025年8月期通期）"
     },
     {
-      "title": "ランサーズ", "source_label": "ランサーズ", "category": "profitability",
-      "published": "2025年3月期", "collected": "2026-05-31",
-      "fiscalPeriod": "2025年3月期 通期", "securitiesCode": "4484",
-      "revenue": 4589, "revenueUnit": "百万円", "yoyPct": 0.3, "opYoyPct": 44.7, "opMargin": 2.4, "opProfit": 109, "opProfitUnit": "百万円",
-      "background": "FY2025通期は売上ほぼ横ばい（+0.3%）も、AXマッチング・新規AXコンサル事業の立ち上がりで営業利益+44.7%と増益。営業利益率2.4%。※Notion DBの確定通期は2025年3月期。進行期（FY2026）はAIでの成長加速局面。",
+      "title": "ランサーズ", "source_label": "ランサーズ", "category": "growth",
+      "published": "2026年3月期", "collected": "2026-05-31",
+      "fiscalPeriod": "2026年3月期 通期", "securitiesCode": "4484",
+      "revenue": 5437, "revenueUnit": "百万円", "yoyPct": 18.5, "opYoyPct": 84.4, "opMargin": 3.7, "opProfit": 201, "opProfitUnit": "百万円",
+      "background": "AXマッチングと新規AXコンサル事業の立ち上がりで売上+18.5%・営業利益+84.4%と大幅な増収増益。営業利益率3.7%。2027年3月期は売上63億円（+15.9%）・営業利益3億円（+49.1%）を見込む。",
       "extra": "登録ユーザー約300万人。2025年5月にAXコンサル子会社を設立",
-      "source": "Notion競合業績データDB（IR: irbank.net/4484、2025年3月期通期）"
+      "source": "Notion競合業績データDB（IR: irbank.net/4484、2026年3月期通期）"
     },
     {
       "title": "Upwork（海外・参考）", "source_label": "Upwork", "category": "profitability",
