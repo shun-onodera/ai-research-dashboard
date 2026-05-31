@@ -149,9 +149,10 @@ main{ max-width:var(--maxw); margin:0 auto; padding:28px 20px 64px; }
 .kpi-chart-card{ background:var(--color-card); border:1px solid var(--color-line); border-radius:14px; padding:16px 18px; box-shadow:var(--shadow); }
 .kpi-chart-title{ font-size:13.5px; font-weight:800; margin:0 0 12px; }
 .ch{ display:flex; flex-direction:column; gap:6px; }
-.ch-row{ display:grid; grid-template-columns:128px 1fr 86px; align-items:center; gap:8px; }
-.ch-name{ font-size:11px; color:var(--color-ink-2); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-.ch-fy{ font-size:9.5px; color:var(--color-muted); font-weight:500; }
+.ch-row{ display:grid; grid-template-columns:120px 1fr 86px; align-items:center; gap:8px; }
+.ch-name{ display:flex; flex-direction:column; line-height:1.25; min-width:0; }
+.ch-co{ font-size:11px; color:var(--color-ink-2); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.ch-fy{ font-size:9px; color:var(--color-muted); font-weight:500; }
 .ch-track{ height:12px; background:var(--color-line-2); border-radius:4px; overflow:hidden; position:relative; }
 .ch-track-mid{ overflow:visible; }
 .ch-fill{ position:absolute; top:0; height:100%; border-radius:4px; }

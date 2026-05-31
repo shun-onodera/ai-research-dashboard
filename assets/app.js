@@ -354,7 +354,7 @@
         var w = Math.max(2, (a.revenue / maxRev) * 100);
         var oku = (a.revenue / 100).toFixed(0); // 百万円→億円概算表示
         var fy = fyShort(a.published);
-        return '<div class="ch-row"><span class="ch-name">' + esc(a.title) + (fy ? ' <span class="ch-fy">' + esc(fy) + '</span>' : '') + '</span>' +
+        return '<div class="ch-row"><span class="ch-name"><span class="ch-co">' + esc(a.title) + '</span>' + (fy ? '<span class="ch-fy">' + esc(fy) + '</span>' : '') + '</span>' +
           '<span class="ch-track"><span class="ch-fill ch-rev" style="width:' + w + '%"></span></span>' +
           '<span class="ch-val">' + esc(fmtNum(a.revenue)) + '<small>百万円</small></span></div>';
       }).join("");
@@ -372,7 +372,7 @@
           ? '<span class="ch-fill ch-gpos" style="left:50%;width:' + w + '%"></span>'
           : '<span class="ch-fill ch-gneg" style="right:50%;width:' + w + '%"></span>';
         var fyg = fyShort(a.published);
-        return '<div class="ch-row"><span class="ch-name">' + esc(a.title) + (fyg ? ' <span class="ch-fy">' + esc(fyg) + '</span>' : '') + '</span>' +
+        return '<div class="ch-row"><span class="ch-name"><span class="ch-co">' + esc(a.title) + '</span>' + (fyg ? '<span class="ch-fy">' + esc(fyg) + '</span>' : '') + '</span>' +
           '<span class="ch-track ch-track-mid">' + bar + '<span class="ch-mid"></span></span>' +
           '<span class="ch-val ' + side + '">' + (n >= 0 ? "+" : "") + n + '%</span></div>';
       }).join("");
