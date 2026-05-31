@@ -68,7 +68,7 @@
       ? '<a class="source-link" href="' + esc(a.url) + '" target="_blank" rel="noopener noreferrer">出典</a>'
       : (a.source ? '<span class="src-note">' + esc(a.source) + "</span>" : "");
     return (
-      '<article class="article" data-source="' + esc(srcKey) + '" data-category="' + esc(a.category || "") + '" data-collected="' + esc(col) + '">' +
+      '<article class="article" data-source="' + esc(srcKey) + '" data-category="' + esc(a.category || "") + '" data-collected="' + esc(col) + '" data-published="' + esc(pub) + '">' +
         '<div class="top">' +
           '<span class="src-tag ' + srcClass + '">' + esc(label) + "</span>" +
           (catLabel ? '<span class="cat-tag">' + esc(catLabel) + "</span>" : "") +
@@ -105,8 +105,9 @@
         }).join("") + "</div>";
     }
     html += '<div class="grp sort-grp"><span class="lbl">並び替え</span>' +
-      '<label class="sort-label" for="sort">収集日</label>' +
-      '<select id="sort" class="sort-select" aria-label="収集日で並び替え">' +
+      '<select id="sort-key" class="sort-select" aria-label="並び替えの基準">' +
+      '<option value="collected">収集日</option><option value="published">公開日</option></select>' +
+      '<select id="sort-order" class="sort-select" aria-label="並び替えの順序">' +
       '<option value="new">新しい順</option><option value="old">古い順</option></select></div>';
     box.innerHTML = html;
   }
@@ -141,22 +142,41 @@
     });
   }
 
+  /* 公開日の表記ゆれ（2026-05 / 2024-12-19 / FY2025 / FY2026 第1四半期 / 空）を
+     比較可能な YYYYMMDD 文字列に正規化。年→月→日の順に判定し、無い桁は 00 で補う。
+     全く年が取れないものは "00000000"（最古扱い）。 */
+  function pubKey(s) {
+    s = String(s || "");
+    var ym = s.match(/(\d{4})-(\d{2})(?:-(\d{2}))?/); // 2026-05 / 2026-05-21
+    if (ym) return ym[1] + ym[2] + (ym[3] || "00");
+    var fy = s.match(/FY\s?(\d{4})/i) || s.match(/(\d{4})\s*年/); // FY2025 / 2026年
+    if (fy) return fy[1] + "0000";
+    var y = s.match(/(\d{4})/);
+    if (y) return y[1] + "0000";
+    return "00000000";
+  }
+
   function initSort() {
-    var sel = document.getElementById("sort");
+    var keySel = document.getElementById("sort-key");
+    var orderSel = document.getElementById("sort-order");
     var wrap = document.getElementById("articles");
-    if (!sel || !wrap) return;
+    if (!keySel || !orderSel || !wrap) return;
+    function valOf(el, key) {
+      if (key === "published") return pubKey(el.getAttribute("data-published"));
+      return el.getAttribute("data-collected") || "";
+    }
     function apply() {
       var cards = Array.prototype.slice.call(wrap.querySelectorAll(".article"));
-      var mode = sel.value;
+      var key = keySel.value, order = orderSel.value;
       cards.sort(function (a, b) {
-        var av = a.getAttribute("data-collected") || "";
-        var bv = b.getAttribute("data-collected") || "";
+        var av = valOf(a, key), bv = valOf(b, key);
         if (av === bv) return (Number(a.dataset.idx) || 0) - (Number(b.dataset.idx) || 0);
-        return mode === "old" ? (av < bv ? -1 : 1) : (av > bv ? -1 : 1);
+        return order === "old" ? (av < bv ? -1 : 1) : (av > bv ? -1 : 1);
       });
       cards.forEach(function (c) { wrap.appendChild(c); });
     }
-    sel.addEventListener("change", apply);
+    keySel.addEventListener("change", apply);
+    orderSel.addEventListener("change", apply);
     apply();
   }
 
