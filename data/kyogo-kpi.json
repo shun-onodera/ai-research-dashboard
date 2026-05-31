@@ -2,8 +2,8 @@
   "theme": "競合KPI",
   "type": "kpi",
   "updated": "2026-05-31",
-  "description": "フリーランス・プロ人材マッチング各社が決算資料・IRで公式開示している業績指標を、成長率・営業利益率のグラフと直近の動きの背景で整理。すべて公開済み数値・出典付きです。決算期は会社ごとに異なります。",
-  "metrics_note": "横棒グラフは各社の「直近通期実績」の前年比成長率（青）と営業利益率（緑）。売上は通貨単位が国内（百万円）と海外（百万USD）で異なるため、棒の横比較ではなく数値で表記しています。",
+  "source_note": "数値はNotion「競合業績データ」DB（各社IR・決算短信ベース、出典: irbank等）から取得。各社の直近の確定通期実績。決算期は会社ごとに異なります。海外2社（Upwork/Fiverr）はNotion DB対象外のためIR資料ベースの参考値。",
+  "description": "競合各社の直近通期の業績を、売上高・前年比成長率・営業利益率のグラフと直近の動きの背景で整理。国内9社はNotion競合業績データDB（IRベース）、海外2社はIR資料ベースの参考値です。",
   "categories": [
     { "key": "growth", "label": "高成長" },
     { "key": "profitability", "label": "収益性重視" },
@@ -12,102 +12,102 @@
   "articles": [
     {
       "title": "INTLOOP", "source_label": "INTLOOP", "category": "growth",
-      "published": "FY2025（2025年7月期）", "collected": "2026-05-31",
-      "fiscalPeriod": "FY2025（2025年7月期）",
-      "revenue": 33551, "revenueUnit": "百万円", "yoyPct": 23.9, "opMargin": 6.5, "opProfit": 2186, "opProfitUnit": "百万円",
-      "background": "企業のDX投資拡大とIT人材不足を背景にコンサル需要が継続拡大し、売上は前年比+23.9%の高成長。営業利益は前年比+45.1%増、営業利益率は5.6%→6.5%へ改善。登録フリーランス約52,000名のネットワークとグループ会社による事業領域拡充が寄与。",
-      "extra": "中期計画 VISION2030：FY2030 売上1,000億円・営業利益150億円（FY2026予想 売上43,800百万円）",
-      "source": "INTLOOP 2026年7月期第1四半期決算短信／事業計画及び成長可能性に関する説明資料／2025年7月期有価証券報告書"
-    },
-    {
-      "title": "TWOSTONE&Sons", "source_label": "TWOSTONE&Sons", "category": "growth",
-      "published": "FY2025（2025年8月期）", "collected": "2026-05-31",
-      "fiscalPeriod": "FY2025（2025年8月期）",
-      "revenue": 18077, "revenueUnit": "百万円", "yoyPct": 26.5, "opMargin": 4.5, "opProfit": 807, "opProfitUnit": "百万円",
-      "background": "エンジニア6万人超のDBを活用したマッチング事業の継続成長と、円安・インフレ下でのエンジニア単価引き上げで12期連続増収（+26.5%）。正社員エンジニア・コンサル人材の採用投資とロールアップM&Aで拡大し、営業利益率は前年から改善。",
-      "extra": "FY2026 1Qはエンジニア登録63,397名・稼働5,553名（過去最高）。FY2026通期予想 売上24,182百万円（+33.8%）",
-      "source": "TWOSTONE&Sons 2025年8月期有価証券報告書／2026年8月期第1四半期決算短信（2026.1.14）"
+      "published": "2025年7月期", "collected": "2026-05-31",
+      "fiscalPeriod": "2025年7月期 通期", "securitiesCode": "9556",
+      "revenue": 33551, "revenueUnit": "百万円", "yoyPct": 23.9, "opYoyPct": 45.1, "opMargin": 6.5, "opProfit": 2186, "opProfitUnit": "百万円",
+      "background": "企業のDX投資拡大とIT人材不足を背景にコンサル需要が継続拡大し、売上+23.9%・営業利益+45.1%の高成長。営業利益率も改善。登録フリーランス約52,000名のネットワークとグループ会社による事業領域拡充が寄与。",
+      "extra": "中期計画 VISION2030：FY2030 売上1,000億円・営業利益150億円",
+      "source": "Notion競合業績データDB（IR: irbank.net/9556、2025年7月期通期）"
     },
     {
       "title": "クラウドワークス", "source_label": "クラウドワークス", "category": "scale",
-      "published": "FY2025（2025年9月期）", "collected": "2026-05-31",
-      "fiscalPeriod": "FY2025（2025年9月期）",
-      "revenue": 22657, "revenueUnit": "百万円", "yoyPct": 32.4, "opMargin": 7.8, "opProfit": 1759, "opProfitUnit": "百万円",
-      "background": "5年連続増収増益で売上・営業利益とも過去最高（+32.4%）。マッチング事業の高収益性とM&AによるDXコンサル取り込みが牽引。一方でグループ会社の減損により当期は純損失▲257百万円。翌期は不採算事業撤退とDXコンサル投資の構造改革期に入る。",
-      "extra": "登録ワーカー760万人・登録クライアント109万社、テイクレート約33%。中期目標「YOSHIDA300」売上300億円",
-      "source": "クラウドワークス 2025年9月期通期決算説明資料／2026年9月期第1四半期決算説明資料"
-    },
-    {
-      "title": "ココナラ", "source_label": "ココナラ", "category": "growth",
-      "published": "FY2025（2025年8月期）", "collected": "2026-05-31",
-      "fiscalPeriod": "FY2025（2025年8月期）",
-      "revenue": 9411, "revenueUnit": "百万円", "yoyPct": 42.8, "opMargin": 2.7, "opProfit": 256, "opProfitUnit": "百万円",
-      "background": "ITフリーランス仲介「ココナラテック」の子会社化（2024年6月）が通年寄与し売上+42.8%の高成長。一方、エージェント事業の売上原価が通年計上され売上総利益率が77.3%→65.1%に低下、営業利益は微減（営業利益率2.7%）。エージェント事業は先行投資段階で営業損失。",
-      "extra": "流通総額 17,228百万円（+8.8%）、テイクレート29.1%、会員590万人超",
-      "source": "ココナラ 2025年8月期決算短信・通期決算説明資料／2026年8月期第2四半期決算説明資料"
-    },
-    {
-      "title": "ランサーズ", "source_label": "ランサーズ", "category": "growth",
-      "published": "FY2026 第3四半期累計", "collected": "2026-05-31",
-      "fiscalPeriod": "FY2026 第3四半期累計（2025年4〜12月／通期実績は未取得）",
-      "revenue": 3925, "revenueUnit": "百万円", "yoyPct": 15.2, "opMargin": null, "opProfit": null, "opProfitUnit": "百万円",
-      "background": "AIによるマッチング自動化のAXマッチング事業の成長と、2025年5月設立の新規AXコンサル事業の立ち上がりでV字回復。3Q単体（2025年10〜12月）は売上1,439百万円（+25.1%・四半期過去最高）、営業利益74百万円（+132.7%）。※直近通期確定実績の精緻値が未取得のため3Q累計を表示（累計営業利益率は未取得）。",
-      "extra": "登録ユーザー約300万人／FY2025通期売上4,589百万円（+0.3%）",
-      "source": "ランサーズ 2026年3月期第3四半期決算説明資料・決算短信（2026.2.12）"
-    },
-    {
-      "title": "ビザスク", "source_label": "ビザスク", "category": "profitability",
-      "published": "FY2026（2026年2月期）", "collected": "2026-05-31",
-      "fiscalPeriod": "FY2026（2026年2月期）",
-      "revenue": 9975, "revenueUnit": "百万円", "yoyPct": 2.0, "opMargin": 13.4, "opProfit": 1341, "opProfitUnit": "百万円",
-      "background": "売上（営業収益）は+2.0%と成長が減速する一方、全社的なコスト効率化が想定を上回り営業利益率は12.5%→13.4%へ改善。売上は取扱高（GMV 14,535百万円）でなく手数料収入ベースの営業収益。AI機能（AI Scout等）と博報堂との資本業務提携（2026年4月発表）を推進。",
-      "extra": "エキスパートDB 国内外80万人超。中期計画 FY2029 取扱高300億円以上・調整後EBITDA20億円以上",
-      "source": "ビザスク 2026年2月期決算短信・通期決算説明資料（2026.4.14）"
+      "published": "2025年9月期", "collected": "2026-05-31",
+      "fiscalPeriod": "2025年9月期 通期", "securitiesCode": "3900",
+      "revenue": 22657, "revenueUnit": "百万円", "yoyPct": 32.4, "opYoyPct": 31.2, "opMargin": 7.8, "opProfit": 1759, "opProfitUnit": "百万円",
+      "background": "5年連続増収増益で売上+32.4%・営業利益+31.2%とも過去最高。マッチング事業の高収益性とM&AによるDXコンサル取り込みが牽引。一方でグループ会社の減損により当期は純損失。翌期は不採算事業撤退とDXコンサル投資の構造改革期に入る。",
+      "extra": "登録ワーカー760万人・登録クライアント109万社。中期目標「YOSHIDA300」売上300億円",
+      "source": "Notion競合業績データDB（IR: irbank.net/3900、2025年9月期通期）"
     },
     {
       "title": "ギークス", "source_label": "ギークス", "category": "profitability",
-      "published": "FY2025（2025年3月期）", "collected": "2026-05-31",
-      "fiscalPeriod": "FY2025（2025年3月期）",
-      "revenue": 25162, "revenueUnit": "百万円", "yoyPct": 6.0, "opMargin": 2.0, "opProfit": 496, "opProfitUnit": "百万円",
-      "background": "国内ITフリーランスエージェント事業の安定成長で売上+6.0%。前期に実施したゲーム事業の減損・売却によるポートフォリオ整理が一巡し、営業利益は前期91百万円→496百万円へ回復（営業利益率2.0%）。豪州など海外IT人材事業の立て直しが進んだ。",
+      "published": "2025年3月期", "collected": "2026-05-31",
+      "fiscalPeriod": "2025年3月期 通期", "securitiesCode": "7060",
+      "revenue": 25162, "revenueUnit": "百万円", "yoyPct": 6.0, "opYoyPct": null, "opMargin": 2.0, "opProfit": 495, "opProfitUnit": "百万円",
+      "background": "国内ITフリーランスエージェント事業の安定成長で売上+6.0%。前期に実施したゲーム事業の減損・売却によるポートフォリオ整理が一巡し、営業利益は前期91百万円→495百万円へ大幅回復（営業利益率2.0%）。",
       "extra": "ITフリーランス登録23,000名超、国内テイクレート18.0%。FY2026通期予想 売上26,600百万円・営業利益800百万円",
-      "source": "ギークス 2025年3月期有価証券報告書／2026年3月期第3四半期決算説明資料（2026.2.13）"
+      "source": "Notion競合業績データDB（IR: irbank.net/7060、2025年3月期通期）"
+    },
+    {
+      "title": "ビザスク", "source_label": "ビザスク", "category": "profitability",
+      "published": "2026年2月期", "collected": "2026-05-31",
+      "fiscalPeriod": "2026年2月期 通期", "securitiesCode": "4490",
+      "revenue": 9975, "revenueUnit": "百万円", "yoyPct": 2.0, "opYoyPct": null, "opMargin": 13.4, "opProfit": 1341, "opProfitUnit": "百万円",
+      "background": "売上（営業収益）は+2.0%と成長が減速する一方、全社的なコスト効率化が想定を上回り営業利益率13.4%と高水準。売上は取扱高（GMV 14,535百万円）でなく手数料収入ベースの営業収益。AI機能（AI Scout等）と博報堂との資本業務提携を推進。",
+      "extra": "エキスパートDB 国内外80万人超。中期計画 FY2029 取扱高300億円以上",
+      "source": "Notion競合業績データDB（IR: irbank.net/4490、2026年2月期通期）"
+    },
+    {
+      "title": "ココナラ", "source_label": "ココナラ", "category": "growth",
+      "published": "2025年8月期", "collected": "2026-05-31",
+      "fiscalPeriod": "2025年8月期 通期", "securitiesCode": "4176",
+      "revenue": 9411, "revenueUnit": "百万円", "yoyPct": 42.8, "opYoyPct": null, "opMargin": 2.7, "opProfit": 256, "opProfitUnit": "百万円",
+      "background": "ITフリーランス仲介「ココナラテック」の子会社化（2024年6月）が通年寄与し売上+42.8%の高成長。一方、エージェント事業の売上原価が通年計上され売上総利益率が低下、営業利益率は2.7%。エージェント事業は先行投資段階。",
+      "extra": "流通総額 17,228百万円、テイクレート29.1%、会員590万人超",
+      "source": "Notion競合業績データDB（IR: irbank.net/4176、2025年8月期通期）"
     },
     {
       "title": "みらいワークス", "source_label": "みらいワークス", "category": "scale",
-      "published": "FY2025（2025年9月期）", "collected": "2026-05-31",
-      "fiscalPeriod": "FY2025（2025年9月期）",
-      "revenue": 11144, "revenueUnit": "百万円", "yoyPct": 5.0, "opMargin": 2.5, "opProfit": 284, "opProfitUnit": "百万円",
-      "background": "14期連続増収で売上は過去最高。一方、成長に向けた人材採用の先行投資で人件費が前年比+22.1%増となり、営業利益は前年比▲53.6%と大きく減少。地方創生事業・ソリューション事業が増収増益で全社を下支え。",
+      "published": "2025年9月期", "collected": "2026-05-31",
+      "fiscalPeriod": "2025年9月期 通期", "securitiesCode": "6563",
+      "revenue": 11144, "revenueUnit": "百万円", "yoyPct": 5.0, "opYoyPct": -53.6, "opMargin": 2.5, "opProfit": 284, "opProfitUnit": "百万円",
+      "background": "14期連続増収で売上+5.0%・過去最高。一方、成長に向けた人材採用の先行投資で人件費が増え、営業利益は前年比▲53.6%と大きく減少。地方創生事業・ソリューション事業が増収増益で全社を下支え。",
       "extra": "プロ人材登録9万名超。中期計画 FY2027 売上16,000百万円・営業利益1,000百万円",
-      "source": "みらいワークス 2025年9月期通期決算説明資料（2025.11.14）／2026年9月期第1四半期決算説明資料"
+      "source": "Notion競合業績データDB（IR: irbank.net/6563、2025年9月期通期）"
     },
     {
-      "title": "サーキュレーション", "source_label": "サーキュレーション", "category": "profitability",
-      "published": "FY2024（2024年7月期）", "collected": "2026-05-31",
-      "fiscalPeriod": "FY2024（2024年7月期）",
-      "revenue": 7661, "revenueUnit": "百万円", "yoyPct": -6.0, "opMargin": 3.5, "opProfit": 266, "opProfitUnit": "百万円",
-      "background": "前代表の保有株式処分問題でアライアンス先金融機関からの顧客紹介が一時停止し主要収益源が毀損、売上▲6.0%・営業利益▲53.1%。翌FY2025 1Qで紹介が順次再開し、みずほ銀行との業務提携（2024年12月・メガバンク初）も開始して回復基調へ。なお2025年9月のTOBで上場廃止。",
-      "extra": "FY2025（2025年7月期・最終通期）は売上8,801百万円（+14.9%）・営業利益472百万円へV字回復",
-      "source": "サーキュレーション 2024年7月期通期決算説明資料（2024.9.13）／2025年7月期通期決算短信（2025.9.12）"
+      "title": "サーキュレーション", "source_label": "サーキュレーション", "category": "growth",
+      "published": "2025年7月期", "collected": "2026-05-31",
+      "fiscalPeriod": "2025年7月期 通期", "securitiesCode": "7379",
+      "revenue": 8801, "revenueUnit": "百万円", "yoyPct": 14.9, "opYoyPct": 76.8, "opMargin": 5.4, "opProfit": 472, "opProfitUnit": "百万円",
+      "background": "前期に金融機関紹介の一時停止で落ち込んだ反動と、みずほ銀行との業務提携（メガバンク初）等で売上+14.9%・営業利益+76.8%とV字回復。営業利益率5.4%。なお2025年9月のTOBで上場廃止し、本決算が最終通期。",
+      "extra": "プロシェアリングとFLEXYの二本柱。2025年9月にPKSHAのTOBで上場廃止",
+      "source": "Notion競合業績データDB（IR: irbank.net/7379、2025年7月期通期）"
     },
     {
-      "title": "Upwork", "source_label": "Upwork", "category": "profitability",
+      "title": "TWOSTONE&Sons", "source_label": "TWOSTONE&Sons", "category": "growth",
+      "published": "2024年8月期", "collected": "2026-05-31",
+      "fiscalPeriod": "2024年8月期 通期", "securitiesCode": "7352",
+      "revenue": 14290, "revenueUnit": "百万円", "yoyPct": 29.9, "opYoyPct": null, "opMargin": 3.3, "opProfit": 474, "opProfitUnit": "百万円",
+      "background": "エンジニア6万人超のDBを活用したマッチング事業の継続成長と単価引き上げで売上+29.9%。正社員エンジニア・コンサル人材の採用投資とロールアップM&Aで拡大、営業利益率3.3%。※Notion DBの確定通期は2024年8月期。",
+      "extra": "FY2026 1Qはエンジニア登録63,397名・稼働5,553名（過去最高）",
+      "source": "Notion競合業績データDB（IR: irbank.net/7352、2024年8月期通期）"
+    },
+    {
+      "title": "ランサーズ", "source_label": "ランサーズ", "category": "profitability",
+      "published": "2025年3月期", "collected": "2026-05-31",
+      "fiscalPeriod": "2025年3月期 通期", "securitiesCode": "4484",
+      "revenue": 4589, "revenueUnit": "百万円", "yoyPct": 0.3, "opYoyPct": 44.7, "opMargin": 2.4, "opProfit": 109, "opProfitUnit": "百万円",
+      "background": "FY2025通期は売上ほぼ横ばい（+0.3%）も、AXマッチング・新規AXコンサル事業の立ち上がりで営業利益+44.7%と増益。営業利益率2.4%。※Notion DBの確定通期は2025年3月期。進行期（FY2026）はAIでの成長加速局面。",
+      "extra": "登録ユーザー約300万人。2025年5月にAXコンサル子会社を設立",
+      "source": "Notion競合業績データDB（IR: irbank.net/4484、2025年3月期通期）"
+    },
+    {
+      "title": "Upwork（海外・参考）", "source_label": "Upwork", "category": "profitability",
       "published": "FY2024（2024年12月期）", "collected": "2026-05-31",
-      "fiscalPeriod": "FY2024（2024年12月期）",
-      "revenue": 769.3, "revenueUnit": "百万USD", "yoyPct": 11.6, "opMargin": 8.5, "opProfit": 65.2, "opProfitUnit": "百万USD",
-      "background": "マクロ逆風で流通総額（GSV）は前年比▲3%と微減も、テイクレートを13.8%→18.0%へ引き上げ売上+11.6%を維持。販売・マーケ費25%削減などコスト規律で、営業損益は前年の赤字（▲11.3百万USD）から+65.2百万USD（営業利益率8.5%）へ黒字転換。",
-      "extra": "GSV 4,008百万USD、Active Clients 832千社。AIアシスタント「Uma」統合・Objective AI買収",
-      "source": "Upwork Form 10-K FY2024（SEC EDGAR、2025.2.13提出）"
+      "fiscalPeriod": "FY2024（2024年12月期）通期", "securitiesCode": "NASDAQ:UPWK",
+      "revenue": 769.3, "revenueUnit": "百万USD", "yoyPct": 11.6, "opYoyPct": null, "opMargin": 8.5, "opProfit": 65.2, "opProfitUnit": "百万USD",
+      "background": "流通総額（GSV）は▲3%と微減もテイクレートを13.8%→18.0%へ引き上げ売上+11.6%。販売・マーケ費削減で営業損益は前年赤字から+65.2百万USD（営業利益率8.5%）へ黒字転換。※Notion DB対象外のためIR資料ベースの参考値。",
+      "extra": "GSV 4,008百万USD、Active Clients 832千社",
+      "source": "IR資料（Upwork Form 10-K FY2024）※Notion DB外の参考値"
     },
     {
-      "title": "Fiverr", "source_label": "Fiverr", "category": "profitability",
+      "title": "Fiverr（海外・参考）", "source_label": "Fiverr", "category": "profitability",
       "published": "FY2025（2025年12月期）", "collected": "2026-05-31",
-      "fiscalPeriod": "FY2025（2025年12月期）",
-      "revenue": 430.9, "revenueUnit": "百万USD", "yoyPct": 10.1, "opMargin": -0.3, "opProfit": -1.2, "opProfitUnit": "百万USD",
-      "background": "広告・サブスク等のサービス収益が+50.9%と急成長し全体売上を+10.1%押し上げる一方、取引手数料中心のマーケットプレイス収益は▲1.8%。AI普及で低スキル案件が減る逆風下、高単価案件（1,000ドル超 +22.8%）へ意図的にシフト。GAAP営業損益は▲1.2百万USDとほぼ均衡だが調整後EBITDAは91.6百万USD（21.3%）と高収益。",
-      "extra": "マーケットGMV 1,073百万USD（▲2.2%）、テイクレート27.7%、購入者単価342USD",
-      "source": "Fiverr Form 20-F FY2025（SEC EDGAR、2026.3.12提出）／Q4 FY2025決算リリース"
+      "fiscalPeriod": "FY2025（2025年12月期）通期", "securitiesCode": "NYSE:FVRR",
+      "revenue": 430.9, "revenueUnit": "百万USD", "yoyPct": 10.1, "opYoyPct": null, "opMargin": -0.3, "opProfit": -1.2, "opProfitUnit": "百万USD",
+      "background": "サービス収益が+50.9%と急成長し全体売上を+10.1%押し上げる一方、取引手数料中心のマーケットプレイス収益は▲1.8%。GAAP営業損益は▲1.2百万USDとほぼ均衡だが調整後EBITDAは91.6百万USD（21.3%）と高収益。※Notion DB対象外のためIR資料ベースの参考値。",
+      "extra": "マーケットGMV 1,073百万USD、テイクレート27.7%。高単価案件（1,000ドル超）+22.8%",
+      "source": "IR資料（Fiverr Form 20-F FY2025）※Notion DB外の参考値"
     }
   ]
 }

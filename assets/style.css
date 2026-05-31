@@ -138,8 +138,30 @@ main{ max-width:var(--maxw); margin:0 auto; padding:28px 20px 64px; }
 .kpi-track{ height:9px; background:var(--color-line-2); border-radius:5px; overflow:hidden; position:relative; }
 .kpi-fill{ display:block; height:100%; border-radius:5px; }
 .kpi-fill.kpi-growth{ background:var(--color-blue); }
+.kpi-fill.kpi-growth2{ background:var(--color-accent2, #5b9bd5); }
 .kpi-fill.kpi-margin{ background:var(--color-good); }
 .kpi-fill.kpi-neg{ background:#c0772f; min-width:3px; }
+
+/* ---------- KPI 全社比較チャート ---------- */
+#kpi-charts{ display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin:0 0 22px; }
+@media (max-width:820px){ #kpi-charts{ grid-template-columns:1fr; } }
+.kpi-chart-card{ background:var(--color-card); border:1px solid var(--color-line); border-radius:14px; padding:16px 18px; box-shadow:var(--shadow); }
+.kpi-chart-title{ font-size:13.5px; font-weight:800; margin:0 0 12px; }
+.ch{ display:flex; flex-direction:column; gap:6px; }
+.ch-row{ display:grid; grid-template-columns:96px 1fr 86px; align-items:center; gap:8px; }
+.ch-name{ font-size:11px; color:var(--color-ink-2); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.ch-track{ height:12px; background:var(--color-line-2); border-radius:4px; overflow:hidden; position:relative; }
+.ch-track-mid{ overflow:visible; }
+.ch-fill{ position:absolute; top:0; height:100%; border-radius:4px; }
+.ch-fill.ch-rev{ left:0; background:var(--color-blue); }
+.ch-fill.ch-gpos{ background:var(--color-blue); border-radius:0 4px 4px 0; }
+.ch-fill.ch-gneg{ background:#c0772f; border-radius:4px 0 0 4px; }
+.ch-mid{ position:absolute; left:50%; top:-2px; bottom:-2px; width:1px; background:var(--color-muted); }
+.ch-val{ font-size:11.5px; font-weight:700; text-align:right; color:var(--color-ink); }
+.ch-val small{ font-size:9px; font-weight:500; color:var(--color-muted); margin-left:1px; }
+.ch-val.pos{ color:var(--color-blue); }
+.ch-val.neg{ color:#c0772f; }
+.kpi-chart-note{ font-size:10.5px; color:var(--color-muted); margin:10px 0 0; }
 .kpi-val{ font-size:12px; font-weight:700; color:var(--color-ink); text-align:right; }
 .kpi-val.neg{ color:#c0772f; }
 .kpi-bg{ font-size:12.5px; color:var(--color-ink-2); margin:10px 0 0; background:#f6f8fb; border-radius:8px; padding:10px 12px; border:1px solid var(--color-line); }

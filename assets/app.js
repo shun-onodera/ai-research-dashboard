@@ -218,7 +218,8 @@
           '<div class="kpi-fig"><span class="kpi-fig-label">営業利益</span><span class="kpi-fig-val">' + esc(opp) + "</span></div>" +
         "</div>" +
         '<div class="kpi-bars">' +
-          barRow("前年比成長率", a.yoyPct, "%", "growth") +
+          barRow("売上 前年比", a.yoyPct, "%", "growth") +
+          barRow("営業利益 前年比", a.opYoyPct, "%", "growth2") +
           barRow("営業利益率", a.opMargin, "%", "margin") +
         "</div>" +
         '<p class="kpi-bg"><span class="kpi-bg-label">直近の動きの背景</span>' + esc(a.background || "") + "</p>" +
@@ -231,6 +232,53 @@
     );
   }
 
+  /* 全社横断の比較バーチャート（#kpi-charts に描画） */
+  function renderKpiCharts(articles) {
+    var box = document.getElementById("kpi-charts");
+    if (!box) return;
+    // 売上ランキング（国内＝百万円のみ。通貨混在を避ける）
+    var dom = articles.filter(function (a) { return a.revenueUnit === "百万円" && a.revenue != null; });
+    var revSorted = dom.slice().sort(function (a, b) { return b.revenue - a.revenue; });
+    var maxRev = revSorted.length ? revSorted[0].revenue : 1;
+    function revBars() {
+      return revSorted.map(function (a) {
+        var w = Math.max(2, (a.revenue / maxRev) * 100);
+        var oku = (a.revenue / 100).toFixed(0); // 百万円→億円概算表示
+        return '<div class="ch-row"><span class="ch-name">' + esc(a.title) + '</span>' +
+          '<span class="ch-track"><span class="ch-fill ch-rev" style="width:' + w + '%"></span></span>' +
+          '<span class="ch-val">' + esc(fmtNum(a.revenue)) + '<small>百万円</small></span></div>';
+      }).join("");
+    }
+    // 売上成長率ランキング（全社・百万円社のみ＝比較整合）。0基線で正負を左右に
+    var grSorted = dom.filter(function (a) { return a.yoyPct != null; })
+      .slice().sort(function (a, b) { return b.yoyPct - a.yoyPct; });
+    var maxAbs = grSorted.reduce(function (m, a) { return Math.max(m, Math.abs(a.yoyPct)); }, 1);
+    function growthBars() {
+      return grSorted.map(function (a) {
+        var n = a.yoyPct;
+        var w = (Math.abs(n) / maxAbs) * 50; // 中央から最大50%
+        var side = n >= 0 ? "pos" : "neg";
+        var bar = n >= 0
+          ? '<span class="ch-fill ch-gpos" style="left:50%;width:' + w + '%"></span>'
+          : '<span class="ch-fill ch-gneg" style="right:50%;width:' + w + '%"></span>';
+        return '<div class="ch-row"><span class="ch-name">' + esc(a.title) + '</span>' +
+          '<span class="ch-track ch-track-mid">' + bar + '<span class="ch-mid"></span></span>' +
+          '<span class="ch-val ' + side + '">' + (n >= 0 ? "+" : "") + n + '%</span></div>';
+      }).join("");
+    }
+    box.innerHTML =
+      '<div class="kpi-chart-card">' +
+        '<h3 class="kpi-chart-title">売上高ランキング（国内・直近通期）</h3>' +
+        '<div class="ch">' + revBars() + "</div>" +
+        '<p class="kpi-chart-note">単位：百万円。海外2社（Upwork/Fiverr）は通貨が異なるため本グラフには含めていません（各社カードに数値表記）。</p>' +
+      "</div>" +
+      '<div class="kpi-chart-card">' +
+        '<h3 class="kpi-chart-title">売上 前年比成長率（国内・直近通期）</h3>' +
+        '<div class="ch">' + growthBars() + "</div>" +
+        '<p class="kpi-chart-note">中央線が0%。右（青）が増収、左（オレンジ）が減収。決算期は会社ごとに異なります。</p>' +
+      "</div>";
+  }
+
   function renderArticles(data) {
     var wrap = document.getElementById("articles");
     if (!wrap) return;
@@ -238,7 +286,7 @@
     (data.sources || []).forEach(function (s) { srcMap[s.key] = s.label; });
     (data.categories || []).forEach(function (c) { catMap[c.key] = c.label; });
     var isKpi = data.type === "kpi";
-    if (isKpi) wrap.classList.add("kpi-grid");
+    if (isKpi) { wrap.classList.add("kpi-grid"); renderKpiCharts(data.articles || []); }
     wrap.innerHTML = (data.articles || []).map(function (a) {
       return isKpi ? kpiCard(a, catMap) : articleCard(a, srcMap, catMap);
     }).join("");
