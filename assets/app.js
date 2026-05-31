@@ -180,14 +180,67 @@
     apply();
   }
 
+  /* KPIカード: 成長率・営業利益率の横棒バー＋数値＋背景テキスト */
+  function fmtNum(n) {
+    if (n == null) return "—";
+    return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+  function barRow(label, val, unit, kind) {
+    // val(%) を 0〜100 の幅に。負値は0幅＋負記号、上限は40%でフルとして視認性確保
+    var n = (val == null) ? null : Number(val);
+    var pct = (n == null) ? 0 : Math.max(0, Math.min(100, (Math.abs(n) / 40) * 100));
+    var neg = (n != null && n < 0);
+    var valText = (n == null) ? "未開示" : (n + unit);
+    return (
+      '<div class="kpi-row">' +
+        '<span class="kpi-label">' + esc(label) + "</span>" +
+        '<span class="kpi-track"><span class="kpi-fill kpi-' + kind + (neg ? " kpi-neg" : "") + '" style="width:' + pct + '%"></span></span>' +
+        '<span class="kpi-val' + (neg ? " neg" : "") + '">' + esc(valText) + "</span>" +
+      "</div>"
+    );
+  }
+  function kpiCard(a, catMap) {
+    var col = a.collected || "";
+    var catLabel = catMap[a.category] || a.category || "";
+    var rev = a.revenue != null ? (fmtNum(a.revenue) + (a.revenueUnit || "")) : "—";
+    var opp = a.opProfit != null ? (fmtNum(a.opProfit) + (a.opProfitUnit || "")) : "—";
+    return (
+      '<article class="article kpi-card" data-source="' + esc(a.source_label || "") + '" data-category="' + esc(a.category || "") + '" data-collected="' + esc(col) + '" data-published="' + esc(a.published || "") + '">' +
+        '<div class="top">' +
+          '<span class="src-tag src-generic">' + esc(a.source_label || a.title) + "</span>" +
+          (catLabel ? '<span class="cat-tag">' + esc(catLabel) + "</span>" : "") +
+          (col ? '<span class="collected-tag">収集 ' + esc(col) + "</span>" : "") +
+        "</div>" +
+        "<h3>" + esc(a.title) + "</h3>" +
+        '<p class="kpi-period">' + esc(a.fiscalPeriod || a.published || "") + "</p>" +
+        '<div class="kpi-figures">' +
+          '<div class="kpi-fig"><span class="kpi-fig-label">売上高</span><span class="kpi-fig-val">' + esc(rev) + "</span></div>" +
+          '<div class="kpi-fig"><span class="kpi-fig-label">営業利益</span><span class="kpi-fig-val">' + esc(opp) + "</span></div>" +
+        "</div>" +
+        '<div class="kpi-bars">' +
+          barRow("前年比成長率", a.yoyPct, "%", "growth") +
+          barRow("営業利益率", a.opMargin, "%", "margin") +
+        "</div>" +
+        '<p class="kpi-bg"><span class="kpi-bg-label">直近の動きの背景</span>' + esc(a.background || "") + "</p>" +
+        (a.extra ? '<p class="kpi-extra">' + esc(a.extra) + "</p>" : "") +
+        '<div class="foot">' +
+          '<span class="pub2"></span>' +
+          (a.source ? '<span class="src-note">' + esc(a.source) + "</span>" : "") +
+        "</div>" +
+      "</article>"
+    );
+  }
+
   function renderArticles(data) {
     var wrap = document.getElementById("articles");
     if (!wrap) return;
     var srcMap = {}, catMap = {};
     (data.sources || []).forEach(function (s) { srcMap[s.key] = s.label; });
     (data.categories || []).forEach(function (c) { catMap[c.key] = c.label; });
+    var isKpi = data.type === "kpi";
+    if (isKpi) wrap.classList.add("kpi-grid");
     wrap.innerHTML = (data.articles || []).map(function (a) {
-      return articleCard(a, srcMap, catMap);
+      return isKpi ? kpiCard(a, catMap) : articleCard(a, srcMap, catMap);
     }).join("");
     Array.prototype.slice.call(wrap.querySelectorAll(".article")).forEach(function (c, i) {
       c.dataset.idx = i;
