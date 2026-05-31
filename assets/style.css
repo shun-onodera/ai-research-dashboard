@@ -221,3 +221,43 @@ main{ max-width:var(--maxw); margin:0 auto; padding:28px 20px 64px; }
 
 /* ---------- print / reduced motion ---------- */
 @media (prefers-reduced-motion: reduce){ *{ transition:none !important; scroll-behavior:auto; } }
+
+/* ---------- 法人×個人 市場構造マップ ---------- */
+.ms-drivers{ display:flex; align-items:stretch; gap:8px; margin-bottom:24px; }
+.ms-driver{ flex:1; background:var(--color-card); border:1px solid var(--color-line); border-top:3px solid var(--color-blue); border-radius:var(--radius); padding:13px 15px; display:flex; flex-direction:column; gap:6px; box-shadow:var(--shadow); }
+.ms-arrow{ align-self:center; color:var(--color-blue); font-weight:800; font-size:20px; flex:0 0 auto; }
+.ms-driver-head{ display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+.ms-driver-no{ width:22px; height:22px; border-radius:50%; background:var(--color-blue); color:#fff; font-size:12px; font-weight:800; display:flex; align-items:center; justify-content:center; flex:0 0 auto; }
+.ms-driver-title{ font-size:14px; font-weight:800; color:var(--color-ink); }
+.ms-driver-phase{ font-size:10.5px; font-weight:700; color:var(--color-blue); background:var(--color-blue-50); border-radius:5px; padding:1px 8px; margin-left:auto; }
+.ms-driver-what{ font-size:12px; color:var(--color-ink-2); margin:0; }
+.ms-driver-impl{ font-size:12px; color:var(--color-ink); margin:0; }
+.ms-impl-label{ display:inline-block; font-size:10px; font-weight:700; color:var(--color-blue); background:var(--color-blue-50); border-radius:4px; padding:0 6px; margin-right:6px; }
+.ms-driver-evi{ font-size:10.5px; color:var(--color-muted); margin:6px 0 0; margin-top:auto; }
+
+.ms-matrix{ display:grid; grid-template-columns:172px 1fr 1fr; gap:12px; align-items:stretch; }
+.ms-colhead{ font-size:13px; font-weight:800; color:#fff; border-radius:8px; padding:9px 14px; text-align:center; align-self:start; }
+.ms-col-now{ background:var(--color-blue); }
+.ms-col-future{ background:#5566a8; }
+.ms-rowhead{ background:var(--color-bg); border:1px solid var(--color-line); border-radius:10px; padding:12px 14px; display:flex; flex-direction:column; gap:3px; justify-content:center; }
+.ms-rowhead b{ font-size:14px; color:var(--color-ink); }
+.ms-rowhead span{ font-size:11px; color:var(--color-muted); }
+.ms-rowhead em{ font-size:11.5px; color:var(--color-blue); font-style:normal; font-weight:600; margin-top:6px; border-top:1px dashed var(--color-line); padding-top:7px; }
+.ms-corp{ border-left:4px solid var(--color-blue); }
+.ms-indiv{ border-left:4px solid #0a7a52; }
+.ms-indiv em{ color:#0a7a52; }
+.ms-cell{ background:var(--color-card); border:1px solid var(--color-line); border-radius:10px; padding:7px 9px; box-shadow:var(--shadow); }
+.ms-cell-tag{ display:none; }
+.ms-list{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:6px; }
+.ms-list li{ background:var(--color-bg); border-radius:7px; padding:8px 11px; }
+.ms-list li b{ display:block; font-size:12.5px; color:var(--color-ink); }
+.ms-list li span{ display:block; font-size:11.5px; color:var(--color-ink-2); margin-top:2px; }
+
+@media (max-width:900px){
+  .ms-drivers{ flex-direction:column; }
+  .ms-arrow{ transform:rotate(90deg); }
+  .ms-matrix{ grid-template-columns:1fr; }
+  .ms-corner, .ms-colhead{ display:none; }
+  .ms-rowhead{ margin-top:8px; }
+  .ms-cell-tag{ display:block; font-size:11px; font-weight:700; color:var(--color-blue); margin-bottom:6px; }
+}

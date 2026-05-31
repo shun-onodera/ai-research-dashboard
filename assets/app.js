@@ -492,9 +492,58 @@
       });
   }
 
+  // ---- 法人×個人 市場構造マップ ----
+  function renderMarketStructure() {
+    var box = document.getElementById("market-structure");
+    if (!box) return;
+    fetch("data/market-structure.json")
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        var drivers = data.drivers || [];
+        var sides = data.sides || [];
+        // ドライバーの流れ（3段階）
+        var dh = '<div class="ms-drivers">';
+        drivers.forEach(function (d, i) {
+          if (i > 0) dh += '<div class="ms-arrow" aria-hidden="true">→</div>';
+          dh += '<div class="ms-driver">' +
+            '<div class="ms-driver-head"><span class="ms-driver-no">' + esc(String(d.no)) + "</span>" +
+            '<span class="ms-driver-title">' + esc(d.title) + "</span>" +
+            '<span class="ms-driver-phase">' + esc(d.phase) + "</span></div>" +
+            '<p class="ms-driver-what">' + esc(d.what) + "</p>" +
+            '<p class="ms-driver-impl"><span class="ms-impl-label">含意</span>' + esc(d.implication) + "</p>" +
+            '<p class="ms-driver-evi">根拠：' + esc(d.evidence) + "</p>" +
+            "</div>";
+        });
+        dh += "</div>";
+        // 需給マトリクス（法人/個人 × 現在進行/これから拡大）
+        function cell(items, tag) {
+          var h = '<div class="ms-cell"><span class="ms-cell-tag">' + esc(tag) + '</span><ul class="ms-list">';
+          items.forEach(function (it) {
+            h += "<li><b>" + esc(it.title) + "</b><span>" + esc(it.detail) + "</span></li>";
+          });
+          h += "</ul></div>";
+          return h;
+        }
+        var mh = '<div class="ms-matrix">';
+        mh += '<div class="ms-corner" aria-hidden="true"></div>';
+        mh += '<div class="ms-colhead ms-col-now">現在進行</div>';
+        mh += '<div class="ms-colhead ms-col-future">これから拡大（1〜3年）</div>';
+        sides.forEach(function (s) {
+          var sideCls = s.key === "corp" ? "ms-corp" : "ms-indiv";
+          mh += '<div class="ms-rowhead ' + sideCls + '"><b>' + esc(s.label) + "</b><span>" + esc(s.desc) + "</span><em>" + esc(s.reading) + "</em></div>";
+          mh += cell(s.now || [], s.label + " × 現在進行");
+          mh += cell(s.future || [], s.label + " × これから拡大");
+        });
+        mh += "</div>";
+        box.innerHTML = dh + mh;
+      })
+      .catch(function () { /* 未配置でも無視 */ });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     initNav();
     initThemePage();
     renderSignalBoard();
+    renderMarketStructure();
   });
 })();
