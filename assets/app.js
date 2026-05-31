@@ -501,6 +501,12 @@
       .then(function (data) {
         var drivers = data.drivers || [];
         var sides = data.sides || [];
+        // 出典の表示（url があれば原典へのリンクにする）
+        function srcHtml(label, url) {
+          if (!label) return "";
+          if (url) return '<a class="ms-src ms-src-link" href="' + esc(url) + '" target="_blank" rel="noopener noreferrer">' + esc(label) + '<span class="ms-ext" aria-hidden="true"> ↗</span></a>';
+          return '<span class="ms-src">' + esc(label) + "</span>";
+        }
         // ドライバーの流れ（3段階）
         var dh = '<div class="ms-drivers">';
         drivers.forEach(function (d, i) {
@@ -509,7 +515,7 @@
           if (Array.isArray(d.evidence)) {
             evi = '<div class="ms-evi"><span class="ms-evi-label">根拠</span><ul class="ms-evi-list">';
             d.evidence.forEach(function (e) {
-              evi += "<li>" + esc(e.fact) + '<span class="ms-src">' + esc(e.source) + "</span></li>";
+              evi += "<li>" + esc(e.fact) + srcHtml(e.source, e.url) + "</li>";
             });
             evi += "</ul></div>";
           } else if (d.evidence) {
@@ -531,7 +537,7 @@
           items.forEach(function (it) {
             h += "<li><b>" + esc(it.title) + "</b><span>" + esc(it.detail) + "</span>" +
               (it.fact ? '<span class="ms-fact">' + esc(it.fact) + "</span>" : "") +
-              (it.source ? '<span class="ms-src">' + esc(it.source) + "</span>" : "") +
+              (it.source ? srcHtml(it.source, it.url) : "") +
               "</li>";
           });
           h += "</ul></div>";

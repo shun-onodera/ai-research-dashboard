@@ -240,6 +240,10 @@ main{ max-width:var(--maxw); margin:0 auto; padding:28px 20px 64px; }
 .ms-evi-list li{ font-size:11px; color:var(--color-ink-2); line-height:1.5; padding-left:11px; position:relative; }
 .ms-evi-list li::before{ content:""; position:absolute; left:0; top:7px; width:5px; height:5px; border-radius:50%; background:var(--color-blue); }
 .ms-src{ display:block; font-size:10px; color:var(--color-muted); margin-top:1px; }
+.ms-src-link{ color:var(--color-blue); text-decoration:none; }
+.ms-src-link:hover{ text-decoration:underline; }
+.ms-ext{ font-size:9px; }
+.ms-evi-list .ms-src{ margin-top:2px; }
 .ms-fact{ display:block; font-size:11px; color:var(--color-ink); margin-top:4px; padding:5px 8px; background:var(--color-blue-50); border-radius:6px; border-left:2px solid var(--color-blue); }
 .ms-indiv .ms-fact{ border-left-color:#0a7a52; background:#e7f4ee; }
 
