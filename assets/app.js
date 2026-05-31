@@ -185,6 +185,17 @@
     if (n == null) return "—";
     return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
+  /* 決算期ラベルを短縮: 「2025年9月期」→「FY25/9」、「FY2024（2024年12月期）」→「FY24/12」 */
+  function fyShort(period) {
+    var s = String(period || "");
+    var m = s.match(/(\d{4})\s*年\s*(\d{1,2})\s*月期/);
+    if (m) return "FY" + m[1].slice(2) + "/" + m[2];
+    var m2 = s.match(/FY(\d{4}).*?(\d{1,2})月期/);
+    if (m2) return "FY" + m2[1].slice(2) + "/" + m2[2];
+    var m3 = s.match(/(\d{4})/);
+    if (m3) return "FY" + m3[1].slice(2);
+    return "";
+  }
   function barRow(label, val, unit, kind) {
     // val(%) を 0〜100 の幅に。負値は0幅＋負記号、上限は40%でフルとして視認性確保
     var n = (val == null) ? null : Number(val);
@@ -199,11 +210,21 @@
       "</div>"
     );
   }
-  function kpiCard(a, catMap) {
+  /* 金額表示（安全HTMLを返す）。百万USDなら円換算（億円）を併記 */
+  function moneyHtml(val, unit, usdjpy) {
+    if (val == null) return "—";
+    var base = esc(fmtNum(val) + (unit || ""));
+    if (unit === "百万USD" && usdjpy) {
+      var oku = (val * usdjpy) / 100; // 百万USD×レート=百万円 → ÷100で億円
+      base += '<span class="kpi-fig-jpy">(約' + esc((Math.round(oku * 10) / 10).toLocaleString()) + '億円)</span>';
+    }
+    return base;
+  }
+  function kpiCard(a, catMap, usdjpy) {
     var col = a.collected || "";
     var catLabel = catMap[a.category] || a.category || "";
-    var rev = a.revenue != null ? (fmtNum(a.revenue) + (a.revenueUnit || "")) : "—";
-    var opp = a.opProfit != null ? (fmtNum(a.opProfit) + (a.opProfitUnit || "")) : "—";
+    var rev = moneyHtml(a.revenue, a.revenueUnit, usdjpy);
+    var opp = moneyHtml(a.opProfit, a.opProfitUnit, usdjpy);
     return (
       '<article class="article kpi-card" data-source="' + esc(a.source_label || "") + '" data-category="' + esc(a.category || "") + '" data-collected="' + esc(col) + '" data-published="' + esc(a.published || "") + '">' +
         '<div class="top">' +
@@ -214,8 +235,8 @@
         "<h3>" + esc(a.title) + "</h3>" +
         '<p class="kpi-period">' + esc(a.fiscalPeriod || a.published || "") + "</p>" +
         '<div class="kpi-figures">' +
-          '<div class="kpi-fig"><span class="kpi-fig-label">売上高</span><span class="kpi-fig-val">' + esc(rev) + "</span></div>" +
-          '<div class="kpi-fig"><span class="kpi-fig-label">営業利益</span><span class="kpi-fig-val">' + esc(opp) + "</span></div>" +
+          '<div class="kpi-fig"><span class="kpi-fig-label">売上高</span><span class="kpi-fig-val">' + rev + "</span></div>" +
+          '<div class="kpi-fig"><span class="kpi-fig-label">営業利益</span><span class="kpi-fig-val">' + opp + "</span></div>" +
         "</div>" +
         '<div class="kpi-bars">' +
           barRow("売上 前年比", a.yoyPct, "%", "growth") +
@@ -245,9 +266,24 @@
     });
     var fys = Object.keys(allFy).map(Number).sort(function (a, b) { return a - b; });
     if (!fys.length) return "";
-    var minV = Math.min.apply(null, vals), maxV = Math.max.apply(null, vals);
-    if (opt && opt.zeroBase) minV = Math.min(0, minV);
-    if (minV === maxV) { maxV = minV + 1; }
+    var rawMin = Math.min.apply(null, vals), rawMax = Math.max.apply(null, vals);
+    if (opt && opt.zeroBase) rawMin = Math.min(0, rawMin);
+    if (rawMin === rawMax) { rawMax = rawMin + 1; }
+    // 切りのよい目盛り（nice numbers）: 0起点で、4分割が綺麗な刻みに丸める
+    function niceStep(range, ticks) {
+      var rough = range / ticks;
+      var mag = Math.pow(10, Math.floor(Math.log(rough) / Math.LN10));
+      var norm = rough / mag;
+      var step = norm <= 1 ? 1 : norm <= 2 ? 2 : norm <= 2.5 ? 2.5 : norm <= 5 ? 5 : 10;
+      return step * mag;
+    }
+    var TICKS = 4;
+    var niceFrom = (opt && opt.zeroBase) ? 0 : null;
+    var baseMin = (niceFrom != null) ? 0 : rawMin;
+    var step = niceStep(rawMax - baseMin, TICKS);
+    var minV = (niceFrom != null) ? 0 : Math.floor(rawMin / step) * step;
+    var maxV = Math.ceil(rawMax / step) * step;
+    if (minV === maxV) maxV = minV + step;
     var span = maxV - minV;
     function xOf(fy) {
       if (fys.length === 1) return (padL + (W - padR)) / 2;
@@ -256,12 +292,14 @@
     }
     function yOf(v) { return padT + (H - padT - padB) * (1 - (v - minV) / span); }
     var parts = [];
-    // y軸グリッド（4本）
-    for (var g = 0; g <= 4; g++) {
-      var gv = minV + span * (g / 4);
+    // y軸グリッド（step刻みで切りのよい目盛り）
+    for (var gv = minV; gv <= maxV + 1e-9; gv += step) {
       var gy = yOf(gv);
+      var label = (opt && opt.pct)
+        ? (Math.round(gv * 10) / 10) + "%"
+        : Math.round(gv).toLocaleString();
       parts.push('<line x1="' + padL + '" y1="' + gy + '" x2="' + (W - padR) + '" y2="' + gy + '" stroke="#eceef2"/>');
-      parts.push('<text x="' + (padL - 6) + '" y="' + (gy + 3) + '" text-anchor="end" font-size="9" fill="#7c8696">' + (opt && opt.pct ? gv.toFixed(1) : Math.round(gv).toLocaleString()) + '</text>');
+      parts.push('<text x="' + (padL - 6) + '" y="' + (gy + 3) + '" text-anchor="end" font-size="9" fill="#7c8696">' + label + '</text>');
     }
     // x軸ラベル
     fys.forEach(function (fy) {
@@ -315,7 +353,8 @@
       return revSorted.map(function (a) {
         var w = Math.max(2, (a.revenue / maxRev) * 100);
         var oku = (a.revenue / 100).toFixed(0); // 百万円→億円概算表示
-        return '<div class="ch-row"><span class="ch-name">' + esc(a.title) + '</span>' +
+        var fy = fyShort(a.published);
+        return '<div class="ch-row"><span class="ch-name">' + esc(a.title) + (fy ? ' <span class="ch-fy">' + esc(fy) + '</span>' : '') + '</span>' +
           '<span class="ch-track"><span class="ch-fill ch-rev" style="width:' + w + '%"></span></span>' +
           '<span class="ch-val">' + esc(fmtNum(a.revenue)) + '<small>百万円</small></span></div>';
       }).join("");
@@ -332,7 +371,8 @@
         var bar = n >= 0
           ? '<span class="ch-fill ch-gpos" style="left:50%;width:' + w + '%"></span>'
           : '<span class="ch-fill ch-gneg" style="right:50%;width:' + w + '%"></span>';
-        return '<div class="ch-row"><span class="ch-name">' + esc(a.title) + '</span>' +
+        var fyg = fyShort(a.published);
+        return '<div class="ch-row"><span class="ch-name">' + esc(a.title) + (fyg ? ' <span class="ch-fy">' + esc(fyg) + '</span>' : '') + '</span>' +
           '<span class="ch-track ch-track-mid">' + bar + '<span class="ch-mid"></span></span>' +
           '<span class="ch-val ' + side + '">' + (n >= 0 ? "+" : "") + n + '%</span></div>';
       }).join("");
@@ -359,7 +399,7 @@
     var isKpi = data.type === "kpi";
     if (isKpi) { wrap.classList.add("kpi-grid"); renderKpiCharts(data.articles || []); renderKpiTimeseries(); }
     wrap.innerHTML = (data.articles || []).map(function (a) {
-      return isKpi ? kpiCard(a, catMap) : articleCard(a, srcMap, catMap);
+      return isKpi ? kpiCard(a, catMap, data.usdjpy) : articleCard(a, srcMap, catMap);
     }).join("");
     Array.prototype.slice.call(wrap.querySelectorAll(".article")).forEach(function (c, i) {
       c.dataset.idx = i;
