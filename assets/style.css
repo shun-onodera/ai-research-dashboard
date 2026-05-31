@@ -110,6 +110,8 @@ main{ max-width:var(--maxw); margin:0 auto; padding:28px 20px 64px; }
 .src-anthropic{ color:#0017c1; background:var(--color-blue-50); border-color:#cdd9f5; }
 .src-openai{ color:#0a7a52; background:#e7f4ee; border-color:#bfe2d2; }
 .src-google{ color:#9a4313; background:#fbeee5; border-color:#f0d6c2; }
+.src-generic{ color:var(--color-blue); background:var(--color-blue-50); border-color:#cdd9f5; }
+.src-note{ font-size:11px; color:var(--color-muted); white-space:nowrap; }
 .cat-tag{ font-size:11px; color:var(--color-muted); background:var(--color-line-2); border-radius:5px; padding:2px 8px; }
 .collected-tag{ font-size:11px; color:var(--color-blue); background:var(--color-blue-50); border:1px solid #cdd9f5; border-radius:5px; padding:1px 7px; margin-left:auto; white-space:nowrap; }
 .article h3{ margin:0; font-size:15.5px; line-height:1.5; }

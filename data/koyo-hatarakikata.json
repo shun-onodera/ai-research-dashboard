@@ -1,0 +1,145 @@
+{
+  "theme": "雇用・働き方",
+  "updated": "2026-05-31",
+  "description": "雇用・働き方・生成AIの労働影響に関する公的機関・調査機関の公表レポートを整理。国内（経済産業省・JILPT・NRI等）と海外（Stanford HAI・OpenAI・BCG・Goldman Sachs等）の調査結果を、出典付きで掲載しています。",
+  "categories": [
+    { "key": "policy", "label": "政策・制度" },
+    { "key": "jobs", "label": "雇用変化" },
+    { "key": "skills", "label": "スキル" },
+    { "key": "productivity", "label": "生産性・導入" }
+  ],
+  "articles": [
+    {
+      "title": "Stanford HAI「AI Index 2026」、AI企業投資が前年比130%増の5,817億ドル",
+      "source_label": "Stanford HAI",
+      "category": "productivity",
+      "published": "2026-04",
+      "collected": "2026-05-31",
+      "summary": "AI Index第9版。世界のAI企業投資は前年比130%増の5,817億ドル、米国の民間投資は127.5%増の3,447億ドルに達した。AIエージェントのタスク成功率は20%から77.3%へ大幅に向上した。",
+      "points": ["世界のAI企業投資 5,817億ドル（前年比130%増）", "米国民間投資 3,447億ドル（127.5%増）", "AIエージェントのタスク成功率 20%→77.3%", "22-25歳ソフトウェア開発者の雇用が前年比約20%減"],
+      "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report",
+      "source": "Stanford HAI, AI Index Report 2026"
+    },
+    {
+      "title": "OpenAI、米国雇用の18%が短期的な自動化リスクと試算",
+      "source_label": "OpenAI",
+      "category": "jobs",
+      "published": "2026-04",
+      "collected": "2026-05-31",
+      "summary": "米国雇用の99.7%をカバーする921職種を分析する新フレームワークを発表。技術的自動化可能性・人間必要性・需要弾力性・実使用データの4次元で評価し、米国雇用の18%が短期的な自動化リスクにあると結論づけた。",
+      "points": ["分析対象は921職種（米国雇用の99.7%をカバー）", "評価軸は4次元（自動化可能性・人間必要性・需要弾力性・実使用データ）", "米国雇用の18%が短期的な自動化リスク", "需要弾力性の高い職種は需要拡大で雇用が増える可能性"],
+      "url": "https://cdn.openai.com/pdf/the-ai-jobs-transition-framework_report.pdf",
+      "source": "OpenAI, The AI Jobs Transition Framework"
+    },
+    {
+      "title": "Anthropic、AIに代替されやすい職種ほど雇用不安が3倍",
+      "source_label": "Anthropic",
+      "category": "jobs",
+      "published": "2026-04",
+      "collected": "2026-05-31",
+      "summary": "Claude.aiユーザー81,000名へのインタビューに基づくAIの経済影響分析。AIに代替される可能性が高い職種の上位25%は、下位と比べて約3倍の雇用不安を抱えていた。生産性向上は高賃金層と低賃金層に二極集中する傾向が確認された。",
+      "points": ["81,000名のインタビューに基づく分析", "代替可能性が高い職種上位25%は下位比で約3倍の雇用不安", "初期キャリア層の不安が顕著", "生産性向上は高賃金層と低賃金層に二極集中"],
+      "url": "https://www.anthropic.com/research/81k-economics",
+      "source": "Anthropic Economic Index, What 81,000 people told us about the economics of AI"
+    },
+    {
+      "title": "Goldman Sachs、AIは月2.5万人を代替・9,000人を創出（米国）",
+      "source_label": "Goldman Sachs",
+      "category": "jobs",
+      "published": "2026-04",
+      "collected": "2026-05-31",
+      "summary": "AIが米国で月あたり約2.5万人分の雇用を代替する一方、拡張領域で月あたり約9,000人分を創出すると分析。差し引き月1.6万人の雇用減で、雇用喪失は若年・未経験層に集中する。",
+      "points": ["月あたり約2.5万人を代替・約9,000人を創出（差し引き月1.6万人減）", "電話交換手・保険損害査定員・請求回収担当が代替リスク最大", "雇用喪失は若年・未経験層に集中", "20-30代技術系職種の失業率は2025年初来約3pt上昇"],
+      "url": "https://www.goldmansachs.com/insights/articles/the-jobs-ai-is-likely-to-boost-and-those-it-may-disrupt",
+      "source": "Goldman Sachs Research, The Jobs AI is Likely to Boost—and Those It May Disrupt"
+    },
+    {
+      "title": "BCG、米国求人の半数超が3年以内に大きく変容",
+      "source_label": "BCG",
+      "category": "jobs",
+      "published": "2026-04",
+      "collected": "2026-05-31",
+      "summary": "米国の約1,500職種・1億6,500万件の求人データを分析。米国の求人の半数以上が3年以内に大きく変容し、5年以内に10〜15%の職が消滅する可能性がある一方、AIは大多数の職を「再形成」するとの知見を示した。",
+      "points": ["約1,500職種・1億6,500万件の求人データを分析", "求人の半数以上が3年以内に大きく変容", "5年以内に10〜15%の職が消滅する可能性", "支配的シナリオは「消滅」より「再形成」"],
+      "url": "https://www.bcg.com/publications/2026/ai-will-reshape-more-jobs-than-it-replaces",
+      "source": "BCG Henderson Institute, AI Will Reshape More Jobs Than It Replaces"
+    },
+    {
+      "title": "HBS／HBR、自動化親和性の高い職種で求人13%減・分析/技術/創造系で20%増",
+      "source_label": "HBR",
+      "category": "jobs",
+      "published": "2026-03",
+      "collected": "2026-05-31",
+      "summary": "生成AI登場後の求人データを分析した実証研究。自動化親和性の高い職種の求人が13%減少した一方、分析・技術・創造系職種の求人は20%増加し、労働需要の構造的シフトを定量で確認した。",
+      "points": ["自動化親和性の高い職種の求人が13%減少", "分析・技術・創造系職種の求人は20%増加", "生成AI登場後の求人データに基づく実証研究", "労働需要の構造的シフトを定量で確認"],
+      "url": "https://hbr.org/2026/03/research-how-ai-is-changing-the-labor-market",
+      "source": "Harvard Business School / HBR, Research: How AI Is Changing the Labor Market"
+    },
+    {
+      "title": "ブルッキングス、学位なし7,000万人にAIが新たなキャリア経路を開く可能性",
+      "source_label": "Brookings",
+      "category": "skills",
+      "published": "2026-04",
+      "collected": "2026-05-31",
+      "summary": "AI普及が学位を持たない就労者（STAR：米国で7,000万人超）のキャリアパスに与える影響を検討。より良い雇用への経路が開く可能性と、逆に経路が閉ざされるリスクの両面を分析した。",
+      "points": ["対象は学位なし就労者（STAR）米国7,000万人超", "AIがより良い雇用への新たな経路を開く可能性", "同時に経路が閉ざされるリスクも分析", "学位ベースからスキルベース採用への移行をAIが加速させうる"],
+      "url": "https://www.brookings.edu/articles/how-ai-may-reshape-career-pathways-to-better-jobs/",
+      "source": "Brookings Institution, How AI may reshape career pathways to better jobs"
+    },
+    {
+      "title": "経済産業省、デジタルスキル標準ver.2.0でデータ系3ロールを追加",
+      "source_label": "経済産業省",
+      "category": "skills",
+      "published": "2026-04",
+      "collected": "2026-05-31",
+      "summary": "2022年策定のDXリテラシー標準・DX推進スキル標準を改訂し、デジタルスキル標準ver.2.0を公表。「データスチュワード」「データエンジニア」「データアーキテクト」の3ロールを追加し、AI実装・運用・ガバナンスのスキルを拡充した国家標準文書。",
+      "points": ["2022年策定の標準を改訂", "データスチュワード・データエンジニア・データアーキテクトの3ロールを追加", "AI実装・運用・AIガバナンスのスキルを拡充", "国家公認のスキル標準"],
+      "url": "https://www.meti.go.jp/press/2026/04/20260416002/20260416002.html",
+      "source": "経済産業省, デジタルスキル標準ver.2.0（DSSver.2.0）"
+    },
+    {
+      "title": "経済産業省、人的資本可視化指針を約3年半ぶりに改訂",
+      "source_label": "経済産業省",
+      "category": "policy",
+      "published": "2026-03",
+      "collected": "2026-05-31",
+      "summary": "2022年8月の初版から約3年半ぶりに人的資本可視化指針を改訂。2026年3月期から適用される府令改正（従業員給与等の決定方針の開示義務化）に対応し、経営戦略と人材戦略・人的資本投資の連動方法を具体化した。",
+      "points": ["初版（2022年8月）から約3年半ぶりの改訂", "2026年3月期から従業員給与等の決定方針の開示が義務化", "経営戦略と人材戦略・人的資本投資の連動を具体化", "上場企業の人的資本開示の質的底上げを狙う"],
+      "url": "https://www.meti.go.jp/press/2025/03/20260323003/20260323003.html",
+      "source": "経済産業省, 人的資本可視化指針（改訂版）"
+    },
+    {
+      "title": "野村総合研究所、日米中独4か国のAI利用を比較調査",
+      "source_label": "NRI",
+      "category": "skills",
+      "published": "2026-04",
+      "collected": "2026-05-31",
+      "summary": "2025年9月に日・米・中・独の4か国でAI利用の国際比較調査を実施。国内就業者2,344名の回答をもとに企業内AI活用の実態・課題・投資意向を分析し、日本企業のAI活用が相対的に遅延している実態を定量化した。",
+      "points": ["2025年9月に日米中独4か国で実施", "国内就業者2,344名が回答", "企業内AI活用の実態・課題・投資意向を分析", "日本のAI活用が4か国比較で相対的に遅延"],
+      "url": "https://www.nri.com/jp/media/journal/20260416.html",
+      "source": "野村総合研究所, AI利用に関する国際比較調査（日・米・中・独4か国）"
+    },
+    {
+      "title": "JILPT、2025年の実質賃金指数が4年連続マイナス（-1.3%）",
+      "source_label": "JILPT",
+      "category": "policy",
+      "published": "2026-04",
+      "collected": "2026-05-31",
+      "summary": "ビジネス・レーバー・トレンド2026年4月号で、2025年の実質賃金指数が前年比-1.3%と4年連続のマイナスになったことを示した。あわせてOECD報告を踏まえた日本の職場におけるAI活用実態の国際比較を特集している。",
+      "points": ["2025年の実質賃金指数は前年比-1.3%", "実質賃金は4年連続のマイナス", "OECD報告を踏まえたAI活用実態の国際比較を特集", "日本のAI活用が国際比較で遅れている構造を分析"],
+      "url": "https://www.jil.go.jp/kokunai/blt/backnumber/2026/04/index.html",
+      "source": "労働政策研究・研修機構（JILPT）, ビジネス・レーバー・トレンド2026年4月号"
+    },
+    {
+      "title": "三菱UFJリサーチ&コンサルティング、人手不足が深刻な業種ほどAI導入が遅い",
+      "source_label": "MURC",
+      "category": "productivity",
+      "published": "2026-04",
+      "collected": "2026-05-31",
+      "summary": "帝国データバンク調査を用いて企業の人手不足感と生成AI導入率の関係を分析。情報通信業で約40%、小売業で約20%が導入済みである一方、建設・運輸など深刻な人手不足業種での導入が低水準にとどまることを指摘した。",
+      "points": ["情報通信業で約40%が生成AIを導入済み", "小売業で約20%が導入済み", "建設・運輸など人手不足が深刻な業種の導入は低水準", "人手不足が深刻な業種ほどAI導入が遅れる構造的ねじれ"],
+      "url": "https://www.murc.jp/library/economyresearch/periodicals/graph_month/watch_2604/",
+      "source": "三菱UFJリサーチ&コンサルティング, 今月のグラフ（2026年4月）"
+    }
+  ]
+}

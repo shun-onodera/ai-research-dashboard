@@ -20,8 +20,9 @@
       <ul>
         <li><a href="../index.html">ホーム</a></li>
         <li><a href="index.html" class="active">AI活用</a></li>
-        <li><span class="soon">競合調査</span></li>
-        <li><span class="soon">雇用・働き方</span></li>
+        <li><a href="../kyogo-chosa/index.html">競合調査</a></li>
+        <li><a href="../kyogo-kpi/index.html">競合KPI</a></li>
+        <li><a href="../koyo-hatarakikata/index.html">雇用・働き方</a></li>
       </ul>
     </nav>
   </div>
@@ -46,33 +47,7 @@
   <h2 class="section-title">収録記事</h2>
   <p class="section-sub">情報源・カテゴリで絞り込めます。各カードの「原文」から公式記事へ移動します。</p>
 
-  <div class="filters" role="group" aria-label="絞り込み">
-    <div class="grp">
-      <span class="lbl">情報源</span>
-      <button class="chip active" data-group="source" data-value="all">すべて</button>
-      <button class="chip" data-group="source" data-value="anthropic">Anthropic</button>
-      <button class="chip" data-group="source" data-value="openai">OpenAI</button>
-      <button class="chip" data-group="source" data-value="google">Google</button>
-    </div>
-    <div class="grp">
-      <span class="lbl">カテゴリ</span>
-      <button class="chip active" data-group="category" data-value="all">すべて</button>
-      <button class="chip" data-group="category" data-value="agent">エージェント設計</button>
-      <button class="chip" data-group="category" data-value="prompt">プロンプト設計</button>
-      <button class="chip" data-group="category" data-value="context">コンテキスト設計</button>
-      <button class="chip" data-group="category" data-value="tool">ツール設計</button>
-      <button class="chip" data-group="category" data-value="usecase">業務活用</button>
-      <button class="chip" data-group="category" data-value="output">成果物デザイン</button>
-    </div>
-    <div class="grp sort-grp">
-      <span class="lbl">並び替え</span>
-      <label class="sort-label" for="sort">収集日</label>
-      <select id="sort" class="sort-select" aria-label="収集日で並び替え">
-        <option value="new">新しい順</option>
-        <option value="old">古い順</option>
-      </select>
-    </div>
-  </div>
+  <div id="filters" class="filters" role="group" aria-label="絞り込み・並び替え"><!-- JSで描画 --></div>
 
   <div id="articles" class="card-grid"><!-- JSで描画 --></div>
   <p class="empty">該当する記事がありません。絞り込みを変更してください。</p>
