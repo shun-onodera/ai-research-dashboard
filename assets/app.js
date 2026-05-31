@@ -420,6 +420,60 @@
     if (desc && data.description) desc.textContent = data.description;
   }
 
+  /* 変化シグナル・ボード（トップpage の #signal-board に描画） */
+  var SIG_CLASS = { ai_commerce: "sig-ai", upstream: "sig-up", ma_alliance: "sig-ma", regulation_macro: "sig-reg" };
+  function renderSignalBoard() {
+    var box = document.getElementById("signal-board");
+    if (!box) return;
+    fetch("data/signals.json")
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (data) {
+        if (!data) return;
+        var typeMap = {};
+        (data.types || []).forEach(function (t) { typeMap[t.key] = t.label; });
+        // フィルタチップ
+        var chips = '<button class="chip active" data-sigtype="all">すべて</button>' +
+          (data.types || []).map(function (t) {
+            return '<button class="chip" data-sigtype="' + esc(t.key) + '">' + esc(t.label) + "</button>";
+          }).join("");
+        // 日付の新しい順
+        var sigs = (data.signals || []).slice().sort(function (a, b) {
+          return (a.date < b.date ? 1 : a.date > b.date ? -1 : 0);
+        });
+        var cards = sigs.map(function (s) {
+          var cls = SIG_CLASS[s.type] || "sig-reg";
+          var imp = s.impact === "high"
+            ? '<span class="sig-impact sig-high">影響大</span>'
+            : '<span class="sig-impact sig-med">影響中</span>';
+          return '<article class="sig-card ' + cls + '" data-sigtype="' + esc(s.type) + '">' +
+            '<div class="sig-head"><span class="sig-type">' + esc(typeMap[s.type] || s.type) + "</span>" + imp +
+              '<span class="sig-date">' + esc(s.date || "") + "</span></div>" +
+            "<h3 class=\"sig-title\">" + esc(s.title) + "</h3>" +
+            '<p class="sig-fact">' + esc(s.fact) + "</p>" +
+            '<p class="sig-signal"><span class="sig-signal-label">何の予兆か</span>' + esc(s.signal) + "</p>" +
+            '<p class="sig-actor">' + esc(s.actor || "") + (s.source ? ' ・ <span class="sig-src">' + esc(s.source) + "</span>" : "") + "</p>" +
+            "</article>";
+        }).join("");
+        box.innerHTML =
+          '<div class="sig-filters" id="sig-filters">' + chips + "</div>" +
+          '<div class="sig-grid" id="sig-grid">' + cards + "</div>";
+        // フィルタ動作
+        box.querySelectorAll(".chip").forEach(function (chip) {
+          chip.addEventListener("click", function () {
+            box.querySelectorAll(".chip").forEach(function (c) { c.classList.remove("active"); });
+            chip.classList.add("active");
+            var v = chip.getAttribute("data-sigtype");
+            box.querySelectorAll(".sig-card").forEach(function (c) {
+              c.style.display = (v === "all" || c.getAttribute("data-sigtype") === v) ? "" : "none";
+            });
+          });
+        });
+        document.querySelectorAll("[data-sig-updated]").forEach(function (el) { el.textContent = data.updated || ""; });
+        document.querySelectorAll("[data-sig-count]").forEach(function (el) { el.textContent = (data.signals || []).length; });
+      })
+      .catch(function (e) { console.error(e); });
+  }
+
   function initThemePage() {
     var path = dataPath();
     if (!path) return;
@@ -441,5 +495,6 @@
   document.addEventListener("DOMContentLoaded", function () {
     initNav();
     initThemePage();
+    renderSignalBoard();
   });
 })();

@@ -173,6 +173,33 @@ main{ max-width:var(--maxw); margin:0 auto; padding:28px 20px 64px; }
 .kpi-card .foot{ border-top:none; padding-top:4px; }
 .kpi-card .src-note{ font-size:10.5px; }
 
+/* ---------- 変化シグナル・ボード ---------- */
+.sig-filters{ display:flex; flex-wrap:wrap; gap:6px; margin:0 0 16px; }
+.sig-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+@media (max-width:980px){ .sig-grid{ grid-template-columns:repeat(2,1fr); } }
+@media (max-width:680px){ .sig-grid{ grid-template-columns:1fr; } }
+.sig-card{ background:var(--color-card); border:1px solid var(--color-line); border-left-width:4px; border-radius:12px; padding:14px 16px; box-shadow:var(--shadow); display:flex; flex-direction:column; gap:7px; }
+.sig-card.sig-ai{ border-left-color:#2f6db0; }
+.sig-card.sig-up{ border-left-color:#0a7a52; }
+.sig-card.sig-ma{ border-left-color:#9a4313; }
+.sig-card.sig-reg{ border-left-color:#7a3da0; }
+.sig-head{ display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+.sig-type{ font-size:10.5px; font-weight:700; padding:2px 8px; border-radius:5px; background:var(--color-line-2); color:var(--color-ink-2); }
+.sig-card.sig-ai .sig-type{ background:var(--color-blue-50); color:#2f6db0; }
+.sig-card.sig-up .sig-type{ background:#e7f4ee; color:#0a7a52; }
+.sig-card.sig-ma .sig-type{ background:#fbeee5; color:#9a4313; }
+.sig-card.sig-reg .sig-type{ background:#f3ecf9; color:#7a3da0; }
+.sig-impact{ font-size:10px; font-weight:700; padding:1px 7px; border-radius:4px; border:1px solid; }
+.sig-high{ color:#a23a3a; background:#fbeaea; border-color:#efc9c9; }
+.sig-med{ color:#6b7280; background:#f3f5f8; border-color:#e3e8ef; }
+.sig-date{ margin-left:auto; font-size:11px; color:var(--color-muted); font-weight:600; }
+.sig-title{ font-size:14px; margin:2px 0 0; line-height:1.45; }
+.sig-fact{ font-size:12px; color:var(--color-ink-2); margin:0; }
+.sig-signal{ font-size:12px; color:var(--color-ink); margin:2px 0 0; background:#f6f8fb; border-radius:8px; padding:8px 10px; }
+.sig-signal-label{ display:block; font-size:10px; font-weight:700; color:var(--color-blue); margin-bottom:2px; letter-spacing:.04em; }
+.sig-actor{ font-size:10.5px; color:var(--color-muted); margin:auto 0 0; padding-top:6px; border-top:1px solid var(--color-line-2); }
+.sig-src{ color:var(--color-muted); }
+
 /* ---------- footer ---------- */
 .site-footer{ border-top:1px solid var(--color-line); background:#fff; }
 .site-footer .inner{ max-width:var(--maxw); margin:0 auto; padding:22px 20px; font-size:12px; color:var(--color-muted); display:flex; flex-direction:column; gap:6px; }
