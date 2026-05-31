@@ -64,6 +64,14 @@
       <button class="chip" data-group="category" data-value="usecase">業務活用</button>
       <button class="chip" data-group="category" data-value="output">成果物デザイン</button>
     </div>
+    <div class="grp sort-grp">
+      <span class="lbl">並び替え</span>
+      <label class="sort-label" for="sort">収集日</label>
+      <select id="sort" class="sort-select" aria-label="収集日で並び替え">
+        <option value="new">新しい順</option>
+        <option value="old">古い順</option>
+      </select>
+    </div>
   </div>
 
   <div id="articles" class="card-grid"><!-- JSで描画 --></div>

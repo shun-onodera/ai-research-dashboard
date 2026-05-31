@@ -41,14 +41,16 @@
 
   function articleCard(a, srcLabel, catLabel) {
     var pub = a.published ? a.published : "—";
+    var col = a.collected ? a.collected : "";
     var points = (a.points || []).map(function (pt) {
       return "<li>" + esc(pt) + "</li>";
     }).join("");
     return (
-      '<article class="article" data-source="' + esc(a.source) + '" data-category="' + esc(a.category) + '">' +
+      '<article class="article" data-source="' + esc(a.source) + '" data-category="' + esc(a.category) + '" data-collected="' + esc(col) + '">' +
         '<div class="top">' +
           '<span class="src-tag ' + (SRC_CLASS[a.source] || "") + '">' + esc(srcLabel) + "</span>" +
           '<span class="cat-tag">' + esc(catLabel) + "</span>" +
+          (col ? '<span class="collected-tag">収集 ' + esc(col) + "</span>" : "") +
         "</div>" +
         "<h3>" + esc(a.title) + "</h3>" +
         '<p class="summary">' + esc(a.summary) + "</p>" +
@@ -94,6 +96,28 @@
     });
   }
 
+  function initSort() {
+    var sel = document.getElementById("sort");
+    var wrap = document.getElementById("articles");
+    if (!sel || !wrap) return;
+    function apply() {
+      var cards = Array.prototype.slice.call(wrap.querySelectorAll(".article"));
+      var mode = sel.value;
+      cards.sort(function (a, b) {
+        var av = a.getAttribute("data-collected") || "";
+        var bv = b.getAttribute("data-collected") || "";
+        // 同収集日内は元の並び（DOM順）を保つため index で安定化
+        if (av === bv) {
+          return (Number(a.dataset.idx) || 0) - (Number(b.dataset.idx) || 0);
+        }
+        return mode === "old" ? (av < bv ? -1 : 1) : (av > bv ? -1 : 1);
+      });
+      cards.forEach(function (c) { wrap.appendChild(c); });
+    }
+    sel.addEventListener("change", apply);
+    apply(); // 初期: 新しい順
+  }
+
   function renderArticles(data) {
     var wrap = document.getElementById("articles");
     if (!wrap) return;
@@ -103,7 +127,12 @@
     wrap.innerHTML = (data.articles || []).map(function (a) {
       return articleCard(a, srcMap[a.source] || a.source, catMap[a.category] || a.category);
     }).join("");
+    // 安定ソート用に元の並び順を記録
+    Array.prototype.slice.call(wrap.querySelectorAll(".article")).forEach(function (c, i) {
+      c.dataset.idx = i;
+    });
     initFilters();
+    initSort();
   }
 
   function setUpdated(data) {
