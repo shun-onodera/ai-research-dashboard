@@ -234,6 +234,14 @@ main{ max-width:var(--maxw); margin:0 auto; padding:28px 20px 64px; }
 .ms-driver-impl{ font-size:12px; color:var(--color-ink); margin:0; }
 .ms-impl-label{ display:inline-block; font-size:10px; font-weight:700; color:var(--color-blue); background:var(--color-blue-50); border-radius:4px; padding:0 6px; margin-right:6px; }
 .ms-driver-evi{ font-size:10.5px; color:var(--color-muted); margin:6px 0 0; margin-top:auto; }
+.ms-evi{ margin-top:auto; padding-top:9px; border-top:1px dashed var(--color-line); }
+.ms-evi-label{ display:inline-block; font-size:10px; font-weight:700; color:var(--color-ink-2); background:var(--color-line-2); border-radius:4px; padding:1px 7px; margin-bottom:6px; }
+.ms-evi-list{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:6px; }
+.ms-evi-list li{ font-size:11px; color:var(--color-ink-2); line-height:1.5; padding-left:11px; position:relative; }
+.ms-evi-list li::before{ content:""; position:absolute; left:0; top:7px; width:5px; height:5px; border-radius:50%; background:var(--color-blue); }
+.ms-src{ display:block; font-size:10px; color:var(--color-muted); margin-top:1px; }
+.ms-fact{ display:block; font-size:11px; color:var(--color-ink); margin-top:4px; padding:5px 8px; background:var(--color-blue-50); border-radius:6px; border-left:2px solid var(--color-blue); }
+.ms-indiv .ms-fact{ border-left-color:#0a7a52; background:#e7f4ee; }
 
 .ms-matrix{ display:grid; grid-template-columns:172px 1fr 1fr; gap:12px; align-items:stretch; }
 .ms-colhead{ font-size:13px; font-weight:800; color:#fff; border-radius:8px; padding:9px 14px; text-align:center; align-self:start; }

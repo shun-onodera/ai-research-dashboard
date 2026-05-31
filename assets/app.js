@@ -505,13 +505,23 @@
         var dh = '<div class="ms-drivers">';
         drivers.forEach(function (d, i) {
           if (i > 0) dh += '<div class="ms-arrow" aria-hidden="true">→</div>';
+          var evi = "";
+          if (Array.isArray(d.evidence)) {
+            evi = '<div class="ms-evi"><span class="ms-evi-label">根拠</span><ul class="ms-evi-list">';
+            d.evidence.forEach(function (e) {
+              evi += "<li>" + esc(e.fact) + '<span class="ms-src">' + esc(e.source) + "</span></li>";
+            });
+            evi += "</ul></div>";
+          } else if (d.evidence) {
+            evi = '<p class="ms-driver-evi">根拠：' + esc(d.evidence) + "</p>";
+          }
           dh += '<div class="ms-driver">' +
             '<div class="ms-driver-head"><span class="ms-driver-no">' + esc(String(d.no)) + "</span>" +
             '<span class="ms-driver-title">' + esc(d.title) + "</span>" +
             '<span class="ms-driver-phase">' + esc(d.phase) + "</span></div>" +
             '<p class="ms-driver-what">' + esc(d.what) + "</p>" +
             '<p class="ms-driver-impl"><span class="ms-impl-label">含意</span>' + esc(d.implication) + "</p>" +
-            '<p class="ms-driver-evi">根拠：' + esc(d.evidence) + "</p>" +
+            evi +
             "</div>";
         });
         dh += "</div>";
@@ -519,7 +529,10 @@
         function cell(items, tag) {
           var h = '<div class="ms-cell"><span class="ms-cell-tag">' + esc(tag) + '</span><ul class="ms-list">';
           items.forEach(function (it) {
-            h += "<li><b>" + esc(it.title) + "</b><span>" + esc(it.detail) + "</span></li>";
+            h += "<li><b>" + esc(it.title) + "</b><span>" + esc(it.detail) + "</span>" +
+              (it.fact ? '<span class="ms-fact">' + esc(it.fact) + "</span>" : "") +
+              (it.source ? '<span class="ms-src">' + esc(it.source) + "</span>" : "") +
+              "</li>";
           });
           h += "</ul></div>";
           return h;
