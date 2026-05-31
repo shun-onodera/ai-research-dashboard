@@ -232,6 +232,77 @@
     );
   }
 
+  /* 時系列の折れ線グラフ（SVG・CDN非依存）を #kpi-timeseries に描画 */
+  var TS_COLORS = ["#0017c1", "#0a7a52", "#9a4313", "#5b9bd5", "#6b7280", "#7a3da0", "#b08900", "#c0392b", "#117a8b"];
+  function buildLineChart(seriesList, valueKey, opt) {
+    // seriesList: [{company, points:[{label,fy,<valueKey>}]}], valueKey: "revenue"|"opMargin"
+    var W = 560, H = 280, padL = 52, padR = 92, padT = 16, padB = 30;
+    var allFy = {}, vals = [];
+    seriesList.forEach(function (s) {
+      s.points.forEach(function (p) {
+        if (p[valueKey] != null) { allFy[p.fy] = (p.label || p.fy); vals.push(p[valueKey]); }
+      });
+    });
+    var fys = Object.keys(allFy).map(Number).sort(function (a, b) { return a - b; });
+    if (!fys.length) return "";
+    var minV = Math.min.apply(null, vals), maxV = Math.max.apply(null, vals);
+    if (opt && opt.zeroBase) minV = Math.min(0, minV);
+    if (minV === maxV) { maxV = minV + 1; }
+    var span = maxV - minV;
+    function xOf(fy) {
+      if (fys.length === 1) return (padL + (W - padR)) / 2;
+      var i = fys.indexOf(fy);
+      return padL + (W - padL - padR) * (i / (fys.length - 1));
+    }
+    function yOf(v) { return padT + (H - padT - padB) * (1 - (v - minV) / span); }
+    var parts = [];
+    // y軸グリッド（4本）
+    for (var g = 0; g <= 4; g++) {
+      var gv = minV + span * (g / 4);
+      var gy = yOf(gv);
+      parts.push('<line x1="' + padL + '" y1="' + gy + '" x2="' + (W - padR) + '" y2="' + gy + '" stroke="#eceef2"/>');
+      parts.push('<text x="' + (padL - 6) + '" y="' + (gy + 3) + '" text-anchor="end" font-size="9" fill="#7c8696">' + (opt && opt.pct ? gv.toFixed(1) : Math.round(gv).toLocaleString()) + '</text>');
+    }
+    // x軸ラベル
+    fys.forEach(function (fy) {
+      parts.push('<text x="' + xOf(fy) + '" y="' + (H - 10) + '" text-anchor="middle" font-size="9" fill="#7c8696">' + esc(allFy[fy]) + '</text>');
+    });
+    // 各社の線＋点＋右端ラベル
+    seriesList.forEach(function (s, idx) {
+      var c = TS_COLORS[idx % TS_COLORS.length];
+      var pts = s.points.filter(function (p) { return p[valueKey] != null; });
+      if (!pts.length) return;
+      var coords = pts.map(function (p) { return [xOf(p.fy), yOf(p[valueKey])]; });
+      if (coords.length > 1) {
+        var d = coords.map(function (c2, i) { return (i === 0 ? "M" : "L") + c2[0].toFixed(1) + "," + c2[1].toFixed(1); }).join(" ");
+        parts.push('<path d="' + d + '" fill="none" stroke="' + c + '" stroke-width="2"/>');
+      }
+      coords.forEach(function (c2) { parts.push('<circle cx="' + c2[0].toFixed(1) + '" cy="' + c2[1].toFixed(1) + '" r="3" fill="' + c + '"/>'); });
+      var last = coords[coords.length - 1];
+      parts.push('<text x="' + (last[0] + 6) + '" y="' + (last[1] + 3) + '" font-size="9" fill="' + c + '" font-weight="700">' + esc(s.company) + '</text>');
+    });
+    return '<svg viewBox="0 0 ' + W + ' ' + H + '" width="100%" role="img" aria-label="時系列グラフ">' + parts.join("") + '</svg>';
+  }
+
+  function renderKpiTimeseries() {
+    var box = document.getElementById("kpi-timeseries");
+    if (!box) return;
+    fetch("../data/kyogo-kpi-timeseries.json")
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (ts) {
+        if (!ts) return;
+        var multi = ts.series.filter(function (s) { return s.points.filter(function (p) { return p.revenue != null; }).length > 1; });
+        var rev = buildLineChart(ts.series, "revenue", { zeroBase: true });
+        var mgn = buildLineChart(ts.series.filter(function (s) { return s.points.some(function (p) { return p.opMargin != null; }); }), "opMargin", { pct: true });
+        box.innerHTML =
+          '<div class="kpi-chart-card"><h3 class="kpi-chart-title">売上高の推移（国内・通期）</h3>' + rev +
+            '<p class="kpi-chart-note">単位：百万円。複数期あるのはINTLOOP・ギークス・TWOSTONE&Sons・ランサーズ（折れ線）。他社はNotion DBに通期1期のみのため点表示。決算期は会社ごとに異なる。</p></div>' +
+          '<div class="kpi-chart-card"><h3 class="kpi-chart-title">営業利益率の推移（国内・通期）</h3>' + mgn +
+            '<p class="kpi-chart-note">単位：%。利益率の改善/悪化の方向が分かる。ランサーズは増収より利益率改善が先行、ギークスはゲーム事業整理で一度低下後に回復。</p></div>';
+      })
+      .catch(function (e) { console.error(e); });
+  }
+
   /* 全社横断の比較バーチャート（#kpi-charts に描画） */
   function renderKpiCharts(articles) {
     var box = document.getElementById("kpi-charts");
@@ -286,7 +357,7 @@
     (data.sources || []).forEach(function (s) { srcMap[s.key] = s.label; });
     (data.categories || []).forEach(function (c) { catMap[c.key] = c.label; });
     var isKpi = data.type === "kpi";
-    if (isKpi) { wrap.classList.add("kpi-grid"); renderKpiCharts(data.articles || []); }
+    if (isKpi) { wrap.classList.add("kpi-grid"); renderKpiCharts(data.articles || []); renderKpiTimeseries(); }
     wrap.innerHTML = (data.articles || []).map(function (a) {
       return isKpi ? kpiCard(a, catMap) : articleCard(a, srcMap, catMap);
     }).join("");

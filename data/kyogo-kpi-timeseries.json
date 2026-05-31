@@ -1,0 +1,41 @@
+{
+  "updated": "2026-05-31",
+  "unit": "百万円",
+  "note": "各社の通期売上高・営業利益率の推移。Notion競合業績データDB（IRベース）に通期レコードが複数期あるもののみ折れ線。1期のみの社は最新点を表示。決算期は会社ごとに異なる。",
+  "series": [
+    { "company": "INTLOOP", "code": "9556", "points": [
+      { "fy": 2024, "label": "FY24", "revenue": 27077, "opMargin": 5.56 },
+      { "fy": 2025, "label": "FY25", "revenue": 33551, "opMargin": 6.51 }
+    ]},
+    { "company": "クラウドワークス", "code": "3900", "points": [
+      { "fy": 2025, "label": "FY25", "revenue": 22657, "opMargin": 7.76 }
+    ]},
+    { "company": "ギークス", "code": "7060", "points": [
+      { "fy": 2023, "label": "FY23", "revenue": 15997, "opMargin": 3.68 },
+      { "fy": 2024, "label": "FY24", "revenue": 23739, "opMargin": 0.38 },
+      { "fy": 2025, "label": "FY25", "revenue": 25162, "opMargin": 1.97 }
+    ]},
+    { "company": "TWOSTONE&Sons", "code": "7352", "points": [
+      { "fy": 2024, "label": "FY24", "revenue": 14290, "opMargin": 3.32 },
+      { "fy": 2025, "label": "FY25", "revenue": 18077, "opMargin": 4.5 }
+    ]},
+    { "company": "みらいワークス", "code": "6563", "points": [
+      { "fy": 2025, "label": "FY25", "revenue": 11144, "opMargin": 2.5 }
+    ]},
+    { "company": "ビザスク", "code": "4490", "points": [
+      { "fy": 2026, "label": "FY26", "revenue": 9975, "opMargin": 13.4 }
+    ]},
+    { "company": "ココナラ", "code": "4176", "points": [
+      { "fy": 2025, "label": "FY25", "revenue": 9411, "opMargin": 2.7 }
+    ]},
+    { "company": "サーキュレーション", "code": "7379", "points": [
+      { "fy": 2025, "label": "FY25", "revenue": 8801, "opMargin": 5.35 }
+    ]},
+    { "company": "ランサーズ", "code": "4484", "points": [
+      { "fy": 2023, "label": "FY23", "revenue": 4808, "opMargin": null },
+      { "fy": 2024, "label": "FY24", "revenue": 4573, "opMargin": 1.64 },
+      { "fy": 2025, "label": "FY25", "revenue": 4589, "opMargin": 2.38 },
+      { "fy": 2026, "label": "FY26", "revenue": 5437, "opMargin": 3.7 }
+    ]}
+  ]
+}
