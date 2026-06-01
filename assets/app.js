@@ -586,6 +586,7 @@
     "変化シグナル・ボード": "#signal-board",
     "法人×個人 市場構造マップ": "#market-structure",
     "競合調査": "kyogo-chosa/index.html",
+    "AIと雇用": "koyo-hatarakikata/index.html",
     "雇用・働き方": "koyo-hatarakikata/index.html"
   };
   function renderHomeSummary() {
@@ -640,7 +641,7 @@
           ? '<a class="rd-srclink" href="' + esc(d.url) + '" target="_blank" rel="noopener noreferrer">原典を開く（' + esc(d.source_label || d.publisher || "出典") + "） ↗</a>"
           : "";
         var backHref = d.backHref || "../koyo-hatarakikata/index.html";
-        var backLabel = d.backLabel || "雇用・働き方の一覧へ戻る";
+        var backLabel = d.backLabel || "AIと雇用の一覧へ戻る";
         var head =
           '<div class="rd-head">' +
             '<a class="rd-back" href="' + esc(backHref) + '">← ' + esc(backLabel) + "</a>" +

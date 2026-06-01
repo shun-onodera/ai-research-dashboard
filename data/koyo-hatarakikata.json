@@ -1,7 +1,7 @@
 {
-  "theme": "雇用・働き方",
+  "theme": "AIと雇用",
   "updated": "2026-05-31",
-  "description": "雇用・働き方・生成AIの労働影響に関する公的機関・調査機関の公表レポートを整理。国内（経済産業省・JILPT・NRI等）と海外（Stanford HAI・OpenAI・BCG・Goldman Sachs等）の調査結果を、出典付きで掲載しています。",
+  "description": "生成AIが雇用・職・スキルに与える影響に関する調査機関・研究機関の分析レポートを整理。国内（経済産業省・JILPT・NRI等）と海外（Stanford HAI・OpenAI・BCG・Goldman Sachs等）の分析を、出典付きで掲載しています。",
   "categories": [
     {
       "key": "policy",
