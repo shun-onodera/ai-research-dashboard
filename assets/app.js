@@ -521,12 +521,16 @@
           } else if (d.evidence) {
             evi = '<p class="ms-driver-evi">根拠：' + esc(d.evidence) + "</p>";
           }
+          var flD = d.impact_fl
+            ? '<p class="ms-fl"><span class="ms-fl-label">副業・FLマッチングへの影響</span>' + esc(d.impact_fl) + "</p>"
+            : "";
           dh += '<div class="ms-driver">' +
             '<div class="ms-driver-head"><span class="ms-driver-no">' + esc(String(d.no)) + "</span>" +
             '<span class="ms-driver-title">' + esc(d.title) + "</span>" +
             '<span class="ms-driver-phase">' + esc(d.phase) + "</span></div>" +
             '<p class="ms-driver-what">' + esc(d.what) + "</p>" +
             '<p class="ms-driver-impl"><span class="ms-impl-label">含意</span>' + esc(d.implication) + "</p>" +
+            flD +
             evi +
             "</div>";
         });
@@ -538,6 +542,7 @@
             h += "<li><b>" + esc(it.title) + "</b><span>" + esc(it.detail) + "</span>" +
               (it.fact ? '<span class="ms-fact">' + esc(it.fact) + "</span>" : "") +
               (it.source ? srcHtml(it.source, it.url) : "") +
+              (it.impact_fl ? '<span class="ms-fl"><span class="ms-fl-label">副業・FLマッチングへの影響</span>' + esc(it.impact_fl) + "</span>" : "") +
               "</li>";
           });
           h += "</ul></div>";
