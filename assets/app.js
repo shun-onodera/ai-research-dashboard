@@ -573,6 +573,44 @@
       .catch(function () { /* 未配置でも無視 */ });
   }
 
+  // ---- ホーム: いま市場で起きていること（横断要点）----
+  var LINK_MAP = {
+    "変化シグナル・ボード": "#signal-board",
+    "法人×個人 市場構造マップ": "#market-structure",
+    "競合調査": "kyogo-chosa/index.html",
+    "雇用・働き方": "koyo-hatarakikata/index.html"
+  };
+  function renderHomeSummary() {
+    var box = document.getElementById("home-summary");
+    if (!box) return;
+    fetch("data/home-summary.json")
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (d) {
+        if (!d) return;
+        var cards = (d.takeaways || []).map(function (t, i) {
+          var href = LINK_MAP[t.link] || "";
+          var linkHtml = href
+            ? '<a class="hs-link" href="' + esc(href) + '">' + esc(t.link) + " →</a>"
+            : "";
+          return '<article class="hs-card">' +
+            '<span class="hs-num">' + (i + 1) + "</span>" +
+            "<h3>" + esc(t.title) + "</h3>" +
+            "<p>" + esc(t.body) + "</p>" +
+            '<p class="hs-evi">根拠：' + esc(t.evidence) + "</p>" +
+            linkHtml +
+            "</article>";
+        }).join("");
+        box.innerHTML =
+          '<div class="hs-lead">' +
+            (d.headline ? "<h3>" + esc(d.headline) + "</h3>" : "") +
+            (d.lead ? "<p>" + esc(d.lead) + "</p>" : "") +
+          "</div>" +
+          '<div class="hs-grid">' + cards + "</div>";
+        if (d.updated) document.querySelectorAll("[data-home-updated]").forEach(function (el) { el.textContent = d.updated; });
+      })
+      .catch(function () { /* 未配置でも無視 */ });
+  }
+
   // ---- レポート詳細ページ（report/index.html?r=slug）----
   function getQuery(name) {
     var m = new RegExp("[?&]" + name + "=([^&]+)").exec(location.search);
@@ -647,6 +685,7 @@
   document.addEventListener("DOMContentLoaded", function () {
     initNav();
     initThemePage();
+    renderHomeSummary();
     renderSignalBoard();
     renderMarketStructure();
     renderReportDetail();
