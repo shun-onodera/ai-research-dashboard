@@ -62,7 +62,6 @@
       return "<li>" + esc(pt) + "</li>";
     }).join("");
     var pubText = esc(a.publisher || a.org || "");
-    if (pub) pubText += (pubText ? "・" : "") + esc(pub);
     var srcClass = SRC_CLASS[a.source] || "src-generic";
     var link = a.url
       ? '<a class="source-link" href="' + esc(a.url) + '" target="_blank" rel="noopener noreferrer">出典</a>'
@@ -75,7 +74,10 @@
         '<div class="top">' +
           '<span class="src-tag ' + srcClass + '">' + esc(label) + "</span>" +
           (catLabel ? '<span class="cat-tag">' + esc(catLabel) + "</span>" : "") +
-          (col ? '<span class="collected-tag">収集 ' + esc(col) + "</span>" : "") +
+          '<span class="date-tags">' +
+            (pub ? '<span class="published-tag">公開 ' + esc(pub) + "</span>" : "") +
+            (col ? '<span class="collected-tag">収集 ' + esc(col) + "</span>" : "") +
+          "</span>" +
         "</div>" +
         "<h3>" + esc(a.title) + "</h3>" +
         '<p class="summary">' + esc(a.summary) + "</p>" +

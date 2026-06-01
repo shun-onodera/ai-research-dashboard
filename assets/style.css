@@ -113,7 +113,9 @@ main{ max-width:var(--maxw); margin:0 auto; padding:28px 20px 64px; }
 .src-generic{ color:var(--color-blue); background:var(--color-blue-50); border-color:#cdd9f5; }
 .src-note{ font-size:11px; color:var(--color-muted); white-space:nowrap; }
 .cat-tag{ font-size:11px; color:var(--color-muted); background:var(--color-line-2); border-radius:5px; padding:2px 8px; }
-.collected-tag{ font-size:11px; color:var(--color-blue); background:var(--color-blue-50); border:1px solid #cdd9f5; border-radius:5px; padding:1px 7px; margin-left:auto; white-space:nowrap; }
+.date-tags{ margin-left:auto; display:inline-flex; gap:6px; flex-wrap:wrap; justify-content:flex-end; }
+.collected-tag{ font-size:11px; color:var(--color-blue); background:var(--color-blue-50); border:1px solid #cdd9f5; border-radius:5px; padding:1px 7px; white-space:nowrap; }
+.published-tag{ font-size:11px; color:var(--color-ink-2); background:var(--color-line-2); border:1px solid var(--color-line); border-radius:5px; padding:1px 7px; white-space:nowrap; }
 .article h3{ margin:0; font-size:15.5px; line-height:1.5; }
 .article .pub{ font-size:11.5px; color:var(--color-muted); }
 .article .summary{ font-size:13px; color:var(--color-ink-2); margin:0; }
