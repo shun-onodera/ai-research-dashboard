@@ -25,6 +25,17 @@
   ],
   "signals": [
     {
+      "title": "サーキュレーション、PKSHAとAIマッチング「PRONAVI now」で人選工程をAI化",
+      "type": "ai_commerce",
+      "impact": "high",
+      "actor": "サーキュレーション / PKSHA",
+      "date": "2025-11",
+      "fact": "親会社PKSHAと共同開発したAIマッチング機能「PRONAVI now」を運用開始。蓄積した22,527件の案件データとPKSHAのAIで、商談中に人材要件とプロ人材のスキルを照合し、マッチ度をその場でリアルタイム表示する。",
+      "signal": "これまでコンサルタントの経験に頼っていた人選（探索・照合・マッチ度判定）の中核工程そのものがAIへ移り、蓄積データの量と質が競争資源になる段階に入りつつある。",
+      "source": "サーキュレーション ニュースリリース（2025.11.14）／PKSHA Technology",
+      "url": "https://circu.co.jp/news/20251114-6117/"
+    },
+    {
       "title": "サーキュレーション、プロ人材の知見をAI商品化（AI Powered Pro）",
       "type": "ai_commerce",
       "impact": "high",
