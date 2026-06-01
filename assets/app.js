@@ -646,6 +646,38 @@
       .catch(function () { /* 未配置でも無視 */ });
   }
 
+  // ---- 競合AI戦略 5類型マップ（トップpage の #competitor-ai-matrix）----
+  function renderCompetitorAiMatrix() {
+    var box = document.getElementById("competitor-ai-matrix");
+    if (!box) return;
+    fetch("data/competitor-ai-matrix.json")
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (data) {
+        if (!data) return;
+        var types = data.types || [];
+        var cards = types.map(function (t) {
+          var exs = (t.examples || []).map(function (e) {
+            var actor = '<span class="cai-actor">' + esc(e.actor) + "</span>";
+            var factHtml = e.deepdive
+              ? '<a class="cai-fact-link" href="report/index.html?r=' + esc(e.deepdive) + '">' + esc(e.fact) + " →</a>"
+              : '<span class="cai-fact">' + esc(e.fact) + "</span>";
+            return '<li class="cai-ex">' + actor + factHtml + "</li>";
+          }).join("");
+          return '<article class="cai-card' + (t.highlight ? " cai-highlight" : "") + '">' +
+            '<div class="cai-head"><span class="cai-key">' + esc(t.key) + "</span>" +
+              '<h3 class="cai-label">' + esc(t.label) + "</h3>" +
+              (t.highlight ? '<span class="cai-threat">最重要脅威</span>' : "") + "</div>" +
+            '<p class="cai-desc">' + esc(t.desc) + "</p>" +
+            '<ul class="cai-list">' + exs + "</ul>" +
+            "</article>";
+        }).join("");
+        box.innerHTML = '<div class="cai-grid">' + cards + "</div>" +
+          (data.note ? '<p class="cai-note">' + esc(data.note) + "</p>" : "");
+        document.querySelectorAll("[data-cai-updated]").forEach(function (el) { el.textContent = data.updated || ""; });
+      })
+      .catch(function () { /* 未配置でも無視 */ });
+  }
+
   // ---- レポート詳細ページ（report/index.html?r=slug）----
   function getQuery(name) {
     var m = new RegExp("[?&]" + name + "=([^&]+)").exec(location.search);
@@ -722,6 +754,7 @@
     initThemePage();
     renderHomeSummary();
     renderSignalBoard();
+    renderCompetitorAiMatrix();
     renderMarketStructure();
     renderReportDetail();
   });
