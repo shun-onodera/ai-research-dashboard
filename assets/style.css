@@ -298,6 +298,9 @@ main{ max-width:var(--maxw); margin:0 auto; padding:28px 20px 64px; }
 .cai-ex{ background:var(--color-bg); border-radius:8px; padding:8px 11px; }
 .cai-highlight .cai-ex{ background:#fff; border:1px solid #f3e0e0; }
 .cai-actor{ display:block; font-size:12px; font-weight:700; color:var(--color-ink); margin-bottom:2px; }
+.cai-actor-link{ text-decoration:none; color:var(--color-blue); }
+.cai-actor-link:hover{ text-decoration:underline; }
+.cai-actor-link .ms-ext{ font-size:9px; }
 .cai-fact{ display:block; font-size:11.5px; line-height:1.6; color:var(--color-ink-2); }
 .cai-fact-link{ display:block; font-size:11.5px; line-height:1.6; color:var(--color-blue); text-decoration:none; }
 .cai-fact-link:hover{ text-decoration:underline; }

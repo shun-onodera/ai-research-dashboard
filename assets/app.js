@@ -657,7 +657,11 @@
         var types = data.types || [];
         var cards = types.map(function (t) {
           var exs = (t.examples || []).map(function (e) {
-            var actor = '<span class="cai-actor">' + esc(e.actor) + "</span>";
+            // 社名: 外部urlがあれば出典リンク
+            var actor = e.url
+              ? '<a class="cai-actor cai-actor-link" href="' + esc(e.url) + '" target="_blank" rel="noopener noreferrer">' + esc(e.actor) + '<span class="ms-ext" aria-hidden="true"> ↗</span></a>'
+              : '<span class="cai-actor">' + esc(e.actor) + "</span>";
+            // 事実: deepdiveがあれば詳細ページへ
             var factHtml = e.deepdive
               ? '<a class="cai-fact-link" href="report/index.html?r=' + esc(e.deepdive) + '">' + esc(e.fact) + " →</a>"
               : '<span class="cai-fact">' + esc(e.fact) + "</span>";

@@ -1,26 +1,33 @@
 {
   "updated": "2026-06-02",
   "title": "競合AI戦略 5類型マップ",
-  "description": "プロ人材マッチング各社のAI活用を、目的別に5類型（A〜E）で整理。各社が公表した取り組みを、公開情報（決算資料・IR・公式リリース・報道）に基づき分類した。特にE型（AI拡張サービス商品化）は、人選を超えて顧客業務に入り込む動きとして注目される。",
-  "note": "本マップは公開された事実の外形的な分類であり、各社の優劣評価ではない。1社が複数類型にまたがる動きを持つ場合は、最も象徴的な類型に配置している。",
+  "description": "プロ人材・フリーランス・IT人材マッチング各社のAI活用を、目的別に5類型（A〜E）で整理。各社が公表した取り組みを、公開情報（公式リリース・決算資料・PR TIMES・報道）に基づき分類した。各社は複数類型にまたがる動きを持つため、代表的な事例をそれぞれの類型に配置している。特にE型（AI拡張サービス商品化）は、人選を超えて顧客業務に入り込む動きとして注目される。",
+  "note": "本マップは公開された事実の外形的な分類であり、各社の優劣評価ではない。事例は2024〜2026年に各社が公表したもの。「詳細→」は本サイト内の詳細分析、社名のリンクは外部の出典へ移動する。",
   "types": [
     {
       "key": "A",
       "label": "A. マッチング精度向上",
       "desc": "AIで候補探索・要件照合・マッチ度判定の精度や速度を高め、成約率を上げる。マッチング事業の中核工程そのものをAI化する動き。",
       "examples": [
-        { "actor": "サーキュレーション / PKSHA", "fact": "AIマッチング「PRONAVI now」。約2.3万件の案件データで商談中にマッチ度をリアルタイム表示", "deepdive": "circu-pronavi-now" },
-        { "actor": "ビザスク", "fact": "「AI Scout」が5分以内に適合度リストを提示。発掘〜契約まで全工程をAI支援", "deepdive": "visasq-ai-fullprocess" },
-        { "actor": "Upwork", "fact": "AIアシスタント「Uma」を統合し提案〜契約を短縮。検索・マッチングAI企業Objective AIを買収", "deepdive": "upwork-uma-ai" }
+        { "actor": "サーキュレーション / PKSHA", "fact": "「PRONAVI now」。約2.3万件の案件データで商談中にマッチ度をリアルタイム表示（2025-11）", "deepdive": "circu-pronavi-now" },
+        { "actor": "ビザスク", "fact": "「AI Scout」。77万人超のエキスパートから適合候補を5分以内に提示（2025-03〜グローバル展開）", "url": "https://prtimes.jp/main/html/rd/p/000000473.000015233.html" },
+        { "actor": "ランサーズ", "fact": "「AIエージェント検索」。チャットで意図を汲み最適な個人・パッケージを提案（MCP/RAG採用、2025-10）", "url": "https://www.lancers.co.jp/news/pr/24391/" },
+        { "actor": "レバテック", "fact": "「AIチャット案件検索（β）」。会話形式の条件からAIが最適案件を自動抽出（2025-12）", "url": "https://prtimes.jp/main/html/rd/p/000000827.000010591.html" },
+        { "actor": "Upwork", "fact": "AIワークエージェント「Uma」。候補ショートリスト受領までの中央値時間を75%超短縮（2025）", "url": "https://www.globenewswire.com/news-release/2025/07/23/3120261/0/en/Upwork-Evolves-Uma-AI-into-AI-Work-Agent-Advances-Human-AI-Collaboration-Across-Hiring-and-Work-Management.html" },
+        { "actor": "LinkedIn", "fact": "AI採用エージェント「Hiring Assistant」。候補パイプライン自動構築、2025-09に全世界提供", "url": "https://news.linkedin.com/2025/hiring-assistant-globally-available" },
+        { "actor": "Fiverr", "fact": "「Fiverr Go」のPersonal AI Assistant。個人の受注・初動対応をAIが代行（2025-02）", "url": "https://www.globenewswire.com/news-release/2025/02/18/3028180/0/en/Fiverr-Unveils-Fiverr-Go-a-Visionary-AI-Platform-that-Puts-Creators-Front-and-Center.html" }
       ]
     },
     {
       "key": "B",
       "label": "B. 業務効率化",
-      "desc": "社内オペレーション（営業・提案・事務）をAIで効率化し、生産性を高める。顧客に渡す成果物ではなく、自社の生産性が主目的。",
+      "desc": "社内オペレーション（営業・提案・事務）をAIで効率化し、生産性を高める。顧客に渡す成果物ではなく自社の生産性が主目的。",
       "examples": [
-        { "actor": "ランサーズ", "fact": "社内AIツール群（Jimin AI・Rakuapo AI・AI大学等）を内製し社内のAIネイティブ化を推進", "deepdive": "lancers-ax-company" },
-        { "actor": "クラウドワークス", "fact": "AI-BPO・ハイブリッド体制で提供工程を効率化（DXコンサルの民主化）", "deepdive": "crowdworks-dx-pivot" }
+        { "actor": "ランサーズ", "fact": "社内「生成AI普及80%プロジェクト」で活用率90%・月約2,000時間削減。業務自動化「ジムインAI」も投入（2024-2025）", "url": "https://www.lancers.co.jp/news/pr/24268/" },
+        { "actor": "サーキュレーション", "fact": "業務に合わせたAIアプリを内製し全社導入。社員の約70%が毎日利用、1人1日平均79分削減（2025-07）", "url": "https://prtimes.jp/main/html/rd/p/000000002.000170494.html" },
+        { "actor": "ギークス", "fact": "「AIステートメント」と統合型AIエージェント「GEECHS AI」で社内業務効率化・事業基盤刷新（2025-11）", "url": "https://geechs.com/newsrelease/20251104_geechs_aistatement/" },
+        { "actor": "クラウドワークス", "fact": "法人向け「AI for biz」。自社営業でも1人41%の工数削減を公表（2024-07）", "url": "https://crowdworks.co.jp/news/senn04mhkx4/" },
+        { "actor": "Upwork", "fact": "社内開発コードの35%超をAIが生成、マッチング品質評価LLMで反復コストを70%超削減（2025）", "url": "https://www.globenewswire.com/news-release/2025/11/03/3179833/0/en/Upwork-Reports-Third-Quarter-2025-Financial-Results.html" }
       ]
     },
     {
@@ -28,19 +35,26 @@
       "label": "C. 高付加価値領域シフト",
       "desc": "マッチング単体から、上流のDX/AX支援・コンサルティングへ事業の重心を移し、高単価・AI関連需要を取りに行く。",
       "examples": [
-        { "actor": "クラウドワークス", "fact": "マッチングとDXコンサルの2軸へ構造改革。DXコンサルへ最大25.5億円の成長投資", "deepdive": "crowdworks-dx-pivot" },
-        { "actor": "ランサーズ", "fact": "「AIでアップデートするAXカンパニー」へ。AXコンサル子会社を設立し一気通貫支援", "deepdive": "lancers-ax-company" },
-        { "actor": "INTLOOP", "fact": "VISION2030で「テクノロジーと人を統合したソリューションプラットフォーマー」を標榜", "deepdive": "intloop-vision2030" },
-        { "actor": "ギークス", "fact": "IT人材マッチングから中小企業向けDX支援（デジショク）へ領域拡大", "deepdive": "geechs-dx-expansion" }
+        { "actor": "クラウドワークス", "fact": "DXコンサルへ最大25.5億円投資。「AX戦略室」設立・「AI実装伴走プラン」提供（2025-2026）", "deepdive": "crowdworks-dx-pivot" },
+        { "actor": "ランサーズ", "fact": "「AXカンパニー」化を表明。戦略コンサル子会社を設立しAX人員を1年で5倍計画（2025-05）", "deepdive": "lancers-ax-company" },
+        { "actor": "INTLOOP", "fact": "VISION2030で「テクノロジーと人を統合したソリューションPF」へ。FY30売上1,000億円目標", "deepdive": "intloop-vision2030" },
+        { "actor": "ギークス", "fact": "「GEECHS JOB」をAX支援プラットフォームへ進化宣言。AI/AXソリューションチーム新設（2026-06）", "url": "https://prtimes.jp/main/html/rd/p/000000342.000000486.html" },
+        { "actor": "ビザスク", "fact": "ストックマークと提携し、AIリサーチ〜エキスパートヒアリングをワンストップ提供（2025-04）", "url": "https://corp.visasq.co.jp/archives/19819" },
+        { "actor": "Upwork", "fact": "Bubty・Ascen買収でAI子会社「Lifted」創設。企業の人材管理基盤へ（エンタープライズTAM 650億ドル、2025-08）", "url": "https://www.globenewswire.com/news-release/2025/08/07/3129091/0/en/Upwork-Reports-Second-Quarter-2025-Financial-Results.html" }
       ]
     },
     {
       "key": "D",
       "label": "D. AI関連人材供給",
-      "desc": "AI実装・データ系の専門人材そのものを供給する。AI関連職種・AX実装案件の供給力を成長機会にする。",
+      "desc": "AI実装・データ系の専門人材そのものを供給・育成する。AI人材特化サービス・AI職種マッチング・リスキリングなど。各社が一斉に参入する激戦領域。",
       "examples": [
-        { "actor": "INTLOOP", "fact": "M&A・VC投資・JV共創で技術系グループを拡充し、戦略コンサル〜IT開発まで一貫対応", "deepdive": "intloop-comtec-ma" },
-        { "actor": "TWOSTONE&Sons", "fact": "ロールアップM&Aでエンジニア供給から上流コンサル・受託開発へ川上展開", "deepdive": "twostone-rollup-ma" }
+        { "actor": "クラウドワークス", "fact": "AI特化型マッチング「AIクラウドワークス」を発表。30種以上の職種、事前登録2日で定員超過、2026-07リリース予定", "url": "https://crowdworks.co.jp/news/oo-gssosbypi/" },
+        { "actor": "ギークス", "fact": "登録24,000人超をAXコンサル・FDE・PMへリスキリングしデータベースを質的転換（2026-06）", "url": "https://prtimes.jp/main/html/rd/p/000000342.000000486.html" },
+        { "actor": "TWOSTONE&Sons", "fact": "子会社が生成AI特化マッチング「Midworks for AI」を開始。PoC〜実運用の人材を供給（2025-06）", "url": "https://twostone-s.com/news/16566/" },
+        { "actor": "ランサーズ", "fact": "AI人材登録が1万人突破（1年で約2.5倍）。学習PF「ランサーズAI大学」で育成も（2025）", "url": "https://www.lancers.co.jp/news/pr/24322/" },
+        { "actor": "Algomatic（DMMグループ）", "fact": "生成AI求人特化エージェント「Algomatic Freelance」。独自のAI人材スキルマップを開発（2025-04）", "url": "https://algomatic.jp/news/release_algomatic_freelance_20250423" },
+        { "actor": "リヴァイ（C&Rグループ）", "fact": "生成AIプロ特化の人材サービス。プロンプトエンジニア等を派遣・紹介・PSCの3形態で供給（2025-06）", "url": "https://ascii.jp/elem/000/004/294/4294903/" },
+        { "actor": "INTLOOP", "fact": "M&A・VC投資で技術系グループを拡充し、戦略コンサル〜IT開発まで一貫対応（2025）", "deepdive": "intloop-comtec-ma" }
       ]
     },
     {
@@ -49,7 +63,12 @@
       "desc": "プロ人材の知見をAIに実装し、サービス商品として外販する。人選を超えて顧客業務に入り込み、今後のデファクトになり得る最重要の動き。",
       "highlight": true,
       "examples": [
-        { "actor": "サーキュレーション / PKSHA", "fact": "「AI Powered Pro」。プロ人材の知見をAIに実装し営業現場を支援。人事・コンサル・法務へ横展開を計画", "deepdive": "circu-ai-powered-pro" }
+        { "actor": "サーキュレーション / PKSHA", "fact": "「AI Powered Pro」。プロ人材の知見をAIに実装し営業現場を支援。人事・コンサル・法務へ横展開計画", "deepdive": "circu-ai-powered-pro" },
+        { "actor": "サーキュレーション / PKSHA", "fact": "「AI Powered Worker」構想。人とAIの協働で個人の知見を拡張する次世代の働き方を社会実装（2025-12）", "url": "https://circu.co.jp/news/20251203-6142/" },
+        { "actor": "INTLOOP / オルツ", "fact": "コンサルタント・エンジニアのデジタルクローンを生成し、知見をAIとして提供する事業を協業検討（2024-10）", "url": "https://prtimes.jp/main/html/rd/p/000000114.000023636.html" },
+        { "actor": "ランサーズ", "fact": "企業向け「Lancers 生成AI Solution」。自社運用ノウハウとAIアシスタントを外販（2024-11）", "url": "https://www.lancers.co.jp/news/pr/23834/" },
+        { "actor": "クラウドワークス", "fact": "「AI実装伴走プラン」。プロンプト設計〜実装までプロ人材が一任で代行（2026-03、2日で定員超過）", "url": "https://prtimes.jp/main/html/rd/p/000000309.000050142.html" },
+        { "actor": "Fiverr", "fact": "「Fiverr Go」のPersonal AI Creation Model。個人の作風をAI化し権利を保持したまま外販（2025-02）", "url": "https://www.globenewswire.com/news-release/2025/02/18/3028180/0/en/Fiverr-Unveils-Fiverr-Go-a-Visionary-AI-Platform-that-Puts-Creators-Front-and-Center.html" }
       ]
     }
   ]
