@@ -261,6 +261,28 @@ main{ max-width:var(--maxw); margin:0 auto; padding:28px 20px 64px; }
 .rd-table tbody tr:nth-child(even){ background:var(--color-bg); }
 .rd-foot{ font-size:12px; color:var(--color-muted); line-height:1.8; margin-top:18px; padding-top:14px; border-top:1px solid var(--color-line-2); }
 
+/* ---------- このサイトについて（about） ---------- */
+.ab-card{ background:var(--color-card); border:1px solid var(--color-line); border-radius:var(--radius-lg); padding:18px 22px; box-shadow:var(--shadow); }
+.ab-list{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:12px; }
+.ab-list li{ padding-left:14px; position:relative; }
+.ab-list li::before{ content:""; position:absolute; left:0; top:8px; width:6px; height:6px; border-radius:50%; background:var(--color-blue); }
+.ab-list li b{ display:block; font-size:14px; color:var(--color-ink); margin-bottom:2px; }
+.ab-list li span{ display:block; font-size:13px; line-height:1.8; color:var(--color-ink-2); }
+.ab-plain{ font-size:13.5px; line-height:1.9; color:var(--color-ink-2); margin:0; }
+.ab-theme{ background:var(--color-card); border:1px solid var(--color-line); border-left:4px solid var(--color-blue); border-radius:var(--radius-lg); padding:16px 20px; box-shadow:var(--shadow); margin-bottom:14px; }
+.ab-theme-head{ display:flex; align-items:center; gap:11px; margin-bottom:6px; }
+.ab-theme-head .ico{ flex:0 0 auto; min-width:34px; height:34px; padding:0 8px; border-radius:8px; background:var(--color-blue-50); color:var(--color-blue); display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:800; }
+.ab-theme-head h3{ font-size:16px; font-weight:800; color:var(--color-ink); margin:0; }
+.ab-desc{ font-size:13px; color:var(--color-ink-2); margin:0 0 12px; line-height:1.7; }
+.ab-table{ width:100%; border-collapse:collapse; font-size:13px; }
+.ab-table th{ text-align:left; vertical-align:top; width:96px; padding:8px 12px; background:var(--color-bg); border:1px solid var(--color-line); color:var(--color-ink-2); font-weight:700; white-space:nowrap; }
+.ab-table td{ padding:8px 12px; border:1px solid var(--color-line); color:var(--color-ink-2); line-height:1.8; }
+@media (max-width:680px){
+  .ab-table, .ab-table tbody, .ab-table tr, .ab-table th, .ab-table td{ display:block; width:auto; }
+  .ab-table th{ border-bottom:none; }
+  .ab-table td{ border-top:none; margin-bottom:8px; }
+}
+
 /* ---------- footer ---------- */
 .site-footer{ border-top:1px solid var(--color-line); background:#fff; }
 .site-footer .inner{ max-width:var(--maxw); margin:0 auto; padding:22px 20px; font-size:12px; color:var(--color-muted); display:flex; flex-direction:column; gap:6px; }
