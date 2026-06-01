@@ -513,11 +513,35 @@
       .then(function (data) {
         var drivers = data.drivers || [];
         var sides = data.sides || [];
+        var foundations = data.foundations || [];
         // 出典の表示（url があれば原典へのリンクにする）
         function srcHtml(label, url) {
           if (!label) return "";
           if (url) return '<a class="ms-src ms-src-link" href="' + esc(url) + '" target="_blank" rel="noopener noreferrer">' + esc(label) + '<span class="ms-ext" aria-hidden="true"> ↗</span></a>';
           return '<span class="ms-src">' + esc(label) + "</span>";
+        }
+        // 市場の前提（土台）の帯
+        var fh = "";
+        if (foundations.length) {
+          var FCLS = { labor: "ms-fnd-labor", rule: "ms-fnd-rule" };
+          fh = '<div class="ms-fnd-wrap">' +
+            (data.foundationsNote ? '<p class="ms-fnd-note">' + esc(data.foundationsNote) + "</p>" : "") +
+            '<div class="ms-fnd-grid">';
+          foundations.forEach(function (f) {
+            var evi = "";
+            if (Array.isArray(f.evidence) && f.evidence.length) {
+              evi = '<ul class="ms-fnd-evi">';
+              f.evidence.forEach(function (e) { evi += "<li>" + esc(e.fact) + srcHtml(e.source, e.url) + "</li>"; });
+              evi += "</ul>";
+            }
+            fh += '<div class="ms-fnd ' + (FCLS[f.key] || "") + '">' +
+              '<h3 class="ms-fnd-title">' + esc(f.title) + "</h3>" +
+              '<p class="ms-fnd-what">' + esc(f.what) + "</p>" +
+              '<p class="ms-fnd-impl"><span class="ms-impl-label">含意</span>' + esc(f.implication) + "</p>" +
+              evi +
+              "</div>";
+          });
+          fh += "</div><div class=\"ms-fnd-arrow\" aria-hidden=\"true\">この土台の上で、下の生成AIドライバーが需給を動かす ↓</div></div>";
         }
         // ドライバーの流れ（3段階）
         var dh = '<div class="ms-drivers">';
@@ -576,7 +600,7 @@
           mh += cell(s.future || [], s.label + " × これから拡大");
         });
         mh += "</div>";
-        box.innerHTML = dh + mh;
+        box.innerHTML = fh + dh + mh;
       })
       .catch(function () { /* 未配置でも無視 */ });
   }

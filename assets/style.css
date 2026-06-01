@@ -283,6 +283,22 @@ main{ max-width:var(--maxw); margin:0 auto; padding:28px 20px 64px; }
 /* ---------- print / reduced motion ---------- */
 @media (prefers-reduced-motion: reduce){ *{ transition:none !important; scroll-behavior:auto; } }
 
+/* ---------- 市場の前提（土台）帯 ---------- */
+.ms-fnd-wrap{ margin-bottom:22px; }
+.ms-fnd-note{ font-size:12.5px; color:var(--color-ink-2); margin:0 0 12px; line-height:1.7; }
+.ms-fnd-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
+@media (max-width:760px){ .ms-fnd-grid{ grid-template-columns:1fr; } }
+.ms-fnd{ background:var(--color-bg); border:1px solid var(--color-line); border-top:3px solid var(--color-muted); border-radius:var(--radius-lg); padding:15px 17px; }
+.ms-fnd-labor{ border-top-color:#0a7a52; }
+.ms-fnd-rule{ border-top-color:#7a3da0; }
+.ms-fnd-title{ font-size:14.5px; font-weight:800; color:var(--color-ink); margin:0 0 8px; }
+.ms-fnd-what{ font-size:12.5px; line-height:1.8; color:var(--color-ink-2); margin:0 0 8px; }
+.ms-fnd-impl{ font-size:12.5px; line-height:1.8; color:var(--color-ink); margin:0 0 8px; }
+.ms-fnd-evi{ list-style:none; margin:0; padding:8px 0 0; border-top:1px dashed var(--color-line); display:flex; flex-direction:column; gap:6px; }
+.ms-fnd-evi li{ font-size:11px; color:var(--color-ink-2); line-height:1.5; padding-left:11px; position:relative; }
+.ms-fnd-evi li::before{ content:""; position:absolute; left:0; top:7px; width:5px; height:5px; border-radius:50%; background:var(--color-muted); }
+.ms-fnd-arrow{ text-align:center; font-size:12px; font-weight:700; color:var(--color-muted); margin-top:12px; }
+
 /* ---------- 法人×個人 市場構造マップ ---------- */
 .ms-drivers{ display:flex; align-items:stretch; gap:8px; margin-bottom:24px; }
 .ms-driver{ flex:1; background:var(--color-card); border:1px solid var(--color-line); border-top:3px solid var(--color-blue); border-radius:var(--radius); padding:13px 15px; display:flex; flex-direction:column; gap:6px; box-shadow:var(--shadow); }
