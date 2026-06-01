@@ -530,6 +530,9 @@
           } else if (d.evidence) {
             evi = '<p class="ms-driver-evi">根拠：' + esc(d.evidence) + "</p>";
           }
+          var jpD = d.japan
+            ? '<p class="ms-jp"><span class="ms-jp-label">日本市場での意味</span>' + esc(d.japan) + "</p>"
+            : "";
           var flD = d.impact_fl
             ? '<p class="ms-fl"><span class="ms-fl-label">副業・FLマッチングへの影響</span>' + esc(d.impact_fl) + "</p>"
             : "";
@@ -539,6 +542,7 @@
             '<span class="ms-driver-phase">' + esc(d.phase) + "</span></div>" +
             '<p class="ms-driver-what">' + esc(d.what) + "</p>" +
             '<p class="ms-driver-impl"><span class="ms-impl-label">含意</span>' + esc(d.implication) + "</p>" +
+            jpD +
             flD +
             evi +
             "</div>";
@@ -551,6 +555,7 @@
             h += "<li><b>" + esc(it.title) + "</b><span>" + esc(it.detail) + "</span>" +
               (it.fact ? '<span class="ms-fact">' + esc(it.fact) + "</span>" : "") +
               (it.source ? srcHtml(it.source, it.url) : "") +
+              (it.japan ? '<span class="ms-jp"><span class="ms-jp-label">日本市場での意味</span>' + esc(it.japan) + "</span>" : "") +
               (it.impact_fl ? '<span class="ms-fl"><span class="ms-fl-label">副業・FLマッチングへの影響</span>' + esc(it.impact_fl) + "</span>" : "") +
               "</li>";
           });
