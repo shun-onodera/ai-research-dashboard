@@ -587,7 +587,9 @@
     "法人×個人 市場構造マップ": "#market-structure",
     "競合調査": "kyogo-chosa/index.html",
     "AIと雇用": "koyo-hatarakikata/index.html",
-    "雇用・働き方": "koyo-hatarakikata/index.html"
+    "雇用・働き方": "koyo-hatarakikata/index.html",
+    "労働市場データ": "roudou-shijo/index.html",
+    "法務・コンプライアンス": "houmu-compliance/index.html"
   };
   function renderHomeSummary() {
     var box = document.getElementById("home-summary");
