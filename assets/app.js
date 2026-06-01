@@ -67,6 +67,9 @@
     var link = a.url
       ? '<a class="source-link" href="' + esc(a.url) + '" target="_blank" rel="noopener noreferrer">出典</a>'
       : (a.source ? '<span class="src-note">' + esc(a.source) + "</span>" : "");
+    var detail = a.deepdive
+      ? '<a class="detail-link" href="../report/index.html?r=' + esc(a.deepdive) + '">詳細を読む（日本市場示唆つき）→</a>'
+      : "";
     return (
       '<article class="article" data-source="' + esc(srcKey) + '" data-category="' + esc(a.category || "") + '" data-collected="' + esc(col) + '" data-published="' + esc(pub) + '">' +
         '<div class="top">' +
@@ -77,6 +80,7 @@
         "<h3>" + esc(a.title) + "</h3>" +
         '<p class="summary">' + esc(a.summary) + "</p>" +
         '<ul class="points">' + points + "</ul>" +
+        (detail ? '<div class="detail-row">' + detail + "</div>" : "") +
         '<div class="foot">' +
           '<span class="pub2">' + pubText + "</span>" +
           link +
@@ -451,7 +455,12 @@
             "<h3 class=\"sig-title\">" + esc(s.title) + "</h3>" +
             '<p class="sig-fact">' + esc(s.fact) + "</p>" +
             '<p class="sig-signal"><span class="sig-signal-label">何の予兆か</span>' + esc(s.signal) + "</p>" +
-            '<p class="sig-actor">' + esc(s.actor || "") + (s.source ? ' ・ <span class="sig-src">' + esc(s.source) + "</span>" : "") + "</p>" +
+            '<p class="sig-actor">' + esc(s.actor || "") +
+              (s.source
+                ? (s.url
+                    ? ' ・ <a class="sig-src sig-src-link" href="' + esc(s.url) + '" target="_blank" rel="noopener noreferrer">' + esc(s.source) + '<span class="ms-ext" aria-hidden="true"> ↗</span></a>'
+                    : ' ・ <span class="sig-src">' + esc(s.source) + "</span>")
+                : "") + "</p>" +
             "</article>";
         }).join("");
         box.innerHTML =
@@ -564,10 +573,71 @@
       .catch(function () { /* 未配置でも無視 */ });
   }
 
+  // ---- レポート詳細ページ（report/index.html?r=slug）----
+  function getQuery(name) {
+    var m = new RegExp("[?&]" + name + "=([^&]+)").exec(location.search);
+    return m ? decodeURIComponent(m[1].replace(/\+/g, " ")) : "";
+  }
+  function renderReportDetail() {
+    var box = document.getElementById("report-detail");
+    if (!box) return;
+    var slug = getQuery("r");
+    if (!slug || !/^[a-z0-9-]+$/.test(slug)) {
+      box.innerHTML = '<p class="empty" style="display:block">レポートが指定されていません。</p>';
+      return;
+    }
+    fetch("../data/deep-dives/" + slug + ".json")
+      .then(function (r) { if (!r.ok) throw new Error("not found"); return r.json(); })
+      .then(function (d) {
+        var gradeBadge = d.grade ? '<span class="rd-grade rd-grade-' + esc(String(d.grade).toLowerCase()) + '">重要度 ' + esc(d.grade) + "</span>" : "";
+        var srcLink = d.url
+          ? '<a class="rd-srclink" href="' + esc(d.url) + '" target="_blank" rel="noopener noreferrer">原典を開く（' + esc(d.source_label || d.publisher || "出典") + "） ↗</a>"
+          : "";
+        var head =
+          '<div class="rd-head">' +
+            '<a class="rd-back" href="../koyo-hatarakikata/index.html">← 雇用・働き方の一覧へ戻る</a>' +
+            '<div class="rd-meta">' + gradeBadge +
+              (d.publisher ? '<span class="rd-pub">' + esc(d.publisher) + "</span>" : "") +
+              (d.published ? '<span class="rd-date">' + esc(d.published) + "</span>" : "") +
+            "</div>" +
+            "<h1>" + esc(d.reportTitle || slug) + "</h1>" +
+            (d.tldr ? '<p class="rd-tldr"><span class="rd-tldr-label">結論</span>' + esc(d.tldr) + "</p>" : "") +
+            srcLink +
+          "</div>";
+        var body = (d.sections || []).map(function (sec) {
+          var paras = (sec.paragraphs || []).map(function (p) { return "<p>" + esc(p) + "</p>"; }).join("");
+          var bullets = (sec.bullets && sec.bullets.length)
+            ? '<ul class="rd-bullets">' + sec.bullets.map(function (b) { return "<li>" + esc(b) + "</li>"; }).join("") + "</ul>"
+            : "";
+          var table = "";
+          if (sec.table && sec.table.rows && sec.table.rows.length) {
+            var th = (sec.table.headers || []).map(function (h) { return "<th>" + esc(h) + "</th>"; }).join("");
+            var rows = sec.table.rows.map(function (row) {
+              return "<tr>" + row.map(function (c) { return "<td>" + esc(c) + "</td>"; }).join("") + "</tr>";
+            }).join("");
+            table = '<div class="rd-table-wrap"><table class="rd-table">' +
+              (sec.table.caption ? "<caption>" + esc(sec.table.caption) + "</caption>" : "") +
+              (th ? "<thead><tr>" + th + "</tr></thead>" : "") +
+              "<tbody>" + rows + "</tbody></table></div>";
+          }
+          return '<section class="rd-section"><h2>' + esc(sec.heading || "") + "</h2>" + paras + table + bullets + "</section>";
+        }).join("");
+        var foot = '<p class="rd-foot">本ページは公開レポートの要約と、日本市場・副業/フリーランスマッチング市場への一般的な示唆を整理したものです。正確な内容は' +
+          (d.url ? '<a href="' + esc(d.url) + '" target="_blank" rel="noopener noreferrer">原典</a>' : "原典") +
+          'をご確認ください。更新 ' + esc(d.updated || "") + "</p>";
+        box.innerHTML = head + '<div class="rd-body">' + body + foot + "</div>";
+        document.title = (d.reportTitle || "レポート詳細") + "｜リサーチ・ダッシュボード";
+      })
+      .catch(function () {
+        box.innerHTML = '<p class="empty" style="display:block">レポートが見つかりませんでした。<a href="../koyo-hatarakikata/index.html">一覧へ戻る</a></p>';
+      });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     initNav();
     initThemePage();
     renderSignalBoard();
     renderMarketStructure();
+    renderReportDetail();
   });
 })();
