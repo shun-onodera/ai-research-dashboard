@@ -593,9 +593,11 @@
         var srcLink = d.url
           ? '<a class="rd-srclink" href="' + esc(d.url) + '" target="_blank" rel="noopener noreferrer">原典を開く（' + esc(d.source_label || d.publisher || "出典") + "） ↗</a>"
           : "";
+        var backHref = d.backHref || "../koyo-hatarakikata/index.html";
+        var backLabel = d.backLabel || "雇用・働き方の一覧へ戻る";
         var head =
           '<div class="rd-head">' +
-            '<a class="rd-back" href="../koyo-hatarakikata/index.html">← 雇用・働き方の一覧へ戻る</a>' +
+            '<a class="rd-back" href="' + esc(backHref) + '">← ' + esc(backLabel) + "</a>" +
             '<div class="rd-meta">' + gradeBadge +
               (d.publisher ? '<span class="rd-pub">' + esc(d.publisher) + "</span>" : "") +
               (d.published ? '<span class="rd-date">' + esc(d.published) + "</span>" : "") +
@@ -627,6 +629,15 @@
           'をご確認ください。更新 ' + esc(d.updated || "") + "</p>";
         box.innerHTML = head + '<div class="rd-body">' + body + foot + "</div>";
         document.title = (d.reportTitle || "レポート詳細") + "｜リサーチ・ダッシュボード";
+        // グローバルメニューの現在地を backHref に合わせて切り替え
+        if (d.backHref) {
+          var navAs = document.querySelectorAll(".gnav a");
+          navAs.forEach(function (a) { a.classList.remove("active"); });
+          var target = d.backHref.replace(/^\.\.\//, "");
+          navAs.forEach(function (a) {
+            if (a.getAttribute("href") === "../" + target) a.classList.add("active");
+          });
+        }
       })
       .catch(function () {
         box.innerHTML = '<p class="empty" style="display:block">レポートが見つかりませんでした。<a href="../koyo-hatarakikata/index.html">一覧へ戻る</a></p>';
