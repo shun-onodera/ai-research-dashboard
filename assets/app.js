@@ -80,6 +80,7 @@
         "<h3>" + esc(a.title) + "</h3>" +
         '<p class="summary">' + esc(a.summary) + "</p>" +
         '<ul class="points">' + points + "</ul>" +
+        (a.implication ? '<p class="impl-note"><span class="impl-note-label">市場への示唆</span>' + esc(a.implication) + "</p>" : "") +
         (detail ? '<div class="detail-row">' + detail + "</div>" : "") +
         '<div class="foot">' +
           '<span class="pub2">' + pubText + "</span>" +

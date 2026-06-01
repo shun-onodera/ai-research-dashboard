@@ -216,6 +216,10 @@ main{ max-width:var(--maxw); margin:0 auto; padding:28px 20px 64px; }
 .sig-src-link{ color:var(--color-blue); text-decoration:none; }
 .sig-src-link:hover{ text-decoration:underline; }
 
+/* ---------- カード内: 市場への示唆 ---------- */
+.impl-note{ font-size:12px; color:var(--color-ink-2); margin:0; padding:8px 10px; background:#eef4ee; border:1px solid #cfe3d2; border-left:3px solid #0a7a52; border-radius:7px; line-height:1.7; }
+.impl-note-label{ display:block; font-size:9.5px; font-weight:700; color:#0a6a48; letter-spacing:.02em; margin-bottom:2px; }
+
 /* ---------- レポート詳細リンク（カード内） ---------- */
 .detail-row{ margin-top:2px; }
 .detail-link{ display:inline-block; font-size:12.5px; font-weight:700; color:var(--color-blue); background:var(--color-blue-50); border:1px solid #cdd9f5; border-radius:8px; padding:6px 12px; text-decoration:none; }
