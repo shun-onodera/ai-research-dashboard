@@ -753,6 +753,139 @@
       });
   }
 
+  // ---- 職種別 AI影響 × プロ人材需要（市場構造マップ 個人セグメント詳細）----
+  var JI_TC = { "代替": "down", "組み替え": "mid", "増幅": "amp", "影響小": "gray" };
+  var JI_DM = { "増": "up", "横ばい": "gray", "減": "down" };
+  var JI_TONE = { "底堅い": "steady", "下押し圧力": "push" };
+  var JI_TC_ORDER = ["増幅", "組み替え", "代替", "影響小"];
+  var JI_DM_ORDER = ["増", "横ばい", "減"];
+  var JI_RANK = { "増": 2, "横ばい": 1, "減": 0 };
+  var JI_REL = { high: "一次・主要", medium: "二次・専門", low: "要確認" };
+  function jiShort(s) { return String(s || "").replace(/（.*?）/g, "").replace(/\(.*?\)/g, ""); }
+
+  // 2軸マトリクス（縦＝プロ人材需要、横＝業務変化）。opts.repMax で1セルの代表職種数を制限
+  function jiMatrix(data, opts) {
+    var jobs = data.jobs || [];
+    var grid = {}; JI_DM_ORDER.forEach(function (d) { grid[d] = {}; JI_TC_ORDER.forEach(function (t) { grid[d][t] = []; }); });
+    jobs.forEach(function (j) { if (grid[j.proDemand] && grid[j.proDemand][j.taskChange]) grid[j.proDemand][j.taskChange].push(j); });
+    var tcsub = { "増幅": "AIで射程拡大", "組み替え": "役割が入れ替わる", "代替": "人の担当が減る", "影響小": "AI影響が小さい" };
+    var prosub = { "増": "スポット外部調達が伸びる", "横ばい": "活用余地はあるが横ばい", "減": "外部委託に向かない" };
+    var h = '<div class="ji-matwrap"><table class="ji-mat"><thead><tr><th class="ji-corner">プロ人材需要 ＼ 業務変化</th>';
+    JI_TC_ORDER.forEach(function (t) { h += '<th class="ji-demh">' + esc(t) + "<small>" + esc(tcsub[t]) + "</small></th>"; });
+    h += "</tr></thead><tbody>";
+    JI_DM_ORDER.forEach(function (d) {
+      h += '<tr><td class="ji-rowh ji-' + JI_DM[d] + '"><span class="ji-pill ji-' + JI_DM[d] + '">プロ人材 ' + esc(d) + "</span><small>" + esc(prosub[d]) + "</small></td>";
+      JI_TC_ORDER.forEach(function (t) {
+        var arr = grid[d][t];
+        h += '<td class="ji-cell ji-' + JI_DM[d] + '">';
+        if (arr.length) {
+          h += '<div class="ji-celln">' + arr.length + "件</div>";
+          var show = opts.repMax ? arr.slice(0, opts.repMax) : arr;
+          show.forEach(function (j) {
+            var up = (opts.arrows && JI_RANK[j.proDemand] > JI_RANK[j.demand]) ? '<span class="ji-arrow">▲</span>' : "";
+            h += '<span class="ji-chip ji-' + JI_TC[t] + '">' + esc(jiShort(j.job)) + up + "</span>";
+          });
+          if (opts.repMax && arr.length > opts.repMax) h += '<span class="ji-more">他' + (arr.length - opts.repMax) + "件</span>";
+        } else { h += '<span class="ji-empty">—</span>'; }
+        h += "</td>";
+      });
+      h += "</tr>";
+    });
+    h += "</tbody></table></div>";
+    return h;
+  }
+
+  function jiAxisDefs(data) {
+    var ax = data.axes || {};
+    function box(a, clsMap, withTone, withFlow, withPro) {
+      if (!a) return "";
+      var h = '<div class="ji-axbox"><div class="ji-axttl">' + esc(a.label) + "</div>";
+      (a.values || []).forEach(function (v) { h += '<div class="ji-axrow"><span class="ji-pill ji-' + (clsMap[v] || "gray") + '">' + esc(v) + '</span><span class="ji-axd">' + esc((a.def || {})[v]) + "</span></div>"; });
+      if (withFlow && a.flow) h += '<div class="ji-flow">' + esc(a.flow) + "</div>";
+      if (withTone && a.tone) Object.keys(a.tone).forEach(function (t) { h += '<div class="ji-tonerow"><span class="ji-tonetag ji-' + JI_TONE[t] + '">' + esc(t) + '</span><span class="ji-axd">' + esc(a.tone[t]) + "</span></div>"; });
+      if (withPro && a.proNote) h += '<div class="ji-flow"><b>プロ人材需要の併記：</b>' + esc(a.proNote) + "</div>";
+      return h + "</div>";
+    }
+    return '<div class="ji-axdef">' +
+      box(ax.taskChange, { "代替": "down", "組み替え": "mid", "増幅": "amp", "影響小": "gray" }, false, true, false) +
+      box(ax.demand, { "増": "up", "横ばい": "gray", "減": "down" }, true, false, true) +
+      "</div>";
+  }
+
+  function jiTable(data) {
+    var jobs = data.jobs || [];
+    var cats = [], byc = {};
+    jobs.forEach(function (j) { var c = j.category; if (!byc[c]) { byc[c] = []; cats.push(c); } byc[c].push(j); });
+    var h = "";
+    cats.forEach(function (c) {
+      h += '<div class="ji-cat">' + esc(c) + "（" + byc[c].length + "）</div>";
+      h += '<div class="ji-twrap"><table class="ji-jt"><thead><tr><th>職種</th><th>業務変化</th><th>需要量変化<br><span class="ji-thsub">雇用／プロ人材(推論)</span></th><th>主要業務</th><th>業務変化の要因</th><th>需要量変化の要因</th><th>エビデンス</th><th>補足</th></tr></thead><tbody>';
+      byc[c].forEach(function (j) {
+        var tone = j.demandTone ? '<span class="ji-tonemini ji-' + JI_TONE[j.demandTone] + '">' + esc(j.demandTone) + "</span>" : "";
+        var dem = '<div class="ji-demlines"><div class="ji-demline"><span class="ji-demk">雇用</span><span class="ji-badge ji-' + JI_DM[j.demand] + '">' + esc(j.demand) + "</span>" + tone + "</div>" +
+          '<div class="ji-demline"><span class="ji-demk ji-pro">プロ人材</span><span class="ji-badge ji-' + JI_DM[j.proDemand] + '">' + esc(j.proDemand) + '</span><span class="ji-inf">推論</span></div></div>';
+        var ev = (j.evidence || []).map(function (e) {
+          var src = e.url ? '<a href="' + esc(e.url) + '" target="_blank" rel="noopener noreferrer">' + esc(e.source) + "</a>" : esc(e.source);
+          var rel = e.reliability ? '<span class="ji-rel ji-rel-' + esc(e.reliability) + '">' + esc(JI_REL[e.reliability] || e.reliability) + "</span>" : "";
+          var dt = e.date ? '<span class="ji-evdate">' + esc(e.date) + "</span>" : "";
+          return '<div class="ji-evitem"><span class="ji-evq">「' + esc(e.quote) + '」</span><span class="ji-evsrc">— ' + src + dt + rel + "</span></div>";
+        }).join("");
+        h += "<tr>" +
+          '<td class="ji-job">' + esc(j.job) + '<span class="ji-conf ji-conf-' + esc(j.confidence) + '">' + (j.confidence === "high" ? "確度高" : "確度中") + "</span></td>" +
+          '<td class="ji-tc ji-' + JI_TC[j.taskChange] + '">' + esc(j.taskChange) + "</td>" +
+          "<td>" + dem + "</td>" +
+          "<td>" + esc(j.mainTasks) + "</td>" +
+          "<td>" + esc(j.taskChangeReason) + "</td>" +
+          '<td class="ji-dreason"><div class="ji-rk">雇用</div>' + esc(j.demandReason) + '<div class="ji-rk ji-pro">プロ人材（推論）</div>' + esc(j.proDemandReason) + "</td>" +
+          '<td class="ji-ev">' + ev + "</td>" +
+          '<td class="ji-note">' + esc(j.note) + "</td>" +
+          "</tr>";
+      });
+      h += "</tbody></table></div>";
+    });
+    return h;
+  }
+
+  function renderJiSummary(box, data, detailHref) {
+    var byPro = data.byProDemand || {};
+    var lead = '<p class="ji-lead">市場構造マップの個人（供給側）を、主要38職種の単位で2軸に切り直した要約。縦＝<b>プロ人材（フリーランス・副業）への法人需要の変化（推論）</b>、横＝<b>業務変化</b>（AIで仕事の中身がどう変わるか）。<span class="ji-arrow">▲</span> は雇用需要より強い職種（正社員採用は横ばい・減でも外部スポット需要が伸びる）。</p>';
+    var ins = '<div class="ji-insband">' +
+      '<div class="ji-ins ji-up"><b>プロ人材需要 増（' + (byPro["増"] || 0) + "）</b>：AI高度人材＋企画・コンサル・専門職。外部スポット調達が伸びる最有望層。</div>" +
+      '<div class="ji-ins ji-gray"><b>横ばい（' + (byPro["横ばい"] || 0) + "）</b>：対人の継続性が核の職種や、現場性の強い職種が中心。</div>" +
+      '<div class="ji-ins ji-down"><b>減（' + (byPro["減"] || 0) + "）</b>：定型でフリーランス対象になりにくい職種（一般事務・量産ライター・定型翻訳）。</div></div>";
+    var link = '<p class="ji-detaillink"><a href="' + esc(detailHref) + '">全38職種の判定表（業務変化・需要・根拠リンク付き）を見る →</a></p>';
+    box.innerHTML = lead + jiMatrix(data, { repMax: 4, arrows: true }) + ins + link;
+  }
+
+  function renderJiDetail(box, data) {
+    var head = '<p class="ji-lead">' + esc(data.pageDescription || "") + "</p>";
+    var note = data.note ? '<div class="ji-callout">' + esc(data.note) + "</div>" : "";
+    var matrix = '<h2 class="ji-h2">2軸マトリクス（縦＝プロ人材需要、横＝業務変化）</h2>' +
+      '<p class="ji-sub"><span class="ji-arrow">▲</span> は雇用需要より強い職種（雇用＝採用ベースは横ばい・減でも、プロ人材＝フリーランス需要が伸びる）。</p>' +
+      jiMatrix(data, { arrows: true });
+    var defs = '<h2 class="ji-h2">2つの軸の定義</h2>' + jiAxisDefs(data);
+    var table = '<h2 class="ji-h2">職種別 判定表（全' + (data.jobs || []).length + "職種）</h2>" +
+      '<p class="ji-sub">「需要量変化」は雇用需要（採用ベース）とプロ人材需要（推論）を併記。エビデンス列は判定根拠の引用＋出典リンク＋公開日（<b>すべて2025年4月以降の公開情報</b>に限定）。信頼性タグ：<span class="ji-rel ji-rel-high">一次・主要</span>＝官公庁・調査発行元・主要メディア・企業公式／<span class="ji-rel ji-rel-medium">二次・専門</span>＝専門媒体・信頼できる二次／<span class="ji-rel ji-rel-low">要確認</span>＝個人ブログ・自社事例等。</p>' +
+      jiTable(data);
+    box.innerHTML = head + note + matrix + defs + table;
+  }
+
+  function renderJobImpact() {
+    var sumBox = document.getElementById("job-impact-summary");
+    var detBox = document.getElementById("job-impact-detail");
+    if (!sumBox && !detBox) return;
+    var path = detBox ? "../data/job-impact.json" : "data/job-impact.json";
+    fetch(path)
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (data) {
+        if (!data) return;
+        if (sumBox) renderJiSummary(sumBox, data, "shokushu-eikyo/index.html");
+        if (detBox) renderJiDetail(detBox, data);
+        document.querySelectorAll("[data-ji-updated]").forEach(function (el) { el.textContent = data.updated || ""; });
+      })
+      .catch(function (e) { console.error(e); });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     initNav();
     initThemePage();
@@ -760,6 +893,7 @@
     renderSignalBoard();
     renderCompetitorAiMatrix();
     renderMarketStructure();
+    renderJobImpact();
     renderReportDetail();
   });
 })();
