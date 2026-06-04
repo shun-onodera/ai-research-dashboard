@@ -886,12 +886,70 @@
       .catch(function (e) { console.error(e); });
   }
 
+  // ---- 競合資産マップ（6セグメント保有量・トップpage の #competitor-asset-map）----
+  function renderCompetitorAssetMap() {
+    var box = document.getElementById("competitor-asset-map");
+    if (!box) return;
+    fetch("data/competitor-asset-map.json")
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (d) {
+        if (!d) return;
+        var segs = d.segments || [], cos = d.companies || [];
+        var demandN = segs.filter(function (s) { return s.side === "demand"; }).length;
+        var supplyN = segs.filter(function (s) { return s.side === "supply"; }).length;
+        function segOf(co, s) { return co.seg[String(s.id)] || co.seg[s.id]; }
+        var scaleHtml = (d.scale || []).map(function (x) { return '<span class="cam-scn cam-s' + x.n + '">' + x.n + " " + esc(x.label) + "</span>"; }).join("");
+        var confHtml = (d.confidence || []).map(function (x) { return '<span class="cam-ci"><span class="cam-cbadge cam-c' + esc(x.k) + '">' + esc(x.k) + "</span>" + esc(x.label) + "</span>"; }).join("");
+        var thead = '<thead><tr class="cam-side"><th class="cam-blank"></th>' +
+          '<th class="cam-demand" colspan="' + demandN + '">法人（需要側）</th>' +
+          '<th class="cam-supply" colspan="' + supplyN + '">個人（供給側）</th></tr>' +
+          '<tr class="cam-seg"><th class="cam-blank"></th>' +
+          segs.map(function (s) { return "<th>" + esc(s.head) + "</th>"; }).join("") + "</tr></thead>";
+        var tbody = "<tbody>" + cos.map(function (co) {
+          var cells = segs.map(function (s) {
+            var c = segOf(co, s);
+            return '<td><div class="cam-cell cam-s' + c.s + '">' + c.s + '<span class="cam-conf">' + esc(c.c) + "</span>" +
+              '<span class="cam-tip"><b>' + esc(co.name) + " ／ " + esc(s.full) + "</b><br>スコア " + c.s + "・確度 " + esc(c.c) + "<br>" + esc(c.r) +
+              '<br><span class="cam-tipsrc">根拠タイプ: ' + esc(c.src) + "</span></span></div></td>";
+          }).join("");
+          return '<tr><td class="cam-rowhead">' + esc(co.name) + '<span class="cam-sub">' + esc(co.sub) + "</span></td>" + cells + "</tr>";
+        }).join("") + "</tbody>";
+        var heatmap = '<div class="cam-hmwrap"><table class="cam-hm">' + thead + tbody + "</table></div>";
+        var insights = '<div class="cam-grid3">' + (d.insights || []).map(function (i) {
+          return '<div class="cam-icard"><div class="cam-ih">' + esc(i.h) + '</div><p><span class="cam-who">' + esc(i.who) + "</span><br>" + esc(i.body) + "</p></div>";
+        }).join("") + "</div>";
+        var notes = (d.notes || []).map(function (n) { return '<div class="cam-note">' + esc(n) + "</div>"; }).join("");
+        var details = cos.map(function (co) {
+          var rows = segs.map(function (s) {
+            var c = segOf(co, s);
+            return '<tr><td class="cam-seglab">' + esc(s.full) + '</td><td><span class="cam-dsc cam-s' + c.s + '">' + c.s + "</span></td>" +
+              '<td><span class="cam-cbadge cam-c' + esc(c.c) + '">' + esc(c.c) + "</span></td><td>" + esc(c.r) + '</td><td class="cam-dsrc">' + esc(c.src) + "</td></tr>";
+          }).join("");
+          return '<details class="cam-co"><summary>' + esc(co.name) + '<span class="cam-gr">' + esc(co.sub) + '</span><span class="cam-chev">▶</span></summary>' +
+            '<div class="cam-cobody"><div class="cam-note cam-grade">出典・確度: ' + esc(co.grade) + "</div>" +
+            '<table class="cam-dt"><thead><tr><th>セグメント</th><th>スコア</th><th>確度</th><th>根拠</th><th>根拠タイプ</th></tr></thead><tbody>' + rows + "</tbody></table></div></details>";
+        }).join("");
+        var caveats = '<ol class="cam-caveat">' + (d.caveats || []).map(function (c) { return "<li>" + esc(c) + "</li>"; }).join("") + "</ol>";
+        box.innerHTML =
+          '<div class="cam-legends"><div class="cam-legbox"><div class="cam-lt">資産の保有量（5段階）</div><div class="cam-scale">' + scaleHtml + "</div></div>" +
+          '<div class="cam-legbox"><div class="cam-lt">確度（各セル右上のバッジ）</div><div class="cam-confrow">' + confHtml + "</div></div></div>" +
+          '<p class="cam-hint">セルにカーソルを合わせると根拠が表示されます。各社の詳細根拠・出典は下の「根拠と確度（社別）」を参照。</p>' +
+          heatmap +
+          '<h3 class="cam-h3">示唆 ― 資産はどこに集中しているか</h3>' + insights + notes +
+          '<h3 class="cam-h3">根拠と確度（社別）</h3><p class="cam-hint">各社をクリックすると6セグメントの詳細（スコア・根拠・出典）を展開します。</p>' + details +
+          '<h3 class="cam-h3">評価の前提と限界</h3>' + caveats;
+        document.querySelectorAll("[data-cam-updated]").forEach(function (el) { el.textContent = d.updated || ""; });
+      })
+      .catch(function () { /* 未配置でも無視 */ });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     initNav();
     initThemePage();
     renderHomeSummary();
     renderSignalBoard();
     renderCompetitorAiMatrix();
+    renderCompetitorAssetMap();
     renderMarketStructure();
     renderJobImpact();
     renderReportDetail();
