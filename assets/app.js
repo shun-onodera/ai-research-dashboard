@@ -687,6 +687,70 @@
     var m = new RegExp("[?&]" + name + "=([^&]+)").exec(location.search);
     return m ? decodeURIComponent(m[1].replace(/\+/g, " ")) : "";
   }
+  // レポート内グラフ（CDN非依存・HTML/CSSバー）。deep-dive JSON の section.charts を描画
+  var RTONE = { risk: "#c0392b", stable: "#6b7280", shift: "#b5681c", growth: "#0a7a52", change: "#0017c1", realized: "#0017c1", theoretical: "#a9c4ea", y2024: "#9aa3ad", y2026: "#0017c1" };
+  function reportChart(c) {
+    if (!c) return "";
+    var inner = "";
+    if (c.type === "flow") {
+      inner = '<div class="rc-flow">';
+      (c.questions || []).forEach(function (q) {
+        inner += '<div class="rc-frow"><div class="rc-qbox">' + esc(q.q) + "</div>" +
+          '<div class="rc-noarm">NO →</div>' +
+          '<div class="rc-out rc-out-' + (q.noTone || "stable") + '">' + esc(q.noLabel) + "<b>" + q.noValue + "%</b></div></div>";
+        if (q.yesLabel) {
+          inner += '<div class="rc-yesline">すべて YES ↓</div>' +
+            '<div class="rc-frow"><div class="rc-qbox rc-qfinal rc-out-' + (q.yesTone || "risk") + '">' + esc(q.yesLabel) + "<b>" + q.yesValue + "%</b></div></div>";
+        } else {
+          inner += '<div class="rc-yesline">YES ↓</div>';
+        }
+      });
+      inner += "</div>";
+    } else if (c.type === "grouped") {
+      var gmax = c.max || (c.groups || []).reduce(function (m, g) { return Math.max(m, g.bars.reduce(function (mm, b) { return Math.max(mm, b.value); }, 0)); }, 1);
+      inner = '<div class="rc-grouped">' + (c.groups || []).map(function (g) {
+        var bars = g.bars.map(function (b) {
+          var w = Math.max(1, (b.value / gmax) * 100), col = RTONE[b.tone] || "#6b7280";
+          return '<div class="rc-grow"><span class="rc-gname">' + esc(b.name) + "</span>" +
+            '<span class="rc-track"><span class="rc-fill" style="width:' + w + "%;background:" + col + '"></span></span>' +
+            '<span class="rc-val" style="color:' + col + '">' + b.value + esc(c.unit || "%") + "</span></div>";
+        }).join("");
+        return '<div class="rc-ggroup"><div class="rc-glabel">' + esc(g.label) + (g.gap ? ' <span class="rc-gap">' + esc(g.gap) + "</span>" : "") + "</div>" + bars + "</div>";
+      }).join("") + "</div>";
+    } else if (!c.series) { return "";
+    } else if (c.type === "stacked100") {
+      var total = c.series.reduce(function (a, b) { return a + (b.value || 0); }, 0) || 100;
+      var segs = c.series.map(function (s) {
+        var w = 100 * (s.value / total);
+        return '<div class="rc-seg" style="width:' + w + "%;background:" + (RTONE[s.tone] || "#6b7280") + '">' + (w >= 9 ? s.value + "%" : "") + "</div>";
+      }).join("");
+      var legend = c.series.map(function (s) {
+        return '<span class="rc-leg"><i style="background:' + (RTONE[s.tone] || "#6b7280") + '"></i>' + esc(s.label) + " " + s.value + "%</span>";
+      }).join("");
+      inner = '<div class="rc-bar100">' + segs + '</div><div class="rc-legend">' + legend + "</div>";
+    } else if (c.type === "bars") {
+      var max = c.series.reduce(function (m, s) { return Math.max(m, s.value || 0); }, 1);
+      inner = '<div class="rc-bars">' + c.series.map(function (s) {
+        var w = Math.max(2, (s.value / max) * 100), col = RTONE[s.tone] || "#6b7280";
+        return '<div class="rc-row"><span class="rc-lab">' + esc(s.label) + "</span>" +
+          '<span class="rc-track"><span class="rc-fill" style="width:' + w + "%;background:" + col + '"></span></span>' +
+          '<span class="rc-val" style="color:' + col + '">' + s.value + esc(c.unit || "%") + "</span></div>";
+      }).join("") + "</div>";
+    } else if (c.type === "diverge") {
+      var dmax = c.max || c.series.reduce(function (m, s) { return Math.max(m, Math.abs(s.value || 0)); }, 1);
+      inner = '<div class="rc-div">' + c.series.map(function (s) {
+        var pct = Math.min(50, (Math.abs(s.value) / dmax) * 50), pos = s.value >= 0, col = RTONE[s.tone] || (pos ? "#0a7a52" : "#c0392b");
+        var bar = pos
+          ? '<span class="rc-dfill" style="left:50%;width:' + pct + "%;background:" + col + '"></span>'
+          : '<span class="rc-dfill" style="right:50%;width:' + pct + "%;background:" + col + '"></span>';
+        return '<div class="rc-drow"><span class="rc-dlab">' + esc(s.label) + '</span><span class="rc-dtrack">' + bar + '<span class="rc-dmid"></span></span><span class="rc-dval" style="color:' + col + '">' + (pos ? "+" : "") + s.value + esc(c.unit || "%") + "</span></div>";
+      }).join("") + "</div>";
+    } else { return ""; }
+    return '<figure class="rc-fig">' + (c.title ? '<figcaption class="rc-title">' + esc(c.title) + "</figcaption>" : "") + inner +
+      (c.caption ? '<p class="rc-cap">' + esc(c.caption) + "</p>" : "") +
+      (c.source ? '<p class="rc-src">出典: ' + esc(c.source) + "</p>" : "") + "</figure>";
+  }
+
   function renderReportDetail() {
     var box = document.getElementById("report-detail");
     if (!box) return;
@@ -731,7 +795,8 @@
               (th ? "<thead><tr>" + th + "</tr></thead>" : "") +
               "<tbody>" + rows + "</tbody></table></div>";
           }
-          return '<section class="rd-section"><h2>' + esc(sec.heading || "") + "</h2>" + paras + table + bullets + "</section>";
+          var charts = (sec.charts || []).map(reportChart).join("");
+          return '<section class="rd-section"><h2>' + esc(sec.heading || "") + "</h2>" + paras + charts + table + bullets + "</section>";
         }).join("");
         var foot = '<p class="rd-foot">本ページは公開レポートの要約と、日本市場・副業/フリーランスマッチング市場への一般的な示唆を整理したものです。正確な内容は' +
           (d.url ? '<a href="' + esc(d.url) + '" target="_blank" rel="noopener noreferrer">原典</a>' : "原典") +
