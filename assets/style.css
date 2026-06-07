@@ -603,15 +603,14 @@ table.cam-dt{width:100%;border-collapse:collapse;font-size:12px}
 /* report chart: diverge（発散バー・0中央） */
 .rc-div{display:flex;flex-direction:column;gap:7px}
 .rc-drow{display:flex;align-items:center;gap:9px}
-.rc-dlab{flex:0 0 210px;font-size:12px;color:var(--color-ink-2);text-align:right;line-height:1.35}
-.rc-dtrack{flex:1;position:relative;height:22px;background:var(--color-line-2);border-radius:5px}
-.rc-dfill{position:absolute;top:0;height:100
-/* report chart: diverge（発散バー・0中央） */
-.rc-div{display:flex;flex-direction:column;gap:7px}
-.rc-drow{display:flex;align-items:center;gap:9px}
 .rc-dlab{flex:0 0 220px;font-size:12px;color:var(--color-ink-2);text-align:right;line-height:1.35}
 .rc-dtrack{flex:1;position:relative;height:22px;background:var(--color-line-2);border-radius:5px}
 .rc-dfill{position:absolute;top:0;height:100%;border-radius:5px}
 .rc-dmid{position:absolute;left:50%;top:-3px;bottom:-3px;width:2px;background:var(--color-muted)}
 .rc-dval{flex:0 0 44px;font-weight:800;font-size:12.5px;text-align:right}
 @media(max-width:600px){.rc-dlab{flex-basis:120px}}
+
+/* レポート冒頭のインフォグラフィック（AI生成の要約イメージ） */
+.rd-hero{margin:0 0 26px;border:1px solid var(--color-line);border-radius:12px;overflow:hidden;background:#fff}
+.rd-hero img{display:block;width:100%;height:auto}
+.rd-hero figcaption{padding:8px 14px;font-size:12px;line-height:1.6;color:var(--color-muted);background:var(--color-line-2);border-top:1px solid var(--color-line)}

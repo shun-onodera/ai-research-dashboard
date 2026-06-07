@@ -801,7 +801,11 @@
         var foot = '<p class="rd-foot">本ページは公開レポートの要約と、日本市場・副業/フリーランスマッチング市場への一般的な示唆を整理したものです。正確な内容は' +
           (d.url ? '<a href="' + esc(d.url) + '" target="_blank" rel="noopener noreferrer">原典</a>' : "原典") +
           'をご確認ください。更新 ' + esc(d.updated || "") + "</p>";
-        box.innerHTML = head + '<div class="rd-body">' + body + foot + "</div>";
+        var hero = d.heroImage
+          ? '<figure class="rd-hero"><img src="' + esc(d.heroImage.src) + '" alt="' + esc(d.heroImage.alt || d.reportTitle || "") + '" loading="lazy" decoding="async">' +
+            (d.heroImage.caption ? '<figcaption>' + esc(d.heroImage.caption) + "</figcaption>" : "") + "</figure>"
+          : "";
+        box.innerHTML = head + hero + '<div class="rd-body">' + body + foot + "</div>";
         document.title = (d.reportTitle || "レポート詳細") + "｜リサーチ・ダッシュボード";
         // グローバルメニューの現在地を backHref に合わせて切り替え
         if (d.backHref) {
