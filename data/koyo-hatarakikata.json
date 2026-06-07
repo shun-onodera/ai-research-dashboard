@@ -1,6 +1,6 @@
 {
   "theme": "AIと雇用",
-  "updated": "2026-05-31",
+  "updated": "2026-06-07",
   "description": "生成AIが雇用・職・スキルに与える影響に関する調査機関・研究機関の分析レポートを整理。国内（経済産業省・JILPT・NRI等）と海外（Stanford HAI・OpenAI・BCG・Goldman Sachs等）の分析を、出典付きで掲載しています。",
   "categories": [
     {
@@ -21,6 +21,42 @@
     }
   ],
   "articles": [
+    {
+      "title": "NY連銀、求人データにAI需要減の明確な証拠は確認できず",
+      "source_label": "Liberty Street Economics",
+      "category": "jobs",
+      "published": "2026-05",
+      "collected": "2026-06-07",
+      "summary": "ニューヨーク連邦準備銀行が求人データ（Lightcast 2018-2025）とAnthropicのAI影響度指標で検証。AIで対応できる仕事の割合が高い職種でも求人は急減しておらず、現時点でAIによる労働需要の明確な押し下げは確認できないと結論づけた。",
+      "points": [
+        "AI対応度0.4以上の職種は労働者・求人の10%未満",
+        "高影響職種の求人減はAI普及前から始まる",
+        "若手と上級職で求人に明確な差はない",
+        "採用鈍化はあるがAIが主因とは言えない"
+      ],
+      "deepdive": "nyfed-ai-job-postings",
+      "url": "https://libertystreeteconomics.newyorkfed.org/2026/05/do-job-postings-show-early-labor-market-effects-of-ai/",
+      "source": "Federal Reserve Bank of New York, Liberty Street Economics",
+      "implication": "AIによる案件需要の急縮小を前提とした過剰反応は当面不要。影響の遅れを見込み、AI活用人材の供給を着実に整える堅実路線が妥当。"
+    },
+    {
+      "title": "CompTIA、AIスキル求人27.5万件・純テック雇用1.9%増（米国）",
+      "source_label": "State of the Tech Workforce 2026",
+      "category": "skills",
+      "published": "2026-04",
+      "collected": "2026-06-07",
+      "summary": "米国IT業界団体CompTIAの年次白書。2026年1月時点でAIスキルを求める求人は約27.5万件、純テック雇用は2026年に1.9%増で約980万人規模に達する見込み。今後10年でテック人材は米国労働力全体の約2倍速で成長すると予測した。",
+      "points": [
+        "AIスキル求人 約27.5万件（2026年1月）",
+        "純テック雇用 2026年に1.9%増（約980万人規模）",
+        "成長率上位 データ系420%・セキュリティ346%",
+        "テック職の年収中央値 約11.3万ドル"
+      ],
+      "deepdive": "comptia-tech-workforce-2026",
+      "url": "https://www.comptia.org/en-us/resources/research/state-of-the-tech-workforce-2026/",
+      "source": "CompTIA, State of the Tech Workforce 2026",
+      "implication": "AIが普及してもテック・デジタル人材の需要は拡大基調。AI活用スキルの可視化と上位の専門領域への提案引き上げが活路。"
+    },
     {
       "title": "Stanford HAI「AI Index 2026」、AI企業投資が前年比130%増の5,817億ドル",
       "source_label": "Stanford HAI",

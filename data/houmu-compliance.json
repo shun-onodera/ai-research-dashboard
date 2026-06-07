@@ -1,6 +1,6 @@
 {
   "theme": "法務・コンプライアンス",
-  "updated": "2026-05-31",
+  "updated": "2026-06-07",
   "description": "フリーランス保護新法・AI事業者ガイドライン・下請法・労働法制・人的資本開示・外国人材制度など、人材市場に関わる法務・制度のマクロ動向を、政府・公的機関の公式情報から整理しています。",
   "categories": [
     {
@@ -21,6 +21,42 @@
     }
   ],
   "articles": [
+    {
+      "title": "EU、AI法簡素化で政治合意 — 高リスク義務を2027年末へ延期",
+      "source_label": "European Commission",
+      "category": "ai_data",
+      "published": "2026-05",
+      "collected": "2026-06-07",
+      "summary": "2026年5月7日、EUがAI法を簡素化する「Digital Omnibus on AI」で政治合意。雇用・採用などの高リスクAI義務の本格適用を2027年12月へ（製品組込み型は2028年8月へ）後ろ倒しする一方、汎用AI義務・透明性義務・罰則は予定どおり維持した。",
+      "points": [
+        "雇用・採用等の高リスクAI義務を2027年12月へ延期",
+        "製品組込み型は2028年8月へ",
+        "汎用AI義務・透明性義務・罰則は維持",
+        "採用AIは透明性対応を先送り不可"
+      ],
+      "deepdive": "eu-ai-act-omnibus",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+      "source": "欧州委員会「AI法（規則(EU)2024/1689）」／Digital Omnibus on AI",
+      "implication": "採用・人選にAIを使う事業者は高リスク対応の猶予が広がる一方、利用・生成物の明示（透明性義務）は早期に効く。EU市場で提供・利用すれば日本企業も対象になりうる。"
+    },
+    {
+      "title": "SSBJ、有報での基準「準拠」表現に注意喚起",
+      "source_label": "サステナビリティ基準委員会（SSBJ）",
+      "category": "disclosure_intl",
+      "published": "2026-05",
+      "collected": "2026-06-07",
+      "summary": "2026年5月29日、SSBJが有価証券報告書でのSSBJ基準への言及方法に注意喚起。全項目を満たさない企業が「基準を踏まえて／参考にして」開示と記すのは準拠の程度を誤認させ不適切とし、完全準拠予定なら達成時期・進捗・「現時点で未準拠」の明示を求めた。",
+      "points": [
+        "全項目未充足で「準拠／踏まえて」は不適切",
+        "完全準拠予定なら時期・進捗・未準拠を明示",
+        "ISSB基準への言及も同様",
+        "誇張なき開示の規律が事業者全般に及ぶ"
+      ],
+      "deepdive": "ssbj-disclosure-notice",
+      "url": "https://www.ssb-j.jp/jp/related_information/disclosure_notice.html",
+      "source": "サステナビリティ基準委員会（SSBJ）「開示に関する注意喚起」",
+      "implication": "開示の正確性・誇張回避の規律はサステナビリティを訴求する事業者全般に及ぶ。自社の社会的価値を発信する際も根拠なき基準準拠表現を避ける姿勢が要る。"
+    },
     {
       "title": "フリーランス保護新法、発注側に7つの義務 報酬は受領後60日以内、施行1年で128事業者を指導",
       "source_label": "公正取引委員会・厚生労働省・中小企業庁",
