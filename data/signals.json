@@ -69,17 +69,6 @@
       "url": "https://prtimes.jp/main/html/rd/p/000000493.000016557.html"
     },
     {
-      "title": "サーキュレーション、PKSHAとAIマッチング「PRONAVI now」で人選工程をAI化",
-      "type": "ai_commerce",
-      "impact": "high",
-      "actor": "サーキュレーション / PKSHA",
-      "date": "2025-11",
-      "fact": "親会社PKSHAと共同開発したAIマッチング機能「PRONAVI now」を運用開始。蓄積した22,527件の案件データとPKSHAのAIで、商談中に人材要件とプロ人材のスキルを照合し、マッチ度をその場でリアルタイム表示する。",
-      "signal": "これまでコンサルタントの経験に頼っていた人選（探索・照合・マッチ度判定）の中核工程そのものがAIへ移り、蓄積データの量と質が競争資源になる段階に入りつつある。",
-      "source": "サーキュレーション ニュースリリース（2025.11.14）／PKSHA Technology",
-      "url": "https://circu.co.jp/news/20251114-6117/"
-    },
-    {
       "title": "サーキュレーション、プロ人材の知見をAI商品化（AI Powered Pro）",
       "type": "ai_commerce",
       "impact": "high",
@@ -89,6 +78,17 @@
       "signal": "プロ人材マッチング事業者が、人を仲介する事業から「人の知見をAI商品として外販する」事業へ踏み出す動きが現れ始めている。",
       "source": "AI Powered Pro for Inside Sales 提供開始リリース（PR TIMES、2026.5.21）",
       "url": "https://prtimes.jp/main/html/rd/p/000000082.000015163.html"
+    },
+    {
+      "title": "EU、AI法を簡素化する「Digital Omnibus」で政治合意 ― 高リスクAI義務を2027年末へ延期",
+      "type": "regulation_macro",
+      "impact": "high",
+      "actor": "欧州委員会・EU理事会・欧州議会",
+      "date": "2026-05",
+      "fact": "2026年5月7日、EUがAI法を簡素化する『Digital Omnibus on AI』で政治合意。雇用・採用などの高リスクAI義務の本格適用を2027年12月2日（製品組込み型は2028年8月2日）へ後ろ倒しする一方、汎用AI義務・透明性義務・罰則（最大で全世界売上の7%）は予定どおり維持。同意なき性的画像やCSAMを生成するAIの利用を新たに禁止した。",
+      "signal": "採用・人選AIへの本格規制は猶予が広がる一方、AI利用・生成物の明示（透明性義務）は維持。AIを使う事業者は説明・表示対応を先送りできない。EU市場で提供・利用すれば日本企業も対象になりうる。",
+      "source": "欧州委員会 AI規制枠組み／Digital Omnibus on AI（2026-05-07政治合意）",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
     },
     {
       "title": "経済産業省、デジタルスキル標準ver.2.0でデータ系3ロールを追加",
@@ -124,6 +124,17 @@
       "url": "https://bcghendersoninstitute.com/ai-will-reshape-more-jobs-than-it-replaces/"
     },
     {
+      "title": "人手不足倒産が2025年度441件で過去最多、求人倍率の地域差は最大1.8倍",
+      "type": "regulation_macro",
+      "impact": "high",
+      "actor": "帝国データバンク／厚生労働省",
+      "date": "2026-04",
+      "fact": "人手不足を一因とする倒産は2025年度に441件と年度ベースで初の400件超・3年連続過去最多。建設業が25.4%で最多。有効求人倍率は就業地別で最高1.76倍・最低0.98倍と地域差が大きい。",
+      "signal": "人手不足が一部企業の事業継続リスクにまで達し、外部人材の活用が「選択肢」から「不可逆な前提」へ。地域・業種をまたいで人と仕事を結ぶ仕組みの重要性が増す。",
+      "source": "帝国データバンク「人手不足倒産の動向調査（2025年度）」／厚生労働省「一般職業紹介状況」",
+      "url": "https://www.mhlw.go.jp/stf/newpage_72811.html"
+    },
+    {
       "title": "ビザスク、候補者発掘から契約まで全工程をAIで支援",
       "type": "ai_commerce",
       "impact": "medium",
@@ -133,17 +144,6 @@
       "signal": "マッチングの主要工程そのものをAIが担う設計が、業界の機能投入競争に入りつつある。",
       "source": "ビザスク公表情報（各社AI戦略整理）",
       "url": "https://corp.visasq.co.jp/archives/20333"
-    },
-    {
-      "title": "クラウドワークス、AI技術系子会社の吸収合併など事業ポートフォリオ再編",
-      "type": "ma_alliance",
-      "impact": "medium",
-      "actor": "クラウドワークス",
-      "date": "2026-02",
-      "fact": "FY2026に事業ポートフォリオの構造改革を進め、AI tech社の吸収合併をはじめ複数サービスの撤退・統合を準備。全10サービス・8グループ会社を対象に不採算事業の撤退を検討。",
-      "signal": "プラットフォーム型事業者が、成長鈍化を理由に保有サービスを整理・再編する局面に入っている。",
-      "source": "クラウドワークス 2026年9月期第1四半期決算説明資料",
-      "url": "https://irbank.net/3900"
     },
     {
       "title": "ランサーズ、「AIでアップデートするAXカンパニー」への進化を表明",
@@ -157,28 +157,6 @@
       "url": "https://irbank.net/4484/ir"
     },
     {
-      "title": "ギークス、IT人材マッチングから中小企業向けDX支援へ領域拡大",
-      "type": "upstream",
-      "impact": "medium",
-      "actor": "ギークス",
-      "date": "2026-02",
-      "fact": "「IT人材マッチング」から「組織のDXソリューション提供」へ事業領域を拡大。中小企業向けDX支援人材「DX職（デジショク）」やSeed Tech事業を新成長エンジンに育成。",
-      "signal": "人材マッチング事業者が、人選の枠を越えて顧客企業のDX実装そのものを支援する領域へ拡大している。",
-      "source": "ギークス 2026年3月期第3四半期決算説明資料（2026.2.13）",
-      "url": "https://www.geechs.com/newsrelease/20260213_ir/"
-    },
-    {
-      "title": "TWOSTONE&Sons、ロールアップM&Aで川上展開を加速",
-      "type": "ma_alliance",
-      "impact": "medium",
-      "actor": "TWOSTONE&Sons",
-      "date": "2026-01",
-      "fact": "ロールアップ型M&Aを成長の柱の一つとして積極実行。FY2026 1QにenableX社をクロージング、M&A検討数239件（前年比+37.4%）に拡大。エンジニア提供から上流コンサル・M&A仲介・受託開発へ川上展開。",
-      "signal": "エンジニアマッチング事業者が、連続買収（ロールアップ）を通じて事業領域を川上へ拡張する資本戦略を強めている。",
-      "source": "TWOSTONE&Sons 2026年8月期第1四半期決算説明資料（2026.1.14）",
-      "url": "https://prtimes.jp/main/html/rd/p/000000338.000015060.html"
-    },
-    {
       "title": "Upwork、AIアシスタント「Uma」を統合しObjective AI社を買収",
       "type": "ai_commerce",
       "impact": "medium",
@@ -188,61 +166,6 @@
       "signal": "海外大手プラットフォームが、AI機能の自社実装と関連AI企業の買収を組み合わせてマッチング基盤を再構築している。",
       "source": "Upwork公表情報（各社AI戦略整理）",
       "url": "https://www.globenewswire.com/news-release/2026/05/05/3287786/0/en/Upwork-Updates-Spring-2026-AI-Powered-Innovations-to-Help-Small-Businesses-Get-Ambitious-Work-Done.html"
-    },
-    {
-      "title": "INTLOOP、コムテック社を新規連結子会社化",
-      "type": "ma_alliance",
-      "impact": "medium",
-      "actor": "INTLOOP",
-      "date": "2025-12",
-      "fact": "FY2026 1Qにコムテック社を新規連結子会社化。ディクスHD・KOZOCOM等を含むグループ体制で事業領域を拡充し、M&A・VC投資・JV共創をファンド投資事業として強化。",
-      "signal": "プロ人材・コンサル事業者がM&Aを明確な成長ドライバーに据え、グループ化による領域拡充を進めている。",
-      "source": "INTLOOP 2026年7月期第1四半期決算短信（2025.12.12）",
-      "url": "https://www.intloop.com/news/20250930/"
-    },
-    {
-      "title": "クラウドワークス、マッチングからDXコンサルへ事業転換を加速",
-      "type": "upstream",
-      "impact": "high",
-      "actor": "クラウドワークス",
-      "date": "2025-11",
-      "fact": "成長鈍化を背景に人材マッチングとDXコンサルの2軸で構造改革。DXコンサルへ最大25.5億円規模の成長投資を行い、2030年に31兆円規模が見込まれるDX市場を対象に設定。",
-      "signal": "国内最大級のクラウドソーシング事業者が、マッチング単体から上流のDX支援へ収益基盤を移す構造転換に踏み出している。",
-      "source": "クラウドワークス 2025年9月期通期決算説明資料",
-      "url": "https://prtimes.jp/main/html/rd/p/000000304.000050142.html"
-    },
-    {
-      "title": "INTLOOP、中長期計画「VISION2030」で売上1,000億円を目標",
-      "type": "upstream",
-      "impact": "medium",
-      "actor": "INTLOOP",
-      "date": "2025-10",
-      "fact": "中長期計画「VISION2030」で2030年7月期に売上高1,000億円・営業利益150億円を目標。「テクノロジーと人を統合したソリューションプラットフォーマー」を目指し、戦略コンサル〜IT開発まで一貫対応の方針。",
-      "signal": "プロ人材事業者が、人材供給単体ではなく「ソリューション提供」への統合を掲げて大型成長目標を設定している。",
-      "source": "INTLOOP 事業計画及び成長可能性に関する説明資料（2025.10.31）",
-      "url": "https://www.intloop.com/news/20240917/"
-    },
-    {
-      "title": "サーキュレーション、PKSHAのTOBで上場廃止",
-      "type": "ma_alliance",
-      "impact": "high",
-      "actor": "サーキュレーション / PKSHA",
-      "date": "2025-09",
-      "fact": "2025年9月にPKSHA TechnologyのTOBにより上場廃止。2025年7月期通期（売上+14.9%・営業利益+76.8%）が最終の通期実績。",
-      "signal": "AI技術企業がプロ人材マッチング事業者を傘下に取り込む資本統合が成立し、AI×プロ人材の融合が資本レベルで進行している。",
-      "source": "Notion競合業績データDB（IR: irbank.net/7379）",
-      "url": "https://circu.co.jp/news/20250827-5952/"
-    },
-    {
-      "title": "サーキュレーション、みずほ銀行と提携しメガバンク初のプロシェアリング",
-      "type": "ma_alliance",
-      "impact": "medium",
-      "actor": "サーキュレーション / みずほ銀行",
-      "date": "2024-12",
-      "fact": "2024年12月にみずほ銀行との業務提携を発表し「みずほプロシェアリング」を開始。メガバンクとの提携は初で、地域金融機関とのアライアンスも新たに3社へ拡大。",
-      "signal": "プロ人材活用サービスが金融機関の顧客基盤と結びつき、販売チャネルが金融経由へ広がる動きが起きている。",
-      "source": "業務提携発表・サーキュレーション 2025年7月期第1四半期決算説明資料（2024.12.13）",
-      "url": "https://circu.co.jp/news/20241213-5386/"
     },
     {
       "title": "フリーランス保護新法、施行1年で128事業者に是正指導",
@@ -256,48 +179,15 @@
       "url": "https://www.jftc.go.jp/freelancelaw_2024/"
     },
     {
-      "title": "下請法が2026年1月「取適法」へ全面改正、手形払い禁止・一方的な代金決定を禁止",
-      "type": "regulation_macro",
-      "impact": "medium",
-      "actor": "公正取引委員会",
-      "date": "2026-01",
-      "fact": "下請代金支払遅延等防止法が改正され、2026年1月「中小受託取引適正化法（取適法）」として施行。従業員数基準の追加、手形払いの禁止、協議に応じない一方的な代金決定の禁止など、受注側（個人・小規模事業者を含む）の保護を強化。",
-      "signal": "個人・小規模事業者への取引適正化が一段と強まり、対等な協議や現金払いを前提に組み込めるかが、外部人材を扱う取引の標準になっていく。",
-      "source": "中小受託取引適正化法（取適法）／公正取引委員会",
-      "url": "https://www.jftc.go.jp/partnership_package/toritekihou.html"
-    },
-    {
-      "title": "人手不足倒産が2025年度441件で過去最多、求人倍率の地域差は最大1.8倍",
-      "type": "regulation_macro",
+      "title": "サーキュレーション、PKSHAのTOBで上場廃止",
+      "type": "ma_alliance",
       "impact": "high",
-      "actor": "帝国データバンク／厚生労働省",
-      "date": "2026-04",
-      "fact": "人手不足を一因とする倒産は2025年度に441件と年度ベースで初の400件超・3年連続過去最多。建設業が25.4%で最多。有効求人倍率は就業地別で最高1.76倍・最低0.98倍と地域差が大きい。",
-      "signal": "人手不足が一部企業の事業継続リスクにまで達し、外部人材の活用が「選択肢」から「不可逆な前提」へ。地域・業種をまたいで人と仕事を結ぶ仕組みの重要性が増す。",
-      "source": "帝国データバンク「人手不足倒産の動向調査（2025年度）」／厚生労働省「一般職業紹介状況」",
-      "url": "https://www.mhlw.go.jp/stf/newpage_72811.html"
-    },
-    {
-      "title": "育成就労制度2027年4月施行、特定技能は5年で最大82万人へ拡大",
-      "type": "regulation_macro",
-      "impact": "medium",
-      "actor": "出入国在留管理庁",
+      "actor": "サーキュレーション / PKSHA",
       "date": "2025-09",
-      "fact": "技能実習に代わる育成就労制度が2027年4月施行で確定し、本人意向による転籍を一定要件で許容。特定技能の受け入れ見込み数は2024〜2028年度で最大82万人（前回の約2.4倍）に再設定され、自動車運送・鉄道など4分野を追加。",
-      "signal": "就業マッチングの対象範囲が外国人材へ広がり、人材の移動性も高まる。専門領域での人選とコンプライアンス対応の重要度が増す。",
-      "source": "出入国在留管理庁「育成就労制度」「特定技能の受入れ見込数の再設定」",
-      "url": "https://www.moj.go.jp/isa/03_00163.html"
-    },
-    {
-      "title": "EU、AI法を簡素化する「Digital Omnibus」で政治合意 ― 高リスクAI義務を2027年末へ延期",
-      "type": "regulation_macro",
-      "impact": "high",
-      "actor": "欧州委員会・EU理事会・欧州議会",
-      "date": "2026-05",
-      "fact": "2026年5月7日、EUがAI法を簡素化する『Digital Omnibus on AI』で政治合意。雇用・採用などの高リスクAI義務の本格適用を2027年12月2日（製品組込み型は2028年8月2日）へ後ろ倒しする一方、汎用AI義務・透明性義務・罰則（最大で全世界売上の7%）は予定どおり維持。同意なき性的画像やCSAMを生成するAIの利用を新たに禁止した。",
-      "signal": "採用・人選AIへの本格規制は猶予が広がる一方、AI利用・生成物の明示（透明性義務）は維持。AIを使う事業者は説明・表示対応を先送りできない。EU市場で提供・利用すれば日本企業も対象になりうる。",
-      "source": "欧州委員会 AI規制枠組み／Digital Omnibus on AI（2026-05-07政治合意）",
-      "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+      "fact": "2025年9月にPKSHA TechnologyのTOBにより上場廃止。2025年7月期通期（売上+14.9%・営業利益+76.8%）が最終の通期実績。",
+      "signal": "AI技術企業がプロ人材マッチング事業者を傘下に取り込む資本統合が成立し、AI×プロ人材の融合が資本レベルで進行している。",
+      "source": "Notion競合業績データDB（IR: irbank.net/7379）",
+      "url": "https://circu.co.jp/news/20250827-5952/"
     }
   ]
 }
