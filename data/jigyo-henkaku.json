@@ -40,6 +40,60 @@
       "implication": "人材市場でも『席・工数を売る』前提が揺らぐ。稼働時間でなく成果・解決の度合いで評価する取引設計と、成果を出す確度の見える化、出なければ次へつなぐ伴走が問われる。"
     },
     {
+      "title": "AIの無料回答が学習支援Cheggの月額モデルを崩壊させた",
+      "source_label": "Higher Ed Dive",
+      "category": "restructure",
+      "published": "2026-04",
+      "collected": "2026-06-09",
+      "summary": "米国の学習支援Cheggは、解答を月額で売る商売の前提を、ChatGPTによる解答の無料化とGoogle AI Overviews（検索結果への答え直接表示）による集客遮断という二重の打撃で同時に失った。時価総額はピークの約147億ドルから99%近くが消え、会員・売上・人員が急減した。",
+      "points": [
+        "時価総額はピーク約147億ドル（2021年2月・株価113.51ドル）から直近約1.5億ドル前後へ、99%近く消失",
+        "通期売上は2021年7.76億ドルから2025年3.77億ドル（前年比39%減）、月額会員はピーク約780万人から2025年Q1に約320万人",
+        "2025年に2度の人員削減（5月248人＝約22%、10月388人＝約45%）、2025年12月にNYSEから上場維持基準抵触の通知",
+        "CEOはGoogle AI OverviewsのCheggへの打撃をChatGPTと同程度に重大と説明し、2025年2月にGoogleを提訴"
+      ],
+      "deepdive": "chegg-ai-answer-collapse",
+      "url": "https://www.highereddive.com/news/chegg-layoffs-strategic-alternatives-google-ai/804192/",
+      "source": "Higher Ed Dive / CNBC / Fox Business / Chegg SEC決算",
+      "implication": "単発の答え・定型作業で稼ぎ、流入を外部プラットフォームに頼る部分は同じ力学にさらされうる。成果保証・伴走・独自データなど代替されにくい価値が残る競争軸になる。"
+    },
+    {
+      "title": "Cognizant ― AI込みレートカードで工数課金から成果課金へ",
+      "source_label": "People Matters（報道）",
+      "category": "model",
+      "published": "2026-04",
+      "collected": "2026-06-09",
+      "summary": "受託IT大手Cognizantが、人の労働時間を積み上げて請求する商売から、AIが担う『デジタル労働』を価格に織り込み成果で値づけする商売へ移り始めた。人の労働とAIの労働を段階で並べる『AI込みレートカード』を導入し、請求の物差しを働いた時間から固定価格・マネージドサービス・取引単位・成果連動へ移すとCEOが公言。社員評価も労働時間でなくAI習熟度で測る。",
+      "points": [
+        "人の労働とAIの『デジタル労働』を段階ごとに分けて値づけする『AI込みレートカード』を導入",
+        "CEO Ravi Kumar S氏『労働力を売ることから成果を売ることへどう移るか』と公言、固定価格・成果連動を模索",
+        "請求の物差しを働いた時間から固定価格・マネージドサービス・取引単位・成果連動へ移す",
+        "社員評価を労働時間でなくAI習熟メーター（活用・研修・認定・案件貢献）で測定、新卒2万人採用・社員35万人超"
+      ],
+      "deepdive": "cognizant-ai-rate-card",
+      "url": "https://www.peoplematters.in/news/ai-and-emerging-tech/cognizant-starts-charging-for-ai-alongside-human-work-in-new-pricing-model-49484",
+      "source": "People Matters（補足: Storyboard18 / Fortune）",
+      "implication": "人材市場でも『稼働時間・人月を束ねて売る』前提が弱まる。価値は稼働時間から成果に責任を持つ供給力と実績データへ移り、登録個人の成果の見える化と成果連動の取引設計が問われる。"
+    },
+    {
+      "title": "Hiscox ― AIが特殊保険の見積りを3日→3分に短縮",
+      "source_label": "hyperexponential（Hiscox公式等を併記）",
+      "category": "interface",
+      "published": "2026-03",
+      "collected": "2026-06-09",
+      "summary": "英国の保険会社Hiscoxが、エージェント型AIで特殊保険（ロンドン市場）の見積り時間を約3日→約3分（99.4%短縮）に圧縮した。AIが申込整理・リスク評価・価格付け・適合確認を下準備として自律処理し、引受担当者は最終確認に集中する。引受という『比べ・見極め・値付け』の判断の入口をAIが担い始めた先行事例である。",
+      "points": [
+        "サボタージュ・テロ保険の見積り所要時間が約3日→約3分、99.4%短縮（Hiscox公式／hyperexponential）",
+        "Google Cloud Gemini＋自社基盤Hailoで申込整理・リスク評価・価格付けを自律処理、最終判断は人が握る",
+        "商用損害保険で見積〜契約60〜99%短縮・引受工程最大75%短縮（hyperexponential／DXC基準）",
+        "損害率3〜5ポイント改善（McKinsey）、市場導入率14%→2028年70%とみられる（Accenture推計）"
+      ],
+      "deepdive": "hiscox-agentic-underwriting",
+      "url": "https://www.hyperexponential.com/blog/agentic-ai-insurance-underwriting",
+      "source": "hyperexponential『Agentic AI in insurance underwriting』（Hiscox公式・Insurance Post併記）",
+      "implication": "候補プロ人材を比べ・見極め・単価を一次評価する『判断の入口』が、実績データの整備度に応じてAIに移りうる。評価モデルに乗らない要素の見極めと、評価の妥当性を保証する仲介者の信用が残る価値になる。"
+    },
+    {
       "title": "AIが暴いた「時間課金」コンサルの構造的欠陥 ― 成果課金への移行",
       "source_label": "Consulting Success",
       "category": "model",
@@ -74,6 +128,24 @@
       "url": "https://www.fintechweekly.com/magazine/articles/ai-agents-262-billion-sales-banks-agentic-commerce-lending-2026",
       "source": "FinTech Weekly",
       "implication": "人材市場でも、登録個人の実績・スキル・条件をAIが読める形に整える力と、AIが拾った候補を人が見極め成果まで伴走する力が同時に問われる。価値は『人を当てる画面』より『能力・信用データ基盤』へ。"
+    },
+    {
+      "title": "AmazonがAI「Rufus」を法人購買の入口に",
+      "source_label": "Digital Commerce 360",
+      "category": "interface",
+      "published": "2026-02",
+      "collected": "2026-06-09",
+      "summary": "AmazonがAIアシスタント「Rufus」を法人の購買の入口に据え、修理・保守用品や空調・配管・安全用品など繰り返し発注する商品を、AIが本人に代わって探し・比べ・買う世界へ動いた。買い手の入口をAIが握ると、商品を並べていた卸・販売側は、AIが正しく読めるデータを供給する裏方へと役割が移る。",
+      "points": [
+        "Rufusは2025年に3億人超に利用された（Amazon）",
+        "Rufus利用者は購入完了率が約60%高い（Amazon）",
+        "MRO・空調・配管・安全用品など繰り返し発注品がAI自動化に向くと指摘",
+        "AIが正しく動くには機械が読める商品データとERP（基幹システム）連携が前提"
+      ],
+      "deepdive": "amazon-business-rufus-agent",
+      "url": "https://www.digitalcommerce360.com/2026/02/06/amazons-ai-b2b-buying-agents-q4-2025/",
+      "source": "Digital Commerce 360",
+      "implication": "人材市場でも入口がAIに移れば、選ばれる確率はスキル・実績・条件を機械が読める形に構造化できているかで決まる。画面の見栄えより、AIに正しく読まれる人材データの整備が競争軸になる。"
     },
     {
       "title": "Salesforce Agentforce ― AIエージェントを席・会話・成果の3モデルで併売",
@@ -112,6 +184,24 @@
       "implication": "人材活用市場でも『人月・稼働時間を売る』前提が揺らぐ。時間ではなく成果・課題解決の度合いで評価される取引設計と、登録人材の成果を出す力の見える化が問われる。"
     },
     {
+      "title": "Caterpillar ― 重機を売り切りから稼働の継続課金へ",
+      "source_label": "Constellation Research",
+      "category": "model",
+      "published": "2026-01",
+      "collected": "2026-06-09",
+      "summary": "建設・鉱山機械の大手Caterpillarが、各機器のセンサーが送るデータをAIで読み、故障の予兆を見つけて先回りの保全（PSE）を提案する仕組みを収益源化した。機器を売って終わりにする事業から、稼働を支え続け対価を継続的に受け取る『製造業のサービス化』へ軸足を移している。",
+      "points": [
+        "先回りの保全（PSE）は2021年に存在せず、2024年に11億ドル（約1,600億円）の売上に育った",
+        "稼働データを送る『つながった機器』は150万台超、2030年に200万台を目指す",
+        "統合データ基盤Heliosに16ペタバイト・30データ源・月500億件超の記録が流入",
+        "サービス売上の土台は2016年から2024年で倍増、電子商取引は1日1,800万ドル規模"
+      ],
+      "deepdive": "caterpillar-equipment-as-service",
+      "url": "https://www.constellationr.com/insights/news/caterpillars-ai-vision-takes-shape-data-cloud-focus-was-precursor",
+      "source": "Constellation Research",
+      "implication": "『一度の人選で終わり』だった人材市場でも、価値の重心が、つないだ後の稼働・定着・成果をデータで見守り続け継続課金する形へ移りうる。"
+    },
+    {
       "title": "AIエージェントが旅行予約を「自動運転」 ― OTAは検索画面から裏方へ",
       "source_label": "PYMNTS",
       "category": "interface",
@@ -146,6 +236,24 @@
       "url": "https://digiday.com/media/in-graphic-detail-the-state-of-ai-referral-traffic-in-2025/",
       "source": "Digiday",
       "implication": "求人・案件探索の入口もAIに置き換わりうる。来訪量より、AIに引用される構造化データ・独自実績という供給の保有が新しい競争軸になる。"
+    },
+    {
+      "title": "Perplexity、AI検索の「Buy with Pro」を全米無料利用者に開放（手数料ゼロ）",
+      "source_label": "Digital Commerce 360",
+      "category": "interface",
+      "published": "2025-11",
+      "collected": "2026-06-09",
+      "summary": "AI検索のPerplexityが、対話の中で加盟店サイトの決済まで完結する購買機能「Buy with Pro」を、有料会員限定から全米の無料利用者へ開放した（2025年感謝祭週から順次）。決済はPayPalが担い、即時購入には「数百」の加盟店が連なる。加盟店から取引手数料・出品料を取らない収益モデルで、取引手数料を取る従来型コマースに対抗する。",
+      "points": [
+        "Buy with Pro（2024年に有料会員向け登場）を全米の無料利用者へ開放、2025年感謝祭週から順次（デスクトップ・ウェブ→iOS・Comet）",
+        "決済はPayPalのエージェント型コマース技術が担当、即時購入(Instant Buy)は「数百」加盟店",
+        "加盟店への取引手数料・出品料はゼロとされ、ChatGPT側の取引手数料4%報道と対照的（各社報道・とみられる）",
+        "全製品合計の月間利用は約4,500万人規模とする報道あり（関連報道・とみられる）"
+      ],
+      "deepdive": "perplexity-agentic-commerce",
+      "url": "https://www.digitalcommerce360.com/2025/11/19/perplexity-agentic-commerce-experience-to-expand-to-free-users/",
+      "source": "Digital Commerce 360",
+      "implication": "人材市場でもAIが人選の入口を握り手数料を取らない対抗軸が現れれば、成約手数料という稼ぎ方の根拠が揺らぐ。成果保証・質の担保・伴走という『人を当てる以外の対価』を示せるかが問われる。"
     },
     {
       "title": "マッキンゼー、全世界売上の約4分の1を「成果連動型」へ転換",
@@ -254,6 +362,42 @@
       "url": "https://www.swissre.com/reinsurance/property-and-casualty/agriculture-risks/agricultural-insurance-parametric-products.html",
       "source": "Swiss Re",
       "implication": "人材市場でも適合の確認・成果の検収・支払いの判断を、根拠データが揃えば自動で次工程へ進める設計が現実味を帯びる。価値は『確かめる人手』からデータ整備と仕組みの設計力へ移る。"
+    },
+    {
+      "title": "貨物仲介のAI中抜き：C.H. Robinsonが仲介業務をAIエージェント群に",
+      "source_label": "C.H. Robinson 公式リリース",
+      "category": "restructure",
+      "published": "2025-04",
+      "collected": "2026-06-09",
+      "summary": "世界最大級の貨物仲介会社C.H. Robinsonが、見積・受注・車両手配・予約・追跡という仲介業務の中核を自社の生成AIエージェント群に置き換えた。人手のオペレーションは「AIが担えない複雑案件の処理」へ移り、定型のマッチングが自動化される一方で複雑案件の見立て・交渉・関係づくりが人に残った。",
+      "points": [
+        "AIが処理した出荷タスクは累計300万件超（2025年4月）。経営幹部は『人がやらずに済んだ300万件の手作業』と表現",
+        "AIによる価格見積100万件超・受注処理100万件に到達（2025年3月時点）。日次では1万件超の定型取引を自動化",
+        "5,200社超の顧客向け受注処理を90秒未満で完了。トラック空き枠登録は2025年2月に約10倍へ",
+        "生成AIが2023〜2024年の生産性30%向上に寄与（年間3,700万件出荷・約8万3,000社の事業基盤の上で実施）"
+      ],
+      "deepdive": "chrobinson-ai-freight-broker",
+      "url": "https://www.chrobinson.com/en-us/about-us/newsroom/press-releases/2025/ai-performs-over-three-million-shipping-tasks/",
+      "source": "C.H. Robinson Worldwide, Inc.",
+      "implication": "求める側と提供する側のあいだの情報の非対称を人手で埋めてきた人材マッチングも、条件が明確な一次マッチングは自動化が進む一方、複雑案件の見立て・交渉・関係構築という定型化しにくい価値が人に残ると考えられる。"
+    },
+    {
+      "title": "シャッターストックが素材をAI学習データへ転換",
+      "source_label": "PetaPixel / Shutterstock IR",
+      "category": "value",
+      "published": "2024-06",
+      "collected": "2026-06-09",
+      "summary": "画像を1枚ずつ売ってきたストック素材会社が、保有する膨大な画像・動画と説明情報（メタデータ）をAI開発企業の学習用データとして卸す『データ供給業』へ価値の所在を移した。素材が表で売る商品から、AIを裏で支えるデータ資産に変わった先行例である。",
+      "points": [
+        "AI向けデータ提供収入は2023年に1.04億ドル、2024年は約1.38億ドル見込み、2027年は年2.5億ドルを目標（PetaPixel）",
+        "提供先に6年契約のOpenAI、Meta、グーグルを擁するアルファベット、アマゾン、アップル、Reka など",
+        "データ提供を含む部門は2025年Q2に前年同期比34%増の6,720万ドルで四半期売上の25%、通期は前年比16%増の2.033億ドルで年間売上の21%（Shutterstock IR）",
+        "寄稿者には会社受領額の平均約20%をデータ量に応じて還元、AI学習を拒んだ寄稿者は約1%にとどまる"
+      ],
+      "deepdive": "shutterstock-ai-data-licensing",
+      "url": "https://petapixel.com/2024/06/04/shutterstock-made-104-million-licensing-assets-to-ai-devs-last-year/",
+      "source": "PetaPixel",
+      "implication": "人材市場でも、プロ人材のスキル・実績・契約履歴という一次データを本人の同意のもとで保有・整理し、本人に還元できるかが価値の中心になる。『人を当てる接点』より『能力・実績データ基盤』へ。"
     }
   ]
 }
