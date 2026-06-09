@@ -1,6 +1,6 @@
 {
   "theme": "AIと雇用",
-  "updated": "2026-06-07",
+  "updated": "2026-06-09",
   "description": "生成AIが雇用・職・スキルに与える影響に関する調査機関・研究機関の分析レポートを整理。国内（経済産業省・JILPT・NRI等）と海外（Stanford HAI・OpenAI・BCG・Goldman Sachs等）の分析を、出典付きで掲載しています。",
   "categories": [
     {
@@ -21,6 +21,42 @@
     }
   ],
   "articles": [
+    {
+      "title": "Bain：求人は二極化、AI関連だけ別の動き",
+      "source_label": "Bain & Company",
+      "category": "jobs",
+      "published": "2026-05",
+      "collected": "2026-06-09",
+      "summary": "Bainが自社データ基盤Auraで世界の求人を分析。2026年1〜3月の求人は前年同期比で広く減少する一方、AI関連の採用だけが回復し、求人市場が二極化している。Bainは求人減を新型コロナ後の正常化・景気循環による一時的なものと読む。",
+      "points": [
+        "求人投稿は前年同期比でフランス約-25%、米国約-23%、日本約-11%（2026年第1四半期）",
+        "インターネット業界は50%超の減少、金融サービス約-28%、IT約-20%",
+        "AI関連の採用は2026年1月+11%→3月+17%と月ごとに伸びを回復",
+        "Bainは求人減を雇用の急減でなく『正常化・景気循環による一時的なもの』と整理"
+      ],
+      "deepdive": "bain-global-job-trends",
+      "url": "https://www.bain.com/insights/global-job-market-trends/",
+      "source": "Bain & Company, Global Job Market Trends",
+      "implication": "正社員採用を絞った企業が外部のプロ人材を機動的に使う需要が増え、景気に左右されにくいAI関連・専門領域に人材プールを厚くした事業者が有利になるとみられる。"
+    },
+    {
+      "title": "Microsoft 2026 WTI：成果は組織の仕組みで決まる",
+      "source_label": "Microsoft（WorkLab）",
+      "category": "productivity",
+      "published": "2026-05",
+      "collected": "2026-06-09",
+      "summary": "Microsoftの年次調査「Work Trend Index 2026」。AIエージェントが作業の実行を担うほど、人は段取り・判断・成果への責任という主体的な役割に時間を移すと整理し、これを『新しい主体性の方程式』と呼ぶ。成否を分けるのはツールより組織のやり方だと示す。",
+      "points": [
+        "AIの効果のうち約67%は組織要因（文化・上司の後押し・人材運用）で説明され、個人要因は約32%",
+        "AI利用者の58%が『1年前にはできなかった成果を出せている』（最先端層では80%）",
+        "最先端層は16%、伸び悩む層も16%。差を分けるのはツールの有無ではなく組織のやり方",
+        "65%が取り残される恐れを抱く一方、仕事の作り変えに挑んで報われた経験は13%だけ（変革のジレンマ）"
+      ],
+      "deepdive": "microsoft-work-trend-2026",
+      "url": "https://www.microsoft.com/en-us/worklab/work-trend-index/agents-human-agency-and-the-opportunity-for-every-organization",
+      "source": "Microsoft WorkLab / Work Trend Index 2026",
+      "implication": "求められるのは『AIに詳しい人』ではなく、業務を分解しエージェント・既存システム・人の承認を組み合わせて成果に変えられる業務変革人材。マッチングに閉じず、業務変革テーマ単位でプロ人材を組成して届ける力が競争優位になる。"
+    },
     {
       "title": "NY連銀、求人データにAI需要減の明確な証拠は確認できず",
       "source_label": "Liberty Street Economics",
@@ -143,23 +179,6 @@
       "deepdive": "bcg-reshape-jobs"
     },
     {
-      "title": "HBS／HBR、自動化親和性の高い職種で求人13%減・分析/技術/創造系で20%増",
-      "source_label": "HBR",
-      "category": "jobs",
-      "published": "2026-03",
-      "collected": "2026-05-31",
-      "summary": "生成AI登場後の求人データを分析した実証研究。自動化親和性の高い職種の求人が13%減少した一方、分析・技術・創造系職種の求人は20%増加し、労働需要の構造的シフトを定量で確認した。",
-      "points": [
-        "自動化親和性の高い職種の求人が13%減少",
-        "分析・技術・創造系職種の求人は20%増加",
-        "生成AI登場後の求人データに基づく実証研究",
-        "労働需要の構造的シフトを定量で確認"
-      ],
-      "url": "https://hbr.org/2026/03/research-how-ai-is-changing-the-labor-market",
-      "source": "Harvard Business School / HBR, Research: How AI Is Changing the Labor Market",
-      "deepdive": "hbr-ai-labor-market"
-    },
-    {
       "title": "ブルッキングス、学位なし7,000万人にAIが新たなキャリア経路を開く可能性",
       "source_label": "Brookings",
       "category": "skills",
@@ -192,23 +211,6 @@
       "url": "https://www.meti.go.jp/press/2026/04/20260416002/20260416002.html",
       "source": "経済産業省, デジタルスキル標準ver.2.0（DSSver.2.0）",
       "deepdive": "meti-dss-v2"
-    },
-    {
-      "title": "経済産業省、人的資本可視化指針を約3年半ぶりに改訂",
-      "source_label": "経済産業省",
-      "category": "policy",
-      "published": "2026-03",
-      "collected": "2026-05-31",
-      "summary": "2022年8月の初版から約3年半ぶりに人的資本可視化指針を改訂。2026年3月期から適用される府令改正（従業員給与等の決定方針の開示義務化）に対応し、経営戦略と人材戦略・人的資本投資の連動方法を具体化した。",
-      "points": [
-        "初版（2022年8月）から約3年半ぶりの改訂",
-        "2026年3月期から従業員給与等の決定方針の開示が義務化",
-        "経営戦略と人材戦略・人的資本投資の連動を具体化",
-        "上場企業の人的資本開示の質的底上げを狙う"
-      ],
-      "url": "https://www.meti.go.jp/press/2025/03/20260323003/20260323003.html",
-      "source": "経済産業省, 人的資本可視化指針（改訂版）",
-      "deepdive": "meti-human-capital-guideline"
     },
     {
       "title": "野村総合研究所、日米中独4か国のAI利用を比較調査",
@@ -260,6 +262,40 @@
       "url": "https://www.murc.jp/library/economyresearch/periodicals/graph_month/watch_2604/",
       "source": "三菱UFJリサーチ&コンサルティング, 今月のグラフ（2026年4月）",
       "deepdive": "murc-ai-labor-shortage"
+    },
+    {
+      "title": "HBS／HBR、自動化親和性の高い職種で求人13%減・分析/技術/創造系で20%増",
+      "source_label": "HBR",
+      "category": "jobs",
+      "published": "2026-03",
+      "collected": "2026-05-31",
+      "summary": "生成AI登場後の求人データを分析した実証研究。自動化親和性の高い職種の求人が13%減少した一方、分析・技術・創造系職種の求人は20%増加し、労働需要の構造的シフトを定量で確認した。",
+      "points": [
+        "自動化親和性の高い職種の求人が13%減少",
+        "分析・技術・創造系職種の求人は20%増加",
+        "生成AI登場後の求人データに基づく実証研究",
+        "労働需要の構造的シフトを定量で確認"
+      ],
+      "url": "https://hbr.org/2026/03/research-how-ai-is-changing-the-labor-market",
+      "source": "Harvard Business School / HBR, Research: How AI Is Changing the Labor Market",
+      "deepdive": "hbr-ai-labor-market"
+    },
+    {
+      "title": "経済産業省、人的資本可視化指針を約3年半ぶりに改訂",
+      "source_label": "経済産業省",
+      "category": "policy",
+      "published": "2026-03",
+      "collected": "2026-05-31",
+      "summary": "2022年8月の初版から約3年半ぶりに人的資本可視化指針を改訂。2026年3月期から適用される府令改正（従業員給与等の決定方針の開示義務化）に対応し、経営戦略と人材戦略・人的資本投資の連動方法を具体化した。",
+      "points": [
+        "初版（2022年8月）から約3年半ぶりの改訂",
+        "2026年3月期から従業員給与等の決定方針の開示が義務化",
+        "経営戦略と人材戦略・人的資本投資の連動を具体化",
+        "上場企業の人的資本開示の質的底上げを狙う"
+      ],
+      "url": "https://www.meti.go.jp/press/2025/03/20260323003/20260323003.html",
+      "source": "経済産業省, 人的資本可視化指針（改訂版）",
+      "deepdive": "meti-human-capital-guideline"
     }
   ]
 }
