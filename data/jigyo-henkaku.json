@@ -130,6 +130,42 @@
       "implication": "人材市場でも、登録個人の実績・スキル・条件をAIが読める形に整える力と、AIが拾った候補を人が見極め成果まで伴走する力が同時に問われる。価値は『人を当てる画面』より『能力・信用データ基盤』へ。"
     },
     {
+      "title": "AIコーディングCursor、ソフト制作の単位経済が崩れる",
+      "source_label": "TechCrunch（報道）",
+      "category": "model",
+      "published": "2026-02",
+      "collected": "2026-06-09",
+      "summary": "自然言語で指示するだけでコードを書くAI開発環境Cursor（Anysphere）が、ソフト制作の主役を『人が書く』から『AIが書き、人が指示・レビューする』へ転換。料金は人数に応じた月額に、AIの利用量に連動した使った分だけ払う課金を重ねる二階建てへ移った。",
+      "points": [
+        "年間あたりの売上規模が約1年で約1億ドル(2025-01)から約20億ドル(2026-02)へ急拡大",
+        "評価額は約500億ドル規模、半年前の約293億ドルからほぼ倍増",
+        "フォーチュン1000の約7割が顧客",
+        "大企業向けは黒字、個人開発者向けは赤字が続き採算が分かれる"
+      ],
+      "deepdive": "cursor-ai-coding",
+      "url": "https://techcrunch.com/2026/04/17/sources-cursor-in-talks-to-raise-2b-at-50b-valuation-as-enterprise-growth-surges/",
+      "source": "TechCrunch",
+      "implication": "人月・稼働時間を束ねて売る前提が弱まり、価値が『見立てて指示しAIの出力を見極め成果に責任を持つ力』へ移る。人材を仲介する側には成果・実績の見える化と成果ベースの取引設計が求められる。"
+    },
+    {
+      "title": "KPMGがAI効率化を理由に自社監査報酬を14%値下げさせた",
+      "source_label": "Financial Times（The Irish Times 経由）",
+      "category": "model",
+      "published": "2026-02",
+      "collected": "2026-06-09",
+      "summary": "4大会計事務所の一角KPMGが、自社を監査する監査人に『AIで作業が効率化したのだから報酬を下げるべきだ』と求め、実際に値下げさせた。時間課金で稼ぐ監査の収益基盤が、AI効率化を盾にした顧客の値下げ圧力で揺らいでいる。",
+      "points": [
+        "KPMG（英法人）への監査報酬は41.6万ドル(2024)→35.7万ドル(2025)へ約14%（5.9万ドル）減（FT報道）",
+        "別の大手PwCも顧客から効率化分の値引き要求を受け一部値下げに動いていると公言（Accounting Today）",
+        "会計事務所のAI利用率は2024年9%→2025年41%へ急拡大（Wolters Kluwer調査、2,700人超）",
+        "監査作業の60%超が0〜4年目若手・60%超が現行AIで自動化可能との推計（OnlyCFO分析、確定値ではない）"
+      ],
+      "deepdive": "kpmg-ai-audit-fees",
+      "url": "https://www.irishtimes.com/business/2026/02/06/kpmg-pressed-its-auditor-to-pass-on-ai-cost-savings/",
+      "source": "Financial Times（The Irish Times 2026-02-06 が掲載）",
+      "implication": "専門人材を『投じた時間』で束ねて売る前提が揺らぐ。人材マッチングでも稼働時間・人月課金を見直し、成果・価値で評価する取引へ橋渡しする役割が高まる。"
+    },
+    {
       "title": "AmazonがAI「Rufus」を法人購買の入口に",
       "source_label": "Digital Commerce 360",
       "category": "interface",
@@ -184,6 +220,60 @@
       "implication": "人材活用市場でも『人月・稼働時間を売る』前提が揺らぐ。時間ではなく成果・課題解決の度合いで評価される取引設計と、登録人材の成果を出す力の見える化が問われる。"
     },
     {
+      "title": "AIで顧客対応の外部委託（BPO）大手の株価が崩壊",
+      "source_label": "Concentrix IR / Nearshore Americas",
+      "category": "restructure",
+      "published": "2026-01",
+      "collected": "2026-06-09",
+      "summary": "コールセンター・チャット対応を請け負う外部委託(BPO)世界最大手のテレパフォーマンス（仏）とコンセントリクス（米）の株価が、生成AIによる代替懸念で大きく崩れた。『人手を仲介して対応量を売る』モデル自体の存在価値が投資家に問われた。引き金はクラーナ×OpenAIの自動化実績の公表。",
+      "points": [
+        "テレパフォーマンス株価は2024年初の約2か月で60%超下落（€225→€85、7年来安値）、2025年9月にCAC40指数から除外",
+        "コンセントリクスは2025年Q4（2026年1月発表）に約13.8億ドルの営業損失。のれん減損が主因",
+        "クラーナ×OpenAIは稼働1か月で230万件・約2/3を自動化、約700人分相当、対応時間11分→2分未満",
+        "クラーナは2025年5月に難所向けへ人を再採用、一次対応はAI・複雑対応は人へ（AI万能論は一部後退）"
+      ],
+      "deepdive": "bpo-contact-center-collapse",
+      "url": "https://ir.concentrix.com/news/news-details/2026/Concentrix-Reports-Fourth-Quarter-and-Fiscal-Year-2025-Results/default.aspx",
+      "source": "Concentrix IR / Nearshore Americas / Klarna公式",
+      "implication": "対応の量を『人数×席数』で売るモデルの崩れは、人材・案件を仲介して稼ぐ事業に通じる。定型の一次対応はAIに置き換わり、難所への伴走・独自データ・運用設計が残る競争軸になる。"
+    },
+    {
+      "title": "AIの後直し化で翻訳業界の人月モデルが崩壊",
+      "source_label": "CNN Business",
+      "category": "value",
+      "published": "2026-01",
+      "collected": "2026-06-09",
+      "summary": "翻訳・ローカライズ業界で『人が原文から訳す』高付加価値の仕事が、AI出力を人が直すだけの機械翻訳ポストエディット（後直し）へ置き換わった。価値の源泉が翻訳者の技能から『AIで足りる品質』へ移り、後直しの単価は半減、人数×時間で稼ぐ人月モデルが崩れた。",
+      "points": [
+        "後直しの単価が1語0.04ユーロ→0.02ユーロへ半減（人手翻訳の約25%水準とも）",
+        "IMFが翻訳者・通訳者を約200人→約50人へ削減（ゲオルギエワ氏、ダボス2026）",
+        "ゲオルギエワ氏は世界の仕事の約40%（先進国は約60%）がAIで変わる/失われると発言",
+        "翻訳者の36%が生成AIで仕事を喪失、43%が収入減（Society of Authors 2024調査・787人回答）"
+      ],
+      "deepdive": "translation-industry-collapse",
+      "url": "https://www.cnn.com/2026/01/23/tech/translation-language-jobs-ai-automation-intl",
+      "source": "CNN Business / Society of Authors調査 / 世界経済フォーラム",
+      "implication": "工数（人数×時間）で値づけする部分は単価が縮みやすい。創造性・責任・成果保証などAIで足りない価値に人材と案件を寄せ、成果で測る取引設計へ移すことが残る競争軸になる。"
+    },
+    {
+      "title": "OpenEvidence ― 医師に無料配布、製薬広告で稼ぐ医師向け生成AI",
+      "source_label": "CNBC / Sacra",
+      "category": "interface",
+      "published": "2026-01",
+      "collected": "2026-06-09",
+      "summary": "米国の医師向け生成AI『OpenEvidence』は、医師には無料で提供し、製薬・医療機器メーカーから広告料を取る無料モデルで急成長した。医師が臨床判断の情報を探す入口が検索や医薬情報担当者（MR）からAIへ移り、情報を届けたい側と使う側の双方をAIが取り持つ両面市場へ組み替わった。",
+      "points": [
+        "米国の医師の40%超が日常利用、1万以上の病院・医療機関に普及（2026年1月）",
+        "臨床相談は月およそ2,000万件、2026年3月10日には24時間で100万件超",
+        "2025年の年間あたり売上は約1.5億ドル、前年（790万ドル）比で約18倍、粗利率約90%",
+        "広告単価（1,000回表示あたり）は70〜1,000ドル超とSNS（5〜15ドル）の数十倍、2026年1月に評価額120億ドル"
+      ],
+      "deepdive": "openevidence-clinical-ai",
+      "url": "https://www.cnbc.com/2026/01/21/openevidence-chatgpt-for-doctors-doubles-valuation-to-12-billion.html",
+      "source": "CNBC（一次報道）／ Sacra（市場分析・一部推計を含む）",
+      "implication": "人選の入口がAIへ移れば、案件と人の初期マッチングにAIが関与する。利用者には無料で入口を押さえ発注側から対価を取る両面市場の設計と、AIに渡す供給側データ（実績・成果）の整備が問われる。"
+    },
+    {
       "title": "Caterpillar ― 重機を売り切りから稼働の継続課金へ",
       "source_label": "Constellation Research",
       "category": "model",
@@ -200,6 +290,96 @@
       "url": "https://www.constellationr.com/insights/news/caterpillars-ai-vision-takes-shape-data-cloud-focus-was-precursor",
       "source": "Constellation Research",
       "implication": "『一度の人選で終わり』だった人材市場でも、価値の重心が、つないだ後の稼働・定着・成果をデータで見守り続け継続課金する形へ移りうる。"
+    },
+    {
+      "title": "言葉だけでアプリが立つ「バイブコーディング」の衝撃",
+      "source_label": "TechCrunch",
+      "category": "value",
+      "published": "2025-12",
+      "collected": "2026-06-09",
+      "summary": "LovableやBoltは、自然な言葉の指示だけで画面・データ保管・ログイン・公開まで一通りそろったアプリを自動生成し、技術に詳しくない人がアプリを量産できるようにした。価値の源泉が『コードを書ける技能』から『何を作るかを言葉にする力』へ移り、受託開発・試作づくりの需要構造を直撃している。",
+      "points": [
+        "Lovableは年間あたりの売上規模で3か月で1700万ドル・顧客3万件（Sifted等）",
+        "最初の100万ドルから8か月で1億ドル、史上もっとも速く成長したソフト企業と報道（TechCrunch等）",
+        "2025年12月に同2億ドル・評価額66億ドル・約3.3億ドル調達（TechCrunch）",
+        "Boltは公開から約5か月で同4000万ドル、「vibe coding」は2025年コリンズ英語辞典の年間ワード"
+      ],
+      "deepdive": "lovable-vibe-coding",
+      "url": "https://techcrunch.com/2025/12/18/vibe-coding-startup-lovable-raises-330m-at-a-6-6b-valuation/",
+      "source": "TechCrunch",
+      "implication": "『コードを書ける人を探す』定型案件は発注側の内製に置き換わりうる一方、課題を定義し要件を言葉にする力やAI活用力を見える化する評価軸への転換が、人材マッチング市場に求められる。"
+    },
+    {
+      "title": "労働を時間課金で売る Hippocratic AIの「1時間9ドル」AI看護",
+      "source_label": "FierceHealthcare／Hippocratic AI 公式",
+      "category": "model",
+      "published": "2025-12",
+      "collected": "2026-06-09",
+      "summary": "米Hippocratic AIは、服薬確認・退院後フォロー・慢性疾患の定期連絡といった看護まわりの患者対応を担うAIエージェントを『1時間あたり9ドル』で提供。これまで看護師の人件費（人の働く時間）として買っていた業務を、ソフトを時間単位で買う形に置き換えた。労働力そのものを使った分だけ払う形で売る『労働のソフトウェア化』の先行事例である。",
+      "points": [
+        "看護まわりの患者対応を1時間9ドルで提供。米国の登録看護師の時給中央値およそ39ドルより大幅に安い（Gizmodo／Fox Business）",
+        "商用化からおよそ15か月で50超の大手医療機関・保険者・製薬会社と6か国で提携",
+        "臨床的な患者対話を1億1,500万件超、安全上の問題なく完了（同社公表）",
+        "2025年シリーズCで1億2,600万ドルを調達、評価額35億ドル・累計調達4億400万ドル"
+      ],
+      "deepdive": "hippocratic-ai-nursing",
+      "url": "https://www.fiercehealthcare.com/ai-and-machine-learning/hippocratic-ai-lands-126m-series-c-expand-patient-facing-ai-agents-fuel-ma",
+      "source": "FierceHealthcare, Hippocratic AI",
+      "implication": "人の働く時間を時間単位で取引してきた人材まわりの市場の真正面に当たる変化。定型の対応はソフトに置き換わり、見立て・調整・対人・責任ある判断といった対人の価値が人に残る。"
+    },
+    {
+      "title": "報道コンテンツがAIの回答原資に ― NYT×Amazonの権利ライセンス",
+      "source_label": "GeekWire・各社公式・大手報道",
+      "category": "value",
+      "published": "2025-12",
+      "collected": "2026-06-09",
+      "summary": "ニューヨーク・タイムズはAmazonと年2,000万〜2,500万ドルとされる契約（金額は報道ベース、公式未開示）を結び、記事・レシピ・スポーツ報道をAlexa等での回答とAI学習に供給した。メディアの稼ぎ方が『来訪で稼ぐ広告・購読』から『AIへ供給して対価を得るライセンス』へ多元化し、価値の所在がページ閲覧数から信頼できる一次情報という権利資産へ移っている。",
+      "points": [
+        "NYTがAmazonと年2,000万〜2,500万ドルと報じられるライセンス契約（NYT 2024年売上 約25.9億ドルの約1%弱とみられる）。NYT初のAI向けライセンス",
+        "対象はNYT本紙・NYT Cooking・The Athletic。Alexa等での要約表示とAI学習の両方に利用",
+        "無断利用には訴訟で対抗：NYT・シカゴ・トリビューンが2025年12月、CNNが2026年5月にPerplexityを提訴",
+        "Microsoftは利用実績連動で出版社へ支払う市場（Publisher Content Marketplace）を開設。ロイター・FT・アクセル・シュプリンガー等が参加"
+      ],
+      "deepdive": "nyt-amazon-content-licensing",
+      "url": "https://www.geekwire.com/2025/report-amazon-to-pay-at-least-20m-a-year-in-ai-content-deal-with-new-york-times/",
+      "source": "GeekWire ほか",
+      "implication": "検証済みの就業・スキルデータを保有するマッチング事業者にとっても、一次データの権利化・資産化とAIへの供給条件の設計が、来訪量に代わる新しい競争軸・収益源になりうる。"
+    },
+    {
+      "title": "人型ロボを売り切りから稼働時間課金へ Figure AI",
+      "source_label": "Figure AI（BMW公式でも裏取り）",
+      "category": "model",
+      "published": "2025-12",
+      "collected": "2026-06-09",
+      "summary": "人型ロボを作るFigure AIが、ロボットの販売から、稼働時間で課金する『ロボットの稼働を従量で提供する形（RaaS）』へ稼ぎ方を移そうとしている。ソフト更新・遠隔支援・全機の学習還流で稼働を支え続け、製造業が『機械メーカー』から『労働力の供給者』へ変わりつつある。",
+      "points": [
+        "Figure 02がBMW米国スパルタンバーグ工場で約11か月稼働（Figure AI / BMW公式）",
+        "車体X3を3万台超の生産を支え、部品9万点超を運んだ",
+        "累計稼働時間は約1,250時間、1交代の設置成功率は99%超",
+        "RaaS（稼働時間で課金）の料金相場は1稼働時間あたり10〜30ドルとみられる（二次情報）"
+      ],
+      "deepdive": "figure-humanoid-raas",
+      "url": "https://www.figure.ai/news/production-at-bmw",
+      "source": "Figure AI 公式 / BMW Group 公式",
+      "implication": "『労働を稼働時間で売る』供給者の登場は人材供給の真正面に重なる。価値の重心が『一度の人選』から、つないだ後の稼働・定着・成果をデータで見守り続けることへ移りうる。"
+    },
+    {
+      "title": "NEC、企業間の調達交渉をAIが自律代行",
+      "source_label": "NEC公式",
+      "category": "interface",
+      "published": "2025-12",
+      "collected": "2026-06-09",
+      "summary": "NECが2025年12月、製造業の納期・数量交渉をAIが最良条件を組み立ててサプライヤーと自律交渉するサービスを開始した。人が電話・メールで数日かけた交渉が、AI同士のやり取りへ置き換わる。企業間取引の接点（交渉）そのものをAIが担う、日本企業の代表事例。",
+      "points": [
+        "NECグループ実証で約1,300品目を自動化（2024年11月）",
+        "購買担当者が介在せずAIだけで合意した割合＝95%",
+        "交渉時間が数時間〜数日から約80秒へ短縮",
+        "自動交渉AIがUN/CEFACTの電子交渉国際標準に採用"
+      ],
+      "deepdive": "nec-procurement-negotiation-ai",
+      "url": "https://www.nec.com/en/press/202512/global_20251202_01.html",
+      "source": "NEC",
+      "implication": "単価・稼働・時期など型のある条件交渉とマッチングの一次対応はAIに移りうる。人には非定型の判断と、確かなデータ整備が残る。"
     },
     {
       "title": "AIエージェントが旅行予約を「自動運転」 ― OTAは検索画面から裏方へ",
@@ -236,6 +416,60 @@
       "url": "https://digiday.com/media/in-graphic-detail-the-state-of-ai-referral-traffic-in-2025/",
       "source": "Digiday",
       "implication": "求人・案件探索の入口もAIに置き換わりうる。来訪量より、AIに引用される構造化データ・独自実績という供給の保有が新しい競争軸になる。"
+    },
+    {
+      "title": "Sierra ― 顧客サポートを「解決1件ごとの成果課金」で売る",
+      "source_label": "TechCrunch",
+      "category": "model",
+      "published": "2025-11",
+      "collected": "2026-06-09",
+      "summary": "Bret Taylor創業のSierraは、顧客サポートAIエージェントを『使う人数・月額』でなく『問い合わせを1件解決できたときだけ払う成果課金』で提供する新モデルを確立しつつある。完了した仕事にだけ課金し固定月額に寄らない設計で、外部委託(BPO)やソフトの料金体系を揺さぶる。",
+      "points": [
+        "創業から約2年（21か月）で年間あたりの売上規模1億ドルに到達、2026年2月初旬に1.5億ドルへ",
+        "完了した仕事に課金し固定の月額契約に寄らない成果課金（定型=使った分／複雑=成果のハイブリッドとされる）",
+        "2025年9月に評価額100億ドルで3.5億ドル、2026年5月に評価額158億ドルで9.5億ドル調達",
+        "競合Decagonも2026年1月に評価額45億ドル（前年比3倍）、ある利用企業で支援人員を数百人→65人程度へ縮小とされる"
+      ],
+      "deepdive": "sierra-outcome-agent",
+      "url": "https://techcrunch.com/2025/11/21/bret-taylors-sierra-reaches-100m-arr-in-under-two-years/",
+      "source": "TechCrunch（2025-11／2026-05続報）",
+      "implication": "人材市場でも『人数・工数を売る』前提が揺らぐ。稼働時間でなく成果・解決1件で評価する取引設計と、成果を出す確度の見える化、出なければ次へつなぐ伴走が問われる。"
+    },
+    {
+      "title": "オムニコム×IPG合併で広告持株会社が世界首位に",
+      "source_label": "eMarketer",
+      "category": "restructure",
+      "published": "2025-11",
+      "collected": "2026-06-09",
+      "summary": "米広告大手オムニコムが同業IPGを約132.5億ドルの全株式交換で買収し、2025年11月26日に統合完了。売上で世界最大の広告持株会社となり、英WPPが首位から陥落した。強みが『人手の制作・媒体手配』から『自社AI基盤Omniと消費者データの規模』へ移り、データ×AI資産の保有量が業界の統合と序列を決める構造になりつつある。",
+      "points": [
+        "約132.5億ドルの全株式交換で2025年11月26日に統合完了、売上で世界最大の広告持株会社に",
+        "統合で年間約7.5億ドルのコスト削減を見込み、約4,000人の人員削減と一部ブランド整理を発表",
+        "自社AI基盤Omniを中核に据え、AIどうしが広告枠を直接買い付け仲介を省く実証を開始",
+        "首位を譲ったWPPは2025年通期売上が前年比5.4%減（101.76億ポンド、WPP IR 2026-02-26）"
+      ],
+      "deepdive": "omnicom-ipg-ai-merger",
+      "url": "https://www.emarketer.com/content/how-omnicom-ipg-merger-sets-new-standard-ai-driven-advertising",
+      "source": "eMarketer（Omnicom公式リリース・WPP IR・各社報道で補強）",
+      "implication": "人と仕事をつなぐ市場も双方の情報を束ねる構造が広告会社と重なる。価値は『担当者の頭数』からAIが読める能力・実績データの厚みとAIの賢さへ移り、独自データ基盤の保有が防壁になりうる。"
+    },
+    {
+      "title": "AI音楽ライセンス：訴訟から「生成1回課金」へ",
+      "source_label": "TechCrunch / 各社公式リリース",
+      "category": "model",
+      "published": "2025-11",
+      "collected": "2026-06-09",
+      "summary": "音楽を勝手にAIに学習させたとして訴えていたレコード大手が、訴訟を取り下げ、自社の楽曲をAIに有償で貸して対価を取るライセンス収益モデルへ転換した。2025年10〜11月にUniversal・WarnerがUdio・Sunoと相次ぎ和解し、2026年にライセンス済み楽曲だけで学習した新プラットフォームを共同で立ち上げる。価値の源が原盤の再生から『学習・生成の原資としての権利』へ移る。",
+      "points": [
+        "UMGがUdioと2025-10-30に和解＋録音・出版のライセンス契約",
+        "WMGがUdioと2025-11-19、Sunoと2025-11-25に和解。WMGはSongkickをSunoへ売却",
+        "仕組みは『生成1回ごとに権利元へ課金』。1生成0.002〜0.005ドルとの報道はあるが公式の金額明記はなく確定値ではない",
+        "Sunoは評価額24.5億ドルで2.5億ドル調達。UMG・Sonyの対Suno訴訟は係争中。演奏家への分配を巡り米音楽家組合がレーベルを提訴"
+      ],
+      "deepdive": "ai-music-licensing",
+      "url": "https://techcrunch.com/2025/11/19/warner-music-settles-copyright-lawsuit-with-udio-signs-deal-for-ai-music-platform/",
+      "source": "TechCrunch / 各社公式リリース",
+      "implication": "経歴・スキル・成果のデータを保有する側が、それ自体をAI学習・生成の原資として資産化し新収益化しうる。ただし本人の同意（オプトイン）と貢献者への分配設計が信頼の前提になる。"
     },
     {
       "title": "Perplexity、AI検索の「Buy with Pro」を全米無料利用者に開放（手数料ゼロ）",
@@ -310,6 +544,24 @@
       "implication": "人材市場でもAIが人選を代行すれば『並べて見せる画面』の価値は下がり、AIが信頼して使える実績・スキル・本人確認データの土台を握る者へ競争軸が移る。"
     },
     {
+      "title": "Upstart ― AI即時与信で融資審査を再構築",
+      "source_label": "Upstart 年次報告書（米SEC提出 10-K）",
+      "category": "restructure",
+      "published": "2025-09",
+      "collected": "2026-06-09",
+      "summary": "米Upstartは、FICO中心の少数項目＋人手だった個人向け融資の与信判断を、2,500超の項目を使うAIによる即時・自動審査へ置き換えた。申込を読み解き・信用力を見極め・諾否を判断する中核業務をAIがエンドツーエンドで担い、銀行・ノンバンクの提供プロセスとコスト構造を組み替えている。",
+      "points": [
+        "2025年12月期、同社プラットフォームの融資の91%が『人手を介さない完全自動』で処理（2020年12月の約70%から上昇）",
+        "モデルは2,500を超える項目を使い、約1億400万件の返済実績で学習。多くの申込者は追加書類なしで即時に結果を受け取れる",
+        "2017年、AIと非伝統的データを使う与信モデルで米CFPB（消費者金融保護局）の初のノーアクションレター取得（同レターは2022年6月に終了）",
+        "当時CFPBは従来型比で承認者27%増・平均金利16%低と報告"
+      ],
+      "deepdive": "upstart-ai-credit",
+      "url": "https://www.sec.gov/Archives/edgar/data/0001647639/000164763926000027/upst-20251231.htm",
+      "source": "Upstart Holdings, Inc. / 米証券取引委員会（SEC）",
+      "implication": "人材市場の中核も『見極め（適合性・信用）』であり、条件が明確で件数の多い一次の見極めはAIで即時自動化が進む一方、難しい判断と関係づくりは人に残る。"
+    },
+    {
       "title": "アクセンチュア、AI内蔵の「リインベンション・サービス」へ全社再編",
       "source_label": "CIO Dive",
       "category": "model",
@@ -344,6 +596,60 @@
       "url": "https://stripe.com/newsroom/news/stripe-openai-instant-checkout",
       "source": "Stripe / OpenAI",
       "implication": "人材市場でも入口がAIとの会話へ移りうる。登録個人の実績・スキル・条件をAIが読める形に整える供給データの保有が問われ、見極め・契約・伴走という『中身』の価値は人に残る。"
+    },
+    {
+      "title": "AIエンジニアDevin、課金を人月から計算量へ転換し業界再編へ",
+      "source_label": "TechCrunch",
+      "category": "restructure",
+      "published": "2025-07",
+      "collected": "2026-06-09",
+      "summary": "AIソフトエンジニア「Devin」のCognitionが、課金単位を人数・人月から「計算量（AIがどれだけ働いたか、約2.25ドル／単位）」へ転換した。起点価格を月500ドルから20ドルへ下げて入口を広げ、同業Windsurfを買収してAI開発エージェント業界が再編フェーズに入った。",
+      "points": [
+        "Devin 2.0で起点価格を月500ドルから20ドルへ引下げ、計算量の単位（約2.25ドル／単位、1単位は約15分）で使った分だけ払う課金へ",
+        "年間あたり売上規模 約8200万ドルのWindsurfを2025年7月に買収",
+        "買収後にCognitionの売上は倍増したと報じられる",
+        "評価額は2025年9月に約102億ドル、その後約250億ドル規模での調達交渉が報道（報道ベース）"
+      ],
+      "deepdive": "cognition-devin-pricing",
+      "url": "https://techcrunch.com/2025/07/14/cognition-maker-of-the-ai-coding-agent-devin-acquires-windsurf/",
+      "source": "TechCrunch",
+      "implication": "外部人材活用市場でも『人月・稼働時間を売る』前提が揺らぐ。AIエージェントが作業を肩代わりするほど、人月でなく成果・仕事量で評価する取引設計と、プロ人材の成果の見える化が問われる。"
+    },
+    {
+      "title": "AIが標的を見つけAIが設計した新薬が肺の難病で初の臨床効果",
+      "source_label": "Nature Medicine",
+      "category": "value",
+      "published": "2025-06",
+      "collected": "2026-06-09",
+      "summary": "AIが治療の狙いどころ（標的TNIK）を見つけ、AIが分子まで設計した新薬レントセルチブが、肺が硬くなる難病（特発性肺線維症）の臨床第2相前半で効きめのきざしを示し、2025年6月3日にNature Medicineに掲載された。創薬の価値の源が『研究者の手作業の試行錯誤』から『AIの一貫生成＋人での検証データ』へ移りはじめた先行事例。",
+      "points": [
+        "最も多い用量（1日1回60mg）群は肺活量が平均+98.4mL改善、偽薬群は-20.3mL（12週間）",
+        "中国22施設・71人を対象にした臨床第2相前半（Phase 2a）",
+        "狙いどころの発見から分子設計までをAI基盤（Pharma.AI）が一気通貫で生成",
+        "Insilicoは『AI創薬の効きめを人で初めて確かめた業界初の実証』と位置づけ"
+      ],
+      "deepdive": "insilico-ai-drug-discovery",
+      "url": "https://www.nature.com/articles/s41591-025-03743-2",
+      "source": "Nature Medicine",
+      "implication": "人材市場でも価値の源が『人が一件ずつ試行錯誤すること』から『AIが候補を幅広く生成し、稼働・成果のデータで裏づけること』へ移りうる。専門能力の価値はAIの出力を見極め検証する判断に残ると考えられる。"
+    },
+    {
+      "title": "Metaが2026年末めど広告制作を全自動AI化へ",
+      "source_label": "Marketing Dive（WSJ報道）",
+      "category": "interface",
+      "published": "2025-06",
+      "collected": "2026-06-09",
+      "summary": "Meta（Facebook・Instagram運営）が、2026年末までに広告の制作から配信までを全自動でAIに任せる計画を進めているとみられる。広告主はサイトURL・商品画像・予算・目的を入力し銀行口座をつなぐだけで、画像・動画・文章の生成、配信先選定、最適化、予算配分までをAIが担うとされる。代理店や人手の制作工程を介さず『目的だけ伝える』入口に広告主の接点が縮む。",
+      "points": [
+        "広告主の入力はURL・商品画像・予算・目的＋銀行口座のみで、AIが広告全体を生成・配信・最適化（WSJ 2025-06-02報道）",
+        "Metaの売上の大半（約97%）は広告で、規模は年1,600億ドル超とされる",
+        "報道当日、Metaは約1%上昇／大手代理店は下落（Omnicom 3.2%安・Publicis 3.8%安・WPP 2.2%安・Interpublic 1.9%安、Reuters）",
+        "全自動化は2026年末を目標とする計画段階であり、実現済みではない"
+      ],
+      "deepdive": "meta-ai-ad-automation",
+      "url": "https://www.marketingdive.com/news/meta-plans-to-enable-fully-ai-automated-ads-by-2026/749613/",
+      "source": "Marketing Dive / Wall Street Journal（原報道）",
+      "implication": "買い手の窓口が『目的を伝えるだけ』に圧縮され、制作・運用の仲介工程がAIで中抜きされる構図。人材市場でも一次マッチング（候補探索・初期提案）の自動化が進み、人選の入口がAIへ移ると考えられる。"
     },
     {
       "title": "Swiss Re ― 衛星観測×指数連動のパラメトリック農業保険で査定レス自動払い",
