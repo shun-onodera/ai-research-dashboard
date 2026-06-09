@@ -3,12 +3,60 @@
   "updated": "2026-06-09",
   "description": "生成AI・AIエージェントが他業種の事業モデル（顧客接点・提供形態・価値の所在・業界構造）を作り変える公開事例を、人材・能力流通市場への転用とあわせて整理。人材業界より先に起きている変化を先読みする。",
   "categories": [
-    { "key": "interface", "label": "AIによる購買化" },
-    { "key": "model", "label": "提供・収益モデルの転換" },
-    { "key": "value", "label": "価値の所在の移動" },
-    { "key": "restructure", "label": "業界再編・新規参入" }
+    {
+      "key": "interface",
+      "label": "AIによる購買化"
+    },
+    {
+      "key": "model",
+      "label": "提供・収益モデルの転換"
+    },
+    {
+      "key": "value",
+      "label": "価値の所在の移動"
+    },
+    {
+      "key": "restructure",
+      "label": "業界再編・新規参入"
+    }
   ],
   "articles": [
+    {
+      "title": "Intercom Fin ― AIエージェントを「解決1件0.99ドル」の成果課金で売る",
+      "source_label": "Intercom（Fin AI）公式",
+      "category": "model",
+      "published": "2026-06",
+      "collected": "2026-06-09",
+      "summary": "顧客サポートAIエージェント「Fin」は席課金をやめ、問い合わせを最後まで解決できたとき（または設定手順を完遂したとき）だけ1件0.99ドルを課金する成果課金へ振り切った。失敗・中途半端な対応は無課金で、売り手が解決精度に責任を負う。価値の単位が席から成果へ移る先行例。",
+      "points": [
+        "解決1件あたり0.99ドル（成果が出たときのみ課金、失敗・部分対応は無課金）",
+        "チームメンバー無制限・追加費用なし（席課金からの脱却）",
+        "セットアップ・連携・基盤費用は0ドル、最小利用は月50件から",
+        "別報道では同成果課金でFinは年商規模 約1億ドル超に成長とされる"
+      ],
+      "deepdive": "intercom-fin-outcome-pricing",
+      "url": "https://fin.ai/pricing",
+      "source": "Intercom（Fin AI）公式",
+      "implication": "人材市場でも『席・工数を売る』前提が揺らぐ。稼働時間でなく成果・解決の度合いで評価する取引設計と、成果を出す確度の見える化、出なければ次へつなぐ伴走が問われる。"
+    },
+    {
+      "title": "AIが暴いた「時間課金」コンサルの構造的欠陥 ― 成果課金への移行",
+      "source_label": "Consulting Success",
+      "category": "model",
+      "published": "2026-03",
+      "collected": "2026-06-09",
+      "summary": "AIが調査・レポート・分析という従来『時間で請求』する作業を自動化し、時間課金が成り立たなくなる流れを加速させた。発注側の固定額選好が高まり、成果・価値ベースへ移ったコンサルの単価が上がっている。収益が時間から成果へ移る転換をデータで裏づけた事例。",
+      "points": [
+        "発注側の固定額選好が67%（2024年Deloitte調査、3年前は41%）",
+        "価値ベース課金へ移ったコンサルの80%が90日以内に単価を引き上げ",
+        "価値ベース導入1年目の平均単価上昇は43%",
+        "1,000社超のコンサル会社を分析"
+      ],
+      "deepdive": "consulting-billable-hour-shift",
+      "url": "https://www.consultingsuccess.com/how-ai-exposed-the-fatal-flaw-in-billable-hour-consulting",
+      "source": "Consulting Success（Deloitte調査引用）",
+      "implication": "人材市場でも『人月・稼働時間を売る』前提が揺らぐ。成果での評価は値下げでなく単価改善になりうるため、固定額・成果連動の選択肢整備と成果の見える化が問われる。"
+    },
     {
       "title": "インビジブル・バンキング ― 銀行が「読まれなければ存在しない」裏方に",
       "source_label": "FinTech Weekly",
@@ -26,6 +74,24 @@
       "url": "https://www.fintechweekly.com/magazine/articles/ai-agents-262-billion-sales-banks-agentic-commerce-lending-2026",
       "source": "FinTech Weekly",
       "implication": "人材市場でも、登録個人の実績・スキル・条件をAIが読める形に整える力と、AIが拾った候補を人が見極め成果まで伴走する力が同時に問われる。価値は『人を当てる画面』より『能力・信用データ基盤』へ。"
+    },
+    {
+      "title": "Salesforce Agentforce ― AIエージェントを席・会話・成果の3モデルで併売",
+      "source_label": "SaaStr",
+      "category": "model",
+      "published": "2026-02",
+      "collected": "2026-06-09",
+      "summary": "SalesforceはAIエージェント群Agentforceを、従来の席課金に加え会話単位・動作単位の従量課金で同時提供している。AIが優秀になるほど顧客側の人が減り席課金だけでは価値を捉えきれない構造変化が背景にあり、課金の物差しを3本立てで走らせている。",
+      "points": [
+        "会話1件2ドル（2024年10月）／動作0.10ドル相当・10万クレジット=500ドル（2025年5月）",
+        "予算固定を求める大企業向けに席課金（1人月125ドル以上、2025年後半）も併存",
+        "AIによる効率化で席数が約1割減と観測",
+        "ARRはFY2026 Q3時点で約5.4億ドル・前年比330%増"
+      ],
+      "deepdive": "agentforce-pricing-models",
+      "url": "https://www.saastr.com/salesforce-now-has-3-pricing-models-for-agentforce-and-maybe-right-now-thats-the-way-to-do-it/",
+      "source": "SaaStr",
+      "implication": "人材活用市場でも『人月を売る』前提が揺らぐ。案件の性質に応じて工数・成果・処理量と評価軸を選び分け、発注側が納得して払える取引設計を組む伴走力が問われる。"
     },
     {
       "title": "AIが法務の経済を変える ― 時間課金から成果・定額課金へ",
@@ -82,6 +148,42 @@
       "implication": "求人・案件探索の入口もAIに置き換わりうる。来訪量より、AIに引用される構造化データ・独自実績という供給の保有が新しい競争軸になる。"
     },
     {
+      "title": "マッキンゼー、全世界売上の約4分の1を「成果連動型」へ転換",
+      "source_label": "Business Insider",
+      "category": "model",
+      "published": "2025-11",
+      "collected": "2026-06-09",
+      "summary": "世界最大級のコンサル会社マッキンゼーが、稼働時間ではなく顧客の事業成果に応じて料金を取るやり方へ大きく舵を切った。生成AIで調査・資料づくりが速くなり時間で対価を取る前提が崩れたことが背景。収益の源泉が『費やした時間』から『届けた成果』へ移る象徴例。",
+      "points": [
+        "全世界売上の約25%が稼働時間でなく顧客の事業成果（売上・コスト削減・事業指標）に連動",
+        "顧客の取締役会スコアカードを成果指標に設定",
+        "従来型の戦略助言は仕事の20%未満まで縮小",
+        "2025年11月ロンドン説明会で統括パートナーが実名で言及"
+      ],
+      "deepdive": "mckinsey-outcome-pricing",
+      "url": "https://finance.yahoo.com/news/ai-reshaping-mckinsey-makes-money-195132745.html",
+      "source": "Business Insider（Yahoo Finance転載）",
+      "implication": "人材活用市場でも『人月・稼働時間を売る』前提が揺らぐ。時間でなく発注側が重視する事業指標・成果で評価される取引設計と、成果を出す力の見える化が問われる。"
+    },
+    {
+      "title": "Opendoor ― AIによる住宅査定・引受の自動化でiBuyer事業を再設計",
+      "source_label": "Nasdaq",
+      "category": "value",
+      "published": "2025-11",
+      "collected": "2026-06-09",
+      "summary": "米住宅買取大手Opendoorが、住宅の評価・査定・権利関係や代金管理を自動化し、十数種類のAI製品を数週間で投入。人手で1件ずつ回す会社からソフトウェア中心の会社へ転換し、業務の速さで採算を立て直そうとしている。人手の判断・処理がAIに置き換わり採算構造が組み替わる事例。",
+      "points": [
+        "住宅の現況評価が『ほぼ丸1日』から『約10分』へ短縮",
+        "引受に必要な人数が最大11人から1人へ縮小",
+        "十数種類のAI製品をわずか数週間で投入",
+        "週ごとの買取契約が9月中旬〜10月下旬でほぼ倍増、2026年末に調整後純利益の損益分岐到達を目標"
+      ],
+      "deepdive": "opendoor-ai-ibuying",
+      "url": "https://www.nasdaq.com/articles/can-opendoor-20-redefine-ibuying-through-ai-and-automation",
+      "source": "Nasdaq / Zacks",
+      "implication": "人材市場でも案件の読み取り・条件確認・書類整備など定型工程はAIで時間と人手が下がりうる。空いた人手を最終的な見極め・要望すり合わせ・トラブル収拾へ再配置する設計が問われる。"
+    },
+    {
       "title": "VisaとMastercard、AIが代行する「エージェント決済」基盤を相次ぎ投入",
       "source_label": "Digital Commerce 360",
       "category": "interface",
@@ -98,6 +200,60 @@
       "url": "https://www.digitalcommerce360.com/2025/10/16/visa-mastercard-both-launch-agentic-ai-payments-tools/",
       "source": "Digital Commerce 360",
       "implication": "人材市場でもAIが人選を代行すれば『並べて見せる画面』の価値は下がり、AIが信頼して使える実績・スキル・本人確認データの土台を握る者へ競争軸が移る。"
+    },
+    {
+      "title": "アクセンチュア、AI内蔵の「リインベンション・サービス」へ全社再編",
+      "source_label": "CIO Dive",
+      "category": "model",
+      "published": "2025-09",
+      "collected": "2026-06-09",
+      "summary": "世界最大級のIT・コンサル会社アクセンチュアが、5つに分かれていた事業をAI内蔵の単一組織へまとめ直した。提供のかたちを個別サービスの寄せ集めから『人とAIエージェントを組み合わせた一体の支援』へ作り替える、事業の構え方そのものの転換例。",
+      "points": [
+        "2025年9月、5事業ラインをAI内蔵の単一組織『リインベンション・サービス』へ統合",
+        "生成AI・AIエージェント売上は直近1年で27億ドル・前年比3倍、受注は59億ドル・前年比ほぼ2倍",
+        "大型案件の約80%が複数サービスにまたがる",
+        "AI・データ専門人材を2年で約2倍の7.7万人に（料金の成果連動化は推測）"
+      ],
+      "deepdive": "accenture-reinvention",
+      "url": "https://www.ciodive.com/news/accenture-generative-ai-revenue-skills-training-data-modernization/761161/",
+      "source": "CIO Dive",
+      "implication": "人材市場でも『単機能の人を時間で当てる』前提が揺らぐ。複数領域をまたいで成果まで導ける人材と、人とAIを組み合わせた解決力で評価される取引設計が問われる。"
+    },
+    {
+      "title": "OpenAI「Instant Checkout」×Stripe ― ChatGPT会話内で完結する購買",
+      "source_label": "Stripe公式ニュースルーム",
+      "category": "interface",
+      "published": "2025-09",
+      "collected": "2026-06-09",
+      "summary": "2025年9月29日、StripeとOpenAIが米国のChatGPT利用者向けに、商品の推薦から決済まで会話画面の中で完結する『Instant Checkout（その場決済）』を開始した。共通規格『Agentic Commerce Protocol』を無償公開。買い物の入口が小売の画面からAIとの会話へ移る先行事例。",
+      "points": [
+        "2025年9月29日開始、まず米国のChatGPT利用者が対象",
+        "共通規格ACPを無償公開し、単一連携でAIの会話に商品を載せられる",
+        "当初Etsy米国出品者、続いてShopify加盟店が順次対応",
+        "販売者は『販売記録者』を保ち受注・税・配送・返品を自社管理（手数料4%報道は公式未明記＝とみられる）"
+      ],
+      "deepdive": "openai-instant-checkout",
+      "url": "https://stripe.com/newsroom/news/stripe-openai-instant-checkout",
+      "source": "Stripe / OpenAI",
+      "implication": "人材市場でも入口がAIとの会話へ移りうる。登録個人の実績・スキル・条件をAIが読める形に整える供給データの保有が問われ、見極め・契約・伴走という『中身』の価値は人に残る。"
+    },
+    {
+      "title": "Swiss Re ― 衛星観測×指数連動のパラメトリック農業保険で査定レス自動払い",
+      "source_label": "Swiss Re公式",
+      "category": "restructure",
+      "published": "2025-05",
+      "collected": "2026-06-09",
+      "summary": "再保険大手Swiss Reが、衛星観測と降雨・気温・土壌水分・植生指数（NDVI）などに連動して現地査定なしで自動支払いするパラメトリック（指数連動）農業保険を世界に展開。あらかじめ決めた値に達すると支払いが自動発動し、従来の数週間〜数か月の査定を回避する。",
+      "points": [
+        "閾値到達で支払いが自動発動し、従来の数週間〜数か月の現地査定を回避",
+        "従来型農業保険の成長 年5%程度に対し、指数連動市場は年15〜20%で成長",
+        "査定・監視基盤『Opti-Crop』で農家が衛星データ・支払い状況をその場で確認",
+        "主な対象は世界の小規模農家6億人、世界の作物生産の約1/3を担う"
+      ],
+      "deepdive": "swissre-parametric-insurance",
+      "url": "https://www.swissre.com/reinsurance/property-and-casualty/agriculture-risks/agricultural-insurance-parametric-products.html",
+      "source": "Swiss Re",
+      "implication": "人材市場でも適合の確認・成果の検収・支払いの判断を、根拠データが揃えば自動で次工程へ進める設計が現実味を帯びる。価値は『確かめる人手』からデータ整備と仕組みの設計力へ移る。"
     }
   ]
 }
