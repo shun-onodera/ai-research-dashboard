@@ -1,0 +1,103 @@
+{
+  "theme": "AIと事業変革",
+  "updated": "2026-06-09",
+  "description": "生成AI・AIエージェントが他業種の事業モデル（顧客接点・提供形態・価値の所在・業界構造）を作り変える公開事例を、人材・能力流通市場への転用とあわせて整理。人材業界より先に起きている変化を先読みする。",
+  "categories": [
+    { "key": "interface", "label": "顧客接点の変化" },
+    { "key": "model", "label": "提供・収益モデルの転換" },
+    { "key": "value", "label": "価値の所在の移動" },
+    { "key": "restructure", "label": "業界再編・新規参入" }
+  ],
+  "articles": [
+    {
+      "title": "インビジブル・バンキング ― 銀行が「読まれなければ存在しない」裏方に",
+      "source_label": "FinTech Weekly",
+      "category": "value",
+      "published": "2026-03",
+      "collected": "2026-06-09",
+      "summary": "AIエージェントが消費者に代わって買い物と与信を選ぶ時代に入り、銀行の消費者向けの顔（アプリ・画面）が後退する。商品が機械可読でなければAIの候補に入らず「その文脈では存在しない」扱いになり、価値は顧客接点から、AIが読み取れるデータと組み込みインフラへ移る。",
+      "points": [
+        "米国でAI/AIエージェントが影響した売上は2025年ホリデー商戦で計2,620億ドル、全小売の約20%相当（Salesforce）",
+        "『エージェントが与信商品を読めなければ、その文脈では存在しないのと同じ』と指摘",
+        "PDFはAIにとって中身の見えない箱。API・構造化メタデータ・Schema.orgでの機械可読化が必要",
+        "VisaのIntelligent Commerce、MastercardのAgent Payなど決済インフラのAI対応が業界横断で進行"
+      ],
+      "deepdive": "invisible-banking",
+      "url": "https://www.fintechweekly.com/magazine/articles/ai-agents-262-billion-sales-banks-agentic-commerce-lending-2026",
+      "source": "FinTech Weekly",
+      "implication": "人材市場でも、登録個人の実績・スキル・条件をAIが読める形に整える力と、AIが拾った候補を人が見極め成果まで伴走する力が同時に問われる。価値は『人を当てる画面』より『能力・信用データ基盤』へ。"
+    },
+    {
+      "title": "AIが法務の経済を変える ― 時間課金から成果・定額課金へ",
+      "source_label": "Thomson Reuters",
+      "category": "model",
+      "published": "2026-02",
+      "collected": "2026-06-09",
+      "summary": "生成AIが法務の作業時間を大きく縮め、働いた時間に応じて請求する時間課金が成り立たなくなりつつある。固定報酬・成果連動・定額制・効率化分の折半など『届けた成果に応じた課金』へ軸が移り、収益の源泉が費やした時間から成果へ移る転換の先行例。",
+      "points": [
+        "AIで10時間の仕事が2時間に縮むと、時間課金の事務所は単価引き上げか売上減の二択に",
+        "法務の専門職はAI活用で年間約240時間を捻出する見込み",
+        "米国の法務・税務会計でのAIの年間影響は合計320億ドル規模と試算",
+        "見えるAI戦略を持つ組織はROI実現が3.9倍・増収が3.5倍起きやすい"
+      ],
+      "deepdive": "legal-ai-pricing-shift",
+      "url": "https://legal.thomsonreuters.com/blog/the-new-economics-of-ai-powered-legal-services-how-smart-law-firms-are-redefining-profit/",
+      "source": "Thomson Reuters",
+      "implication": "人材活用市場でも『人月・稼働時間を売る』前提が揺らぐ。時間ではなく成果・課題解決の度合いで評価される取引設計と、登録人材の成果を出す力の見える化が問われる。"
+    },
+    {
+      "title": "AIエージェントが旅行予約を「自動運転」 ― OTAは検索画面から裏方へ",
+      "source_label": "PYMNTS",
+      "category": "interface",
+      "published": "2025-12",
+      "collected": "2026-06-09",
+      "summary": "旅行の計画・予約が、利用者が検索結果を見比べて選ぶ『検索主導』から、AIエージェントが供給会社をまたいで計画・予約・変更まで肩代わりする『エージェント主導』へ移り始めた。入口を握ってきたOTA（オンライン旅行会社）は、画面で選ばせる立場から在庫・価格を供給する裏方へ後退しうる。",
+      "points": [
+        "消費者の約25%がAIエージェントに旅行計画を任せることに前向き（PYMNTS Intelligence）",
+        "Trip.com『TripGenie』は航空券・ホテル・体験を横断した行程作成から予約完結まで実行",
+        "Expediaは複数回の引き継ぎを不要にするAIサービスエージェントを提示",
+        "Amazon Alexa Plusが音声予約に対応し、価格監視・取り直し・変更までAIが担う"
+      ],
+      "deepdive": "agentic-travel-booking",
+      "url": "https://www.pymnts.com/news/artificial-intelligence/2025/agentic-ai-takes-the-wheel-in-travel-planning-and-booking/",
+      "source": "PYMNTS",
+      "implication": "人と仕事をつなぐ事業でも、探索・組み合わせ・手配はAIエージェントに移りやすく、検索画面の価値は下がる。残るのは、AIに選ばれる在庫の厚みと、相性の見極め・関係構築・トラブル対応という人の目利き。"
+    },
+    {
+      "title": "AI検索の「ゼロクリック」が出版・メディアの送客モデルを壊す",
+      "source_label": "Digiday",
+      "category": "restructure",
+      "published": "2025-12",
+      "collected": "2026-06-09",
+      "summary": "Google AI OverviewsやChatGPTが答えを画面上で直接見せるため、検索からサイトへ人を送る流れが細り始めた。広告閲覧で稼ぐ出版・メディアの収益前提が揺らぎ、価値が『閲覧トラフィック』から『AIに引用される供給そのもの』へ再編されつつある。",
+      "points": [
+        "AI経由の流入は主要10業種でウェブ全体の約1%だが伸びは急（ChatGPT前年比52%増、Gemini同388%増）",
+        "AI経由流入の87.4%をChatGPTが占め、送り込みが特定サービスに偏る",
+        "AI要約が出るとGoogle検索のリンク押下率は約15%から8%へほぼ半減（ゼロクリック化）",
+        "一方でAI経由の来訪は登録1.66%・課金1.34%と転換率が高く、量から質への移行を示す"
+      ],
+      "deepdive": "ai-search-media-shift",
+      "url": "https://digiday.com/media/in-graphic-detail-the-state-of-ai-referral-traffic-in-2025/",
+      "source": "Digiday",
+      "implication": "求人・案件探索の入口もAIに置き換わりうる。来訪量より、AIに引用される構造化データ・独自実績という供給の保有が新しい競争軸になる。"
+    },
+    {
+      "title": "VisaとMastercard、AIが代行する「エージェント決済」基盤を相次ぎ投入",
+      "source_label": "Digital Commerce 360",
+      "category": "interface",
+      "published": "2025-10",
+      "collected": "2026-06-09",
+      "summary": "VisaがTrusted Agent Protocol、MastercardがAgent Payを発表し、AIが本人に代わって買い物・支払いを完結する基盤を整備した。買い手の窓口が小売の画面からAIへ移り、決済各社は本人確認・データ受け渡しを担う裏側のインフラ提供者へ役割を移しつつある。",
+      "points": [
+        "Visa=Trusted Agent Protocol／Mastercard=Agent Payを2025年10月に投入",
+        "Visa基盤にMicrosoft・Shopify・Stripe・Worldpay・Nuveiが参加",
+        "生成AI経由の米小売流入が前年比約4,700%増（2025年7月・Adobe）",
+        "OpenAIのAgentic Commerce Protocol・GoogleのAP2と補完関係"
+      ],
+      "deepdive": "agentic-payments",
+      "url": "https://www.digitalcommerce360.com/2025/10/16/visa-mastercard-both-launch-agentic-ai-payments-tools/",
+      "source": "Digital Commerce 360",
+      "implication": "人材市場でもAIが人選を代行すれば『並べて見せる画面』の価値は下がり、AIが信頼して使える実績・スキル・本人確認データの土台を握る者へ競争軸が移る。"
+    }
+  ]
+}
