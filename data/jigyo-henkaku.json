@@ -3,7 +3,7 @@
   "updated": "2026-06-09",
   "description": "生成AI・AIエージェントが他業種の事業モデル（顧客接点・提供形態・価値の所在・業界構造）を作り変える公開事例を、人材・能力流通市場への転用とあわせて整理。人材業界より先に起きている変化を先読みする。",
   "categories": [
-    { "key": "interface", "label": "顧客接点の変化" },
+    { "key": "interface", "label": "AIによる購買化" },
     { "key": "model", "label": "提供・収益モデルの転換" },
     { "key": "value", "label": "価値の所在の移動" },
     { "key": "restructure", "label": "業界再編・新規参入" }
