@@ -36,6 +36,10 @@
  .mk-refs li:last-child{border-bottom:none}
  .mk-refs a{color:var(--color-blue);font-weight:600;text-decoration:none} .mk-refs a:hover{text-decoration:underline}
  .mk-refs .cat{display:inline-block;min-width:88px;font-size:10.5px;font-weight:800;color:var(--color-muted);margin-right:6px}
+ .mk-tbl td.l ul{margin:0;padding-left:15px} .mk-tbl td.l li{margin:3px 0;line-height:1.6}
+ .mk-tbl td.l a{color:var(--color-blue);text-decoration:none} .mk-tbl td.l a:hover{text-decoration:underline}
+ .mk-drv td:first-child,.mk-drv th:first-child{width:150px;white-space:nowrap}
+ .mk-mtx td,.mk-mtx th{font-size:11.5px} .mk-mtx td.l{vertical-align:top}
 </style>
 </head>
 <body>
@@ -126,24 +130,35 @@
 
   <h2 class="section-title">なぜAIの影響はセグメントで違うのか（ドライバーと根拠）</h2>
   <p class="section-sub">市場規模の動きは3つの力で決まる。その効き方が、大手／中小・IT／ビジネスで非対称になる理由を分解する。</p>
-  <div class="ab-card">
-    <ul class="ab-list">
-      <li><b>① 市場自体の成長</b><span>対象市場そのものが伸びる。IT市場は年率約6.6%、ビジネスコンサル市場は約9.9%で成長（AX＝AIによる変革需要が押し上げ）。投資余力の大きい大手ほど、外部のプロ人材への支出を維持・拡大しやすい。</span></li>
-      <li><b>② 隣接市場からの流入</b><span>コンサルファーム・SIerが抱えていた予算・案件が、エージェント型の外部プロ人材活用へ移る。高難度・上流が中心で、与信・コンプライアンス要件もあるため、<b>大手・ビジネス・上流に偏る</b>。</span></li>
-      <li><b>③ AIの影響（件数×単価）</b><span>定型業務はAIに代替されて件数が減る一方、残る高難度業務に集中して単価が上がる。<b>「代替されやすさ（件数減）」と「高難度への集中（単価増）」がセグメントで逆向きに効く</b>のが非対称の正体。</span></li>
-      <li><b>補足：AX（変革需要）の置き場所</b><span>AXは①だけでなく①②③に分散して効く（コンサル市場の自然成長を押し上げ＝①、ファーム/SIerからの流入＝②、高難度・成果連動で単価増＝③）。①にまとめると二重計上になるため、3つに分けて織り込んでいる。</span></li>
-    </ul>
-  </div>
-  <p class="section-sub" style="margin-top:14px">件数効果・単価効果の水準と、その理由</p>
   <div class="mk-card">
-    <table class="mk-tbl">
-      <tr><th class="l">セグメント</th><th>件数効果</th><th class="l">なぜその水準か（件数）</th><th>単価効果</th><th class="l">なぜその水準か（単価）</th></tr>
-      <tr><td class='l'>IT×大手</td><td style='color:#a23a3a;font-weight:700'>−8%</td><td class='l'>定型実装の一部は自動化されるが、上流設計・AXの再設計が残るため減りは小さめ</td><td style='color:#0a7a52;font-weight:700'>＋6%</td><td class='l'>業務再設計・リスキリングを伴う高難度案件と成果連動へシフトし上昇</td></tr><tr><td class='l'>IT×中小</td><td style='color:#a23a3a;font-weight:700'>−15%</td><td class='l'>定型実装・保守が中核で、AIエージェント・ノーコードに代替されやすく減りが最大</td><td style='color:#0a7a52;font-weight:700'>＋3%</td><td class='l'>上流の高難度に移る逃げ場が小さく、単価で取り返しにくい</td></tr><tr><td class='l'>ビジネス×大手</td><td style='color:#a23a3a;font-weight:700'>−3%</td><td class='l'>もともと定型が少なく判断・設計が中心で、AIに代替されにくい</td><td style='color:#0a7a52;font-weight:700'>＋4%</td><td class='l'>AX変革・成果連動で高単価化（大手の投資余力も後押し）</td></tr><tr><td class='l'>ビジネス×中小</td><td style='color:#a23a3a;font-weight:700'>−5%</td><td class='l'>一部の定型支援が自動化される</td><td style='color:#0a7a52;font-weight:700'>＋4%</td><td class='l'>AI支援・成果連動で微増</td></tr>
+    <table class="mk-tbl mk-drv">
+      <tr><th class="l">ドライバー</th><th class="l">詳細</th><th class="l">参考データ・リンク</th></tr>
+      <tr>
+        <td class="l">① 市場自体の成長</td>
+        <td class="l"><ul><li>対象市場そのものが伸びる</li><li>IT市場は年率約6.6%、ビジネスコンサル市場は約9.9%で成長（AX＝AIによる変革需要が押し上げ）</li><li>投資余力の大きい大手ほど、外部のプロ人材への支出を維持・拡大しやすい</li></ul></td>
+        <td class="l"><a href="https://my.idc.com/getdoc.jsp?containerId=prJPJ53253625" target="_blank" rel="noopener">IDC：国内ITサービス市場</a><br><a href="https://my.idc.com/getdoc.jsp?containerId=prAP54019325" target="_blank" rel="noopener">IDC：国内ビジネスコンサル市場</a></td>
+      </tr>
+      <tr>
+        <td class="l">② 隣接市場からの流入</td>
+        <td class="l"><ul><li>コンサルファーム・SIerが抱えていた予算・案件が、エージェント型の外部プロ人材活用へ移る</li><li>高難度・上流が中心で、与信・コンプライアンス要件もある</li><li>このため<b>大手・ビジネス・上流に偏る</b></li></ul></td>
+        <td class="l"><a href="https://irnote.jp/article/2025/11/28/622.html" target="_blank" rel="noopener">クラウドワークス：DXコンサルが前年比約2.6倍（隣接領域への流入例）</a></td>
+      </tr>
+      <tr>
+        <td class="l">③ AIの影響（件数×単価）</td>
+        <td class="l"><ul><li>定型業務はAIに代替されて件数が減る</li><li>残る高難度業務に集中して単価が上がる</li><li><b>「代替されやすさ（件数減）」と「高難度への集中（単価増）」が逆向きに効く</b>のが、セグメント非対称の正体</li></ul></td>
+        <td class="l">件数：<a href="https://arxiv.org/abs/2302.06590" target="_blank" rel="noopener">GitHub・MSR 約55.8%高速化</a>／<a href="https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/" target="_blank" rel="noopener">METR −19%</a><br>単価：<a href="https://www.jftc.go.jp/houdou/pressrelease/2024/oct/241018_freelance2.pdf" target="_blank" rel="noopener">公取委 価格転嫁67.1%</a>／<a href="https://www.thestreet.com/markets/ai-is-forcing-mckinsey-bcg-bain-to-rethink-consulting-fees" target="_blank" rel="noopener">マッキンゼー 成果連動25%</a></td>
+      </tr>
     </table>
-    <div class="mk-note"><b>水準の置き方</b>：上記の％は確度C（独自仮定）で、下記の実測・研究と<b>方向と大きさの感覚を揃えて</b>設定している（点で当てに行く数字ではない）。<br>
-      ・件数（減）の根拠：<a href="https://arxiv.org/abs/2302.06590" target="_blank" rel="noopener">GitHub・MSR：定型コーディング約55.8%高速化</a>（定型ほど自動化が効く）／<a href="https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/" target="_blank" rel="noopener">METR：熟練者・実環境では−19%（高難度ほどAIで速くならず件数が減りにくい）</a>。<br>
-      ・単価（増）の根拠：<a href="https://www.jftc.go.jp/houdou/pressrelease/2024/oct/241018_freelance2.pdf" target="_blank" rel="noopener">公取委・厚労省：委託者の67.1%が価格転嫁を受容</a>／<a href="https://www.thestreet.com/markets/ai-is-forcing-mckinsey-bcg-bain-to-rethink-consulting-fees" target="_blank" rel="noopener">マッキンゼー：報酬の約25%を成果連動へ</a>／<a href="https://irnote.jp/article/2025/11/28/622.html" target="_blank" rel="noopener">クラウドワークス：DXコンサルが前年比約2.6倍（高難度シフト）</a>。
-    </div>
+    <div class="mk-note"><b>補足：AX（変革需要）の置き場所</b>　AXは①だけでなく①②③に分散して効く（コンサル市場の自然成長を押し上げ＝①、ファーム/SIerからの流入＝②、高難度・成果連動で単価増＝③）。①にまとめると二重計上になるため、3つに分けて織り込んでいる。</div>
+  </div>
+
+  <p class="section-sub" style="margin-top:16px">各ドライバーは各セグメントにどう効くか（なぜ）</p>
+  <div class="mk-card">
+    <table class="mk-tbl mk-mtx">
+      <tr><th class="l">セグメント</th><th class="l">① 市場成長</th><th class="l">② 隣接流入</th><th class="l">③ AI：件数</th><th class="l">③ AI：単価</th></tr>
+      <tr><td class='l' style='font-weight:700;white-space:nowrap'>IT×大手</td><td class='l'>IT市場6.6%・投資余力大</td><td class='l'>SIerから流入（大）</td><td class='l'><b style='color:#a23a3a'>件数 −8%</b><br>定型実装の一部が自動化（上流は残る）</td><td class='l'><b style='color:#0a7a52'>単価 ＋6%</b><br>上流再設計・成果連動へシフト</td></tr><tr><td class='l' style='font-weight:700;white-space:nowrap'>IT×中小</td><td class='l'>IT市場6.6%</td><td class='l'>ほぼ無し</td><td class='l'><b style='color:#a23a3a'>件数 −15%</b><br>定型実装・保守がノーコード/AIに代替（最大）</td><td class='l'><b style='color:#0a7a52'>単価 ＋3%</b><br>上流の逃げ場が小さい</td></tr><tr><td class='l' style='font-weight:700;white-space:nowrap'>ビジネス×大手</td><td class='l'>コンサル9.9%・投資余力大</td><td class='l'>ファームから流入（大）</td><td class='l'><b style='color:#a23a3a'>件数 −3%</b><br>判断・設計中心で代替されにくい</td><td class='l'><b style='color:#0a7a52'>単価 ＋4%</b><br>AX変革・成果連動で高単価化</td></tr><tr><td class='l' style='font-weight:700;white-space:nowrap'>ビジネス×中小</td><td class='l'>補助金等で底上げ</td><td class='l'>小さい</td><td class='l'><b style='color:#a23a3a'>件数 −5%</b><br>一部の定型支援が自動化</td><td class='l'><b style='color:#0a7a52'>単価 ＋4%</b><br>AI支援・成果連動で微増</td></tr>
+    </table>
+    <div class="mk-note">件数−X%／単価＋X%は2030年時点・確度C（独自仮定）で、方向と大きさを上の実測・研究に揃えて設定（点で当てに行く数字ではない）。<b>IT×中小は件数減が突出して大きく、単価で取り返せないため縮小。ビジネス×大手は流入と単価増が重なり最も伸びる。</b></div>
   </div>
 
   <h2 class="section-title">セグメント別の伸び（中庸・2024→2030）</h2>
@@ -158,16 +173,6 @@
       <tr><td class='l'>IT×大手</td><td style='color:#6b7280;font-weight:600'>+1.8%</td><td style='color:#0a7a52;font-weight:600'>+12.1%</td><td style='color:#0a7a52;font-weight:600'>+22.4%</td><td class='l' style='color:#6b7280'>全シナリオで拡大</td></tr><tr><td class='l'>IT×中小</td><td style='color:#a23a3a;font-weight:600'>-13.0%</td><td style='color:#a23a3a;font-weight:600'>-6.1%</td><td style='color:#6b7280;font-weight:600'>+1.8%</td><td class='l' style='color:#6b7280'>全シナリオで縮小</td></tr><tr><td class='l'>ビジネス×大手</td><td style='color:#0a7a52;font-weight:600'>+8.4%</td><td style='color:#0a7a52;font-weight:600'>+18.5%</td><td style='color:#0a7a52;font-weight:600'>+29.1%</td><td class='l' style='color:#6b7280'>全シナリオで拡大</td></tr><tr><td class='l'>ビジネス×中小</td><td style='color:#a23a3a;font-weight:600'>-0.1%</td><td style='color:#0a7a52;font-weight:600'>+7.4%</td><td style='color:#0a7a52;font-weight:600'>+14.6%</td><td class='l' style='color:#6b7280'>AI悲観で縮小</td></tr>
     </table>
     <div class="mk-note">成長は<b>大手の2区分に集中</b>。大手ビジネスは単価上昇がAIの件数減を相殺してむしろ追い風。<b>中小ITは全シナリオで縮小</b>（定型実装の件数がAIに吸われ、単価で補えない）。</div>
-  </div>
-
-  <h2 class="section-title">結論を最も動かす前提（上位3）</h2>
-  <p class="section-sub">中庸を基準に各前提を悲観↔強気へ振った時の、2030年市場規模の振れ幅。大きい順。今後の精緻化はここに集中すれば足りる。</p>
-  <div class="mk-card">
-    <table class="mk-tbl">
-      <tr><th class="l">前提</th><th>悲観〜強気での市場規模</th><th>振れ幅</th></tr>
-      <tr><td class='l'>大手IT：他市場からの仕事の流入</td><td>4,928〜6,151億</td><td>1,223億</td></tr><tr><td class='l'>大手IT：AIによる件数の減少</td><td>5,009〜5,895億</td><td>886億</td></tr><tr><td class='l'>大手IT：AIによる単価の上昇</td><td>5,157〜5,852億</td><td>695億</td></tr>
-    </table>
-    <div class="mk-note">AIの不確実性が「件数」と「単価」の2つに分かれて上位に並ぶ。詰めるべきは、定型業務の自動化率、ハイクラス単価と成果連動の比率、他市場（SIer・コンサル）からの流入実額。</div>
   </div>
 
   <h2 class="section-title">全体を通しての示唆</h2>
