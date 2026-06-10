@@ -99,6 +99,19 @@
     <div class="mk-note">独立な手法が同水準に収束することが、起点値の信頼性を支える。<b>合計 約3,300億（帯 2,843〜3,960）</b>。帯の幅は起点の不確実性として後段に引き継ぐ。</div>
   </div>
 
+  <p class="section-sub">各手法のパラメータの根拠・論理</p>
+  <div class="mk-card">
+    <table class="mk-tbl">
+      <tr><th class="l">パラメータ</th><th class="l">意味</th><th class="l">根拠・論理</th><th>確度</th></tr>
+      <tr><td class="l">外部委託率</td><td class="l">ITサービス市場のうち外部に委託される割合</td><td class="l">IPAの実測（金額ベース 約43.3%）を基準に、大手SIerの内製分を控除して調整。「保守的に」で済ませず、出典値からの控除として明示</td><td>A/B</td></tr>
+      <tr><td class="l">エージェント介在率<br>（IT 18/21/25%）</td><td class="l">フリーランス市場のうち、自己発注型でなくエージェント（人を介した仲介）が入る割合</td><td class="l">IT領域は要件定義・人選の仲介価値が高く約2割。直接契約・自己発注型プラットフォーム経由は対象外。1点でなくレンジで保持</td><td>C</td></tr>
+      <tr><td class="l">想定シェア<br>（IT 30/40/50%・ビジネス 40/50/60%）</td><td class="l">主要5社が市場全体に占める割合（売上を市場規模へ割り戻す分母）</td><td class="l">上場主要プレイヤーが市場の約半分を占めると想定（残りは中小エージェント・新興・非上場）。シェアを固定して逆算すると循環論法になるため、低/中/高で振って独立性を保つ</td><td>C</td></tr>
+      <tr><td class="l">代替率<br>（ビジネス 3/4/5%）</td><td class="l">ビジネスコンサル市場のうち、外部プロ人材で代替・調達される割合</td><td class="l">コンサルの中核（全社戦略・大型変革）はファームが担い続けるため数%にとどめる。高単価・常駐の一部が業務委託へ移る分を見込む</td><td>C</td></tr>
+      <tr><td class="l">介在率<br>（ビジネス 8/10/12%）</td><td class="l">広義のビジネス支援需要のうちエージェント介在分</td><td class="l">ビジネス系は仲介の標準化がITより遅く、介在割合は低めの約1割</td><td>C</td></tr>
+    </table>
+    <div class="mk-note">これらの多くは確度C（独自仮定）。実測（外部委託率43.3%等）に方向を揃え、1点でなくレンジ（低/中/高）で持つことで特定の前提への依存を避ける。<b>3手法が同じ帯に収束すること自体が、各仮定が大きく外れていないことの傍証</b>になる。</div>
+  </div>
+
   <h2 class="section-title">3. 大手 / 中小への配分</h2>
   <div class="mk-card">
     <p style="font-size:13px;margin:0 0 8px">金額ベースで大手が過半を占めるため、領域共通で<b>大手60：中小40</b>を採用。根拠＝IT予算の大企業偏在／月60〜80万円以上の業務委託は与信・コンプライアンス要件で大手に偏る／主要エージェントの顧客が大手中心。中小に4割残すのはSaaS導入支援・補助金・AI支援などの中小固有需要があるため。</p>
@@ -113,6 +126,22 @@
       <tr><td class='l' rowspan='4' style='font-weight:700;white-space:nowrap;vertical-align:top'>IT×大手<br><span style='font-weight:400;color:#6b7280;font-size:10.5px'>2024 1,500億<br>AI正味 -2.5%</span></td><td class='l'>① 自然増</td><td>+3.5</td><td><b>+5.0</b></td><td>+6.5</td></tr><tr><td class='l'>② 構造変化（流入）</td><td>+7.0</td><td><b>+12.0</b></td><td>+17.0</td></tr><tr><td class='l'>③a AI 件数下押し</td><td style='color:#a23a3a'>−12.0</td><td style='color:#a23a3a'><b>−8.0</b></td><td style='color:#a23a3a'>−5.0</td></tr><tr><td class='l'>③b AI 単価押上げ</td><td style='color:#0a7a52'>+3.0</td><td style='color:#0a7a52'><b>+6.0</b></td><td style='color:#0a7a52'>+9.0</td></tr><tr><td class='l' rowspan='4' style='font-weight:700;white-space:nowrap;vertical-align:top'>IT×中小<br><span style='font-weight:400;color:#6b7280;font-size:10.5px'>2024 1,000億<br>AI正味 -12.4%</span></td><td class='l'>① 自然増</td><td>+1.5</td><td><b>+3.0</b></td><td>+4.5</td></tr><tr><td class='l'>② 構造変化（流入）</td><td>-1.0</td><td><b>+0.0</b></td><td>+2.0</td></tr><tr><td class='l'>③a AI 件数下押し</td><td style='color:#a23a3a'>−20.0</td><td style='color:#a23a3a'><b>−15.0</b></td><td style='color:#a23a3a'>−10.0</td></tr><tr><td class='l'>③b AI 単価押上げ</td><td style='color:#0a7a52'>+1.0</td><td style='color:#0a7a52'><b>+3.0</b></td><td style='color:#0a7a52'>+5.0</td></tr><tr><td class='l' rowspan='4' style='font-weight:700;white-space:nowrap;vertical-align:top'>ビジネス×大手<br><span style='font-weight:400;color:#6b7280;font-size:10.5px'>2024 480億<br>AI正味 +0.9%</span></td><td class='l'>① 自然増</td><td>+6.0</td><td><b>+8.0</b></td><td>+10.0</td></tr><tr><td class='l'>② 構造変化（流入）</td><td>+8.0</td><td><b>+14.0</b></td><td>+20.0</td></tr><tr><td class='l'>③a AI 件数下押し</td><td style='color:#a23a3a'>−6.0</td><td style='color:#a23a3a'><b>−3.0</b></td><td style='color:#a23a3a'>−1.0</td></tr><tr><td class='l'>③b AI 単価押上げ</td><td style='color:#0a7a52'>+2.0</td><td style='color:#0a7a52'><b>+4.0</b></td><td style='color:#0a7a52'>+7.0</td></tr><tr><td class='l' rowspan='4' style='font-weight:700;white-space:nowrap;vertical-align:top'>ビジネス×中小<br><span style='font-weight:400;color:#6b7280;font-size:10.5px'>2024 320億<br>AI正味 -1.2%</span></td><td class='l'>① 自然増</td><td>+3.0</td><td><b>+5.0</b></td><td>+7.0</td></tr><tr><td class='l'>② 構造変化（流入）</td><td>+2.0</td><td><b>+5.0</b></td><td>+8.0</td></tr><tr><td class='l'>③a AI 件数下押し</td><td style='color:#a23a3a'>−8.0</td><td style='color:#a23a3a'><b>−5.0</b></td><td style='color:#a23a3a'>−3.0</td></tr><tr><td class='l'>③b AI 単価押上げ</td><td style='color:#0a7a52'>+2.0</td><td style='color:#0a7a52'><b>+4.0</b></td><td style='color:#0a7a52'>+6.0</td></tr>
     </table>
     <div class="mk-note">③AIは「件数を減らす力（③a）」と「単価を上げる力（③b）」に分け、正味＝(1−③a)(1+③b)−1 を取る。係数は出典と下記ロジックから組み上げ、目標から逆算していない。</div>
+  </div>
+
+  <p class="section-sub">②構造変化（流入）の式とパラメータの根拠</p>
+  <div class="mk-card">
+    <p style="font-size:13px;margin:0 0 4px;color:var(--color-ink-2)">「他市場（コンサルファーム・SIer）から、どれだけ仕事がエージェント型の外部プロ人材活用へ移ってくるか」を、需要側の潜在量を供給側の現実で割り引いて求める。</p>
+    <div class="mk-formula">② 初年度率 ＝ <b>潜在流入率 × 供給充足率</b>　／　潜在流入率 ＝ 年間の流入見込み額 ÷ そのセグメントの市場規模<br>② ₜ ＝ ② 初年度率 × 減衰^(t−1)（前半厚く・後半逓減）</div>
+    <table class="mk-tbl">
+      <tr><th class="l">例</th><th class="l">潜在流入率（＝流入見込み額 ÷ 規模）</th><th class="l">× 供給充足率</th><th>中庸 初年度率</th></tr>
+      <tr><td class="l">ビジネス×大手</td><td class="l">200億（コンサル代替150＋人脈・OB商流化50）÷ 480億 ＝ <b>+42%</b></td><td class="l">×0.33（悲観0.19／強気0.48）</td><td><b>≈ +14%</b></td></tr>
+      <tr><td class="l">IT×大手</td><td class="l">SIerからの流入 約200億/年 ÷ 1,500億 ≈ <b>+13.3%</b></td><td class="l">保守側に丸め</td><td><b>≈ +12%</b></td></tr>
+    </table>
+    <div class="mk-note"><b>パラメータの根拠・論理</b><br>
+      ・<b>潜在流入額</b>＝コンサルファーム・SIerの予算のうち、エージェント型の外部プロ人材へ移りうる規模。流入が実際に起きていることは、競合の隣接事業の伸びがベンチマーク（<a href="https://irnote.jp/article/2025/11/28/622.html" target="_blank" rel="noopener">クラウドワークス DXコンサル約2.6倍</a>・サーキュレーション+14.9%・INTLOOP+23.9%）。<br>
+      ・<b>供給充足率（0.19／0.33／0.48）</b>＝需要が潜在的にあっても、それを担えるハイクラス人材の頭数・稼働が限られ、潜在の一部しか市場化しない「実現割合」。確度C。供給が早く厚くなれば上振れ（0.48）、伸びなければ下振れ（0.19）。「保守的に+14%」と置く代わりに「潜在42%×充足率0.33」と分解することで、<b>『充足率0.33は妥当か』という議論できる論点に変えている</b>（目標からの逆算を避ける）。<br>
+      ・<b>減衰率（0.85〜0.90）</b>＝流入は取りやすい需要・案件から先に進むため、初年度が最も厚く年々逓減する（S字の後半）。<br>
+      ※ IT×中小は流入ほぼ無し（むしろ自己発注型へ流出）、ビジネス×中小はAI支援特需で小幅プラス。</div>
   </div>
 
   <h2 class="section-title">5. AIの件数×単価の式と根拠</h2>
