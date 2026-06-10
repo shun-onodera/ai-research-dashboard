@@ -86,6 +86,42 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
 .minic b{color:var(--color-blue)}
 .vf-scope{font-size:11.5px;color:#9aa0ab;margin:8px 0 0;line-height:1.6}
 .zt td.nw{white-space:nowrap}
+
+/* ============================================================
+   A. 情報ボックスの3種統制（上書き）
+   ① 要点＝白地＋ネイビー上帯 ② 注記＝グレー破線のみ ③ 重要示唆＝左アクセント1本
+   ============================================================ */
+/* ① 要点（小括・読み取り・節末示唆・狙う市場・職種別示唆・検討論点） */
+.minic{background:#fff;border:1px solid #c9d2e0;border-top:3px solid var(--color-blue);color:var(--color-ink-2)}
+.minic b{color:var(--color-blue)}
+.market{background:#fff;border:1px solid #c9d2e0;border-top:3px solid var(--color-blue);border-left:1px solid #c9d2e0}
+.market .t{color:var(--color-blue)}
+.jisuggest{background:#fff;border:1px solid #c9d2e0;border-top:3px solid var(--color-blue)}
+.jisuggest h5{color:var(--color-blue)}
+.qlist{border-top:3px solid var(--color-blue)}
+/* ② 注記（補足・背景説明） */
+.note{background:transparent;border:1px dashed var(--color-line);color:var(--color-muted)}
+.note b{color:var(--color-ink-2)}
+/* ③ 重要示唆（変化仮説・市場への影響・一般則・打ち手） */
+.vf-imp{background:#fff;border:1px solid var(--color-line);border-left:4px solid var(--color-blue)}
+.vf-imp .vf-lab{background:var(--color-blue-50);color:var(--color-blue)}
+.vf-fl{background:#fff;border:1px solid var(--color-line);border-left:4px solid var(--color-blue)}
+.vf-fl .vf-lab{background:var(--color-blue-50);color:var(--color-blue)}
+.tebox{background:#fff;border:1px solid var(--color-line);border-left:4px solid var(--color-blue)}
+.readkey .genrule{background:#fff;border:1px solid var(--color-line);border-left:4px solid var(--color-blue)}
+/* 矢印つき結論行はテキスト型に簡素化 */
+.selnote{background:transparent;border:none;border-left:3px solid var(--color-blue);border-radius:0;color:var(--color-blue);padding:2px 0 2px 12px}
+/* 競合・統計のアクセントもネイビーへ統一（カテゴリ色はS1のみ） */
+.cmp{border-left-color:var(--color-blue)}
+.cmp ul b{color:var(--color-ink)}
+.stat .v{color:var(--color-blue)}
+
+/* ============================================================
+   B. 小見出しの階層統一（S節=青バッジh2 → 小節=番号チップ＋細罫線h3 → ラベルh4/h5）
+   ============================================================ */
+.sub-h{display:flex;align-items:center;gap:10px;font-size:16.5px;font-weight:800;margin:30px 0 10px;color:var(--color-ink)}
+.sub-h .nchip{flex:0 0 auto;font-size:12px;font-weight:800;color:var(--color-blue);background:var(--color-blue-50);border:1px solid #cdd9f5;border-radius:6px;padding:2px 10px;white-space:nowrap}
+.sub-h::after{content:"";flex:1 1 auto;height:1px;background:var(--color-line);margin-left:4px}
 /* 2-3 選定基準（法人/個人）＋ 職種別の読み解き方・示唆 */
 .selsec{margin:14px 0 8px}
 .selsec h4{font-size:15px;font-weight:800;margin:16px 0 6px;color:var(--color-ink)}
@@ -360,7 +396,7 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
 
 <!-- 2-3 需給の不一致（ねじれ） -->
 <div class="selsec">
-  <h4 style="font-size:16px;margin-top:18px">2-3. 需給の不一致（ねじれ）― 増える供給と高度化する需要がかみ合わない</h4>
+  <h3 class="sub-h"><span class="nchip">2-3</span>需給の不一致（ねじれ）― 増える供給と高度化する需要がかみ合わない</h3>
   <p class="lead">2-1と2-2は逆方向に作用する。供給は「収入補填に押された兼業型の副業」を中心に厚くなる一方、需要は「AIに吸収されず残った、難度が高く成果が問われる案件」へ集中する。しかも供給の増加は意向が先行し、実行は時間を確保できる層に限られる（実施率は約1割）。増える供給の中身と、伸びる需要の中身が乖離していく。</p>
   <ul style="font-size:13.3px;line-height:1.9;color:var(--color-ink-2);padding-left:1.2em;margin:8px 0">
     <li><b>副業と専業の格差</b>：法人の難度の高い案件は、本業を持つ兼業型の副業では対応しにくく、需要は専業フリーランスや小規模チームへ寄りやすい。定型の副業案件はAIに吸収される。</li>
@@ -371,7 +407,7 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
 
 <!-- 2-4 サービス選定基準（法人・個人に分けて詳述） -->
 <div class="selsec">
-  <h4 style="font-size:16px;margin-top:18px">2-4. サービス選定基準の変化 ― 法人・個人で分けて見る</h4>
+  <h3 class="sub-h"><span class="nchip">2-4</span>サービス選定基準の変化 ― 法人・個人で分けて見る</h3>
   <p class="lead">マッチング事業の存在意義は、本来「情報の非対称（すき間）を人手で埋めること」にあった。だがAIが、候補探索・絞り込み・要件翻訳という中間工程を低コスト・短時間で埋める。このため「仲介の利便性（登録者数・速さ・手数料の安さ）」は差別化要因でなくなり、法人・個人の選定基準は次のように移る。</p>
 
   <h4>法人による事業者選定の基準</h4>
@@ -406,7 +442,7 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
 
 <!-- 2-5 マッチング事業者自身の変化（業態転換） -->
 <div class="selsec">
-  <h4 style="font-size:16px;margin-top:18px">2-5. マッチング事業者自身の変化 ― 仲介業から「能力流通を支える基盤事業」へ</h4>
+  <h3 class="sub-h"><span class="nchip">2-5</span>マッチング事業者自身の変化 ― 仲介業から「能力流通を支える基盤事業」へ</h3>
   <p class="lead">ここまでの変化（中間工程のAI代替・選定基準の成果収束・需給の不一致）が同時に進むと、「引き合わせるだけ」の事業者は存在意義を失う。事業者自身が、次の5つの転換を迫られる。</p>
   <div class="zt-wrap" style="overflow-x:auto"><table class="zt">
     <thead><tr><th style="width:16%">転換の対象</th><th style="width:36%">従来</th><th>今後</th></tr></thead>
@@ -423,7 +459,7 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
 
 <!-- 2-6 影響の総括：砂時計化 -->
 <div class="selsec">
-  <h4 style="font-size:16px;margin-top:18px">2-6. 影響の総括 ― マッチングの「砂時計化」</h4>
+  <h3 class="sub-h"><span class="nchip">2-6</span>影響の総括 ― マッチングの「砂時計化」</h3>
   <p class="lead">S2の変化を1枚に束ねると、マッチング事業の価値は「中間」から「両端」へ移る。中間工程（候補探索・絞り込み・要件翻訳＝情報のすき間を人手で埋める作業）はAIが自動化する。一方、前段（AIを活用した業務の再設計）と後段（事前に判別しにくい成果の不確実性の引き受け）はAIで代替しにくく、人と事業者の価値が残る。</p>
   <div class="hg">
     <div class="row"><div class="side up">比重が高まる</div><div class="bar b1">前段：業務の定義・要件化（業務の再設計）</div></div>
@@ -486,7 +522,7 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
 
 <!-- 3-0 顔ぶれとビジネスモデル（4モデルのプロット） -->
 <div class="selsec">
-  <h4 style="font-size:16px;margin-top:6px">3-1. 競合の顔ぶれとビジネスモデル ― 4モデルのプロット</h4>
+  <h3 class="sub-h" style="margin-top:6px"><span class="nchip">3-1</span>競合の顔ぶれとビジネスモデル ― 4モデルのプロット</h3>
   <p class="lead">各社は単一モデルではなく、複数のモデルをまたいで展開している。まず4つのモデルを定義し、各社がどのモデルに対応するサービスを持つかをプロットする。</p>
   <ul style="font-size:13px;line-height:1.85;color:var(--color-ink-2);padding-left:1.2em;margin:8px 0 12px">
     <li><b>プラットフォーム型</b>：利用者が自分で検索・発注するセルフサーブのマッチングの場。低単価×高テイクレート（手数料率）。</li>
@@ -512,7 +548,7 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
   <div class="minic"><b>読み取り</b>：純粋に1モデルへ留まる社はいない。エージェント型を主力とする社（INTLOOP・サーキュレーション・ギークス・TWOSTONE・みらいワークス）に加え、<b>クラウドワークス・ランサーズはプラットフォームとエージェントの二本柱</b>を持つ（クラウドワークスのエージェント事業は旧クラウドテック等を統合した収益柱。ランサーズも「ランサーズエージェント」を展開）。さらにほぼ全社がチーム型（ベンダー・コンサル）かAI商品化へ越境している。ハイクラス副業・フリーランス領域の主戦場は<b>エージェント型＋チーム型</b>の組み合わせで、AI商品化はその上に乗る新収益レイヤー。</div>
 </div>
 
-<h4 style="font-size:16px;margin:18px 0 6px">3-2. 業績 ― 高成長×低利益率の投資局面</h4>
+<h3 class="sub-h"><span class="nchip">3-2</span>業績 ― 高成長×低利益率の投資局面</h3>
 <div class="zt-wrap" style="overflow-x:auto">
 <table class="zt">
   <caption>主要マッチング事業者の直近通期業績（各社IR・決算短信ベース。決算期は各社で異なる。海外2社は参考・円換算1ドル=155円）</caption>
@@ -538,7 +574,7 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
 
 <!-- 3-3 各社の方向性・AI戦略・補足 -->
 <div class="selsec">
-  <h4 style="font-size:16px;margin-top:18px">3-3. 各社の方向性・AI戦略・補足（国内9社）</h4>
+  <h3 class="sub-h"><span class="nchip">3-3</span>各社の方向性・AI戦略・補足（国内9社）</h3>
   <p class="lead">モデルのプロット（3-1）とは分けて、各社が「どこへ向かい・AIで何をし・どんな顧客資産や特記があるか」を一覧する。海外2社（Upwork・Fiverr）は業績表のみの参考掲載とする。</p>
   <div class="zt-wrap" style="overflow-x:auto"><table class="zt">
     <thead><tr><th style="width:13%">企業名</th><th style="width:28%">方向性</th><th style="width:30%">AI戦略</th><th>補足（顧客資産・規模・特記）</th></tr></thead>
@@ -556,8 +592,8 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
   </table></div>
 </div>
 
+<h3 class="sub-h"><span class="nchip">3-4</span>AI戦略の構図 ― 3層に分かれ、最前線は「外販」</h3>
 <div class="cmp">
-  <h4>3-4. AI戦略の構図 ― 3層に分かれ、最前線は「外販」。利益率の天井はビジネスモデルで決まる</h4>
   <ul>
     <li><b>脱・純粋マッチング（砂時計化）</b>：全社が「人を当てるだけ」から前段・後段へ拡張（クラウドワークス→DXコンサル、INTLOOP→ソリューション、ランサーズ→AX、ギークス→DXソリューション、TWOSTONE→川上展開）。</li>
     <li><b>AI戦略①社内効率化</b>：AIで営業を効率化し、営業1人あたり契約数を高める（みらいワークス・ランサーズ等）。</li>
@@ -569,12 +605,12 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
 </div>
 
 <!-- 競合AI戦略 5類型マップ（AI3層の直後に復活） -->
-<h2 class="section-title" style="margin-top:30px">競合AI戦略 5類型マップ</h2>
+<h3 class="sub-h"><span class="nchip">3-5</span>競合AI戦略 5類型マップ</h3>
 <p class="section-sub">各社のAI活用を、目的別に5類型（A〜E）で整理。各社の公表事実を分類しており、事例から詳細分析へ移動できる。特にE型（AI拡張サービスの商品化）は、人選を超えて顧客業務に入り込む動きとして注目。</p>
 <div id="competitor-ai-matrix"><!-- app.js が描画 --></div>
 
 <!-- 競合資産マップ（本体セクションをそのまま・競合動向の最後） -->
-<h2 class="section-title" style="margin-top:30px">競合資産マップ（6セグメント保有量）</h2>
+<h3 class="sub-h"><span class="nchip">3-6</span>競合資産マップ（6セグメント保有量）</h3>
 <p class="section-sub">競合を「AI戦略の類型」とは別レンズ＝法人・個人の資産（顧客基盤・登録人材）をどこにどれだけ持つかで見るマップ。各社の公表情報に基づく5段階評価。</p>
 <div id="competitor-asset-map"><!-- app.js が描画 --></div>
 
@@ -585,7 +621,7 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
 <p class="section-sub">分析の帰結。勝敗を分ける5要因と、各要因を満たす打ち手（マッチング事業者一般への含意）。</p>
 
 <div class="selsec">
-  <h4 style="font-size:15px;margin-top:4px">分析→KFSの対応 ― 各KFSはどの事実から導かれるか</h4>
+  <h3 class="sub-h" style="margin-top:4px"><span class="nchip">導出</span>分析→KFSの対応 ― 各KFSはどの事実から導かれるか</h3>
   <div class="zt-wrap" style="overflow-x:auto"><table class="zt">
     <thead><tr><th style="width:30%">KFS</th><th>由来する分析（どの事実から導かれるか）</th></tr></thead>
     <tbody>
