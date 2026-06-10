@@ -40,6 +40,7 @@
  .mk-tbl td.l a{color:var(--color-blue);text-decoration:none} .mk-tbl td.l a:hover{text-decoration:underline}
  .mk-drv td:first-child,.mk-drv th:first-child{width:150px;white-space:nowrap}
  .mk-mtx td,.mk-mtx th{font-size:11.5px} .mk-mtx td.l{vertical-align:top}
+ .mk-seg td:first-child,.mk-seg th:first-child,.mk-seg td:last-child,.mk-seg th:last-child{white-space:nowrap}
 </style>
 </head>
 <body>
@@ -107,7 +108,7 @@
   <p class="section-sub" style="margin-top:16px">各セグメントの市場規模の出し方</p>
   <div class="mk-card">
     <p style="font-size:13px;margin:0 0 10px;color:var(--color-ink-2)">2段階で求めている。<b>(1) 領域ごとに2024年の規模を3つの独立手法で交差検証</b>し、3手法が同じ水準に収束することを確認して中央値を採用。<b>(2) 各領域を大手60：中小40で配分</b>して4セグメントに分ける。</p>
-    <table class="mk-tbl">
+    <table class="mk-tbl mk-seg">
       <tr><th class="l">領域</th><th class="l">(a) 市場から絞り込み</th><th class="l">(b) 主要プレイヤー ÷ シェア</th><th class="l">(c) 外部統計から</th><th>採用</th></tr>
       <tr><td class="l" style="font-weight:700">IT</td><td class="l">ITサービス市場 約7兆円 × 外部委託率・フリーランス率・エージェント介在率</td><td class="l">主要5社の売上 約1,000億 ÷ 想定シェア 約40%</td><td class="l">ITフリーランス市場 約1.2兆 × エージェント介在 約2割</td><td><b>約2,500億</b></td></tr>
       <tr><td class="l" style="font-weight:700">ビジネス</td><td class="l">ビジネスコンサル市場 約1.3兆 のうち外部プロ人材へ回る数%</td><td class="l">主要5社のビジネス系売上 約400億 ÷ 想定シェア 約5割</td><td class="l">広義のビジネス支援需要 約0.8兆 × 介在 約1割</td><td><b>約800億</b></td></tr>
