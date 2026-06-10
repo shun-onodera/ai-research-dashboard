@@ -26,6 +26,16 @@
  .mk-note{font-size:12px;color:var(--color-ink-2);background:#f3f5ff;border:1px solid #cdd9f5;border-radius:10px;padding:10px 14px;margin:8px 0;line-height:1.85}
  .mk-note b{color:var(--color-blue)}
  .mk-chart{overflow-x:auto}
+ .mk-msg{font-size:13px;background:#eef2ff;border-left:4px solid var(--color-blue);border-radius:0 10px 10px 0;padding:12px 15px;margin:2px 0 12px;line-height:1.95}
+ .mk-msg .ttl{display:block;font-size:10.5px;font-weight:800;color:var(--color-blue);letter-spacing:.05em;margin-bottom:3px}
+ .mk-msg b{color:var(--color-blue)}
+ .mk-takeaway{background:#f3f5ff;border:1px solid #cdd9f5;border-radius:14px;padding:17px 21px;margin:10px 0;font-size:14px;line-height:2.05;box-shadow:var(--shadow)}
+ .mk-takeaway b{color:var(--color-blue)}
+ .mk-refs{list-style:none;margin:6px 0;padding:0}
+ .mk-refs li{padding:9px 0;border-bottom:1px solid var(--color-line);font-size:13px;line-height:1.7}
+ .mk-refs li:last-child{border-bottom:none}
+ .mk-refs a{color:var(--color-blue);font-weight:600;text-decoration:none} .mk-refs a:hover{text-decoration:underline}
+ .mk-refs .cat{display:inline-block;min-width:88px;font-size:10.5px;font-weight:800;color:var(--color-muted);margin-right:6px}
 </style>
 </head>
 <body>
@@ -74,6 +84,9 @@
   <h2 class="section-title">市場規模の推移（2024→2030・3シナリオ）</h2>
   <p class="section-sub">前提の置き方を変えた3つの将来像。点でなく「帯」で意思決定する。縦軸は0起点。</p>
   <div class="mk-card">
+    <div class="mk-msg"><span class="ttl">この図のメッセージ</span>
+      市場規模は、<b>強気で年率+18.4%（2030年 9,095億円）</b>、中庸で+8.8%（5,488億円）、悲観で-0.5%（3,202億円）になる見立て。各シナリオを左右する要因は、大手IT領域の〈他市場（SIer・コンサル）からの仕事の流入〉〈AIによる件数の減少〉〈AIによる単価の上昇〉の3つ。<b>特に「他市場からの流入」の振れが大きく</b>、単独で2030年の結論を約1,223億円動かす。
+    </div>
     <div class="mk-chart"><svg viewBox="0 0 820 300" width="100%" role="img" aria-label="シナリオ別 市場規模推移"><line x1="60" y1="266.0" x2="802" y2="266.0" stroke="#d8dce3"/><text x="54" y="270.0" font-size="11" fill="#6b7280" text-anchor="end">0</text><line x1="60" y1="216.0" x2="802" y2="216.0" stroke="#d8dce3"/><text x="54" y="220.0" font-size="11" fill="#6b7280" text-anchor="end">2,000</text><line x1="60" y1="166.0" x2="802" y2="166.0" stroke="#d8dce3"/><text x="54" y="170.0" font-size="11" fill="#6b7280" text-anchor="end">4,000</text><line x1="60" y1="116.0" x2="802" y2="116.0" stroke="#d8dce3"/><text x="54" y="120.0" font-size="11" fill="#6b7280" text-anchor="end">6,000</text><line x1="60" y1="66.0" x2="802" y2="66.0" stroke="#d8dce3"/><text x="54" y="70.0" font-size="11" fill="#6b7280" text-anchor="end">8,000</text><line x1="60" y1="16.0" x2="802" y2="16.0" stroke="#d8dce3"/><text x="54" y="20.0" font-size="11" fill="#6b7280" text-anchor="end">10,000</text><text x="60.0" y="284.0" font-size="11" fill="#6b7280" text-anchor="middle">2024</text><text x="183.7" y="284.0" font-size="11" fill="#6b7280" text-anchor="middle">2025</text><text x="307.3" y="284.0" font-size="11" fill="#6b7280" text-anchor="middle">2026</text><text x="431.0" y="284.0" font-size="11" fill="#6b7280" text-anchor="middle">2027</text><text x="554.7" y="284.0" font-size="11" fill="#6b7280" text-anchor="middle">2028</text><text x="678.3" y="284.0" font-size="11" fill="#6b7280" text-anchor="middle">2029</text><text x="802.0" y="284.0" font-size="11" fill="#6b7280" text-anchor="middle">2030</text><polygon points="60.0,183.5 183.7,167.1 307.3,148.1 431.0,126.2 554.7,100.9 678.3,71.9 802.0,38.6 802.0,185.9 678.3,182.7 554.7,180.4 431.0,179.3 307.3,179.4 183.7,180.8 60.0,183.5" fill="#0017c1" opacity="0.08"/><polyline points="60.0,183.5 183.7,167.1 307.3,148.1 431.0,126.2 554.7,100.9 678.3,71.9 802.0,38.6" fill="none" stroke="#6f8fd8" stroke-width="2" stroke-dasharray="5 4"/><polyline points="60.0,183.5 183.7,180.8 307.3,179.4 431.0,179.3 554.7,180.4 678.3,182.7 802.0,185.9" fill="none" stroke="#6b7280" stroke-width="2" stroke-dasharray="5 4"/><polyline points="60.0,183.5 183.7,174.1 307.3,164.7 431.0,155.3 554.7,146.2 678.3,137.3 802.0,128.8" fill="none" stroke="#0017c1" stroke-width="3.5"/><circle cx="802.0" cy="128.8" r="4" fill="#0017c1"/><text x="798.0" y="32.6" font-size="11" fill="#6f8fd8" text-anchor="end">強気 9,095</text><text x="798.0" y="122.8" font-size="12" font-weight="700" fill="#0017c1" text-anchor="end">中庸 5,488</text><text x="798.0" y="201.9" font-size="11" fill="#6b7280" text-anchor="end">悲観 3,202</text></svg></div>
     <div class="mk-read">
       <p><b>見方</b>：太い線が中庸、上の点線が強気、下の点線が悲観、薄い帯が振れ幅。</p>
@@ -95,6 +108,9 @@
   <h2 class="section-title">セグメント別の伸び（中庸・2024→2030）</h2>
   <p class="section-sub">顧客（大手／中小）×領域（Tech＝システム実装／Biz＝経営・事業支援）の4区分。実線が大手、点線が中小。</p>
   <div class="mk-card">
+    <div class="mk-msg"><span class="ttl">この図のメッセージ</span>
+      AIは「件数を減らし単価を上げる」が、その効き方はセグメントで非対称。<b>高難度の大手・上流は単価上昇が件数減を相殺</b>し（大手ビジネスは件数−3%×単価+4%で正味+0.9%、大手ITは−8%×+6%で−2.5%）、<b>定型の中小は件数減が勝つ</b>（中小ITは−15%×+3%で−12.5%）。結果、成長は大手2区分に集中し、<b>大手ビジネス +18.5%（6年で約2.8倍）・大手IT +12.1%（最大規模 2,984億円）</b>が牽引する一方、中小ITは-6.1%で縮む。
+    </div>
     <div class="mk-chart"><svg viewBox="0 0 820 330" width="100%" role="img" aria-label="セグメント別 市場規模推移（中庸）"><line x1="56" y1="296.0" x2="660" y2="296.0" stroke="#d8dce3"/><text x="50" y="300.0" font-size="11" fill="#6b7280" text-anchor="end">0</text><line x1="56" y1="218.4" x2="660" y2="218.4" stroke="#d8dce3"/><text x="50" y="222.4" font-size="11" fill="#6b7280" text-anchor="end">1,000</text><line x1="56" y1="140.8" x2="660" y2="140.8" stroke="#d8dce3"/><text x="50" y="144.8" font-size="11" fill="#6b7280" text-anchor="end">2,000</text><line x1="56" y1="63.3" x2="660" y2="63.3" stroke="#d8dce3"/><text x="50" y="67.3" font-size="11" fill="#6b7280" text-anchor="end">3,000</text><text x="56.0" y="314.0" font-size="11" fill="#6b7280" text-anchor="middle">2024</text><text x="156.7" y="314.0" font-size="11" fill="#6b7280" text-anchor="middle">2025</text><text x="257.3" y="314.0" font-size="11" fill="#6b7280" text-anchor="middle">2026</text><text x="358.0" y="314.0" font-size="11" fill="#6b7280" text-anchor="middle">2027</text><text x="458.7" y="314.0" font-size="11" fill="#6b7280" text-anchor="middle">2028</text><text x="559.3" y="314.0" font-size="11" fill="#6b7280" text-anchor="middle">2029</text><text x="660.0" y="314.0" font-size="11" fill="#6b7280" text-anchor="middle">2030</text><rect x="56" y="10" width="14" height="4" rx="2" fill="#0017c1"/><text x="74" y="14" font-size="11" fill="#1a1a1c">Tech×大手</text><rect x="183" y="10" width="14" height="4" rx="2" fill="#6b7280"/><text x="201" y="14" font-size="11" fill="#1a1a1c">Tech×中小</text><rect x="310" y="10" width="14" height="4" rx="2" fill="#0a7a52"/><text x="328" y="14" font-size="11" fill="#1a1a1c">Biz×大手</text><rect x="424" y="10" width="14" height="4" rx="2" fill="#6f8fd8"/><text x="442" y="14" font-size="11" fill="#1a1a1c">Biz×中小</text><polyline points="56.0,179.6 156.7,160.2 257.3,140.2 358.0,120.3 458.7,100.7 559.3,82.0 660.0,64.5" fill="none" stroke="#0017c1" stroke-width="3.2"/><circle cx="660.0" cy="64.5" r="3.5" fill="#0017c1"/><text x="668.0" y="68.5" font-size="11" font-weight="700" fill="#0017c1">Tech×大手 2,984</text><polyline points="56.0,218.4 156.7,220.0 257.3,222.8 358.0,226.6 458.7,231.4 559.3,236.9 660.0,242.9" fill="none" stroke="#6b7280" stroke-width="2.4" stroke-dasharray="6 3"/><circle cx="660.0" cy="242.9" r="3.5" fill="#6b7280"/><text x="668.0" y="246.9" font-size="11" font-weight="400" fill="#6b7280">Tech×中小 684</text><polyline points="56.0,258.8 156.7,250.0 257.3,240.3 358.0,229.8 458.7,218.3 559.3,206.0 660.0,192.9" fill="none" stroke="#0a7a52" stroke-width="3.2"/><circle cx="660.0" cy="192.9" r="3.5" fill="#0a7a52"/><text x="668.0" y="196.9" font-size="11" font-weight="700" fill="#0a7a52">Biz×大手 1,329</text><polyline points="56.0,271.2 156.7,268.8 257.3,266.4 358.0,264.0 458.7,261.9 559.3,259.8 660.0,257.8" fill="none" stroke="#6f8fd8" stroke-width="2.4" stroke-dasharray="6 3"/><circle cx="660.0" cy="257.8" r="3.5" fill="#6f8fd8"/><text x="668.0" y="261.8" font-size="11" font-weight="400" fill="#6f8fd8">Biz×中小 492</text></svg></div>
     <table class="mk-tbl">
       <tr><th class="l">セグメント</th><th>悲観</th><th>中庸</th><th>強気</th><th class="l">頑健性</th></tr>
@@ -113,6 +129,12 @@
     <div class="mk-note">AIの不確実性が「件数」と「単価」の2つに分かれて上位に並ぶ。詰めるべきは、定型業務の自動化率、ハイクラス単価と成果連動の比率、他市場（SIer・コンサル）からの流入実額。</div>
   </div>
 
+  <h2 class="section-title">全体を通しての示唆</h2>
+  <p class="section-sub">この市場をどう読み、何を見るか。</p>
+  <div class="mk-takeaway">
+    市場は<b>「件数が減っても単価で粘り、全体では伸びる」</b>（中庸 年率+8.8%、2030年 約5,500億円）。ただし成長は<b>〈大手×高難度〉に偏り、定型・中小は縮む</b>。取りにいくなら大手・上流へ資源を寄せ、見るべき指標も〈成約件数〉から<b>〈単価×継続×成果〉</b>へ移すのが筋となる。最大の不確実性は「他市場からの仕事の流入」と「AIの件数（減）と単価（増）のせめぎ合い」にあり、<b>この上位要因を一次情報で詰めるほど、見立ての幅（帯）は締まる</b>。
+  </div>
+
   <h2 class="section-title">試算方法・前提（この市場規模の出し方）</h2>
   <p class="section-sub">「ひとつの数字を当てに行く」のではなく、複数手法で交差検証し、前提と出典を開示し、確度を区別し、帯と感度で示す設計。</p>
   <div class="ab-card">
@@ -124,13 +146,21 @@
       <li><b>⑤ 確度の区別と読み方</b><span>市場規模は公的統計・調査会社・上場企業IR（確度高）、将来の係数は独自仮定（レンジで保持）。結論は点でなくレンジで読む。1万回の確率試行は「仮定の不確実性」を見る参考であり、根拠の確からしさを上げるものではない。</span></li>
     </ul>
   </div>
-  <p class="section-sub" style="margin-top:14px">主な出典（市場規模・前提）</p>
+  <h2 class="section-title">参考文献・データ</h2>
+  <p class="section-sub">市場規模・成長率・AIの影響の根拠とした公開情報。各リンクから原典を確認できます。</p>
   <div class="mk-card">
-    <table class="ab-table"><tbody>
-      <tr><th>市場規模</th><td>IDC Japan（国内ITサービス／ビジネスコンサル／生成AI市場）、エン・ジャパン（ITフリーランス市場）、矢野経済研究所、IPA（外部委託率）、上場各社IR</td></tr>
-      <tr><th>AI・件数</th><td>GitHub・Microsoft Research（Peng et al., 2023）、METR（2025）</td></tr>
-      <tr><th>AI・単価</th><td>公正取引委員会・厚生労働省「フリーランス取引の状況についての実態調査」（2024）、マッキンゼー（成果連動への移行・2025年報道）、クラウドワークス決算説明資料、ココナラIR</td></tr>
-    </tbody></table>
+    <ul class="mk-refs">
+      <li><span class="cat">市場規模</span><a href="https://my.idc.com/getdoc.jsp?containerId=prJPJ53253625" target="_blank" rel="noopener">IDC Japan ― 国内ITサービス市場予測</a></li>
+      <li><span class="cat">市場規模</span><a href="https://my.idc.com/getdoc.jsp?containerId=prAP54019325" target="_blank" rel="noopener">IDC Japan ― 国内ビジネスコンサルティング市場予測</a></li>
+      <li><span class="cat">市場規模</span><a href="https://www.idc.com/getdoc.jsp?containerId=prJPJ52722724" target="_blank" rel="noopener">IDC Japan ― 国内生成AI市場予測</a></li>
+      <li><span class="cat">市場規模</span><a href="https://corp.en-japan.com/newsrelease/2025/42859.html" target="_blank" rel="noopener">エン・ジャパン ― ITフリーランス市場の実態調査（2025）</a></li>
+      <li><span class="cat">市場規模</span><a href="https://www.yano.co.jp/press-release/show/press_id/3736" target="_blank" rel="noopener">矢野経済研究所 ― デジタル人材向け人材サービス市場</a></li>
+      <li><span class="cat">AI・件数</span><a href="https://arxiv.org/abs/2302.06590" target="_blank" rel="noopener">GitHub・Microsoft Research ― AIによるコーディング高速化（Peng et al., 2023／arXiv:2302.06590）</a></li>
+      <li><span class="cat">AI・件数</span><a href="https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/" target="_blank" rel="noopener">METR ― 熟練者・実環境でのAI開発生産性の実験（2025）</a></li>
+      <li><span class="cat">AI・単価</span><a href="https://www.jftc.go.jp/houdou/pressrelease/2024/oct/241018_freelance2.pdf" target="_blank" rel="noopener">公正取引委員会・厚生労働省 ― フリーランス取引の状況についての実態調査（2024、PDF）</a></li>
+      <li><span class="cat">AI・単価</span><a href="https://www.thestreet.com/markets/ai-is-forcing-mckinsey-bcg-bain-to-rethink-consulting-fees" target="_blank" rel="noopener">マッキンゼー ― 報酬の成果連動への移行（2025年報道）</a></li>
+      <li><span class="cat">AI・単価</span><a href="https://irnote.jp/article/2025/11/28/622.html" target="_blank" rel="noopener">クラウドワークス ― 2025年9月期決算（DXコンサル事業の成長）</a></li>
+    </ul>
   </div>
   <p class="section-sub" style="margin-top:10px;color:var(--color-muted)">※ 本ページは公開情報のみに基づく市場全体の推計です。先読み（仮説）を含み、確定した予測ではありません。特定企業の事業計画・取り分は扱いません。</p>
 
