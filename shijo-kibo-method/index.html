@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>市場規模の試算ロジック（詳細）｜リサーチ・ダッシュボード</title>
+<meta name="description" content="外部プロ人材市場の規模を、3手法のクロス・三点見積もり・AIの件数×単価分解・年次合成でどう推計したかの詳細。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230017c1'/%3E%3Ctext x='16' y='22' font-size='17' font-family='sans-serif' font-weight='700' fill='white' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+ .mk-card{background:var(--color-card);border:1px solid var(--color-line);border-radius:var(--radius-lg);padding:18px 20px;margin:12px 0;box-shadow:var(--shadow)}
+ .mk-tbl{width:100%;border-collapse:collapse;font-size:12.5px;margin:2px 0}
+ .mk-tbl th,.mk-tbl td{border:1px solid var(--color-line);padding:8px 10px;text-align:right}
+ .mk-tbl th{background:var(--color-bg);color:var(--color-ink);font-weight:700;text-align:center}
+ .mk-tbl td.l,.mk-tbl th.l{text-align:left}
+ .mk-tbl.mini th,.mk-tbl.mini td{padding:5px 7px;font-size:11.5px}
+ .mk-note{font-size:12px;color:var(--color-ink-2);background:#f6f8fb;border:1px solid var(--color-line);border-radius:8px;padding:10px 13px;margin:8px 0;line-height:1.85}
+ .mk-note b{color:var(--color-blue)}
+ .mk-callout{background:linear-gradient(180deg,var(--color-blue-50),#fff);border:1px solid #cdd9f5;border-left:4px solid var(--color-blue);border-radius:var(--radius-lg);padding:15px 18px;margin:10px 0;font-size:13px;line-height:1.95}
+ .mk-callout b{color:var(--color-blue)}
+ .mk-formula{background:#f6f8fb;border:1px solid var(--color-line);border-left:4px solid var(--color-blue);border-radius:8px;padding:11px 14px;margin:10px 0;font-size:13px;font-family:"SFMono-Regular",Consolas,monospace;overflow-x:auto}
+ .mk-formula b{color:var(--color-blue)}
+ .mk-back{display:inline-block;margin-top:10px;font-size:13px;font-weight:700;color:var(--color-blue);text-decoration:none}
+ .mk-back:hover{text-decoration:underline}
+ .mk-tbl a{color:var(--color-blue);text-decoration:none} .mk-tbl a:hover{text-decoration:underline}
+ .mk-chart{overflow-x:auto}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">本文へスキップ</a>
+<header class="site-header">
+  <div class="bar">
+    <a class="brand" href="../index.html"><span class="mark">R</span>リサーチ・ダッシュボード</a>
+    <button class="navtoggle" aria-label="メニュー" aria-expanded="false">☰</button>
+    <nav class="gnav" aria-label="グローバルメニュー">
+      <ul>
+        <li><a href="../index.html">全体像</a></li>
+        <li><a href="../shijo-kibo/index.html" class="active">市場規模</a></li>
+        <li><a href="../kyogo-chosa/index.html">競合調査</a></li>
+        <li><a href="../kyogo-kpi/index.html">競合KPI</a></li>
+        <li><a href="../koyo-hatarakikata/index.html">AIと雇用</a></li>
+        <li><a href="../jigyo-henkaku/index.html">AIと事業変革</a></li>
+        <li><a href="../roudou-shijo/index.html">労働市場データ</a></li>
+        <li><a href="../houmu-compliance/index.html">法務・コンプライアンス</a></li>
+        <li><a href="../about/index.html">このサイトについて</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="inner">
+    <p class="eyebrow">METHOD ／ 市場規模の試算ロジック</p>
+    <h1>市場規模の試算ロジック（詳細）</h1>
+    <p>「市場規模」ページの数字を、どんな考え方・手法・前提で出したかの詳細。ひとつの数字を当てに行くのではなく、複数手法で交差検証し、前提と出典を開示し、確度を区別し、帯と感度で示す設計です。数値は公開情報（公的統計・調査会社・上場企業IR・AI技術研究）に基づく推計で、先読み（仮説）を含みます。</p>
+    <a class="mk-back" href="../shijo-kibo/index.html">← 市場規模ページに戻る</a>
+  </div>
+</section>
+
+<main id="main">
+
+  <h2 class="section-title">設計の考え方（5つの工夫）</h2>
+  <p class="section-sub">数値の信頼性を担保するための5点。</p>
+  <div class="mk-card">
+    <ul class="ab-list">
+      <li><b>① 入れ子の定義</b><span>総需要（TAM）→ 取れる市場（SAM）と段階で絞り、何を測っているかを曖昧にしない。</span></li>
+      <li><b>② 3手法のクロス</b><span>市場規模を1か所から引かず、(a)市場からの絞り込み・(b)主要プレイヤー売上÷シェア・(c)外部統計の3手法が同水準に収束することを確認する。</span></li>
+      <li><b>③ 前提の全面開示</b><span>すべての成長係数を悲観/中庸/強気の3点＋出典で持つ。ブラックボックスを作らない。</span></li>
+      <li><b>④ 確度の区別</b><span>公式統計（A/B）と独自仮定（C）を区別し、過大に断定しない。</span></li>
+      <li><b>⑤ レンジと感度</b><span>点でなく帯で示し、結論を最も動かす前提を特定する。</span></li>
+    </ul>
+  </div>
+
+  <h2 class="section-title">1. 市場の階層（TAM → SAM）</h2>
+  <p class="section-sub">総需要の内側に、本推計が対象とする市場を位置づける。</p>
+  <div class="mk-card">
+    <table class="mk-tbl">
+      <tr><th class="l">階層</th><th class="l">定義</th><th>2030年</th></tr>
+      <tr><td class="l"><b>TAM</b></td><td class="l">外部プロ人材活用の総需要（既存ビジネス系＋既存IT系＋AX）</td><td>約2.7兆円</td></tr>
+      <tr><td class="l"><b>SAM</b></td><td class="l">エージェント型・ハイクラスのプロ人材活用市場（本推計の対象。稼働ベースの業務委託。請負・派遣・自己発注型プラットフォームは別市場）</td><td>中庸 約5,500億円</td></tr>
+    </table>
+    <div class="mk-note">SAMは総需要の全部ではなく、エージェント型・ハイクラスの層に限定。たとえばIT領域では、フリーランス市場全体（約1.2兆円）のうちエージェントが介在する約2割が対象。測る対象を絞ること自体が推計の精度を上げる。</div>
+  </div>
+
+  <h2 class="section-title">2. 2024年の起点 ― 3手法のクロス</h2>
+  <p class="section-sub">領域ごとに、独立した3手法を別々に走らせ、重なる帯を採用する（点でなくレンジ）。</p>
+  <div class="mk-card">
+    <p style="font-size:13px;margin:0 0 6px;font-weight:700">IT領域（採用 帯 2,160〜3,000／中央 2,500億）</p>
+    <table class="mk-tbl">
+      <tr><th class="l">手法</th><th class="l">考え方</th><th>低</th><th>中</th><th>高</th></tr>
+      <tr><td class='l'>(a) 市場から絞り込み</td><td class='l'>ITサービス市場 約7兆 × 外部委託率・フリーランス率・エージェント介在率</td><td>1,364</td><td><b>2,510</b></td><td>4,243</td></tr><tr><td class='l'>(b) 主要プレイヤー ÷ シェア</td><td class='l'>主要5社 約1,000億 ÷ 想定シェア(30/40/50%)</td><td>2,016</td><td><b>2,520</b></td><td>3,360</td></tr><tr><td class='l'>(c) 外部統計から</td><td class='l'>ITフリーランス市場 約1.2兆 × エージェント介在(18/21/25%)</td><td>2,160</td><td><b>2,520</b></td><td>3,000</td></tr>
+    </table>
+    <p style="font-size:13px;margin:12px 0 6px;font-weight:700">ビジネス領域（採用 帯 683〜960／中央 800億）</p>
+    <table class="mk-tbl">
+      <tr><th class="l">手法</th><th class="l">考え方</th><th>低</th><th>中</th><th>高</th></tr>
+      <tr><td class='l'>(a) 市場から絞り込み</td><td class='l'>ビジネスコンサル市場 約1.3兆 × 代替率(3/4/5%)</td><td>600</td><td><b>800</b></td><td>1,000</td></tr><tr><td class='l'>(b) 主要プレイヤー ÷ シェア</td><td class='l'>主要5社 約400億 ÷ 想定シェア(40/50/60%)</td><td>683</td><td><b>820</b></td><td>1,025</td></tr><tr><td class='l'>(c) 外部統計から</td><td class='l'>広義ビジネス支援需要 約0.8兆 × 介在(8/10/12%)</td><td>640</td><td><b>800</b></td><td>960</td></tr>
+    </table>
+    <div class="mk-note">独立な手法が同水準に収束することが、起点値の信頼性を支える。<b>合計 約3,300億（帯 2,843〜3,960）</b>。帯の幅は起点の不確実性として後段に引き継ぐ。</div>
+  </div>
+
+  <h2 class="section-title">3. 大手 / 中小への配分</h2>
+  <div class="mk-card">
+    <p style="font-size:13px;margin:0 0 8px">金額ベースで大手が過半を占めるため、領域共通で<b>大手60：中小40</b>を採用。根拠＝IT予算の大企業偏在／月60〜80万円以上の業務委託は与信・コンプライアンス要件で大手に偏る／主要エージェントの顧客が大手中心。中小に4割残すのはSaaS導入支援・補助金・AI支援などの中小固有需要があるため。</p>
+    <div class="mk-formula">IT：2,500 ×60% = 1,500 ／ ×40% = 1,000　｜　ビジネス：800 ×60% = 480 ／ ×40% = 320（億円）</div>
+  </div>
+
+  <h2 class="section-title">4. 成長率の構造 ― 3要素への分解と三点見積もり</h2>
+  <p class="section-sub">成長率を実績の単純延長で置かず、①市場の自然成長＋②他市場からの構造的な流入＋③AIの影響（件数×単価）に分解。各要素を悲観/中庸/強気の3点で持つ。値は年率%。</p>
+  <div class="mk-card">
+    <table class="mk-tbl mini">
+      <tr><th class="l">セグメント</th><th class="l">要素</th><th>悲観</th><th>中庸</th><th>強気</th></tr>
+      <tr><td class='l' rowspan='4' style='font-weight:700;white-space:nowrap;vertical-align:top'>IT×大手<br><span style='font-weight:400;color:#6b7280;font-size:10.5px'>2024 1,500億<br>AI正味 -2.5%</span></td><td class='l'>① 自然増</td><td>+3.5</td><td><b>+5.0</b></td><td>+6.5</td></tr><tr><td class='l'>② 構造変化（流入）</td><td>+7.0</td><td><b>+12.0</b></td><td>+17.0</td></tr><tr><td class='l'>③a AI 件数下押し</td><td style='color:#a23a3a'>−12.0</td><td style='color:#a23a3a'><b>−8.0</b></td><td style='color:#a23a3a'>−5.0</td></tr><tr><td class='l'>③b AI 単価押上げ</td><td style='color:#0a7a52'>+3.0</td><td style='color:#0a7a52'><b>+6.0</b></td><td style='color:#0a7a52'>+9.0</td></tr><tr><td class='l' rowspan='4' style='font-weight:700;white-space:nowrap;vertical-align:top'>IT×中小<br><span style='font-weight:400;color:#6b7280;font-size:10.5px'>2024 1,000億<br>AI正味 -12.4%</span></td><td class='l'>① 自然増</td><td>+1.5</td><td><b>+3.0</b></td><td>+4.5</td></tr><tr><td class='l'>② 構造変化（流入）</td><td>-1.0</td><td><b>+0.0</b></td><td>+2.0</td></tr><tr><td class='l'>③a AI 件数下押し</td><td style='color:#a23a3a'>−20.0</td><td style='color:#a23a3a'><b>−15.0</b></td><td style='color:#a23a3a'>−10.0</td></tr><tr><td class='l'>③b AI 単価押上げ</td><td style='color:#0a7a52'>+1.0</td><td style='color:#0a7a52'><b>+3.0</b></td><td style='color:#0a7a52'>+5.0</td></tr><tr><td class='l' rowspan='4' style='font-weight:700;white-space:nowrap;vertical-align:top'>ビジネス×大手<br><span style='font-weight:400;color:#6b7280;font-size:10.5px'>2024 480億<br>AI正味 +0.9%</span></td><td class='l'>① 自然増</td><td>+6.0</td><td><b>+8.0</b></td><td>+10.0</td></tr><tr><td class='l'>② 構造変化（流入）</td><td>+8.0</td><td><b>+14.0</b></td><td>+20.0</td></tr><tr><td class='l'>③a AI 件数下押し</td><td style='color:#a23a3a'>−6.0</td><td style='color:#a23a3a'><b>−3.0</b></td><td style='color:#a23a3a'>−1.0</td></tr><tr><td class='l'>③b AI 単価押上げ</td><td style='color:#0a7a52'>+2.0</td><td style='color:#0a7a52'><b>+4.0</b></td><td style='color:#0a7a52'>+7.0</td></tr><tr><td class='l' rowspan='4' style='font-weight:700;white-space:nowrap;vertical-align:top'>ビジネス×中小<br><span style='font-weight:400;color:#6b7280;font-size:10.5px'>2024 320億<br>AI正味 -1.2%</span></td><td class='l'>① 自然増</td><td>+3.0</td><td><b>+5.0</b></td><td>+7.0</td></tr><tr><td class='l'>② 構造変化（流入）</td><td>+2.0</td><td><b>+5.0</b></td><td>+8.0</td></tr><tr><td class='l'>③a AI 件数下押し</td><td style='color:#a23a3a'>−8.0</td><td style='color:#a23a3a'><b>−5.0</b></td><td style='color:#a23a3a'>−3.0</td></tr><tr><td class='l'>③b AI 単価押上げ</td><td style='color:#0a7a52'>+2.0</td><td style='color:#0a7a52'><b>+4.0</b></td><td style='color:#0a7a52'>+6.0</td></tr>
+    </table>
+    <div class="mk-note">③AIは「件数を減らす力（③a）」と「単価を上げる力（③b）」に分け、正味＝(1−③a)(1+③b)−1 を取る。係数は出典と下記ロジックから組み上げ、目標から逆算していない。</div>
+  </div>
+
+  <h2 class="section-title">5. AIの件数×単価の式と根拠</h2>
+  <div class="mk-card">
+    <div class="mk-formula">③ネット ＝ <b>(1 − 件数下押し) × (1 + 単価押上げ) − 1</b><br>例）IT×大手 中庸 ＝ (1 − 0.08)(1 + 0.06) − 1 = <b>−2.5%</b>　／　IT×中小 中庸 ＝ (1 − 0.15)(1 + 0.03) − 1 = <b>−12.5%</b></div>
+    <table class="mk-tbl">
+      <tr><th class="l">力</th><th class="l">根拠（社名・調査・時点）</th><th>確度</th></tr>
+      <tr><td class="l">件数（減）</td><td class="l">定型業務の自動化：<a href="https://arxiv.org/abs/2302.06590" target="_blank" rel="noopener">GitHub・MSR 約55.8%高速化</a>／<a href="https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/" target="_blank" rel="noopener">METR：熟練者・実環境では−19%</a>（高難度ほど件数が減りにくい）</td><td>B</td></tr>
+      <tr><td class="l">単価（増）</td><td class="l">高難度集中・課金転換：<a href="https://www.jftc.go.jp/houdou/pressrelease/2024/oct/241018_freelance2.pdf" target="_blank" rel="noopener">公取委 委託者67.1%が価格転嫁を受容</a>／<a href="https://www.thestreet.com/markets/ai-is-forcing-mckinsey-bcg-bain-to-rethink-consulting-fees" target="_blank" rel="noopener">マッキンゼー 報酬の約25%を成果連動へ</a>／<a href="https://irnote.jp/article/2025/11/28/622.html" target="_blank" rel="noopener">クラウドワークス DXコンサル約2.6倍</a></td><td>A/B</td></tr>
+    </table>
+    <div class="mk-note"><b>課金方式の転換が効く理由</b>：時間課金から定額・成果連動へ移ると、金額が投入工数から切り離される。「工数が55%減る＝市場が55%縮む」という旧来の見立ては過大で、件数減と単価増を分けて見る必要がある。各係数の水準は確度C（独自仮定・レンジ保持）。</div>
+  </div>
+
+  <h2 class="section-title">6. 年次の動き（前半厚く・後半逓減）と合成</h2>
+  <p class="section-sub">構造変化は前半厚く後半逓減、AIの件数下押し・単価押上げは普及で逓増。各要素は乗算で合成する。</p>
+  <div class="mk-card">
+    <div class="mk-formula">当年成長率ₜ ＝ <b>(1+①ₜ)×(1+②ₜ)×(1−③aₜ)×(1+③bₜ) − 1</b>　／　市場規模ₜ ＝ 市場規模ₜ₋₁ ×(1+成長率ₜ)</div>
+    <div class="mk-chart"><table class="mk-tbl mini"><tr><th class='l'>IT×大手（中庸）</th><th>2025</th><th>2026</th><th>2027</th><th>2028</th><th>2029</th><th>2030</th></tr><tr><td class='l'>① 自然増ₜ</td><td>+5.00</td><td>+4.85</td><td>+4.70</td><td>+4.56</td><td>+4.43</td><td>+4.29</td></tr><tr><td class='l'>② 構造変化ₜ</td><td>+12.00</td><td>+10.56</td><td>+9.29</td><td>+8.18</td><td>+7.20</td><td>+6.33</td></tr><tr><td class='l'>③a 件数ₜ</td><td style='color:#a23a3a'>−2.80</td><td style='color:#a23a3a'>−3.84</td><td style='color:#a23a3a'>−4.88</td><td style='color:#a23a3a'>−5.92</td><td style='color:#a23a3a'>−6.96</td><td style='color:#a23a3a'>−8.00</td></tr><tr><td class='l'>③b 単価ₜ</td><td style='color:#0a7a52'>+2.10</td><td style='color:#0a7a52'>+2.88</td><td style='color:#0a7a52'>+3.66</td><td style='color:#0a7a52'>+4.44</td><td style='color:#0a7a52'>+5.22</td><td style='color:#0a7a52'>+6.00</td></tr><tr><td class='l'>当年成長率</td><td>+16.71</td><td>+14.68</td><td>+12.83</td><td>+11.14</td><td>+9.59</td><td>+8.15</td></tr><tr><td class='l'>市場規模(億)</td><td>1,751</td><td>2,008</td><td>2,265</td><td>2,518</td><td>2,759</td><td>2,984</td></tr></table></div>
+    <div class="mk-note">②が年々小さく（逓減）、AIの件数・単価がいずれも年々大きく（逓増）なるため、成長率は後半にかけて自然に鈍化する。一定率の複利延長より実態に即した推移になる。</div>
+  </div>
+
+  <h2 class="section-title">7. シナリオと結果</h2>
+  <p class="section-sub">悲観＝全要素を悲観側、強気＝強気側に同時に振った「世界」。各シナリオでエンジンを回した結果。</p>
+  <div class="mk-card">
+    <table class="mk-tbl">
+      <tr><th class="l">シナリオ</th><th>2024</th><th>2025</th><th>2026</th><th>2027</th><th>2028</th><th>2029</th><th>2030</th><th>24-30 CAGR</th></tr>
+      <tr><td class='l'>悲観（件数激減・流入停滞）</td><td>3,300</td><td>3,408</td><td>3,465</td><td>3,469</td><td>3,424</td><td>3,333</td><td>3,202</td><td><b>-0.5%</b></td></tr><tr><td class='l'>中庸（基準）</td><td>3,300</td><td>3,675</td><td>4,052</td><td>4,426</td><td>4,793</td><td>5,148</td><td>5,488</td><td><b>+8.8%</b></td></tr><tr><td class='l'>強気（単価上昇・流入加速）</td><td>3,300</td><td>3,956</td><td>4,717</td><td>5,594</td><td>6,604</td><td>7,763</td><td>9,095</td><td><b>+18.4%</b></td></tr>
+    </table>
+  </div>
+
+  <h2 class="section-title">8. 確率分布（参考・モンテカルロ）</h2>
+  <div class="mk-card">
+    <table class="mk-tbl">
+      <tr><th>P10</th><th>P50（中央）</th><th>P90</th><th>平均</th><th>5,000〜6,500億に入る確率</th></tr>
+      <tr><td>4,879</td><td><b>5,550</b></td><td>6,303</td><td>5,574</td><td>80%</td></tr>
+    </table>
+    <div class="mk-note">三角分布で1万回試行（AIの件数と単価は逆相関で連動）。<b>確率分布は「仮定の不確実性」を見る参考</b>で、独自仮定（確度C）を多数回試行しても根拠の確からしさそのものは上がらない。意思決定の主役は離散3シナリオ。</div>
+  </div>
+
+  <h2 class="section-title">9. 確度区分と出典</h2>
+  <p class="section-sub">数値の確からしさを区別し、原典を開示する。</p>
+  <div class="mk-card">
+    <div class="mk-note">確度 <b>A</b>＝公式統計（政府・公的機関）／<b>B</b>＝準公式・調査会社・上場企業IR／<b>C</b>＝独自仮定（推測。レンジ・前提付きで提示）。市場規模＝A〜B、将来の係数（流入・AIの件数/単価）＝Cでレンジ保持。</div>
+    <table class="mk-tbl">
+      <tr><th class="l">指標・数値</th><th class="l">出典</th><th class="l">使用箇所</th></tr>
+      <tr><td class='l'><a href='https://my.idc.com/getdoc.jsp?containerId=prJPJ53253625' target='_blank' rel='noopener'>国内ITサービス市場</a></td><td class='l'>IDC Japan</td><td class='l'>起点(a)IT</td></tr><tr><td class='l'><a href='https://my.idc.com/getdoc.jsp?containerId=prAP54019325' target='_blank' rel='noopener'>国内ビジネスコンサル市場</a></td><td class='l'>IDC Japan</td><td class='l'>起点(a)ビジネス・①自然増</td></tr><tr><td class='l'><a href='https://www.idc.com/getdoc.jsp?containerId=prJPJ52722724' target='_blank' rel='noopener'>国内生成AI市場</a></td><td class='l'>IDC Japan</td><td class='l'>②③の方向性</td></tr><tr><td class='l'><a href='https://corp.en-japan.com/newsrelease/2025/42859.html' target='_blank' rel='noopener'>ITフリーランス市場の実態調査</a></td><td class='l'>エン・ジャパン</td><td class='l'>起点(c)IT</td></tr><tr><td class='l'><a href='https://www.yano.co.jp/press-release/show/press_id/3736' target='_blank' rel='noopener'>デジタル人材向け人材サービス市場</a></td><td class='l'>矢野経済研究所</td><td class='l'>①既存IT系の上限</td></tr><tr><td class='l'><a href='https://arxiv.org/abs/2302.06590' target='_blank' rel='noopener'>AIによるコーディング高速化(約55.8%)</a></td><td class='l'>GitHub・Microsoft Research (Peng et al., 2023)</td><td class='l'>③a 件数下押し</td></tr><tr><td class='l'><a href='https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/' target='_blank' rel='noopener'>熟練者・実環境のAI生産性(−19%)</a></td><td class='l'>METR (2025)</td><td class='l'>③a 件数下押し</td></tr><tr><td class='l'><a href='https://www.jftc.go.jp/houdou/pressrelease/2024/oct/241018_freelance2.pdf' target='_blank' rel='noopener'>フリーランス取引の状況についての実態調査(価格転嫁67.1%)</a></td><td class='l'>公正取引委員会・厚生労働省 (2024)</td><td class='l'>③b 単価押上げ</td></tr><tr><td class='l'><a href='https://www.thestreet.com/markets/ai-is-forcing-mckinsey-bcg-bain-to-rethink-consulting-fees' target='_blank' rel='noopener'>報酬の成果連動への移行(約25%)</a></td><td class='l'>マッキンゼー (2025年報道)</td><td class='l'>③b 単価押上げ</td></tr><tr><td class='l'><a href='https://irnote.jp/article/2025/11/28/622.html' target='_blank' rel='noopener'>DXコンサル事業 前年比約2.6倍</a></td><td class='l'>クラウドワークス 2025年9月期</td><td class='l'>③b 単価押上げ</td></tr>
+    </table>
+  </div>
+
+  <p class="section-sub" style="color:var(--color-muted)">※ 本ページは公開情報のみに基づく市場全体の推計です。先読み（仮説）を含み、確定した予測ではありません。特定企業の事業計画・取り分は扱いません。</p>
+  <a class="mk-back" href="../shijo-kibo/index.html">← 市場規模ページに戻る</a>
+
+</main>
+
+<footer class="site-footer">
+  <div class="inner">
+    <div><b>市場規模の試算ロジック（詳細）</b>　リサーチ・ダッシュボード</div>
+    <div class="note">掲載内容は公開情報に基づく推計の要約です。将来の係数は独自仮定（レンジ保持）。試算日：<span data-updated>2026-06-10</span></div>
+    <div class="note">デザイン参考：デジタル庁デザインシステム</div>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>
