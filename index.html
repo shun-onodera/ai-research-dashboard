@@ -84,6 +84,8 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
 .qlist ol{margin:0;padding-left:1.4em;font-size:13.3px;line-height:1.95;color:var(--color-ink-2)}
 .minic{font-size:13px;color:#2d4d78;background:var(--color-blue-50);border:1px solid #cdd9f5;border-radius:9px;padding:10px 14px;margin:12px 0;line-height:1.8}
 .minic b{color:var(--color-blue)}
+.vf-scope{font-size:11.5px;color:#9aa0ab;margin:8px 0 0;line-height:1.6}
+.zt td.nw{white-space:nowrap}
 /* 2-3 選定基準（法人/個人）＋ 職種別の読み解き方・示唆 */
 .selsec{margin:14px 0 8px}
 .selsec h4{font-size:15px;font-weight:800;margin:16px 0 6px;color:var(--color-ink)}
@@ -205,7 +207,7 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
     <div class="concl">
       <div class="c"><b>① 土台（追い風）</b>労働市場と法務が、外部のプロ人材活用に構造的な追い風を生んでいる。</div>
       <div class="c"><b>② 構造変化（砂時計化）</b>生成AIでマッチングの価値は低下し、価値は前段（業務設計）と後段（成果保証・データ）へ移る。</div>
-      <div class="c"><b>③ 勝敗を分ける5要因（KFS）</b>実績データ基盤・成果実現力・AI商品化力・コンプラ対応力・育成力。</div>
+      <div class="c"><b>③ 勝敗を分ける5要因（KFS）</b>実績データ基盤・コンプライアンス対応力・成果実現力・AI商品化力・育成力。</div>
     </div>
     <div class="flowstrip">
       <span class="s"><span>S1</span>変動要因</span><span class="a">→</span>
@@ -226,7 +228,7 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
   <tbody>
     <tr><td class="co">法人の調達対象</td><td>労働時間・人員を調達</td><td class="co">成果・業務の再設計を調達</td><td>AIが定型を担い、人に残るのが判断・設計のため</td></tr>
     <tr><td class="co">案件の件数と単価</td><td>件数が多く、単価は中位</td><td class="co">件数は減少し単価は上昇（金額規模は拡大し得る）</td><td>定型はAIへ吸収され、難度の高い案件に集中</td></tr>
-    <tr><td class="co">個人の働き方</td><td>正社員の安定 か 独立 の二択</td><td class="co">副業が収入補填・スキル蓄積の場として常態化（兼業中心）</td><td>雇用不安と、AIによる複業余力の両面</td></tr>
+    <tr><td class="co">個人の働き方</td><td>正社員の安定 か 独立 の二択</td><td class="co">副業が収入補填・スキル蓄積の場として拡大（実行はなお約1割）</td><td>雇用不安・AI複業余力が押し上げる一方、時間確保が壁</td></tr>
     <tr><td class="co">個人内の格差</td><td>スキル差は緩やか</td><td class="co">AI活用力により二極化</td><td>AIを活用できる層のみ生産性が大きく向上</td></tr>
     <tr><td class="co">事業者の選定基準</td><td>登録者数・速さ・手数料</td><td class="co">成果保証・データの確かさ・育成・連携性</td><td>仲介の利便性はAIが代替するため</td></tr>
     <tr><td class="co">事業者の収益源</td><td>中間工程（成約手数料）</td><td class="co">前段（要件設計）と後段（成果保証・定着）</td><td>中間工程はAIが自動化＝砂時計化</td></tr>
@@ -248,7 +250,8 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
 <!-- 1. 労働市場 -->
 <div class="vfactor labor">
   <div class="vf-head"><div class="vf-num">1</div><h3>労働市場</h3><span class="vf-status">土台（追い風）</span></div>
-  <p class="vf-gaiyo">企業は正社員を採りにくくなり、人手不足はむしろ深刻になっている。社内で確保しきれない専門性を、外部のプロ人材で機動的に補う必要が高まっている。副業を認める・受け入れる企業も増え、学び直しへの公的支援も拡充しており、外部活用とスキル育成の土壌が整いつつある。本タブはハイクラスを対象とするため、シグナルは採用難・人手不足／副業の土壌／学び直しの3つに絞る（賃金二極化・地域差・シニア供給は対象外）。</p>
+  <p class="vf-gaiyo">企業は正社員を採りにくくなり、人手不足はむしろ深刻になっている。社内で確保しきれない専門性を、外部のプロ人材で機動的に補う必要が高まっている。副業を認める・受け入れる企業も増え、学び直しへの公的支援も拡充しており、外部活用とスキル育成の土壌が整いつつある。</p>
+  <p class="vf-scope">※ シグナルはハイクラスに関わる3つ（採用難・人手不足／副業の土壌／学び直し）に絞る。賃金二極化・地域差・シニア供給は本タブの対象外。</p>
   <div class="vf-box vf-imp"><span class="vf-lab">生まれる変化（仮説）</span>
     <ul>
       <li><b>① 外部プロ人材需要の構造的な拡大</b>：正社員で採れない専門性を、外部のプロ人材で補う需要が拡大する。不足の本質は「人数」より「確保しにくい専門性」にあり、需要は対価を払える企業・難度の高い領域に偏る。</li>
@@ -288,7 +291,8 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
 <!-- 3. 生成AI -->
 <div class="vfactor ai">
   <div class="vf-head"><div class="vf-num">3</div><h3>生成AI</h3><span class="vf-status">構造変化（最大）</span></div>
-  <p class="vf-gaiyo">仕事の中身が変わり、定型・準定型の専門作業は社内・少人数で処理されるようになる。その結果、外部に出る案件は「難度が高く、成果が問われる仕事」に偏る。課金の単位は時間から成果へ、専門人材を探す入口はAIへ、価値は知見・データへ移る。シグナルはハイクラス専門サービス（コンサル・受託IT・監査・B2B調達など）の事例に絞る。</p>
+  <p class="vf-gaiyo">仕事の中身が変わり、定型・準定型の専門作業は社内・少人数で処理されるようになる。その結果、外部に出る案件は「難度が高く、成果が問われる仕事」に偏る。課金の単位は時間から成果へ、専門人材を探す入口はAIへ、価値は知見・データへ移る。</p>
+  <p class="vf-scope">※ シグナルはハイクラス専門サービス（コンサル・受託IT・監査・B2B調達など）の事例に絞る。</p>
   <div class="vf-box vf-imp"><span class="vf-lab">生まれる変化（仮説）</span>
     <ul>
       <li><b>① 外部に出る案件の高度化</b>：定型・準定型の専門作業は社内・少人数で完結し、外部に出る案件は高難度・成果必須型に偏る。</li>
@@ -316,11 +320,11 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
     <div class="fromto"><span class="from">労働時間・人員</span><span class="a">→</span><span class="to">成果・業務の再設計</span></div>
     <p>AIが定型処理を代替し、人に残る業務が「判断・設計・成果責任」に偏るため、法人の調達対象もそこへ移る。支払いは「働いた時間（時間課金・人月）」から、総額を先に固定する定額方式や、結果に連動させる成果連動方式へ。</p>
     <div class="zt-wrap" style="overflow-x:auto"><table class="zt">
-      <thead><tr><th style="width:28%">観点</th><th>従来</th><th>今後</th></tr></thead>
+      <thead><tr><th style="width:19%">観点</th><th style="width:30%">従来</th><th>今後</th></tr></thead>
       <tbody>
-        <tr><td class="co">調達対象</td><td>労働時間・人員</td><td>成果・業務の再設計</td></tr>
-        <tr><td class="co">支払い方式</td><td>時間課金・人月</td><td>定額（総額を先に固定）／成果連動（結果で変動）</td></tr>
-        <tr><td class="co">件数と単価</td><td>件数多・単価中位</td><td>件数は減少・単価は上昇</td></tr>
+        <tr><td class="co">調達対象</td><td class="nw">労働時間・人員</td><td>成果・業務の再設計</td></tr>
+        <tr><td class="co">支払い方式</td><td class="nw">時間課金・人月</td><td>定額（総額を先に固定）／成果連動（結果で変動）</td></tr>
+        <tr><td class="co">件数と単価</td><td class="nw">件数多・単価中位</td><td>件数は減少・単価は上昇</td></tr>
       </tbody>
     </table></div>
     <ul>
@@ -334,29 +338,30 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
   </div>
   <div class="icard">
     <h4>2-2. 個人（供給）の変化</h4>
-    <div class="fromto"><span class="from">正社員 か 独立</span><span class="a">→</span><span class="to">副業の常態化</span></div>
-    <p>雇用不安（AIによる職務の再編）とAIによる複業余力の両面から、供給は厚くなる。ただしAI活用力により二極化し、AIを使って成果を出せる層は売り手市場、定型作業にとどまる層は値下げ圧力に直面する。日本では副業の動機は<b>収入の補填が主</b>で、スキル・実績の蓄積や、一部が独立準備を兼ねる（独立準備が主目的とは限らず、多くは本業を続けながらの兼業）。</p>
+    <div class="fromto"><span class="from">正社員 か 独立</span><span class="a">→</span><span class="to">副業の拡大（ただし実行は約1割）</span></div>
+    <p>雇用不安（AIによる職務の再編）とAIによる複業余力が、供給を押し上げる方向に働く。ただし「常態化」と言える段階ではない。<b>副業の実施率は正社員の11.0%と過去最高を更新したものの、なお約1割</b>にとどまる。最大の壁は時間の確保で、本業（残業）と副業の合計が45時間を超える働き方が3割にのぼり、出社回帰（在宅勤務の導入企業は47.3%へ低下）がやりくりのハードルを上げる面もある。動機は収入の補填が上位だが、キャリア形成・スキル活用目的が増加傾向にある。供給はAI活用力により二極化し、AIで成果を出せる層は売り手市場、定型作業にとどまる層は値下げ圧力に直面する。</p>
     <div class="zt-wrap" style="overflow-x:auto"><table class="zt">
-      <thead><tr><th style="width:28%">観点</th><th>従来</th><th>今後</th></tr></thead>
+      <thead><tr><th style="width:19%">観点</th><th style="width:30%">従来</th><th>今後</th></tr></thead>
       <tbody>
-        <tr><td class="co">働き方</td><td>正社員の安定 か 独立 の二択</td><td>副業が収入補填・スキル蓄積の場として常態化（兼業中心）</td></tr>
-        <tr><td class="co">供給内の格差</td><td>スキル差は緩やか</td><td>AI活用力により二極化</td></tr>
-        <tr><td class="co">実績の扱い</td><td>事業者側に蓄積</td><td>持ち運び・本人還元を求める</td></tr>
+        <tr><td class="co">働き方</td><td class="nw">正社員か独立の二択</td><td>副業が収入補填・スキル蓄積の場として拡大（実行はなお約1割）</td></tr>
+        <tr><td class="co">供給内の格差</td><td class="nw">スキル差は緩やか</td><td>AI活用力により二極化</td></tr>
+        <tr><td class="co">実績の扱い</td><td class="nw">事業者側に蓄積</td><td>持ち運び・本人還元を求める</td></tr>
       </tbody>
     </table></div>
     <ul>
-      <li><b>常態化</b>：副業経験者は約4割、容認企業は6割超。正社員を続けながら副業で収入を補い実績を蓄積する形が標準化する。</li>
+      <li><b>拡大基調だが、実行は少数派</b>：実施率は正社員の11.0%と過去最高（前回調査比+4.0pt、20代男性は20.2%）。容認企業6割超という制度の広がりと意向の高まりに、実行が追いついていない。</li>
+      <li><b>時間確保が最大の壁</b>：本業（残業）＋副業で45時間超の働き方が3割。出社回帰（在宅勤務導入は47.3%へ低下）で、時間のやりくりのハードルは上がっている。</li>
       <li><b>入口拡大・中間層減</b>：実力で参入できる経路は広がる一方、未経験・若手の入口は縮小する。初期実績の獲得のため、低単価でも経験を積む動きが生じる。</li>
       <li><b>実績データの資産化意識</b>：自身の実績がAI・マッチングの基礎データになるため、本人に還元される持ち運び可能な仕組みを求め始める。</li>
     </ul>
-    <p class="src">根拠：フリーランス462万人の54%が副業層・副業容認60.7%（労働市場データ）／副業動機は収入補填が上位・独立準備はスキル活用層の42.2%（国内の副業実態調査2025）／代替されやすい職種ほど不安3倍（AIと雇用）</p>
+    <p class="src">根拠：副業実施率11.0%・過去最高、本業＋副業45時間超が3割（国内の副業実態調査2025）／副業容認60.7%・受入53.7%・在宅勤務導入47.3%へ低下（労働市場データ）／代替されやすい職種ほど不安3倍（AIと雇用）</p>
   </div>
 </div>
 
 <!-- 2-3 需給の不一致（ねじれ） -->
 <div class="selsec">
   <h4 style="font-size:16px;margin-top:18px">2-3. 需給の不一致（ねじれ）― 増える供給と高度化する需要がかみ合わない</h4>
-  <p class="lead">2-1と2-2は逆方向に作用する。供給は「収入補填に押された兼業型の副業」を中心に厚くなる一方、需要は「AIに吸収されず残った、難度が高く成果が問われる案件」へ集中する。増える供給の中身と、伸びる需要の中身が乖離していく。</p>
+  <p class="lead">2-1と2-2は逆方向に作用する。供給は「収入補填に押された兼業型の副業」を中心に厚くなる一方、需要は「AIに吸収されず残った、難度が高く成果が問われる案件」へ集中する。しかも供給の増加は意向が先行し、実行は時間を確保できる層に限られる（実施率は約1割）。増える供給の中身と、伸びる需要の中身が乖離していく。</p>
   <ul style="font-size:13.3px;line-height:1.9;color:var(--color-ink-2);padding-left:1.2em;margin:8px 0">
     <li><b>副業と専業の格差</b>：法人の難度の高い案件は、本業を持つ兼業型の副業では対応しにくく、需要は専業フリーランスや小規模チームへ寄りやすい。定型の副業案件はAIに吸収される。</li>
     <li><b>不一致の拡大</b>：「量は存在するが整合しない」状態が広がる。登録者を増やすだけでは、需要に応えられない。</li>
@@ -425,7 +430,7 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
     <div class="row"><div class="side dn">AIが代替し縮小</div><div class="bar b2">中間：候補探索・絞り込み</div></div>
     <div class="row"><div class="side up">比重が高まる</div><div class="bar b3">後段：成果の保証・定着支援（伴走・成果の確認）</div></div>
   </div>
-  <p class="lead" style="margin-top:8px">収益も「中間工程の成約手数料」一本に依存する構造から、前段・後段の付加価値（設計・伴走・成果保証・データ）へ分散させる必要がある。この図が、後段のKFS（特に②成果実現・保証）の土台になる。</p>
+  <p class="lead" style="margin-top:8px">収益も「中間工程の成約手数料」一本に依存する構造から、前段・後段の付加価値（設計・伴走・成果保証・データ）へ分散させる必要がある。この図が、後段のKFS（特に③ 成果を実現・保証する力）の土台になる。</p>
 </div>
 
 <!-- 職種別（本体セクションをそのまま） -->
@@ -585,9 +590,9 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
     <thead><tr><th style="width:30%">KFS</th><th>由来する分析（どの事実から導かれるか）</th></tr></thead>
     <tbody>
       <tr><td class="co">① 確かな実績データ基盤</td><td>S2選定基準の収束（成果保証の根拠＝価値証明＝同一データ）／S1生成AI（価値がデータへ）／S1法務（AI開発データ特例）</td></tr>
-      <tr><td class="co">② 成果を実現・保証する力</td><td>S1生成AI（課金が成果へ）／S2法人需要（成果保証への要求）／S3競合（全社が前段・後段へ拡張）</td></tr>
-      <tr><td class="co">③ AIの運用・商品化力</td><td>S3競合（AI3層・外販が最前線）／S1生成AI（入口のAI化）</td></tr>
-      <tr><td class="co">④ コンプライアンスを肩代わりする力</td><td>S1法務（雇用認定・取引適正化）／S2選定基準（ハイクラス法人の最重要関心＝リスク回避）</td></tr>
+      <tr><td class="co">② コンプライアンスを肩代わりする力</td><td>S1法務（雇用認定・取引適正化）／S2選定基準（ハイクラス法人の最重要関心＝リスク回避）</td></tr>
+      <tr><td class="co">③ 成果を実現・保証する力</td><td>S1生成AI（課金が成果へ）／S2法人需要（成果保証への要求）／S3競合（全社が前段・後段へ拡張）</td></tr>
+      <tr><td class="co">④ AIの運用・商品化力</td><td>S3競合（AI3層・外販が最前線）／S1生成AI（入口のAI化）</td></tr>
       <tr><td class="co">⑤ 供給を引き上げる育成力</td><td>S2需給の不一致（ねじれ）／S1労働市場（学び直しの公的支援）</td></tr>
     </tbody>
   </table></div>
@@ -598,7 +603,7 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
   <p>需要の的は、<b>大手・成長企業</b>に絞る。理由は2つ。第一に、<b>難易度の高い業務ニーズ（AIによる業務変革・再設計など）は大手に集中する</b>。AIで定型業務が社内・AIに吸収され、外部に出るのは「AIをどう業務に組み込み成果を出すか」という高度なテーマが中心で、こうした変革投資の体力と必要性を持つのは大手・成長企業に偏る。第二に、賃金が上がるなかで高コストな専門職を抱え込まず外部で機動的に使いたいという事情と、副業の受入制度の整備が、対価を払える大手・成長企業に需要を寄せる。<span class="src">（根拠：難度の高い案件への偏り＝AIと事業変革／副業を認める企業60.7%・受け入れる企業53.7%＝労働市場データ）</span></p>
 </div>
 
-<div class="layer-h"><span class="pill dohyo">土俵に立つ条件（必須）</span> ① 実績データ基盤 ／ ④ コンプライアンス対応</div>
+<div class="layer-h"><span class="pill dohyo">土俵に立つ条件（必須）</span> ① 実績データ基盤 ／ ② コンプライアンス対応</div>
 
 <div class="kfs">
   <div class="top"><div class="num">1</div><h3>確かな実績データ基盤</h3><div class="tags"><span class="tag ai">生成AI</span><span class="tag law">コンプラ</span></div></div>
@@ -615,7 +620,7 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
 </div>
 
 <div class="kfs">
-  <div class="top"><div class="num">4</div><h3>コンプライアンスを肩代わりする力</h3><div class="tags"><span class="tag law">コンプラ</span></div></div>
+  <div class="top"><div class="num">2</div><h3>コンプライアンスを肩代わりする力</h3><div class="tags"><span class="tag law">コンプラ</span></div></div>
   <p class="gaiyo"><b>概要</b>：ハイクラス法人の最大の関心である「雇用認定リスクの回避」を、契約・運用の設計で事業者が引き受けられるかが問われる。<br><b>理由</b>：常駐・準委任で「偽装請負・実質雇用」と判断されるリスクが軽ければ需要は伸び、重ければ萎縮する。法律で守られる安心の比重が下がるハイクラスでは、買いたたき保護より、このリスクの回避と取引適正化の手続きの肩代わりが、法人にとっての選定軸になる。</p>
   <div class="grid">
     <div><h5>構成要素</h5><ul>
@@ -630,10 +635,10 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
   </div>
 </div>
 
-<div class="layer-h"><span class="pill win">勝ち上がる条件（差別化）</span> ② 成果実現・保証 ／ ③ AI運用・商品化 ／ ⑤ 育成</div>
+<div class="layer-h"><span class="pill win">勝ち上がる条件（差別化）</span> ③ 成果実現・保証 ／ ④ AI運用・商品化 ／ ⑤ 育成</div>
 
 <div class="kfs">
-  <div class="top"><div class="num">2</div><h3>成果を実現・保証する力（砂時計の両端）</h3><div class="tags"><span class="tag ai">生成AI</span><span class="tag comp">競合</span></div></div>
+  <div class="top"><div class="num">3</div><h3>成果を実現・保証する力（砂時計の両端）</h3><div class="tags"><span class="tag ai">生成AI</span><span class="tag comp">競合</span></div></div>
   <p class="gaiyo"><b>概要</b>：中間のマッチングではなく、前段（業務の設計）と後段（成果の保証・定着）で価値を生み出せるかが問われる。<br><b>理由</b>：AIがマッチングの中間工程（候補探索・絞り込み・要件翻訳）を代替するため、価値は砂時計の両端に残る。前段はAIを活用した高度な業務再設計、後段は事前に判別しにくい成果の不確実性の引き受けで、いずれもAIで代替しにくい。競合各社もこの両端へ拡張しており、選定基準も「成果の確かさ」へ収束する。</p>
   <div class="grid">
     <div><h5>構成要素</h5><ul>
@@ -648,7 +653,7 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
 </div>
 
 <div class="kfs">
-  <div class="top"><div class="num">3</div><h3>AIの運用・商品化力</h3><div class="tags"><span class="tag ai">生成AI</span><span class="tag comp">競合</span></div></div>
+  <div class="top"><div class="num">4</div><h3>AIの運用・商品化力</h3><div class="tags"><span class="tag ai">生成AI</span><span class="tag comp">競合</span></div></div>
   <p class="gaiyo"><b>概要</b>：マッチングAIは「持っていないと負ける」標準装備であり、その先で担当者の知見をAIとして外販できるかが差を生む。<br><b>理由</b>：マッチング機能のAI化は差別化要因ではなく前提条件になりつつあり（サーキュレーション・ビザスク・INTLOOP・Upworkが実装済み）、新たな収益源の最前線は「知見・データのAI外販」にある。担当者が持つ人選ノウハウは、KFS①のデータ基盤を直接収益化する資産でもある。</p>
   <div class="grid">
     <div><h5>構成要素</h5><ul>
