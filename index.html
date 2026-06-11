@@ -307,6 +307,18 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
 .axfoot{font-size:12.5px;color:var(--color-ink-2);line-height:1.78;margin:12px 0 0;background:#fff;border:1px solid var(--color-line);border-left:4px solid var(--color-blue);border-radius:8px;padding:11px 14px}
 .axfoot b{color:var(--color-ink)}
 @media(max-width:760px){.axgrid{grid-template-columns:1fr}}
+/* エグゼクティブサマリー：3フェーズ段組みの要約表 */
+.esum-lead{font-size:13.5px;font-weight:700;color:var(--color-ink);line-height:1.85;margin:6px 0 6px}
+.zt.esum tbody tr{background:#fff}
+.zt.esum tr.band td{background:var(--color-blue-50);padding:6px 11px;border-color:#cdd9f5}
+.zt.esum tr.band a{font-size:12px;font-weight:800;color:var(--color-blue);text-decoration:none;letter-spacing:.02em}
+.zt.esum tr.band a:hover{text-decoration:underline}
+.zt.esum td.dv{font-weight:700;color:var(--color-ink)}
+.zt.esum td.bw{color:var(--color-muted)}
+.zt.esum td.pt{font-weight:700;color:var(--color-ink)}
+.esum-concl{font-size:13px;line-height:1.8;color:var(--color-ink-2);margin:10px 0 0;background:#fff;border:1px solid var(--color-line);border-left:4px solid var(--color-blue);border-radius:8px;padding:11px 14px}
+.esum-concl b{color:var(--color-blue)}
+.esum-concl a{color:var(--color-blue);font-weight:700;text-decoration:none}
 </style>
 </head>
 <body>
@@ -339,11 +351,6 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
     <p>土台となる労働市場・法務と、最大の構造変化である生成AIが、副業・フリーランス市場の需要・供給・サービス選定を組み替えている。本タブは、その変化を「変動要因 → 影響 → 競合の反応 → 重要成功要因（KFS）と打ち手」の順に整理する。各セクションの数値・出来事には、一次の事例・統計まで辿れる出典タブを示す。</p>
     <p class="updated">データ最終更新日：<b>2026-06-10</b>　／　掲載はすべて公開情報（公的統計・IR・公式リリース・報道）</p>
     <span class="scope">🎯 <b>対象</b>：ハイクラス業務委託（経営企画・事業企画・コンサル・IT専門職など、高度な専門性を業務委託で活用する領域）。低単価のクラウドソーシング・ギグワーク等は対象外。</span>
-    <div class="concl">
-      <div class="c"><b>① 土台（追い風）</b>労働市場と法務が、外部のプロ人材活用に構造的な追い風を生んでいる。</div>
-      <div class="c"><b>② 構造変化（砂時計化）</b>生成AIでマッチングの価値は低下し、価値は前段（業務設計）と後段（成果保証・データ）へ移る。</div>
-      <div class="c"><b>③ 勝敗を分ける6要因（KFS）</b>狙う市場・実績データ基盤・コンプライアンス対応力・成果実現力・AI商品化力・育成力。</div>
-    </div>
     <div class="flowstrip">
       <span class="s"><span>S1</span>変動要因</span><span class="a">→</span>
       <span class="s"><span>S2</span>影響</span><span class="a">→</span>
@@ -356,20 +363,26 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
 <main id="main" class="zv">
 
 <!-- 全体要約（エグゼクティブサマリー） -->
-<h2 class="section-title" id="summary" style="margin-top:16px">市場はこう変わる ― 全体要約（従来 → 今後）</h2>
-<p class="section-sub">7つの観点での変化の方向。各行の根拠と詳細は、以降の節で順に説明する。</p>
-<div class="zt-wrap" style="overflow-x:auto"><table class="zt">
-  <thead><tr><th style="width:17%">観点</th><th style="width:24%">従来</th><th style="width:30%">今後</th><th>理由</th></tr></thead>
+<h2 class="section-title" id="summary" style="margin-top:16px">全体サマリー ― 変動要因から打ち手まで（従来 → 今後）</h2>
+<p class="esum-lead">AIがマッチングの中間工程を自動化し、価値は「成果を保証し、供給を育てる基盤」へ移る。事業者が仲介業から〈能力流通を支える基盤事業〉へ転換できるかが、勝敗の分かれ目になる。</p>
+<p class="section-sub">「なぜ → 何が → だから何を」の順に、各節のキーメッセージを1枚に。各区分の見出しから該当節へ移動できる。</p>
+<div class="zt-wrap" style="overflow-x:auto"><table class="zt esum" style="table-layout:fixed;min-width:780px">
+  <thead><tr><th style="width:16%">区分</th><th style="width:21%">従来</th><th style="width:28%">今後</th><th>要点（事業への含意）</th></tr></thead>
   <tbody>
-    <tr><td class="co">法人の調達対象</td><td>労働時間・人員を調達</td><td class="co">成果・業務の再設計を調達</td><td>AIが定型を担い、人に残るのが判断・設計のため</td></tr>
-    <tr><td class="co">案件の件数と単価</td><td>件数が多く、単価は中位</td><td class="co">件数は減少し単価は上昇（金額規模は拡大し得る）</td><td>定型はAIへ吸収され、難度の高い案件に集中</td></tr>
-    <tr><td class="co">個人の働き方</td><td>正社員の安定 か 独立 の二択</td><td class="co">副業が収入補填・スキル蓄積の場として拡大（実行はなお約1割）</td><td>雇用不安・AI複業余力が押し上げる一方、時間確保が壁</td></tr>
-    <tr><td class="co">個人内の格差</td><td>スキル差は緩やか</td><td class="co">AI活用力により二極化</td><td>AIを活用できる層のみ生産性が大きく向上</td></tr>
-    <tr><td class="co">事業者の選定基準</td><td>登録者数・速さ・手数料</td><td class="co">成果保証・データの確かさ・育成・連携性</td><td>仲介の利便性はAIが代替するため</td></tr>
-    <tr><td class="co">事業者の収益源</td><td>中間工程（成約手数料）</td><td class="co">前段（要件設計）と後段（成果保証・定着）</td><td>中間工程はAIが自動化＝砂時計化</td></tr>
-    <tr><td class="co">事業者の評価指標</td><td>成約件数・単価・継続率</td><td class="co">「成果達成率」を加え、評価の主軸を成果へ</td><td>成果を測る指標がないと転換を裏づけられない</td></tr>
+    <tr class="band"><td colspan="4"><a href="#s1">〔なぜ〕変動要因 ― S1</a></td></tr>
+    <tr><td class="dv">土台：労働市場・法務</td><td class="bw">正社員前提・取引は緩い</td><td class="cf">採用難・副業制度・取引適正化が進む</td><td class="pt">外部プロ人材の活用に追い風</td></tr>
+    <tr><td class="dv">起点：生成AI</td><td class="bw">専門作業は外注</td><td class="cf">定型は社内・AIへ／外部は高度・成果型に偏る</td><td class="pt">仕事が「高度・成果」へ＝最大の構造変化</td></tr>
+    <tr class="band"><td colspan="4"><a href="#s2">〔何が〕市場への影響 ― S2・職種別</a></td></tr>
+    <tr><td class="dv">法人の調達</td><td class="bw">労働時間・人員</td><td class="cf">成果・業務の再設計</td><td class="pt">件数でなく単価・成果で取る（金額は拡大しうる）</td></tr>
+    <tr><td class="dv">個人の供給</td><td class="bw">正社員か独立の二択</td><td class="cf">副業で備え（実行はなお約1割）</td><td class="pt">AI活用力で二極化</td></tr>
+    <tr><td class="dv">成長する需要</td><td class="bw">定型に分散</td><td class="cf">高度・成果に集中</td><td class="pt">3つの「AXニーズ」に集まる</td></tr>
+    <tr><td class="dv">事業者のモデル</td><td class="bw">仲介手数料の一本足</td><td class="cf">前段（業務設計）と後段（成果保証・データ）</td><td class="pt">仲介業→基盤事業＝砂時計化</td></tr>
+    <tr class="band"><td colspan="4"><a href="#s3">〔だから何を〕競合の反応と打ち手 ― S3・S4</a></td></tr>
+    <tr><td class="dv">競合の反応</td><td class="bw">純粋マッチング</td><td class="cf">川上拡張・AIの外販</td><td class="pt">AI化は標準装備、差別化は外販へ</td></tr>
+    <tr><td class="dv">勝敗を分けるKFS</td><td class="bw">量・速さ・安さ</td><td class="cf">成果・データの確かさ・育成</td><td class="pt">6要因＝土俵3＋勝ち上がり3</td></tr>
   </tbody>
 </table></div>
+<p class="esum-concl"><b>結論</b>：仲介業から「能力流通を支える基盤事業」へ転換できるかが、事業者の分かれ目（→ <a href="#s5">S5 まとめ</a>）。</p>
 <div class="toc">
   <a href="#s1">S1 変動要因</a>
   <a href="#s2">S2 影響（需要・供給・選定基準）</a>
