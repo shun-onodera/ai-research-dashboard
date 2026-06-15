@@ -309,6 +309,24 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
 .axfoot{font-size:12.5px;color:var(--color-ink-2);line-height:1.78;margin:12px 0 0;background:#fff;border:1px solid var(--color-line);border-left:4px solid var(--color-blue);border-radius:8px;padding:11px 14px}
 .axfoot b{color:var(--color-ink)}
 .axcaveat{font-size:11.5px;color:var(--color-muted);line-height:1.7;margin:9px 0 0}
+.basewrap{margin-top:16px}
+.base-sech{font-size:15px;font-weight:800;color:var(--color-ink);margin:0 0 3px;padding-left:10px;border-left:4px solid var(--color-blue)}
+.base-secsub{font-size:12px;color:var(--color-muted);margin:0 0 12px;line-height:1.65}
+.bases{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
+.base-card{background:#fff;border:1px solid var(--color-line);border-radius:10px;border-top:3px solid var(--color-blue);padding:13px 15px}
+.base-head{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+.base-tag{font-size:11px;font-weight:800;color:var(--color-blue);background:var(--color-blue-50);border:1px solid #cdd9f5;border-radius:6px;padding:2px 8px}
+.base-card h4{margin:0;font-size:13.5px;font-weight:800;color:var(--color-ink);flex:1 1 auto}
+.base-dir{font-size:10.5px;font-weight:700;color:var(--color-ink-2);border:1px solid var(--color-line);border-radius:6px;padding:1px 7px;white-space:nowrap}
+.base-what{font-size:12px;line-height:1.7;color:var(--color-ink-2);margin:0 0 6px}
+.base-impact{font-size:12px;line-height:1.7;color:var(--color-ink);margin:0}
+.base-impact b{color:var(--color-blue)}
+.base-src{font-size:11px;color:var(--color-muted);margin:0}
+.base-src a{color:var(--color-blue)}
+.base-sec{margin:0 0 8px}
+.base-lab{display:block;font-size:10.5px;font-weight:800;color:var(--color-blue);margin:0 0 3px;letter-spacing:.02em}
+.base-list{margin:0;padding-left:1.15em;font-size:12px;line-height:1.65;color:var(--color-ink-2)}
+.base-list li{margin:0 0 3px}
 @media(max-width:760px){.axgrid{grid-template-columns:1fr}}
 /* エグゼクティブサマリー：3フェーズ段組みの要約表 */
 .esum-lead{font-size:13.5px;font-weight:700;color:var(--color-ink);line-height:1.85;margin:6px 0 6px}
@@ -396,52 +414,11 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
 </div>
 
 <!-- S1 -->
-<h2 class="section-title" id="s1"><span class="sn">S1</span>マクロ変動要因 ― 2つの土台と1つの構造変化</h2>
-<p class="section-sub">すべての変化の起点。各シグナル（数値・出来事）の出典タブへは、最下部のリンクから移動できる。</p>
-<!-- 1. 労働市場 -->
-<div class="vfactor labor">
-  <div class="vf-head"><div class="vf-num">1</div><h3>労働市場</h3><span class="vf-status">土台（追い風）</span></div>
-  <p class="vf-gaiyo">企業は正社員を採りにくくなり、人手不足はむしろ深刻になっている。社内で確保しきれない専門性を、外部のプロ人材で機動的に補う必要が高まっている。副業を認める・受け入れる企業も増え、学び直しへの公的支援も拡充しており、外部活用とスキル育成の土壌が整いつつある。</p>
-  <p class="vf-scope">※ シグナルはハイクラスに関わる3つ（採用難・人手不足／副業の土壌／学び直し）に絞る。賃金二極化・地域差・シニア供給は本タブの対象外。</p>
-  <div class="vf-box vf-imp"><span class="vf-lab">生まれる変化（仮説）</span>
-    <ul>
-      <li><b>① 外部プロ人材需要の構造的な拡大</b>：正社員で採れない専門性を、外部のプロ人材で補う需要が拡大する。不足の本質は「人数」より「確保しにくい専門性」にあり、需要は対価を払える企業・難度の高い領域に偏る。</li>
-      <li><b>② 副業受入の制度的な土壌の拡大</b>：企業側の受入制度が広がり、ハイクラス人材の兼業供給が制度面から後押しされる。</li>
-      <li><b>③ 育成と連動した事業機会</b>：学び直しへの公的支援と連動し、「育成機能を内包した人材サービス」の事業余地が広がる。</li>
-    </ul>
-  </div>
-  <div class="vf-box vf-fl"><span class="vf-lab">副業・フリーランス市場への影響</span>マッチング事業にとって需要環境は良好で、「正社員では採れない専門性を、必要なときだけ外部で確保したい」という需要は構造的に拡大する。とりわけ受入制度が整った大手・成長企業ほど活用余地が大きく、ここを的に絞ると伸ばしやすい。学び直しへの公的支援の追い風は、事業者が育成機能を取り込む方向とも一致する。</div>
-  <div class="vf-evid"><span class="vf-elab">根拠（予兆シグナル）</span>
-    <div class="vf-sig"><span class="vf-sl">採用難・人手不足<span class="vf-map">［→ 変化①を支える］</span></span>正社員の有効求人倍率は0.99倍と1倍を割り（全体は1.18倍／厚生労働省2026-04）、新規求人数も前年同月比−3.6%。完全失業率は2.5%と低水準が続き、人手不足を一因とする倒産は2025年度に442件で過去最多（前年度比+43%／東京商工リサーチ）。＝企業は正社員採用で不足を埋めきれていない。<a href="roudou-shijo/index.html">労働市場データ ↗</a><div class="sigspot"><a class="ss-title" href="report/index.html?r=tsr-jinde-bankruptcy-fy2025" target="_blank" rel="noopener">エビデンス：人手不足関連倒産442件で過去最多（2025年度）→</a><span class="ss-sum">人手不足が倒産に直結する局面に（前年度比＋43%）。採用難が企業存続を脅かす段階に入った。<span class="ss-src">東京商工リサーチ・2026-04</span></span></div></div>
-    <div class="vf-sig"><span class="vf-sl">副業の土壌<span class="vf-map">［→ 変化②を支える］</span></span>副業を認める企業は60.7%（2020年は49.5%）、社外から副業人材を受け入れる企業も53.7%まで拡大。政府推計のフリーランスは462万人で、その54%は本業を持つ副業層。＝企業側に「外部の専門人材を受け入れる制度」が整いつつある。<a href="roudou-shijo/index.html">労働市場データ ↗</a><div class="sigspot"><a class="ss-title" href="report/index.html?r=soumu-roudouryoku-2026-04" target="_blank" rel="noopener">エビデンス：完全失業率2.5%を維持、就業者6,860万人（2026年4月）→</a><span class="ss-sum">働き手が増えてもなお人手が足りない供給逼迫が続き、外部のフリーランス・副業を活用する余地が広がる。<span class="ss-src">総務省 労働力調査・2026-05</span></span></div></div>
-    <div class="vf-sig"><span class="vf-sl">学び直し<span class="vf-map">［→ 変化③を支える］</span></span>転職者数は331万人（3年連続増）、転職で賃金が上がった人の割合は40.5%。政府は「人への投資」に5年で1兆円を投じ、学び直し（リスキリング）講座費用を最大70%補助。＝スキル習得・育成への公的な後押しが強い。<a href="roudou-shijo/index.html">労働市場データ ↗</a><div class="sigspot"><a class="ss-title" href="roudou-shijo/index.html" target="_blank" rel="noopener">エビデンス：転職者数331万人・賃上げ成功40.5%、リスキリング支援は5年で1兆円 →</a><span class="ss-sum">学び直しへの公的支援が拡充し、育成機能を内包する事業者の追い風になる。<span class="ss-src">労働市場データ（一次統計・政府方針）</span></span></div></div>
-  </div>
-</div>
-
-<!-- 2. 法務・コンプライアンス -->
-<div class="vfactor law">
-  <div class="vf-head"><div class="vf-num">2</div><h3>法務・コンプライアンス</h3><span class="vf-status">土台（取引の前提）</span></div>
-  <p class="vf-gaiyo">フリーランスとの取引を適正にする法律が整い、発注側が守るべき手続きが増えた。ハイクラスでの最大の論点は「契約が業務委託なのか、実質的な雇用なのか」の線引きである。AI・データの規制は、日本は緩やか・欧州は厳格と対照的で、人選にAIを使う事業者にとっての前提条件になる。</p>
-  <div class="vf-box vf-imp"><span class="vf-lab">生まれる変化（仮説）</span>
-    <ul>
-      <li><b>① 取引適正化対応の前提条件化</b>：60日以内の支払い・書面明示などの対応が取引の前提条件になり、その代行が事業者の価値になる。</li>
-      <li><b>② 雇用認定リスクが案件設計の中心論点に</b>：「業務委託か実質雇用か」の線引きが厳しくなり、リスク管理力が法人の選定軸になる。</li>
-      <li><b>③ 人選AIの透明性が信頼条件に</b>：説明責任・人間の関与・追跡可能性の自主整備が、AIで人選する事業者の信頼の前提になる。</li>
-      <li><b>④ 実績データのAI活用は進めやすく</b>：AI開発向けのデータ提供は同意不要の特例ができ、制度面ではむしろ後押しされる。</li>
-    </ul>
-  </div>
-  <div class="vf-box vf-fl"><span class="vf-lab">副業・フリーランス市場への影響</span>法人がハイクラスを外部活用する際の最大の不安は「常駐・継続的な業務委託が偽装請負・実質雇用と判断されるリスク」。マッチング事業がこのリスクを避ける契約・運用設計と、取引適正化の手続きを標準で代行できれば、法人の利用ハードルが下がり需要が伸びる。逆に放置すれば需要は萎縮する。実績データのAI活用は法改正で進めやすくなる一方、人選AIの透明性確保は信頼の前提になる。</div>
-  <div class="vf-evid"><span class="vf-elab">根拠（予兆シグナル）</span>
-    <div class="vf-sig"><span class="vf-sl">取引適正化が「義務」になった（フリーランス保護新法）<span class="vf-map">［→ 変化①を支える］</span></span>フリーランス保護新法（2024-11施行）が発注側に7つの義務を課した（報酬を成果物受領後60日以内に支払う・取引条件の書面明示・相談窓口の整備など）。施行1年で128の事業者が是正指導を受け、下請取引も取適法へ改正（2026-01／手形払いや一方的な代金決定の禁止）。＝形式を整えるだけでは足りず、実態の遵守が問われる段階。<a href="houmu-compliance/index.html">法務・コンプライアンス ↗</a><div class="sigspot"><a class="ss-title" href="houmu-compliance/index.html" target="_blank" rel="noopener">エビデンス：フリーランス保護新法、発注側に7つの義務 ― 施行1年で128事業者を指導 →</a><span class="ss-sum">報酬は受領後60日以内・取引条件の書面明示が義務に。形式でなく実態の遵守が問われる段階に入った。<span class="ss-src">公正取引委員会ほか・2025-12</span></span></div></div>
-    <div class="vf-sig"><span class="vf-sl">「業務委託か、実質的な雇用か」の線引きが厳格化（◎最重要）<span class="vf-map">［→ 変化②を支える］</span></span>EUのプラットフォーム労働指令は、発注側に指揮命令の実態があればその関係を「雇用」とみなす（雇用でないと示す責任は発注側）。各国は2026-12までに国内法へ反映。日本でも労働基準法見直しで副業の労働時間通算が論点（立法は後ろ倒し）。＝常駐・継続的な業務委託の案件設計で、偽装請負・実質雇用と判断されないことが要点。<a href="houmu-compliance/index.html">法務・コンプライアンス ↗</a><div class="sigspot"><a class="ss-title" href="houmu-compliance/index.html" target="_blank" rel="noopener">エビデンス：EUプラットフォーム労働指令 ― 指揮命令の実態があれば「雇用」とみなす →</a><span class="ss-sum">雇用でないと示す責任は発注側にある。各国は2026年12月までに国内法へ反映。日本でも労働基準法の見直しが論点。<span class="ss-src">欧州連合ほか・2024〜</span></span></div></div>
-    <div class="vf-sig"><span class="vf-sl">AI規制の対照<span class="vf-map">［→ 変化③を支える］</span></span>日本のAI推進法（2025-09全面施行）は罰則がなく自主性を促す枠組み。欧州のAI法は採用・人事に使うAIを「高リスク」として厳しく規制し、罰則は最大「全世界売上高の7%」で、EU外の企業にも域外適用されうる。＝人選AIは、説明責任・人間の関与・追跡可能性を自主的に整えるほど信頼につながる。<a href="houmu-compliance/index.html">法務・コンプライアンス ↗</a><div class="sigspot"><a class="ss-title" href="report/index.html?r=eu-ai-act-omnibus" target="_blank" rel="noopener">エビデンス：EU、AI法簡素化で政治合意 ― 高リスク義務を2027年末へ延期 →</a><span class="ss-sum">採用・人事に使うAIは「高リスク」。罰則は最大で全世界売上の7%・域外適用。日本は罰則なしの自主規制型と対照的。<span class="ss-src">European Commission・2026-05</span></span></div></div>
-    <div class="vf-sig"><span class="vf-sl">個人データ／開示<span class="vf-map">［→ 変化④を支える］</span></span>個人情報保護法の改正案（2026-04閣議決定）は違反企業への課徴金を新設する一方、AI開発のための第三者提供は本人同意を不要とする特例を設ける。上場約4,000社には人的資本3指標（女性管理職比率・男性育休取得率・男女賃金差）の開示義務。＝実績データのAI活用は進めやすくなり、人と処遇のデータ需要も生まれる。<a href="houmu-compliance/index.html">法務・コンプライアンス ↗</a><div class="sigspot"><a class="ss-title" href="houmu-compliance/index.html" target="_blank" rel="noopener">エビデンス：個人情報保護法の改正案を閣議決定 ― 課徴金を新設、AI開発データは本人同意を不要に →</a><span class="ss-sum">AI開発向けのデータ提供は同意不要の特例ができ、実績データの活用が進めやすくなる。上場約4,000社に人的資本3指標の開示義務も。<span class="ss-src">個人情報保護委員会ほか・2026-04</span></span></div></div>
-  </div>
-</div>
-
-<!-- 3. 生成AI -->
-<div class="vfactor ai">
-  <div class="vf-head"><div class="vf-num">3</div><h3>生成AI</h3><span class="vf-status">構造変化（最大）</span></div>
+<h2 class="section-title" id="s1"><span class="sn">S1</span>マクロ変動要因 ― 起点（生成AI）と、それを取り巻く5つの土台（PESTLE）</h2>
+<p class="section-sub">中核は生成AI（構造変化の起点）。それが作用する外部環境を、PESTLEの残り5観点（政治・経済・社会・法・環境）で土台として押さえる。各観点の詳細は該当タブへ。</p>
+<!-- 中核：生成AI -->
+<div class="vfactor ai core">
+  <div class="vf-head"><div class="vf-num">核</div><h3>生成AI</h3><span class="vf-status">中核＝構造変化の起点（技術／T）</span></div>
   <p class="vf-gaiyo">仕事の中身が変わり、定型・準定型の専門作業は社内・少人数で処理されるようになる。その結果、外部に出る案件は「難度が高く、成果が問われる仕事」に偏る。課金の単位は時間から成果へ、専門人材を探す入口はAIへ、価値は知見・データへ移る。</p>
   <p class="vf-scope">※ シグナルはハイクラス専門サービス（コンサル・受託IT・監査・B2B調達など）の事例に絞る。</p>
   <div class="vf-box vf-imp"><span class="vf-lab">生まれる変化（仮説）</span>
@@ -459,6 +436,85 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
     <div class="vf-sig"><span class="vf-sl">需要の質が高度化<span class="vf-map">［→ 変化①②を支える］</span></span>Bainは「採用は二極化し、AI関連の求人だけが回復している」と分析。Microsoftは「AI活用の成果の67%は、ツールでなく組織運営（文化・上司の後押し・人材運用）で決まる」と示す。代替されやすい職種ほど将来不安が約3倍。＝外部に求められるのは「成果まで導ける人材」。<a href="koyo-hatarakikata/index.html">AIと雇用 ↗</a><div class="sigspot"><a class="ss-title" href="report/index.html?r=bain-global-job-trends" target="_blank" rel="noopener">エビデンス：Bain ― 求人は二極化、AI関連だけ別の動き →</a><span class="ss-sum">世界の求人が広く減るなか、AI関連の採用だけが回復。外部に求められるのは成果まで導ける人材だと示す。<span class="ss-src">Bain & Company・2026-05</span></span></div></div>
     <div class="vf-sig"><span class="vf-sl">時間→成果への課金転換<span class="vf-map">［→ 変化②を支える］</span></span>コンサル・専門サービスで、人月・時間課金から成果報酬・定額への転換が進む（報道によれば、マッキンゼーは売上の約25%を成果連動へ、KPMGはAI効率化を理由に監査報酬を14%減、受託ITのCognizantは人月から成果へ課金単位を移行）。あらかじめ総額を固定する定額方式や成果連動への移行も進む。＝「働いた時間で売る」前提が崩れる。<a href="jigyo-henkaku/index.html">AIと事業変革 ↗</a><div class="sigspot"><a class="ss-title" href="report/index.html?r=mckinsey-outcome-pricing" target="_blank" rel="noopener">エビデンス：マッキンゼー、全世界売上の約4分の1を「成果連動型」へ転換 →</a><span class="ss-sum">稼働時間でなく顧客の事業成果に応じた料金へ大きく舵を切った。「時間で売る」前提が崩れた象徴例。<span class="ss-src">Business Insider・2025-11</span></span></div></div>
     <div class="vf-sig"><span class="vf-sl">入口・価値の移動<span class="vf-map">［→ 変化③④を支える］</span></span>専門人材の探索・要件定義・一次選別から、企業間の条件交渉までAIが担い始めた（NECの調達交渉AIは合意率95%・交渉時間を数日→約80秒に短縮）。価値の源泉は、表に見える商品・手数料から、AIを支える知見・データへ移る。＝マッチングの入口がAIに移り、価値はデータに宿る。<a href="jigyo-henkaku/index.html">AIと事業変革 ↗</a><div class="sigspot"><a class="ss-title" href="report/index.html?r=nec-procurement-negotiation-ai" target="_blank" rel="noopener">エビデンス：NEC、企業間の調達交渉をAIが自律代行 →</a><span class="ss-sum">人が数日かけた交渉をAI同士のやり取りへ（合意率95%・約80秒）。取引の接点そのものをAIが担う代表事例。<span class="ss-src">NEC公式・2025-12</span></span></div></div>
+  </div>
+</div>
+
+<div class="basewrap">
+  <h3 class="base-sech">土台 ― 中核を取り巻く外部環境5観点（PESTLE）</h3>
+  <p class="base-secsub">生成AIの変化が作用する前提条件。詳細は各観点のリンク先タブで確認できる。ハイクラスで影響の小さい要素（インボイス・地方差・マスのシニア就労など）は除く。</p>
+  <div class="bases">
+    <div class="base-card">
+      <div class="base-head"><span class="base-tag">社会（S）</span><h4>労働市場・働き手の供給</h4><span class="base-dir">追い風（供給）</span></div>
+      <div class="base-sec"><span class="base-lab">起きている変化</span>
+        <ul class="base-list">
+          <li>採用難・人手不足が継続（正社員の有効求人倍率0.99倍）。社内で確保できない専門性を外部のプロ人材で補う必要が高まる</li>
+          <li>副業を認める法人60.7%／社外人材を受け入れる法人53.7%</li>
+          <li>学び直しへの公的支援（人への投資 5年で1兆円・最大70%補助）</li>
+          <li>少子高齢化で高度人材が希少化。独立・複業志向の高まりと、経験豊富なシニアの顧問供給も供給を支える</li>
+        </ul>
+      </div>
+      <div class="base-sec"><span class="base-lab">市場への影響</span>
+        <p class="base-impact">専門性を必要なときだけ外部で確保する需要が構造的に拡大し、供給の裾野も広がる。</p>
+      </div>
+      <p class="base-src">出典：<a href="https://www.mhlw.go.jp/toukei/list/114-1.html" target="_blank" rel="noopener">厚生労働省 一般職業紹介状況 ↗</a>／<a href="https://www.cas.go.jp/jp/seisaku/atarashii_sihonsyugi/index.html" target="_blank" rel="noopener">内閣官房 新しい資本主義（人への投資）↗</a>／<a href="roudou-shijo/index.html">労働市場データ（総務省ほか）↗</a></p>
+    </div>
+    <div class="base-card">
+      <div class="base-head"><span class="base-tag">経済（E）</span><h4>景気・変革投資の循環</h4><span class="base-dir">両面</span></div>
+      <div class="base-sec"><span class="base-lab">起きている変化</span>
+        <ul class="base-list">
+          <li>AIシステム市場が拡大：2024年1兆3,412億円→2029年4兆1,873億円（年率25.6%）</li>
+          <li>賃上げは3年連続で5%超（2026年5.26%）。人件費の固定費化で、変動費にできる業務委託の調達動機が高まる</li>
+          <li>一方、景気後退時は大型の変革投資が凍結され、スポット需要が縮む面もある</li>
+        </ul>
+      </div>
+      <div class="base-sec"><span class="base-lab">市場への影響</span>
+        <p class="base-impact">変革投資が高単価のプロ人材需要を押し上げる。ただし需要は景気・投資予算に感応して振れる。</p>
+      </div>
+      <p class="base-src">出典：<a href="https://my.idc.com/getdoc.jsp?containerId=prJPJ53362125" target="_blank" rel="noopener">IDC Japan・2025-05 ↗</a>／<a href="https://www.jil.go.jp/kokunai/topics/mm/20260327a.html" target="_blank" rel="noopener">連合・JILPT・2026-03 ↗</a>／<a href="https://prtimes.jp/main/html/rd/p/000000044.000077691.html" target="_blank" rel="noopener">国内コンサル市場調査・2026-02 ↗</a></p>
+    </div>
+    <div class="base-card">
+      <div class="base-head"><span class="base-tag">政治（P）</span><h4>高度人材・副業推進政策／高度外国人材</h4><span class="base-dir">両面（追い風寄り）</span></div>
+      <div class="base-sec"><span class="base-lab">起きている変化</span>
+        <ul class="base-list">
+          <li>政府が副業・兼業を促進（厚生労働省「副業・兼業の促進に関するガイドライン」）。成長戦略でも継続して位置づけ</li>
+          <li>高度外国人材の優遇制度（特別高度人材J-Skip・未来創造人材J-Find、2023年〜）が供給源を広げる</li>
+          <li>「技術・人文知識・国際業務」の在留資格者は45.8万人で過去最多水準</li>
+          <li>政策の継続性は政権・方針に依存する</li>
+        </ul>
+      </div>
+      <div class="base-sec"><span class="base-lab">市場への影響</span>
+        <p class="base-impact">政策の後押しが、経営課題に関与するプロ人材への発注と供給の双方を支える。</p>
+      </div>
+      <p class="base-src">出典：<a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000192188.html" target="_blank" rel="noopener">厚生労働省 副業・兼業ガイドライン ↗</a>／<a href="https://www.moj.go.jp/isa/applications/resources/nyuukokukanri01_00009.html" target="_blank" rel="noopener">出入国在留管理庁（高度人材J-Skip）↗</a>／<a href="https://www.moj.go.jp/isa/policies/statistics/toukei_ichiran_touroku.html" target="_blank" rel="noopener">出入国在留管理庁 在留外国人統計 ↗</a></p>
+    </div>
+    <div class="base-card">
+      <div class="base-head"><span class="base-tag">法（L）</span><h4>取引・コンプライアンスの前提</h4><span class="base-dir">両面（前提）</span></div>
+      <div class="base-sec"><span class="base-lab">起きている変化</span>
+        <ul class="base-list">
+          <li>フリーランス保護新法（2024-11）が発注側に支払期日・書面明示などの義務。下請取引も取適法へ改正</li>
+          <li>ハイクラスの常駐・継続委託は「業務委託か実質雇用か（労働者性）」の線引きが論点</li>
+          <li>AI・データ規制は日本は緩やか・欧州は厳格（EU AI法）。個情法はAI開発データの特例で活用を後押し</li>
+        </ul>
+      </div>
+      <div class="base-sec"><span class="base-lab">市場への影響</span>
+        <p class="base-impact">取引適正化の代行と雇用認定リスクの引き受けが法人の選定軸になる。整備が進むほど外部活用の障壁は下がる。</p>
+      </div>
+      <p class="base-src">出典：<a href="https://www.jftc.go.jp/freelancelaw_2025/" target="_blank" rel="noopener">公正取引委員会 フリーランス法 ↗</a>／<a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank" rel="noopener">欧州委員会 EU AI法 ↗</a>／<a href="https://www.ppc.go.jp/" target="_blank" rel="noopener">個人情報保護委員会 ↗</a>／<a href="houmu-compliance/index.html">法務・コンプライアンス ↗</a></p>
+    </div>
+    <div class="base-card">
+      <div class="base-head"><span class="base-tag">環境（En）</span><h4>GX・サステナビリティ起点の専門需要</h4><span class="base-dir">追い風（新需要）</span></div>
+      <div class="base-sec"><span class="base-lab">起きている変化</span>
+        <ul class="base-list">
+          <li>サステナビリティ情報開示が2027年3月期から段階的に義務化（時価総額3兆円以上の約70社から順次拡大／SSBJ基準）</li>
+          <li>政府のGX投資は10年で150兆円超、排出量取引も本格化する</li>
+          <li>気候リスク評価・サステナ会計・脱炭素戦略の専門人材を、特定フェーズにスポットで外部活用する動きが強まるとみられる</li>
+        </ul>
+      </div>
+      <div class="base-sec"><span class="base-lab">市場への影響</span>
+        <p class="base-impact">期限と対象企業が明確な「時限・大量」の専門人材需要を新たに生む。</p>
+      </div>
+      <p class="base-src">出典：<a href="https://www.ssb-j.jp/jp/" target="_blank" rel="noopener">SSBJ（サステナビリティ基準委員会）↗</a>／<a href="https://www.nikkei.com/article/DGXZQOUA033FP0T01C25A0000000/" target="_blank" rel="noopener">日本経済新聞（GX）・2025-01 ↗</a>／<a href="https://www.nikkei.com/article/DGXZQOUC1016S0Q5A410C2000000/" target="_blank" rel="noopener">日本経済新聞（サステナ人材活用）・2025-04 ↗</a></p>
+    </div>
   </div>
 </div>
 
