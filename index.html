@@ -22,6 +22,12 @@ html{scroll-behavior:smooth}
 .side-toc a{display:block;font-size:12px;line-height:1.45;color:var(--color-ink-2);text-decoration:none;padding:6px 8px;border-left:3px solid transparent;border-radius:0 6px 6px 0;margin:1px 0}
 .side-toc a:hover{background:var(--color-blue-50);color:var(--color-blue)}
 .side-toc a.active{border-left-color:var(--color-blue);background:var(--color-blue-50);color:var(--color-blue);font-weight:700}
+.side-toc a.toc-sublevel{font-size:11.5px;color:var(--color-muted);padding-left:14px}
+.side-toc .toc-sub{display:none;margin:1px 0 3px}
+.side-toc .toc-sub.open{display:block}
+.side-toc .toc-sub a{font-size:11px;line-height:1.4;color:var(--color-muted);padding:4px 8px 4px 18px;border-left:2px solid transparent;margin:0}
+.side-toc .toc-sub a:hover{background:var(--color-blue-50);color:var(--color-blue)}
+.side-toc .toc-sub a.active{border-left-color:var(--color-blue);background:var(--color-blue-50);color:var(--color-blue);font-weight:700}
 .zv .scope{display:block;margin:14px 0 4px;background:var(--color-blue-50);border:1px solid #cdd9f5;border-radius:10px;padding:11px 14px;font-size:13px;color:var(--color-ink-2);line-height:1.75}
 .zv .concl{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
 .zv .concl .c{background:#fff;border:1px solid var(--color-line);border-radius:12px;padding:13px 15px;box-shadow:var(--shadow);font-size:13px;line-height:1.8}
@@ -130,7 +136,7 @@ html{scroll-behavior:smooth}
 /* ============================================================
    B. 小見出しの階層統一（S節=青バッジh2 → 小節=番号チップ＋細罫線h3 → ラベルh4/h5）
    ============================================================ */
-.sub-h{display:flex;align-items:center;gap:10px;font-size:16.5px;font-weight:800;margin:30px 0 10px;color:var(--color-ink)}
+.sub-h{display:flex;align-items:center;gap:10px;font-size:16.5px;font-weight:800;margin:30px 0 10px;color:var(--color-ink);scroll-margin-top:76px}
 .sub-h .nchip{flex:0 0 auto;font-size:12px;font-weight:800;color:var(--color-blue);background:var(--color-blue-50);border:1px solid #cdd9f5;border-radius:6px;padding:2px 10px;white-space:nowrap}
 .sub-h::after{content:"";flex:1 1 auto;height:1px;background:var(--color-line);margin-left:4px}
 /* 2-3 選定基準（法人/個人）＋ 職種別の読み解き方・示唆 */
@@ -222,7 +228,7 @@ html{scroll-behavior:smooth}
 .market .src{font-size:11.5px;color:var(--color-muted)}
 .layer-h{font-size:13px;font-weight:800;color:var(--color-ink-2);margin:20px 0 8px;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
 .layer-h .pill{border-radius:999px;font-size:11px;padding:2px 12px;color:#fff;font-weight:700}
-.pill.dohyo{background:#5b616e}.pill.win{background:var(--color-blue)}
+.pill.dohyo{background:#5b616e}.pill.win{background:var(--color-blue)}.pill.base{background:#fff;color:#5b616e;border:1px solid #5b616e}
 .kfs{background:var(--color-card);border:1px solid var(--color-line);border-radius:var(--radius-lg);padding:16px 18px;margin:10px 0;box-shadow:var(--shadow)}
 .kfs .top{display:flex;align-items:flex-start;gap:12px;flex-wrap:wrap}
 .kfs .num{flex:0 0 auto;width:30px;height:30px;border-radius:50%;background:var(--color-blue);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:14px}
@@ -427,11 +433,25 @@ html{scroll-behavior:smooth}
 <nav class="side-toc" aria-label="目次">
   <div class="toc-h">目次</div>
   <a href="#summary" data-t="summary">全体サマリー</a>
-  <a href="#s1" data-t="s1">S1 変動要因</a>
-  <a href="#s2" data-t="s2">S2 影響</a>
-  <a href="#shokushu" data-t="shokushu">職種別の影響</a>
+  <a href="#s1" data-t="s1">S1 変動要因（生成AI＋外部環境）</a>
+  <a href="#s2" data-t="s2">S2 影響（需要・供給・選定）</a>
+  <div class="toc-sub" data-for="s2">
+    <a href="#s2-1" data-t="s2-1">2-1 法人の変化</a>
+    <a href="#s2-2" data-t="s2-2">2-2 個人の変化</a>
+    <a href="#s2-3" data-t="s2-3">2-3 統合示唆（不一致・収束）</a>
+    <a href="#s2-4" data-t="s2-4">2-4 事業者自身の変化</a>
+    <a href="#s2-5" data-t="s2-5">2-5 総括：砂時計化</a>
+  </div>
+  <a href="#shokushu" class="toc-sublevel" data-t="shokushu">└ 補論：職種別（個人の深掘り）</a>
   <a href="#s3" data-t="s3">S3 競合の動向</a>
-  <a href="#forces" data-t="forces">競争構造（5フォース）</a>
+  <div class="toc-sub" data-for="s3">
+    <a href="#s3-1" data-t="s3-1">3-1 ビジネスモデル</a>
+    <a href="#s3-2" data-t="s3-2">3-2 業績</a>
+    <a href="#s3-3" data-t="s3-3">3-3 方向性・AI戦略</a>
+    <a href="#s3-4" data-t="s3-4">3-4 AI戦略3層</a>
+    <a href="#s3-5" data-t="s3-5">3-5 競合資産マップ</a>
+  </div>
+  <a href="#forces" data-t="forces">5F 競争構造（S3の総括）</a>
   <a href="#s4" data-t="s4">S4 KFSと打ち手</a>
   <a href="#s5" data-t="s5">S5 まとめ</a>
 </nav>
@@ -578,7 +598,7 @@ html{scroll-behavior:smooth}
 <p class="section-sub">変動要因の波及を、関与者ごとに順に追う。<b>2-1 法人</b>（需要の中身と事業者選定）→ <b>2-2 個人</b>（供給の広がりと事業者選定）→ <b>2-3 両者を重ねた統合示唆</b>（需給の不一致・選定基準の収束）→ <b>2-4 事業者自身の変化</b> → <b>2-5 総括（砂時計化）</b>。</p>
 <div class="impact">
   <div class="icard">
-    <h3 class="sub-h"><span class="nchip">2-1</span>法人の変化 ― 需要の中身と、事業者に求めるもの</h3>
+    <h3 class="sub-h" id="s2-1"><span class="nchip">2-1</span>法人の変化 ― 需要の中身と、事業者に求めるもの</h3>
     <div class="fromto"><span class="from">労働時間・人員で調達</span><span class="a">→</span><span class="to">成果・業務の再設計で調達（大手と中小で中身が分かれる）</span></div>
     <p class="keylead">調達単位が「労働時間・人員」から「成果・業務の再設計」へ移行する。支払いも、働いた時間ではなく、総額を先に固定する定額方式や、結果に連動する成果連動方式へ移る。案件の件数は減り、1件あたりの単価は上がる。ただし「大手・成長企業」と「中小企業」では需要の中身が異なる。大手は高難度・成果型の重い案件が集まり、件数減・単価増が最も当てはまる。中小はAIで小口・短期の潜在需要が表面化する。</p>
     <div class="zt-wrap" style="overflow-x:auto"><table class="zt" style="table-layout:fixed;min-width:700px">
@@ -637,7 +657,7 @@ html{scroll-behavior:smooth}
     <p class="selnote">→ 大手は「結果（成果・定着）と、それを支えるデータの信頼性・伴走」を重視し、中小は「速さ・手軽さ・コストの安さ・使いやすさ」を重視する。AIがマッチングの利便性（登録者数・速さ・手数料の安さ）を代替する点は共通する。</p>
   </div>
   <div class="icard">
-    <h3 class="sub-h"><span class="nchip">2-2</span>個人の変化 ― 供給の広がりと、事業者に求めるもの</h3>
+    <h3 class="sub-h" id="s2-2"><span class="nchip">2-2</span>個人の変化 ― 供給の広がりと、事業者に求めるもの</h3>
     <div class="fromto"><span class="from">正社員 か 独立 の二択</span><span class="a">→</span><span class="to">副業者＋専業に多様化（二極化）</span></div>
     <p class="keylead">供給は厚くなるが二極化する。しかも「副業者（兼業型・本業あり）」と「専業フリーランス（独立）」では、増え方も向く仕事も異なる。副業者は備え・実績づくりとして増えるが時間が壁で限定的。専業は高難度・成果型の受け皿として価値が上がる。</p>
     <div class="zt-wrap" style="overflow-x:auto"><table class="zt" style="table-layout:fixed;min-width:680px">
@@ -681,7 +701,7 @@ html{scroll-behavior:smooth}
 
 <!-- 2-3 両者を重ねた統合示唆（需給の不一致・選定基準の収束） -->
 <div class="selsec">
-  <h3 class="sub-h"><span class="nchip">2-3</span>両者を重ねた統合示唆 ― 需給の不一致と、選定基準の収束</h3>
+  <h3 class="sub-h" id="s2-3"><span class="nchip">2-3</span>両者を重ねた統合示唆 ― 需給の不一致と、選定基準の収束</h3>
   <p class="lead">2-1（法人）と2-2（個人）を重ねると、2つの示唆が立つ。<b>①</b>増える供給と伸びる需要の中身がかみ合わない「需給の不一致」、<b>②</b>法人・個人が事業者に求める基準が同一の実績データへ「収束」すること。</p>
 
   <h4>① 需給の不一致（ねじれ）</h4>
@@ -704,7 +724,7 @@ html{scroll-behavior:smooth}
 
 <!-- 2-4 マッチング事業者自身の変化（業態転換／問題提起） -->
 <div class="selsec">
-  <h3 class="sub-h"><span class="nchip">2-4</span>事業者自身の変化 ― マッチング業から「成果保証・データ・供給確保まで担う事業」へ</h3>
+  <h3 class="sub-h" id="s2-4"><span class="nchip">2-4</span>事業者自身の変化 ― マッチング業から「成果保証・データ・供給確保まで担う事業」へ</h3>
   <p class="lead">2-1〜2-3の変化（中間工程のAI代替・選定基準の成果収束・需給の不一致）が同時に進むと、「引き合わせるだけ」の事業者は存在意義を失う。事業者自身が、次の5つの転換を迫られる。ここでは何が転換を迫られるか（問題提起）までを示し、各転換を実現する具体的な打ち手は<a href="#s4">S4 のKFS</a>で扱う。</p>
   <div class="zt-wrap" style="overflow-x:auto"><table class="zt">
     <thead><tr><th style="width:16%">転換の対象</th><th style="width:36%">従来</th><th>今後</th></tr></thead>
@@ -721,7 +741,7 @@ html{scroll-behavior:smooth}
 
 <!-- 2-5 影響の総括：砂時計化 -->
 <div class="selsec">
-  <h3 class="sub-h"><span class="nchip">2-5</span>影響の総括 ― マッチングの「砂時計化」</h3>
+  <h3 class="sub-h" id="s2-5"><span class="nchip">2-5</span>影響の総括 ― マッチングの「砂時計化」</h3>
   <p class="lead">S2の変化を1枚に束ねると、マッチング事業の価値は「中間」から「両端」へ移る。中間工程（候補探索・絞り込み・要件翻訳＝情報のすき間を人手で埋める作業）はAIが自動化する。一方、前段（顧客との関係構築・課題理解、AI前提で業務をどう作り変えるかの判断）と後段（事前に判別しにくい成果の不確実性の引き受け）は、AIを道具として使いこなしても判断と成果責任は人・事業者に残るため、丸ごとAIには代替されにくい。</p>
   <div class="hg">
     <div class="row"><div class="side up">比重が高まる</div><div class="bar b1">前段：関係構築・顧客理解（業務の定義・要件化）</div></div>
@@ -793,7 +813,7 @@ html{scroll-behavior:smooth}
 <p class="section-sub">市場の変化に、競合はすでに動いている。順に「ビジネスモデル → 業績 → 各社の方向性・AI戦略 → AI戦略の構図 → 顧客資産」で見る。業績は公開IR・決算ベース、戦略は公式リリース・報道ベース。</p>
 <!-- 3-1 ビジネスモデル（4モデルのプロット） -->
 <div class="selsec">
-  <h3 class="sub-h" style="margin-top:6px"><span class="nchip">3-1</span>競合のビジネスモデル ― 4モデルのプロット</h3>
+  <h3 class="sub-h" id="s3-1" style="margin-top:6px"><span class="nchip">3-1</span>競合のビジネスモデル ― 4モデルのプロット</h3>
   <p class="lead">各社は単一モデルではなく、複数のモデルをまたいで展開している。まず4つのモデルを定義し、各社がどのモデルに対応するサービスを持つかをプロットする。</p>
   <ul style="font-size:13px;line-height:1.85;color:var(--color-ink-2);padding-left:1.2em;margin:8px 0 12px">
     <li><b>プラットフォーム型</b>：利用者が自分で検索・発注するマッチングの場（担当者が介在しない）。低単価×高テイクレート（手数料率）。</li>
@@ -822,7 +842,7 @@ html{scroll-behavior:smooth}
   </div>
 </div>
 
-<h3 class="sub-h"><span class="nchip">3-2</span>業績 ― 高成長×低利益率の投資局面</h3>
+<h3 class="sub-h" id="s3-2"><span class="nchip">3-2</span>業績 ― 高成長×低利益率の投資局面</h3>
 <div class="zt-wrap" style="overflow-x:auto">
 <table class="zt">
   <caption>主要マッチング事業者の直近通期業績（各社IR・決算短信ベース。決算期は各社で異なる。海外2社は参考・円換算1ドル=155円）</caption>
@@ -848,7 +868,7 @@ html{scroll-behavior:smooth}
 
 <!-- 3-3 各社の方向性・AI戦略・補足 -->
 <div class="selsec">
-  <h3 class="sub-h"><span class="nchip">3-3</span>各社の方向性・AI戦略・補足（国内9社）</h3>
+  <h3 class="sub-h" id="s3-3"><span class="nchip">3-3</span>各社の方向性・AI戦略・補足（国内9社）</h3>
   <p class="lead">モデルのプロット（3-1）とは分けて、各社が「どこへ向かい・AIで何をし・どんな顧客資産や特記があるか」を一覧する。海外2社（Upwork・Fiverr）は業績表のみの参考掲載とする。</p>
   <div class="zt-wrap" style="overflow-x:auto"><table class="zt">
     <thead><tr><th style="width:13%">企業名</th><th style="width:28%">方向性</th><th style="width:30%">AI戦略</th><th>補足（顧客資産・規模・特記）</th></tr></thead>
@@ -867,7 +887,7 @@ html{scroll-behavior:smooth}
   <div class="keybox"><span class="s2tag">示唆</span><span class="kx-h">方向性は「川上への拡張」と「AIの外販」に収束し、差は標準装備の先で開く</span>9社に共通するのは、人選から<b>前段（DX・コンサル・業務再設計）と後段（成果・データ）へ踏み出す「川上拡張」</b>と、高度化したAI・知見を外部法人へ外販する<b>「AIの外販・商品化」</b>である。AI能力は内製にとどまらず<b>提携・買収（サーキュレーション×PKSHA、ビザスク×博報堂、TWOSTONEのロールアップM&amp;A）</b>で一気に獲得する企業が先行する。利益率はビジネスモデルで上限が決まり（手数料型のビザスクが営業利益率13.4%と突出、エージェント型は低位）、多くが高成長×先行投資で短期の利益を圧縮している局面にある。マッチング事業者一般への含意は、<b>「マッチング機能のAI化」はすでに標準装備にすぎず、差がつくのは川上の業務変革力とAIの商品化力</b>だという点にある。</div>
 </div>
 
-<h3 class="sub-h"><span class="nchip">3-4</span>AI戦略の構図 ― 3層に分かれ、最前線は「外販」</h3>
+<h3 class="sub-h" id="s3-4"><span class="nchip">3-4</span>AI戦略の構図 ― 3層に分かれ、最前線は「外販」</h3>
 <div class="cmp">
   <p style="margin:0 0 2px;font-size:13px;line-height:1.85;color:var(--color-ink-2)"><b style="color:var(--color-blue)">脱・純粋マッチング（砂時計化）</b>：全社が「人選だけ」から前段・後段へ拡張（クラウドワークス→DXコンサル、INTLOOP→ソリューション、ランサーズ→AX、ギークス→DXソリューション、TWOSTONE→川上展開）。その上で、AI活用は下から上へ次の3層に分かれ、最前線は最上段の「外販」にある。</p>
   <div class="pyr">
@@ -885,14 +905,9 @@ html{scroll-behavior:smooth}
   <div class="note" style="margin-top:10px"><b>補足：「AI Powered Pro」の中身（一次情報）</b>　PKSHA傘下入り後に投入された同サービスは、蓄積データをそのまま外販するのではない。<b>プロ人材の思考・判断を抽出し、顧客企業の現場の業務フローにAIとして実装して、個人に依存していた専門家の判断を、組織が再現できる知見に変える</b>もので、約2.2万件のプロジェクトデータと体系化された知見、PKSHAのAI技術が基盤になる。外販で重要なのは「データの提供」よりも「プロ人材の判断軸をAIに実装する」点であり、ここが模倣されにくい。AI能力は内製でなく買収（PKSHA傘下入り）で獲得した。出典：<a href="https://circu.co.jp/news/20251203-6142/" target="_blank" rel="noopener">サーキュレーション公式（AI Powered Worker）</a>／<a href="https://circu.co.jp/news/20251114-6117/" target="_blank" rel="noopener">PRONAVI now</a></div>
 </div>
 
-<!-- 競合AI戦略 5類型マップ（AI3層の直後に復活） -->
-<h3 class="sub-h"><span class="nchip">3-5</span>競合AI戦略 5類型マップ</h3>
-<p class="section-sub">各社のAI活用を、目的別に5類型（A〜E）で整理。各社の公表事実を分類しており、事例から詳細分析へ移動できる。特にE型（AI拡張サービスの商品化）は、人選を超えて顧客業務に入り込む動きとして注目。</p>
-<div id="competitor-ai-matrix"><!-- app.js が描画 --></div>
-
 <!-- 競合資産マップ（本体セクションをそのまま・競合動向の最後） -->
-<h3 class="sub-h"><span class="nchip">3-6</span>競合資産マップ（6セグメント保有量）</h3>
-<p class="section-sub">競合を「AI戦略の類型」とは別レンズ＝法人・個人の資産（顧客基盤・登録人材）をどこにどれだけ持つかで見るマップ。各社の公表情報に基づく5段階評価。</p>
+<h3 class="sub-h" id="s3-5"><span class="nchip">3-5</span>競合資産マップ（6セグメント保有量）</h3>
+<p class="section-sub">競合を「AI戦略（3層）」とは別レンズ＝法人・個人の資産（顧客基盤・登録人材）をどこにどれだけ持つかで見るマップ。各社の公表情報に基づく5段階評価。</p>
 <div id="competitor-asset-map"><!-- app.js が描画 --></div>
 
 <div class="keybox"><span class="s2tag">競合動向からの示唆（この節の要点）</span>
@@ -955,13 +970,17 @@ html{scroll-behavior:smooth}
 </div>
 
 <h2 class="section-title" id="s4"><span class="sn">S4</span>マッチング事業者のKFS（重要成功要因）と打ち手</h2>
-<p class="section-sub">分析の帰結。勝敗を分ける6要因（①②＝参入に必須／③〜⑥＝差を生む）と、全社共通の前提（コンプライアンスの代行）。各要因を満たす打ち手（マッチング事業者一般への含意）。</p>
+<p class="section-sub">分析の帰結。全社共通の前提（Lv.0＝コンプライアンスの代行）を土台に、勝敗を分ける6要因（①②＝参入に必須／③〜⑥＝差を生む）を積む。各要因を満たす打ち手（マッチング事業者一般への含意）。</p>
 
 <div class="selsec">
   <h3 class="sub-h" style="margin-top:4px"><span class="nchip">導出</span>分析→KFSの対応 ― 各KFSはどの事実から導かれるか</h3>
   <div class="zt-wrap" style="overflow-x:auto"><table class="zt">
     <thead><tr><th style="width:30%">KFS</th><th>このKFSを導いた分析・事実（S1〜S3のどこから来たか）</th></tr></thead>
     <tbody>
+      <tr><td class="co">〔前提・Lv.0〕コンプライアンスの代行（衛生要因）</td><td><ul>
+        <li><b>S1法務</b>：雇用認定リスクと取引適正化義務（60日以内の支払い・書面明示）が、取引の前提になる。</li>
+        <li><b>S2選定基準</b>：ハイクラス法人の最重要関心。ただし全社が満たす最低限で差別化要因にならない（競合別KFS比較・能力軸スコアで確認）。全KFSの土台に置く。</li>
+      </ul></td></tr>
       <tr><td class="co">① 狙う市場の選択</td><td><ul>
         <li><b>S1労働市場</b>：副業を認める企業60.7%・受け入れる企業53.7%。外部活用の制度が整い、対価を払える体力を持つのは大手・成長企業に偏る。</li>
         <li><b>S2法人需要</b>：難度の高い業務（AIによる業務再設計など）は大手に集中し、外部に出る案件もそこに偏る。</li>
@@ -971,10 +990,6 @@ html{scroll-behavior:smooth}
         <li><b>S1生成AI</b>：価値が「人選（マッチング）」から「能力・実績データ」へ移る。</li>
         <li><b>S1法務</b>：AI開発用データの取得が特例で進めやすくなる。</li>
         <li><b>縦串（共通土台）</b>：③関係構築・④成果保証・⑤AI商品化のいずれもが、この実績データ基盤の上に乗る。</li>
-      </ul></td></tr>
-      <tr><td class="co">〔前提〕コンプライアンスの代行（衛生要因）</td><td><ul>
-        <li><b>S1法務</b>：雇用認定リスクと取引適正化義務（60日以内の支払い・書面明示）が、取引の前提になる。</li>
-        <li><b>S2選定基準</b>：ハイクラス法人の最重要関心。ただし全社が満たす最低限で差別化要因にならない（競合別KFS比較・能力軸スコアで確認）。</li>
       </ul></td></tr>
       <tr><td class="co">③ 法人との関係構築・継続取引</td><td><ul>
         <li><b>5フォース（買い手）</b>：売り手は縛られないが買い手は乗り換えに手間。この非対称＝事業者の数少ない交渉余地で、継続関係が乗り換えコストになる。</li>
@@ -1001,6 +1016,9 @@ html{scroll-behavior:smooth}
     </tbody>
   </table></div>
 </div>
+
+<div class="layer-h"><span class="pill base">前提（Lv.0／衛生要因）</span> コンプライアンスの代行 ― 満たして当然、差はつかない（全KFSの土台）</div>
+<div class="note"><b>前提（衛生要因）：コンプライアンスの代行 ― 満たして当然、差はつかない。</b> 雇用認定リスクの回避と取引適正化（受領後60日以内の支払い・書面明示・相談窓口など）の手続き代行は、ハイクラス取引の最低限の入場券であり、①〜⑥のすべてに先立つ前提（Lv.0）として全KFSの土台に置く。人選にAIを使う場合の説明責任・人間の関与・追跡可能性の確保も同様に前提化する。満たさなければ選外になるが、満たしても差別化にはならない（全社が満たす方向の衛生要因。競合別KFS比較・能力軸スコアでも確認）。差がつくのは、この前提の上に積む③〜⑥である。根拠＝フリーランス保護新法の取引適正化義務／EU AI法の域外適用（<a href="houmu-compliance/index.html" target="_blank" rel="noopener">法務・コンプライアンス ↗</a>）。</div>
 
 <div class="layer-h"><span class="pill dohyo">参入に必須の条件</span> ① 狙う市場の選択 ／ ② 実績データ基盤の構築</div>
 
@@ -1030,8 +1048,6 @@ html{scroll-behavior:smooth}
     <div><h5>打ち手</h5><div class="tebox"><div class="te"><b>データ基盤を最優先投資に置く</b><span class="pr">優先◎</span><br>実績データを「確認済み・本人同意・AI可読」の形で計画的に蓄積する。法人には成果保証の根拠、個人には価値の証明として同時に作用するため、投資の優先順位が最も高い。<span class="gr">根拠：価値がデータへ移る事例・広告会社の統合でデータ規模が業界順位を規定（<a href="jigyo-henkaku/index.html" target="_blank" rel="noopener">AIと事業変革</a>）／個情法のAI開発データ特例（<a href="houmu-compliance/index.html" target="_blank" rel="noopener">法務</a>）</span></div></div></div>
   </div>
 </div>
-
-<div class="note"><b>前提（衛生要因）：コンプライアンスの代行 ― 満たして当然、差はつかない。</b> 雇用認定リスクの回避と取引適正化（受領後60日以内の支払い・書面明示・相談窓口など）の手続き代行は、ハイクラス取引の最低限の入場券。人選にAIを使う場合の説明責任・人間の関与・追跡可能性の確保も同様に前提化する。満たさなければ選外になるが、満たしても差別化にはならない（全社が満たす方向の衛生要因。競合別KFS比較・能力軸スコアでも確認）。差がつくのは、この前提の上に積む③〜⑥である。根拠＝フリーランス保護新法の取引適正化義務／EU AI法の域外適用（<a href="houmu-compliance/index.html" target="_blank" rel="noopener">法務・コンプライアンス ↗</a>）。</div>
 
 <div class="layer-h"><span class="pill win">差を生む条件（差別化）</span> ③ 法人との関係構築・継続取引 ／ ④ 成果の実現・保証 ／ ⑤ AIの運用・商品化 ／ ⑥ 供給の確保</div>
 
@@ -1143,17 +1159,23 @@ html{scroll-behavior:smooth}
 <script src="assets/app.js" defer></script>
 <script>
 (function(){
-  var ids=['summary','s1','s2','shokushu','s3','forces','s4','s5'];
+  var tops=['summary','s1','s2','shokushu','s3','forces','s4','s5'];
+  var subs={s2:['s2-1','s2-2','s2-3','s2-4','s2-5'],s3:['s3-1','s3-2','s3-3','s3-4','s3-5']};
   var toc=document.querySelector('.side-toc'); if(!toc) return;
-  var links={}; toc.querySelectorAll('a').forEach(function(a){links[a.getAttribute('data-t')]=a;});
-  function setActive(id){ ids.forEach(function(x){ if(links[x]) links[x].classList.toggle('active', x===id); }); }
+  var links={}; toc.querySelectorAll('a[data-t]').forEach(function(a){links[a.getAttribute('data-t')]=a;});
+  function topOf(){ var cur=tops[0];
+    for(var i=0;i<tops.length;i++){ var el=document.getElementById(tops[i]); if(el && el.getBoundingClientRect().top<=110) cur=tops[i]; }
+    return cur; }
+  function subOf(sec){ var list=subs[sec]||[]; var cur=null;
+    for(var i=0;i<list.length;i++){ var el=document.getElementById(list[i]); if(el && el.getBoundingClientRect().top<=130) cur=list[i]; }
+    return cur; }
   function onScroll(){
-    var cur=ids[0];
-    for(var i=0;i<ids.length;i++){
-      var el=document.getElementById(ids[i]);
-      if(el && el.getBoundingClientRect().top<=110) cur=ids[i];
-    }
-    setActive(cur);
+    var t=topOf();
+    for(var k in links){ links[k].classList.remove('active'); }
+    if(links[t]) links[t].classList.add('active');
+    toc.querySelectorAll('.toc-sub').forEach(function(g){ g.classList.toggle('open', g.getAttribute('data-for')===t); });
+    var s=subOf(t);
+    if(s && links[s]) links[s].classList.add('active');
   }
   window.addEventListener('scroll', onScroll, {passive:true});
   window.addEventListener('resize', onScroll, {passive:true});
