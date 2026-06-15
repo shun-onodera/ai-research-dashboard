@@ -11,6 +11,17 @@
 <style>
 /* === 全体像 再構成の追加コンポーネント（本体 :root 変数を利用）=== */
 main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
+/* === 左サイド 追従目次 === */
+html{scroll-behavior:smooth}
+.section-title{scroll-margin-top:76px}
+.side-toc{display:none}
+@media(min-width:1440px){
+  .side-toc{display:flex;flex-direction:column;position:fixed;top:84px;left:calc(50% - 712px);width:158px;max-height:calc(100vh - 110px);overflow-y:auto;z-index:40;background:#fff;border:1px solid var(--color-line);border-radius:12px;padding:12px 6px 12px 10px;box-shadow:var(--shadow)}
+}
+.side-toc .toc-h{font-size:10.5px;font-weight:800;letter-spacing:.08em;color:var(--color-muted);padding:2px 6px 8px;border-bottom:1px solid var(--color-line);margin-bottom:6px}
+.side-toc a{display:block;font-size:12px;line-height:1.45;color:var(--color-ink-2);text-decoration:none;padding:6px 8px;border-left:3px solid transparent;border-radius:0 6px 6px 0;margin:1px 0}
+.side-toc a:hover{background:var(--color-blue-50);color:var(--color-blue)}
+.side-toc a.active{border-left-color:var(--color-blue);background:var(--color-blue-50);color:var(--color-blue);font-weight:700}
 .zv .scope{display:block;margin:14px 0 4px;background:var(--color-blue-50);border:1px solid #cdd9f5;border-radius:10px;padding:11px 14px;font-size:13px;color:var(--color-ink-2);line-height:1.75}
 .zv .concl{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
 .zv .concl .c{background:#fff;border:1px solid var(--color-line);border-radius:12px;padding:13px 15px;box-shadow:var(--shadow);font-size:13px;line-height:1.8}
@@ -412,6 +423,17 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
   </div>
 </section>
 
+<nav class="side-toc" aria-label="目次">
+  <div class="toc-h">目次</div>
+  <a href="#summary" data-t="summary">全体サマリー</a>
+  <a href="#s1" data-t="s1">S1 変動要因</a>
+  <a href="#s2" data-t="s2">S2 影響</a>
+  <a href="#shokushu" data-t="shokushu">職種別の影響</a>
+  <a href="#s3" data-t="s3">S3 競合の動向</a>
+  <a href="#forces" data-t="forces">競争構造（5フォース）</a>
+  <a href="#s4" data-t="s4">S4 KFSと打ち手</a>
+  <a href="#s5" data-t="s5">S5 まとめ</a>
+</nav>
 <main id="main" class="zv">
 
 <!-- 全体要約（エグゼクティブサマリー） -->
@@ -1017,24 +1039,24 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
 
 <div class="kfs">
   <div class="top"><div class="num">3</div><h3>法人との関係構築・継続取引（顧客基盤）</h3><div class="tags"><span class="tag comp">競合</span><span class="tag labor">需要</span></div></div>
-  <p class="gaiyo"><b>概要</b>：単発のマッチングではなく、法人と継続的に取引する関係（顧客基盤）を築けるかが差を生む。砂時計の前段＝関係構築・顧客理解が、業務設計（KFS④）や成果保証の乗る土台になる。<br><b>理由</b>：売り手（プロ人材）は複数事業者をかけ持ちし縛られないが、買い手（法人）は要件整理・人選・稼働後支援を委ねる構造ゆえ乗り換えに手間がかかる。<b>この買い手側の非対称が、事業者に残された数少ない交渉余地</b>。継続関係は乗り換えコストとなり、非公開の案件枠・優先発注として積み上がる。競合の能力差も、仲介の量・速さではなく顧客接点（関係の深さ）で出る。</p>
+  <p class="gaiyo"><b>概要</b>：「<b>案件をもらえる関係か</b>」を問うKFS。単発のマッチングではなく、法人と継続的に取引する関係（顧客基盤）を築けるかが差を生む。＝案件が生まれる<b>「前」の取引基盤</b>（誰と継続的につながるか）。もらった案件を遂行して成果を出す力はKFS④が担い、両者を分ける。<br><b>理由</b>：売り手（プロ人材）は複数事業者をかけ持ちし縛られないが、買い手（法人）は要件整理・人選・稼働後支援を委ねる構造ゆえ乗り換えに手間がかかる。<b>この買い手側の非対称が、事業者に残された数少ない交渉余地</b>。継続関係は乗り換えコストとなり、非公開の案件枠・優先発注として積み上がる。競合の能力差も、仲介の量・速さではなく顧客接点（関係の深さ）で出る。</p>
   <div class="grid">
     <div><h5>構成要素</h5><ul>
-      <li><b>顧客の課題理解</b>：あいまいな要望を案件に翻訳できる関係の深さ。前段の業務設計（KFS④）はここを土台に成り立つ。</li>
+      <li><b>顧客の信頼・課題理解</b>：継続して相談される関係の深さ。あいまいな段階で真っ先に声がかかる立場（案件を「もらえる」関係）。</li>
       <li><b>継続発注・乗り換えコスト</b>：委ねるほど乗り換えが重くなる構造を、成果と定着で正当に裏打ちする。</li>
       <li><b>非公開の案件枠</b>：市場に出る前に相談される、優先・限定の発注枠を持てるか。</li>
       <li><b>関係のデータ化</b>：誰が・どの法人と・どんな成果でつながったかをKFS②の資産として蓄積し、担当者個人の人脈依存から脱する。</li>
     </ul></div>
     <div><h5>打ち手</h5><div class="tebox">
       <div class="te"><b>継続取引の関係を資産化する</b><span class="pr">優先◎</span><br>担当者個人の信頼・人脈に閉じず、顧客理解と継続発注の履歴を組織のデータへ転換し、乗り換えコストを成果・定着で裏打ちする。新規参入の障壁も、規模でなくこの関係資産に宿る。<span class="gr">根拠：買い手の非対称＝事業者の交渉余地（<a href="#forces">5フォース ↗</a>）／競合の能力差は顧客接点で出る（<a href="kyogo-chosa/index.html" target="_blank" rel="noopener">競合調査</a>）</span></div>
-      <div class="te"><b>前段（関係構築）を業務設計の入口にする</b><span class="pr">優先○</span><br>関係の深さを起点に上流の業務設計案件を組成し、KFS④（成果の実現・保証）へつなぐ。<span class="gr">根拠：砂時計の前段＝関係構築・顧客理解（2-6補足）</span></div>
+      <div class="te"><b>継続率・指名発注をKPIに据える</b><span class="pr">優先○</span><br>成約件数だけでなく、同じ法人からの継続発注率・指名率・非公開案件の獲得を指標化し、関係の深さを数字で管理する。受けた案件の遂行・成果保証はKFS④へ引き継ぐ。<span class="gr">根拠：買い手の乗り換えコスト＝継続関係の価値（<a href="#forces">5フォース ↗</a>）</span></div>
     </div></div>
   </div>
 </div>
 
 <div class="kfs">
   <div class="top"><div class="num">4</div><h3>成果の実現・保証</h3><div class="tags"><span class="tag ai">生成AI</span><span class="tag comp">競合</span></div></div>
-  <p class="gaiyo"><b>概要</b>：中間のマッチングではなく、前段（業務の設計）と後段（成果の保証・定着）で価値を生み出せるかが問われる。<br><b>理由</b>：AIがマッチングの中間工程（候補探索・絞り込み・要件翻訳）を代替するため、価値は砂時計の両端に残る。前段はAIを活用した高度な業務再設計、後段は事前に判別しにくい成果の不確実性の引き受けで、いずれもAIで代替しにくい。競合各社もこの両端へ拡張しており、選定基準も「成果の確かさ」へ収束する。AIが候補探し・選別を代替する分、最後に残る価値は成果保証である（代替品への直接の対抗）。なお前段の土台となる関係構築・顧客基盤はKFS③に分けて扱う。</p>
+  <p class="gaiyo"><b>概要</b>：「<b>もらった案件で成果を出せるか</b>」を問うKFS。中間のマッチングではなく、前段（業務の設計）と後段（成果の保証・定着）で価値を生み出せるかが問われる。＝案件を受けた<b>「後」の遂行・成果責任</b>。誰と継続的につながるか（案件の前の取引基盤）はKFS③が担う。<br><b>理由</b>：AIがマッチングの中間工程（候補探索・絞り込み・要件翻訳）を代替するため、価値は砂時計の両端に残る。前段はAIを活用した高度な業務再設計、後段は事前に判別しにくい成果の不確実性の引き受けで、いずれもAIで代替しにくい。競合各社もこの両端へ拡張しており、選定基準も「成果の確かさ」へ収束する。AIが候補探し・選別を代替する分、最後に残る価値は成果保証である（代替品への直接の対抗）。なお前段の土台となる関係構築・顧客基盤はKFS③に分けて扱う。</p>
   <div class="grid">
     <div><h5>構成要素</h5><ul>
       <li><b>前段（業務の再設計・組成）</b>：KFS③で築いた関係・顧客理解を土台に、あいまいな要望を設計フェーズの案件として切り出し、設計ができる上流人材を当てて実行体制まで束ねる力（自前で設計図を引く力ではなく、元請けとしての組成力）。</li>
@@ -1121,5 +1143,24 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
 
 </main>
 <script src="assets/app.js" defer></script>
+<script>
+(function(){
+  var ids=['summary','s1','s2','shokushu','s3','forces','s4','s5'];
+  var toc=document.querySelector('.side-toc'); if(!toc) return;
+  var links={}; toc.querySelectorAll('a').forEach(function(a){links[a.getAttribute('data-t')]=a;});
+  function setActive(id){ ids.forEach(function(x){ if(links[x]) links[x].classList.toggle('active', x===id); }); }
+  function onScroll(){
+    var cur=ids[0];
+    for(var i=0;i<ids.length;i++){
+      var el=document.getElementById(ids[i]);
+      if(el && el.getBoundingClientRect().top<=110) cur=ids[i];
+    }
+    setActive(cur);
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('resize', onScroll, {passive:true});
+  onScroll();
+})();
+</script>
 </body>
 </html>
