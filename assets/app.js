@@ -917,12 +917,12 @@
 
   function renderJiSummary(box, data, detailHref) {
     var byPro = data.byProDemand || {};
-    var lead = '<p class="ji-lead">市場構造マップの個人（供給側）を、主要38職種の単位で2軸に切り直した要約。縦＝<b>プロ人材（フリーランス・副業）への法人需要の変化（推論）</b>、横＝<b>業務変化</b>（AIで仕事の中身がどう変わるか）。<span class="ji-arrow">▲</span> は雇用需要より強い職種（正社員採用は横ばい・減でも外部スポット需要が伸びる）。</p>';
+    var lead = '<p class="ji-lead">市場構造マップの個人（供給側）を、主要39職種の単位で2軸に切り直した要約。縦＝<b>プロ人材（フリーランス・副業）への法人需要の変化（推論）</b>、横＝<b>業務変化</b>（AIで仕事の中身がどう変わるか）。<span class="ji-arrow">▲</span> は雇用需要より強い職種（正社員採用は横ばい・減でも外部スポット需要が伸びる）。</p>';
     var ins = '<div class="ji-insband">' +
       '<div class="ji-ins ji-up"><b>プロ人材需要 増（' + (byPro["増"] || 0) + "）</b>：AI高度人材＋企画・コンサル・専門職。外部スポット調達が伸びる最有望層。</div>" +
       '<div class="ji-ins ji-gray"><b>横ばい（' + (byPro["横ばい"] || 0) + "）</b>：対人の継続性が核の職種や、現場性の強い職種が中心。</div>" +
       '<div class="ji-ins ji-down"><b>減（' + (byPro["減"] || 0) + "）</b>：定型でフリーランス対象になりにくい職種（一般事務・量産ライター・定型翻訳）。</div></div>";
-    var link = '<p class="ji-detaillink"><a href="' + esc(detailHref) + '">全38職種の判定表（業務変化・需要・根拠リンク付き）を見る →</a></p>';
+    var link = '<p class="ji-detaillink"><a href="' + esc(detailHref) + '">全39職種の判定表（業務変化・需要・根拠リンク付き）を見る →</a></p>';
     box.innerHTML = lead + jiMatrix(data, { repMax: 4, arrows: true }) + ins + link;
   }
 

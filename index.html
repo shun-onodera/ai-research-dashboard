@@ -294,11 +294,11 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
 .kx-block .s2tag{margin-bottom:6px}
 .kx-block .kx-txt{display:block;font-size:13px;line-height:1.85;color:var(--color-ink-2)}
 .kx-block .kx-txt b{color:var(--color-ink)}
-/* 成長ニーズ＝3つのAXニーズ */
+/* 成長ニーズ＝4つのAXニーズ */
 .axneed{margin:14px 0 4px}
 .axneed-h{font-size:14.5px;font-weight:800;margin:0 0 4px;color:var(--color-ink)}
 .axneed-sub{font-size:12px;color:var(--color-muted);margin:0 0 11px;line-height:1.65}
-.axgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.axgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
 .axcard{background:#fff;border:1px solid var(--color-line);border-radius:10px;border-top:3px solid var(--color-blue);padding:13px 15px}
 .axcard .axtag{display:inline-block;font-size:11px;font-weight:800;color:var(--color-blue);background:var(--color-blue-50);border:1px solid #cdd9f5;border-radius:6px;padding:2px 9px;margin-bottom:7px}
 .axcard h6{margin:0 0 5px;font-size:14px;font-weight:800;color:var(--color-ink)}
@@ -306,6 +306,7 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
 .axcard .axjobs{font-size:11.5px;color:var(--color-muted);line-height:1.6;margin:0}
 .axfoot{font-size:12.5px;color:var(--color-ink-2);line-height:1.78;margin:12px 0 0;background:#fff;border:1px solid var(--color-line);border-left:4px solid var(--color-blue);border-radius:8px;padding:11px 14px}
 .axfoot b{color:var(--color-ink)}
+.axcaveat{font-size:11.5px;color:var(--color-muted);line-height:1.7;margin:9px 0 0}
 @media(max-width:760px){.axgrid{grid-template-columns:1fr}}
 /* エグゼクティブサマリー：3フェーズ段組みの要約表 */
 .esum-lead{font-size:13.5px;font-weight:700;color:var(--color-ink);line-height:1.85;margin:6px 0 6px}
@@ -375,7 +376,7 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
     <tr class="band"><td colspan="4"><a href="#s2">〔何が〕市場への影響 ― S2・職種別</a></td></tr>
     <tr><td class="dv">法人の調達</td><td class="bw">労働時間・人員を調達</td><td class="cf">「成果・業務の再設計」を調達し、支払いは時間課金から定額・成果連動へ。大手は高難度の重い案件、中小は小口・短期の潜在需要と、中身が分かれる</td><td class="pt">需要は「件数（量）」でなく「単価・成果」で測る。件数は減っても金額規模は拡大しうる（→ <a href="shijo-kibo/index.html">市場規模タブ</a>で定量化：2030年中庸 約5,500億円）</td></tr>
     <tr><td class="dv">個人の供給</td><td class="bw">正社員か独立の二択</td><td class="cf">副業者（備え・実績づくり。実行はなお約1割）と、専業フリーランス（高難度・成果型の受け皿）に多様化する</td><td class="pt">増える供給は副業者、伸びる需要の受け皿は専業に偏り、かみ合わない（需給の不一致）。AI活用力による二極化も進む</td></tr>
-    <tr><td class="dv">成長する需要</td><td class="bw">定型を含め広く分散</td><td class="cf">定型に分散していた需要が、高度・成果型の領域に集中する</td><td class="pt">成長は「3つのAXニーズ」（AIを作る／業務を組み替える／顧客価値を作る）に集まる</td></tr>
+    <tr><td class="dv">成長する需要</td><td class="bw">定型を含め広く分散</td><td class="cf">定型に分散していた需要が、高度・成果型の領域に集中する</td><td class="pt">成長は「4つのAXニーズ」（AIを作る／業務を組み替える／顧客価値を作る／組織・人材を作り変える）に集まる</td></tr>
     <tr><td class="dv">事業者のモデル</td><td class="bw">仲介手数料の一本足</td><td class="cf">中間の人選が縮み、案件の前工程（業務の設計）と後工程（成果の保証・データ）へ価値が移る</td><td class="pt">仲介から、設計〜実行を束ねて成果に責任を持つ「元請け型」への転換が迫られる（設計自体はプロ人材が担う → 2-6補足）</td></tr>
     <tr class="band"><td colspan="4"><a href="#s3">〔だから何を〕競合の反応と打ち手 ― S3・S4</a></td></tr>
     <tr><td class="dv">競合の反応</td><td class="bw">純粋マッチング</td><td class="cf">純粋マッチングから川上（DX・コンサル）へ拡張し、AIを外販・商品化する企業が先行</td><td class="pt">マッチングのAI化はもはや「標準装備」。差別化の主戦場はAIの外販・商品化へ</td></tr>
@@ -608,7 +609,7 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
 
 <!-- 職種別（本体セクションをそのまま） -->
 <h2 class="section-title" id="shokushu" style="margin-top:30px">個人セグメント：職種別のAI影響とプロ人材需要</h2>
-<p class="section-sub">S2の影響を、最下流＝職種の単位まで具体に落とす。市場構造マップの「個人（供給側）」を、主要38職種で2軸に切り直した要約。</p>
+<p class="section-sub">S2の影響を、最下流＝職種の単位まで具体に落とす。市場構造マップの「個人（供給側）」を、主要39職種で2軸に切り直した要約。</p>
 
 <div class="readkey">
   <h4>読み解き方 ― 2つの軸</h4>
@@ -641,7 +642,7 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
 <div class="jisuggest">
   <h5>示唆 ― 職種から見たマッチング事業への含意</h5>
   <ul>
-    <li><b>プロ人材需要「増」（15職種）</b>：外部調達が最も伸びる最有望層で、ここを厚く狙う（内訳は下の「3つのAXニーズ」に整理）。</li>
+    <li><b>プロ人材需要「増」（16職種）</b>：外部調達が最も伸びる最有望層で、ここを厚く狙う（内訳は下の4つのAXニーズに整理）。</li>
     <li><b>「横ばい」（約20職種）</b>：対人の継続性が核、または現場性の強い職種。必要人数が「関係・判断・責任の数」で決まるため底堅い。</li>
     <li><b>「減」（約3職種）</b>：定型でフリーランス対象になりにくい（一般事務・量産ライター・定型翻訳など）。ここに依存しない。</li>
   </ul>
@@ -650,14 +651,16 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
 </div>
 
 <div class="axneed">
-  <h5 class="axneed-h">成長するニーズ ― 3つの「AXニーズ」</h5>
-  <p class="axneed-sub">需要「増」の15職種を、AI×業務変革（AX）で外部調達が伸びる領域として3つに束ねた。マッチング事業の成長ニーズはこの3領域に集まる。</p>
+  <h5 class="axneed-h">成長するニーズ ― 4つの「AXニーズ」</h5>
+  <p class="axneed-sub">需要「増」の16職種を、AI×業務変革（AX）で外部調達が伸びる領域として4つに束ねた。マッチング事業の成長ニーズはこの4領域に集まる。</p>
   <div class="axgrid">
     <div class="axcard"><span class="axtag">AXニーズ①</span><h6>AIを作る・動かす</h6><p class="axdef">AIそのものを開発・運用し、守る。</p><p class="axjobs">AI/機械学習エンジニア・データサイエンティスト・データエンジニア・情報セキュリティ</p></div>
     <div class="axcard"><span class="axtag">AXニーズ②</span><h6>AIで業務を組み替える</h6><p class="axdef">AI前提で業務・事業を再設計し、成果まで導く。</p><p class="axjobs">経営企画・事業企画・新規事業/事業開発・戦略コンサル・業務改革コンサル・PM/PdM・営業企画</p></div>
     <div class="axcard"><span class="axtag">AXニーズ③</span><h6>AIで顧客価値を作る</h6><p class="axdef">AIで顧客接点・体験・需要を作る。</p><p class="axjobs">デジタルマーケティング・UI/UXデザイナー</p></div>
+    <div class="axcard"><span class="axtag">AXニーズ④</span><h6>AIで組織・人材を作り変える</h6><p class="axdef">AI前提で評価・配置・育成・組織を設計し直し、定着まで導く。</p><p class="axjobs">組織・人事変革コンサル・人事企画（評価/配置/育成の再設計）・人材開発（学び直し設計）・変革の定着支援</p></div>
   </div>
-  <p class="axfoot">共通項は「<b>AIをどう業務に組み込み、成果まで導くか</b>」を担える高度専門人材。いずれも<b>プロジェクト単位・業務委託で外部調達したい法人需要</b>として伸びる（件数ではなく単価・金額で表れる）。事業は件数でなく単価・成果で、この3領域を取りに行く。</p>
+  <p class="axfoot">共通項は「<b>AIを前提に、業務・組織・人材を作り替え、成果まで導く</b>」ことを担える高度専門人材。いずれも<b>プロジェクト単位・業務委託で外部調達したい法人需要</b>として伸びる（件数ではなく単価・金額で表れる）。事業は件数でなく単価・成果で、この4領域を取りに行く。</p>
+  <p class="axcaveat">※ ④の中核は、需要増に転じた「人事企画（評価・配置・育成・組織設計）」。AIの定着には組織・人材の作り替えが要るため、制度設計・組織開発・学び直し設計を外部委託する需要が伸びる（人事領域の副業・フリーランス活用が伸長）。ただし自社のリスキリング（学び直し）の実施・配置転換そのものは内部活動として市場から除き、“設計・伴走の外部委託”分のみを数える。②（業務改革の実行支援）とは一部重なる。これは「成果が出るまで導く＝定着」を人材面から担う領域で、後述のKFS（後段の価値）に対応する。</p>
 </div>
 
 <!-- S3 -->
