@@ -303,6 +303,8 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
 .axcard .axtag{display:inline-block;font-size:11px;font-weight:800;color:var(--color-blue);background:var(--color-blue-50);border:1px solid #cdd9f5;border-radius:6px;padding:2px 9px;margin-bottom:7px}
 .axcard h6{margin:0 0 5px;font-size:14px;font-weight:800;color:var(--color-ink)}
 .axcard .axdef{margin:0 0 7px;font-size:12.5px;line-height:1.7;color:var(--color-ink-2)}
+.axcard .axwhy{font-size:12px;line-height:1.7;color:var(--color-ink-2);background:var(--color-blue-50);border-radius:6px;padding:7px 9px;margin:0 0 8px}
+.axcard .axwhy b{color:var(--color-blue)}
 .axcard .axjobs{font-size:11.5px;color:var(--color-muted);line-height:1.6;margin:0}
 .axfoot{font-size:12.5px;color:var(--color-ink-2);line-height:1.78;margin:12px 0 0;background:#fff;border:1px solid var(--color-line);border-left:4px solid var(--color-blue);border-radius:8px;padding:11px 14px}
 .axfoot b{color:var(--color-ink)}
@@ -366,7 +368,7 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
 <!-- 全体要約（エグゼクティブサマリー） -->
 <h2 class="section-title" id="summary" style="margin-top:16px">全体サマリー ― 変動要因から打ち手まで（従来 → 今後）</h2>
 <p class="esum-lead">AIが人選の仲介（候補探し・絞り込み・条件交渉）を自動化し、要件翻訳・人選そのものには対価が払われなくなる。単価は、成果が出ないリスクを引き受けた者へ移る。事業者が、人を引き合わせるだけの仲介業から、設計から実行までを束ねて成果に責任を持つ「元請け型」の事業へ転換できるかが、勝敗の分かれ目になる。</p>
-<p class="section-sub">「なぜ → 何が → だから何を」の順に、各節のキーメッセージを1枚に。各区分の見出しから該当節へ移動できる。</p>
+<p class="section-sub">「なぜ → 何が → 示唆」の順に、各節のキーメッセージを1枚に。各区分の見出しから該当節へ移動できる。</p>
 <div class="zt-wrap" style="overflow-x:auto"><table class="zt esum" style="table-layout:fixed;min-width:780px">
   <thead><tr><th style="width:16%">区分</th><th style="width:21%">従来</th><th style="width:28%">今後</th><th>要点（事業への含意）</th></tr></thead>
   <tbody>
@@ -378,8 +380,8 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
     <tr><td class="dv">個人の供給</td><td class="bw">正社員か独立の二択</td><td class="cf">副業者（備え・実績づくり。実行はなお約1割）と、専業フリーランス（高難度・成果型の受け皿）に多様化する</td><td class="pt">増える供給は副業者、伸びる需要の受け皿は専業に偏り、かみ合わない（需給の不一致）。AI活用力による二極化も進む</td></tr>
     <tr><td class="dv">成長する需要</td><td class="bw">定型を含め広く分散</td><td class="cf">定型に分散していた需要が、高度・成果型の領域に集中する</td><td class="pt">成長は「4つのAXニーズ」（AIを作る／業務を組み替える／顧客価値を作る／組織・人材を作り変える）に集まる</td></tr>
     <tr><td class="dv">事業者のモデル</td><td class="bw">仲介手数料の一本足</td><td class="cf">中間の人選が縮み、案件の前工程（業務の設計）と後工程（成果の保証・データ）へ価値が移る</td><td class="pt">仲介から、設計〜実行を束ねて成果に責任を持つ「元請け型」への転換が迫られる（設計自体はプロ人材が担う → 2-6補足）</td></tr>
-    <tr class="band"><td colspan="4"><a href="#s3">〔だから何を〕競合の反応と打ち手 ― S3・S4</a></td></tr>
-    <tr><td class="dv">競合の反応</td><td class="bw">純粋マッチング</td><td class="cf">純粋マッチングから川上（DX・コンサル）へ拡張し、AIを外販・商品化する企業が先行</td><td class="pt">マッチングのAI化はもはや「標準装備」。差別化の主戦場はAIの外販・商品化へ</td></tr>
+    <tr class="band"><td colspan="4"><a href="#s3">〔示唆〕競合の反応と打ち手 ― S3・S4</a></td></tr>
+    <tr><td class="dv">競合の反応</td><td class="bw">純粋マッチング</td><td class="cf">純粋マッチングから川上（DX・コンサル）へ拡張し、AIを外販・商品化する企業が先行</td><td class="pt">マッチングのAI化はすでに「標準装備」。差別化の主戦場はAIの外販・商品化へ</td></tr>
     <tr><td class="dv">勝敗を分けるKFS</td><td class="bw">量・速さ・安さ</td><td class="cf">量・速さ・安さでなく、成果・実績データの確かさ・供給力（専業フリーランスに選ばれる力。育成は一手段）で選ばれる</td><td class="pt">勝敗は6要因（参入に必須の3＋差を生む3）。実績データ基盤と成果保証が軸</td></tr>
   </tbody>
 </table></div>
@@ -422,13 +424,13 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
   <p class="vf-gaiyo">フリーランスとの取引を適正にする法律が整い、発注側が守るべき手続きが増えた。ハイクラスでの最大の論点は「契約が業務委託なのか、実質的な雇用なのか」の線引きである。AI・データの規制は、日本は緩やか・欧州は厳格と対照的で、人選にAIを使う事業者にとっての前提条件になる。</p>
   <div class="vf-box vf-imp"><span class="vf-lab">生まれる変化（仮説）</span>
     <ul>
-      <li><b>① 取引適正化対応の前提条件化</b>：60日以内の支払い・書面明示などの対応が取引の前提条件になり、その肩代わりが事業者の価値になる。</li>
+      <li><b>① 取引適正化対応の前提条件化</b>：60日以内の支払い・書面明示などの対応が取引の前提条件になり、その代行が事業者の価値になる。</li>
       <li><b>② 雇用認定リスクが案件設計の中心論点に</b>：「業務委託か実質雇用か」の線引きが厳しくなり、リスク管理力が法人の選定軸になる。</li>
       <li><b>③ 人選AIの透明性が信頼条件に</b>：説明責任・人間の関与・追跡可能性の自主整備が、AIで人選する事業者の信頼の前提になる。</li>
       <li><b>④ 実績データのAI活用は進めやすく</b>：AI開発向けのデータ提供は同意不要の特例ができ、制度面ではむしろ後押しされる。</li>
     </ul>
   </div>
-  <div class="vf-box vf-fl"><span class="vf-lab">副業・フリーランス市場への影響</span>法人がハイクラスを外部活用する際の最大の不安は「常駐・継続的な業務委託が偽装請負・実質雇用と判断されるリスク」。マッチング事業がこのリスクを避ける契約・運用設計と、取引適正化の手続きを標準で肩代わりできれば、法人の利用ハードルが下がり需要が伸びる。逆に放置すれば需要は萎縮する。実績データのAI活用は法改正で進めやすくなる一方、人選AIの透明性確保は信頼の前提になる。</div>
+  <div class="vf-box vf-fl"><span class="vf-lab">副業・フリーランス市場への影響</span>法人がハイクラスを外部活用する際の最大の不安は「常駐・継続的な業務委託が偽装請負・実質雇用と判断されるリスク」。マッチング事業がこのリスクを避ける契約・運用設計と、取引適正化の手続きを標準で代行できれば、法人の利用ハードルが下がり需要が伸びる。逆に放置すれば需要は萎縮する。実績データのAI活用は法改正で進めやすくなる一方、人選AIの透明性確保は信頼の前提になる。</div>
   <div class="vf-evid"><span class="vf-elab">根拠（予兆シグナル）</span>
     <div class="vf-sig"><span class="vf-sl">取引適正化が「義務」になった（フリーランス保護新法）<span class="vf-map">［→ 変化①を支える］</span></span>フリーランス保護新法（2024-11施行）が発注側に7つの義務を課した（報酬を成果物受領後60日以内に支払う・取引条件の書面明示・相談窓口の整備など）。施行1年で128の事業者が是正指導を受け、下請取引も取適法へ改正（2026-01／手形払いや一方的な代金決定の禁止）。＝形式を整えるだけでは足りず、実態の遵守が問われる段階。<a href="houmu-compliance/index.html">法務・コンプライアンス ↗</a><div class="sigspot"><a class="ss-title" href="houmu-compliance/index.html" target="_blank" rel="noopener">エビデンス：フリーランス保護新法、発注側に7つの義務 ― 施行1年で128事業者を指導 →</a><span class="ss-sum">報酬は受領後60日以内・取引条件の書面明示が義務に。形式でなく実態の遵守が問われる段階に入った。<span class="ss-src">公正取引委員会ほか・2025-12</span></span></div></div>
     <div class="vf-sig"><span class="vf-sl">「業務委託か、実質的な雇用か」の線引きが厳格化（◎最重要）<span class="vf-map">［→ 変化②を支える］</span></span>EUのプラットフォーム労働指令は、発注側に指揮命令の実態があればその関係を「雇用」とみなす（雇用でないと示す責任は発注側）。各国は2026-12までに国内法へ反映。日本でも労働基準法見直しで副業の労働時間通算が論点（立法は後ろ倒し）。＝常駐・継続的な業務委託の案件設計で、偽装請負・実質雇用と判断されないことが要点。<a href="houmu-compliance/index.html">法務・コンプライアンス ↗</a><div class="sigspot"><a class="ss-title" href="houmu-compliance/index.html" target="_blank" rel="noopener">エビデンス：EUプラットフォーム労働指令 ― 指揮命令の実態があれば「雇用」とみなす →</a><span class="ss-sum">雇用でないと示す責任は発注側にある。各国は2026年12月までに国内法へ反映。日本でも労働基準法の見直しが論点。<span class="ss-src">欧州連合ほか・2024〜</span></span></div></div>
@@ -505,12 +507,12 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
         <tr><td class="co">専業フリーランス</td><td>一部の独立志向層にとどまっていた（独立・本業として）。</td><td class="cf"><ul><li>高難度・成果型の需要の受け皿として価値が上がる</li><li>AIを使いこなせるかで売り手市場と値下げ圧力に二極化する</li></ul></td><td><ul><li>AIに吸収されず残る難度の高い案件は、フルコミットできる専業に寄る</li><li>AI活用力が高単価・専門性の決定打になり、使いこなせる層と定型作業にとどまる層の差が開く</li></ul></td></tr>
       </tbody>
     </table></div>
-    <p class="ic-sub">今後の具体 ― 副業者に効く動き</p>
+    <p class="ic-sub">今後の具体 ― 副業者で起きる動き</p>
     <ul>
       <li><b>副業の定着</b>：正社員を続けながら実績・スキルを蓄積する形が標準的な選択肢となる。独立の準備段階・収入面の備えになる。<span class="ic-note">（ただし実施率は正社員の約1割。容認・意向の広がりに実行が追いついていない段階）</span></li>
       <li><b>入口は広がるが中間層が薄い</b>：学歴より実力で参入できる経路は広がる一方、未経験・若手の入口は縮小する。初期実績の獲得のため、低単価でも経験を積む動きが生じる。</li>
     </ul>
-    <p class="ic-sub">今後の具体 ― 専業フリーランスに効く動き</p>
+    <p class="ic-sub">今後の具体 ― 専業フリーランスで起きる動き</p>
     <ul>
       <li><b>高難度・成果型の受け皿</b>：AIに吸収されず残る難度の高い案件は、フルコミットできる専業へ寄る。AIを活用して成果を出せる層は売り手市場となり、定型作業にとどまる層は単価下落（値下げ圧力）に直面する（二極化）。</li>
       <li><b>実績データの資産化</b>：自身の実績が市場価値の証明・資産になるため、持ち運び可能で本人に還元される仕組みを求め始める。</li>
@@ -549,7 +551,7 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
     <tbody>
       <tr><td class="co">人選の質（確かさ）</td><td><ul><li>実績が確認済みで、難度の高い課題に応えられる候補</li><li>確かさを最重視する</li></ul></td><td><ul><li>一定の質を満たしつつ、すぐ動ける候補</li><li>手軽さ・速さを重視する</li></ul></td></tr>
       <tr><td class="co">成果の担保</td><td><ul><li>成果保証・再提案の仕組み</li><li>成果が出ない場合の責任分担まで求める</li></ul></td><td><ul><li>最低限の品質保証</li><li>重い保証より、低コストで試せることを優先する</li></ul></td></tr>
-      <tr><td class="co">価格・支払い方式</td><td><ul><li>成果に見合う価格設計（定額・成果連動）</li><li>予算は確保しやすい</li></ul></td><td><ul><li>価格の安さ・分かりやすさ</li><li>小口・短期で使える料金を求める</li></ul></td></tr>
+      <tr><td class="co">価格・支払い方式</td><td><ul><li>成果に見合う価格設計（定額・成果連動）</li><li>予算は確保しやすい</li></ul></td><td><ul><li>価格の安さ・分かりやすさ</li><li>小口・短期で利用できる料金を求める</li></ul></td></tr>
       <tr><td class="co">業務設計・伴走</td><td><ul><li>業務の再設計まで伴走できるか（AI活用を含む設計力）</li><li>変革の相談相手を求める</li></ul></td><td><ul><li>要件の整理は助けてほしい</li><li>重い伴走より手軽さを優先する</li></ul></td></tr>
       <tr><td class="co">データ連携・運用</td><td>自社の購買AI・業務システムとのデータ連携、定着までの支援。</td><td>連携より、自分で操作できる手軽さ・導入の軽さ。</td></tr>
     </tbody>
@@ -617,9 +619,9 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
     <div class="axiscol">
       <h5>横軸：業務変化（AIで仕事の中身がどう変わるか）</h5>
       <dl>
-        <dt>代替</dt><dd>主要業務の大半をAIがまるごと肩代わりし、人が担う部分がごくわずかになる。</dd>
-        <dt>組み替え</dt><dd>定型・反復部分をAIが肩代わりし、人の業務が別の種類（AI出力の検証・設計・調整・対人）へ入れ替わる。</dd>
-        <dt>増幅</dt><dd>定型部分をAIが肩代わりし、浮いた時間で人は同じコア業務をより多く・広く・高度に担う（役割は変わらず射程が広がる）。</dd>
+        <dt>代替</dt><dd>主要業務の大半をAIがまるごと代替し、人が担う部分がごくわずかになる。</dd>
+        <dt>組み替え</dt><dd>定型・反復部分をAIが代替し、人の業務が別の種類（AI出力の検証・設計・調整・対人）へ入れ替わる。</dd>
+        <dt>増幅</dt><dd>定型部分をAIが代替し、浮いた時間で人は同じコア業務をより多く・広く・高度に担う（役割は変わらず射程が広がる）。</dd>
         <dt>影響小</dt><dd>対人・現場・身体性が業務の中核で、AIが関与しても中身がほとんど変わらない。</dd>
       </dl>
     </div>
@@ -654,12 +656,12 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
   <h5 class="axneed-h">成長するニーズ ― 4つの「AXニーズ」</h5>
   <p class="axneed-sub">需要「増」の16職種を、AI×業務変革（AX）で外部調達が伸びる領域として4つに束ねた。マッチング事業の成長ニーズはこの4領域に集まる。</p>
   <div class="axgrid">
-    <div class="axcard"><span class="axtag">AXニーズ①</span><h6>AIを作る・動かす</h6><p class="axdef">AIそのものを開発・運用し、守る。</p><p class="axjobs">AI/機械学習エンジニア・データサイエンティスト・データエンジニア・情報セキュリティ</p></div>
-    <div class="axcard"><span class="axtag">AXニーズ②</span><h6>AIで業務を組み替える</h6><p class="axdef">AI前提で業務・事業を再設計し、成果まで導く。</p><p class="axjobs">経営企画・事業企画・新規事業/事業開発・戦略コンサル・業務改革コンサル・PM/PdM・営業企画</p></div>
-    <div class="axcard"><span class="axtag">AXニーズ③</span><h6>AIで顧客価値を作る</h6><p class="axdef">AIで顧客接点・体験・需要を作る。</p><p class="axjobs">デジタルマーケティング・UI/UXデザイナー</p></div>
-    <div class="axcard"><span class="axtag">AXニーズ④</span><h6>AIで組織・人材を作り変える</h6><p class="axdef">AI前提で評価・配置・育成・組織を設計し直し、定着まで導く。</p><p class="axjobs">組織・人事変革コンサル・人事企画（評価/配置/育成の再設計）・人材開発（学び直し設計）・変革の定着支援</p></div>
+    <div class="axcard"><span class="axtag">AXニーズ①</span><h6>AIを作る・動かす</h6><p class="axdef">AIそのものを開発・運用し、守る。</p><p class="axwhy"><b>需要増の理由</b>：AIを作る仕事自体はAIに代替されにくく、需要が純増する。担い手は深刻に不足し（先端IT人材 約55万人・AI人材 約12万人不足）、社内で賄えず外部調達に向かう。</p><p class="axjobs">AI/機械学習エンジニア・データサイエンティスト・データエンジニア・情報セキュリティ</p></div>
+    <div class="axcard"><span class="axtag">AXニーズ②</span><h6>AIで業務を組み替える</h6><p class="axdef">AI前提で業務・事業を再設計し、成果まで導く。</p><p class="axwhy"><b>需要増の理由</b>：定型が自動化され、価値が「業務・事業の再設計と成果責任」へ移る。正社員採用は横ばいでも、変革テーマ単位で企画・コンサル人材をスポット起用する需要が伸びる（国内DX投資は6.5→9.8兆円）。</p><p class="axjobs">経営企画・事業企画・新規事業/事業開発・戦略コンサル・業務改革コンサル・PM/PdM・営業企画</p></div>
+    <div class="axcard"><span class="axtag">AXニーズ③</span><h6>AIで顧客価値を作る</h6><p class="axdef">AIで顧客接点・体験・需要を作る。</p><p class="axwhy"><b>需要増の理由</b>：AIで顧客体験・需要のつくり方が変わる。単純制作は内製・AI化する一方、戦略・体験設計・ブランド判断は人に残り、もともと外部委託が多い領域で高度人材のスポット需要が伸びる。</p><p class="axjobs">デジタルマーケティング・UI/UXデザイナー</p></div>
+    <div class="axcard"><span class="axtag">AXニーズ④</span><h6>AIで組織・人材を作り変える</h6><p class="axdef">AI前提で評価・配置・育成・組織を設計し直し、定着まで導く。</p><p class="axwhy"><b>需要増の理由</b>：業務（②）を変えても、評価・配置・育成まで作り替えないとAIは定着しない。人員の配置転換は既に進行し（プライム上場企業の39.3%が実施）、担い手は社内に不足するため、制度・組織設計を外部委託する需要が伸びる。</p><p class="axjobs">組織・人事変革コンサル・人事企画（評価/配置/育成の再設計）・人材開発（学び直し設計）・変革の定着支援</p></div>
   </div>
-  <p class="axfoot">共通項は「<b>AIを前提に、業務・組織・人材を作り替え、成果まで導く</b>」ことを担える高度専門人材。いずれも<b>プロジェクト単位・業務委託で外部調達したい法人需要</b>として伸びる（件数ではなく単価・金額で表れる）。事業は件数でなく単価・成果で、この4領域を取りに行く。</p>
+  <p class="axfoot">共通項は「<b>AIを前提に、業務・組織・人材を作り替え、成果まで導く</b>」ことを担える高度専門人材。いずれも<b>プロジェクト単位・業務委託で外部調達したい法人需要</b>として伸びる（件数ではなく単価・金額で表れる）。事業は件数でなく単価・成果で、この4領域を獲得する。</p>
   <p class="axcaveat">※ ④の中核は、需要増に転じた「人事企画（評価・配置・育成・組織設計）」。AIの定着には組織・人材の作り替えが要るため、制度設計・組織開発・学び直し設計を外部委託する需要が伸びる（人事領域の副業・フリーランス活用が伸長）。ただし自社のリスキリング（学び直し）の実施・配置転換そのものは内部活動として市場から除き、“設計・伴走の外部委託”分のみを数える。②（業務改革の実行支援）とは一部重なる。これは「成果が出るまで導く＝定着」を人材面から担う領域で、後述のKFS（後段の価値）に対応する。</p>
 </div>
 
@@ -674,7 +676,7 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
     <li><b>プラットフォーム型</b>：利用者が自分で検索・発注するマッチングの場（担当者が介在しない）。低単価×高テイクレート（手数料率）。</li>
     <li><b>エージェント型</b>：担当者が要件をヒアリングし、人選・提案して個別にマッチングする。高単価×低テイクレート。</li>
     <li><b>チーム型（ベンダー型）</b>：個人1名の紹介でなく、<b>業務をテーマ（プロジェクト）単位で請け負える</b>。チーム・準委任で受け、上流のコンサル・DX支援・受託開発まで踏み込む。</li>
-    <li><b>AI商品化型</b>：自社で磨いたマッチングAI・業務知見を、外部法人へAIプロダクト／エージェントとして外販する新収益。</li>
+    <li><b>AI商品化型</b>：自社で高度化したマッチングAI・業務知見を、外部法人へAIプロダクト／エージェントとして外販する新収益。</li>
   </ul>
   <div class="zt-wrap" style="overflow-x:auto"><table class="zt">
     <caption>各社モデルプロット（◎＝主力／○＝展開中・兼営／空欄＝該当なし。国内9社・公表情報ベース）</caption>
@@ -739,25 +741,25 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
       <tr><td class="co">ココナラ</td><td>エージェント事業（ココナラテック）を先行投資で育成し二層構造へ</td><td>明確なAI戦略の公表は薄い</td><td>会員590万人・流通総額172億円・テイクレート29.1%。+42.8%の高成長</td></tr>
     </tbody>
   </table></div>
-  <div class="keybox"><span class="s2tag">示唆</span><span class="kx-h">方向性は「川上への拡張」と「AIの外販」に収束し、差は標準装備の先で開く</span>9社に共通するのは、人を当てるマッチングから<b>前段（DX・コンサル・業務再設計）と後段（成果・データ）へ踏み出す「川上拡張」</b>と、磨いたAI・知見を外部法人へ売る<b>「AIの外販・商品化」</b>である。AI能力は内製にとどまらず<b>提携・買収（サーキュレーション×PKSHA、ビザスク×博報堂、TWOSTONEのロールアップM&amp;A）</b>で一気に獲得する企業が先行する。利益率はビジネスモデルで上限が決まり（手数料型のビザスクが営業利益率13.4%と突出、エージェント型は低位）、多くが高成長×先行投資で目先の利益を圧縮している局面にある。マッチング事業者一般への含意は、<b>「マッチング機能のAI化」はもはや標準装備にすぎず、差がつくのは川上の業務変革力とAIの商品化力</b>だという点にある。</div>
+  <div class="keybox"><span class="s2tag">示唆</span><span class="kx-h">方向性は「川上への拡張」と「AIの外販」に収束し、差は標準装備の先で開く</span>9社に共通するのは、人選から<b>前段（DX・コンサル・業務再設計）と後段（成果・データ）へ踏み出す「川上拡張」</b>と、高度化したAI・知見を外部法人へ外販する<b>「AIの外販・商品化」</b>である。AI能力は内製にとどまらず<b>提携・買収（サーキュレーション×PKSHA、ビザスク×博報堂、TWOSTONEのロールアップM&amp;A）</b>で一気に獲得する企業が先行する。利益率はビジネスモデルで上限が決まり（手数料型のビザスクが営業利益率13.4%と突出、エージェント型は低位）、多くが高成長×先行投資で短期の利益を圧縮している局面にある。マッチング事業者一般への含意は、<b>「マッチング機能のAI化」はすでに標準装備にすぎず、差がつくのは川上の業務変革力とAIの商品化力</b>だという点にある。</div>
 </div>
 
 <h3 class="sub-h"><span class="nchip">3-4</span>AI戦略の構図 ― 3層に分かれ、最前線は「外販」</h3>
 <div class="cmp">
-  <p style="margin:0 0 2px;font-size:13px;line-height:1.85;color:var(--color-ink-2)"><b style="color:var(--color-blue)">脱・純粋マッチング（砂時計化）</b>：全社が「人を当てるだけ」から前段・後段へ拡張（クラウドワークス→DXコンサル、INTLOOP→ソリューション、ランサーズ→AX、ギークス→DXソリューション、TWOSTONE→川上展開）。その上で、AI活用は下から上へ次の3層に分かれ、最前線は最上段の「外販」にある。</p>
+  <p style="margin:0 0 2px;font-size:13px;line-height:1.85;color:var(--color-ink-2)"><b style="color:var(--color-blue)">脱・純粋マッチング（砂時計化）</b>：全社が「人選だけ」から前段・後段へ拡張（クラウドワークス→DXコンサル、INTLOOP→ソリューション、ランサーズ→AX、ギークス→DXソリューション、TWOSTONE→川上展開）。その上で、AI活用は下から上へ次の3層に分かれ、最前線は最上段の「外販」にある。</p>
   <div class="pyr">
     <div class="tier t3"><b>③ AIの外販・商品化</b><span>最前線＝新収益源（知見・データを外販）</span></div>
-    <div class="tier t2"><b>② マッチング機能のAI化</b><span>標準装備＝「ないと負ける」土俵</span></div>
+    <div class="tier t2"><b>② マッチング機能のAI化</b><span>標準装備＝なければ戦えない前提</span></div>
     <div class="tier t1"><b>① 社内効率化</b><span>土台＝営業の生産性向上</span></div>
   </div>
   <ul class="tier-leg">
     <li><b>① 社内効率化</b>：AIで営業を効率化し、営業1人あたり契約数を高める（みらいワークス・ランサーズ等）。</li>
-    <li><b>② マッチング機能のAI化＝標準装備</b>：「ないと負ける」土俵に（サーキュレーション「PRONAVI now」、ビザスク「AI Scout」が5分で適合リスト、INTLOOP、Upwork）。</li>
+    <li><b>② マッチング機能のAI化＝標準装備</b>：なければ戦えない前提に（サーキュレーション「PRONAVI now」、ビザスク「AI Scout」が5分で適合リスト、INTLOOP、Upwork）。</li>
     <li><b>③ AIの外販・商品化＝新収益源の最前線</b>：担当者の知見をAIに載せて外販（サーキュレーション「AI Powered Pro」を商品化、INTLOOPは業務特化AIエージェントを外部法人へ外販）。</li>
     <li><b>AI能力の獲得</b>：内製か、提携・買収か（サーキュレーションはPKSHAのTOBで傘下入りしAI能力を一気に獲得、ビザスク×博報堂、Upworkは Objective AI を買収、クラウドワークスはAI tech子会社を吸収）。</li>
     <li><b>利益率はモデル次第</b>：手数料モデルのビザスク（13.4%）が突出、エージェント型は2.5〜6.5%。テイクレートはプラットフォーム型（ココナラ29.1%・Fiverr27.7%）が高く、エージェント型（ギークス・Upwork18%）は低い＝「高単価×低率」か「低単価×高率」かが数字に表れる。</li>
   </ul>
-  <div class="note" style="margin-top:10px"><b>補足：「AI Powered Pro」の中身（一次情報）</b>　PKSHA傘下入り後に投入された同サービスは、蓄積データをそのまま売るのではない。<b>プロ人材の思考・判断を抽出し、顧客企業の現場の業務フローにAIとして実装して、個人に依存していた専門家の判断を、組織が再現できる知見に変える</b>もので、約2.2万件のプロジェクトデータと体系化された知見、PKSHAのAI技術が基盤になる。外販で効くのは「データを売る」ことよりも「プロ人材の判断軸をAIに実装する」点であり、ここが模倣されにくい。AI能力は内製でなく買収（PKSHA傘下入り）で獲得した。出典：<a href="https://circu.co.jp/news/20251203-6142/" target="_blank" rel="noopener">サーキュレーション公式（AI Powered Worker）</a>／<a href="https://circu.co.jp/news/20251114-6117/" target="_blank" rel="noopener">PRONAVI now</a></div>
+  <div class="note" style="margin-top:10px"><b>補足：「AI Powered Pro」の中身（一次情報）</b>　PKSHA傘下入り後に投入された同サービスは、蓄積データをそのまま外販するのではない。<b>プロ人材の思考・判断を抽出し、顧客企業の現場の業務フローにAIとして実装して、個人に依存していた専門家の判断を、組織が再現できる知見に変える</b>もので、約2.2万件のプロジェクトデータと体系化された知見、PKSHAのAI技術が基盤になる。外販で重要なのは「データの提供」よりも「プロ人材の判断軸をAIに実装する」点であり、ここが模倣されにくい。AI能力は内製でなく買収（PKSHA傘下入り）で獲得した。出典：<a href="https://circu.co.jp/news/20251203-6142/" target="_blank" rel="noopener">サーキュレーション公式（AI Powered Worker）</a>／<a href="https://circu.co.jp/news/20251114-6117/" target="_blank" rel="noopener">PRONAVI now</a></div>
 </div>
 
 <!-- 競合AI戦略 5類型マップ（AI3層の直後に復活） -->
@@ -773,7 +775,7 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
 <div class="keybox"><span class="s2tag">競合動向からの示唆（この節の要点）</span>
   <ul>
     <li><b>砂時計化は既に起きている事実</b>：純粋マッチングからの脱却は全社共通で、砂時計化は同業で既に進行している。</li>
-    <li><b>差別化の主戦場は外販・商品化へ移った</b>：マッチング機能のAI化は「ないと負ける」標準装備になり、差別化の主戦場は知見・データの外販・商品化の段階へ移った。</li>
+    <li><b>差別化の主戦場は外販・商品化へ移った</b>：マッチング機能のAI化はなければ戦えない標準装備になり、差別化の主戦場は知見・データの外販・商品化の段階へ移った。</li>
     <li><b>AI能力は提携・買収が速い</b>：獲得は内製・提携・買収の三択で、提携・買収で一気に獲得した企業（サーキュレーション×PKSHA等）が速い。</li>
     <li><b>利益率の天井はビジネスモデルで決まる</b>：手数料型13.4%が突出、エージェント型2.5〜6.5%。高成長×低利益率の投資局面では、投資を抜けた企業から増益が出ている。</li>
   </ul>
@@ -794,10 +796,10 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
       </ul></td></tr>
       <tr><td class="co">② 確かな実績データ基盤</td><td><ul>
         <li><b>S2選定基準の収束</b>：法人の「成果保証の根拠」と個人の「価値の証明」が、同一の実績データに帰着する。</li>
-        <li><b>S1生成AI</b>：価値が「人を当てる画面」から「能力・実績データ」へ移る。</li>
+        <li><b>S1生成AI</b>：価値が「人選（マッチング）」から「能力・実績データ」へ移る。</li>
         <li><b>S1法務</b>：AI開発用データの取得が特例で進めやすくなる。</li>
       </ul></td></tr>
-      <tr><td class="co">③ コンプライアンスを肩代わりする力</td><td><ul>
+      <tr><td class="co">③ コンプライアンスを代行する力</td><td><ul>
         <li><b>S1法務</b>：雇用認定リスクと取引適正化義務（60日以内の支払い・書面明示）が、取引の前提になる。</li>
         <li><b>S2選定基準</b>：ハイクラス法人の最重要関心が「雇用認定リスクの回避」である。</li>
       </ul></td></tr>
@@ -819,11 +821,11 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
   </table></div>
 </div>
 
-<div class="layer-h"><span class="pill dohyo">土俵に立つ条件（必須）</span> ① 狙う市場 ／ ② 実績データ基盤 ／ ③ コンプライアンス対応</div>
+<div class="layer-h"><span class="pill dohyo">参入に必須の条件</span> ① 狙う市場 ／ ② 実績データ基盤 ／ ③ コンプライアンス対応</div>
 
 <div class="kfs">
   <div class="top"><div class="num">1</div><h3>狙う市場の選択（Where to play）― 大手・成長企業</h3><div class="tags"><span class="tag labor">労働市場</span><span class="tag ai">生成AI</span></div></div>
-  <p class="gaiyo"><b>概要</b>：需要の的を、対価を払え、難度の高いテーマを持つ<b>大手・成長企業</b>に絞る。誰に売るかの選択が、他のKFSの効き方を左右する土台になる。<br><b>理由</b>：AIで定型業務が社内・AIに吸収され、外部に出るのは「AIをどう業務に組み込み成果を出すか」という高度なテーマが中心になる。こうした変革投資の体力と必要性を持つのは大手・成長企業に偏り、副業の受入制度の整備も、対価を払えるこの層に需要を寄せる。</p>
+  <p class="gaiyo"><b>概要</b>：需要の的を、対価を払え、難度の高いテーマを持つ<b>大手・成長企業</b>に絞る。誰に売るかの選択が、他のKFSの効果を左右する土台になる。<br><b>理由</b>：AIで定型業務が社内・AIに吸収され、外部に出るのは「AIをどう業務に組み込み成果を出すか」という高度なテーマが中心になる。こうした変革投資の体力と必要性を持つのは大手・成長企業に偏り、副業の受入制度の整備も、対価を払えるこの層に需要を寄せる。</p>
   <div class="grid">
     <div><h5>構成要素</h5><ul>
       <li><b>高難度ニーズの集中</b>：AIによる業務変革・再設計など難度の高いテーマは、大手・成長企業に集中する。</li>
@@ -844,27 +846,27 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
       <li><b>AI可読性</b>：スキル・実績・契約履歴を、AIが正しく読み取れる構造化データとして保持していること。</li>
       <li><b>本人同意・本人還元</b>：本人の同意のもとで扱い、その価値を本人にも還元する仕組み。これが信頼の前提となる。</li>
     </ul></div>
-    <div><h5>打ち手</h5><div class="tebox"><div class="te"><b>データ基盤を最優先投資に置く</b><span class="pr">優先◎</span><br>実績データを「確認済み・本人同意・AI可読」の形で計画的に蓄積する。法人には成果保証の根拠、個人には価値の証明として同時に効くため、投資の優先順位が最も高い。<span class="gr">根拠：価値がデータへ移る事例・広告会社の統合でデータ規模が業界順位を規定（<a href="jigyo-henkaku/index.html" target="_blank" rel="noopener">AIと事業変革</a>）／個情法のAI開発データ特例（<a href="houmu-compliance/index.html" target="_blank" rel="noopener">法務</a>）</span></div></div></div>
+    <div><h5>打ち手</h5><div class="tebox"><div class="te"><b>データ基盤を最優先投資に置く</b><span class="pr">優先◎</span><br>実績データを「確認済み・本人同意・AI可読」の形で計画的に蓄積する。法人には成果保証の根拠、個人には価値の証明として同時に作用するため、投資の優先順位が最も高い。<span class="gr">根拠：価値がデータへ移る事例・広告会社の統合でデータ規模が業界順位を規定（<a href="jigyo-henkaku/index.html" target="_blank" rel="noopener">AIと事業変革</a>）／個情法のAI開発データ特例（<a href="houmu-compliance/index.html" target="_blank" rel="noopener">法務</a>）</span></div></div></div>
   </div>
 </div>
 
 <div class="kfs">
-  <div class="top"><div class="num">3</div><h3>コンプライアンスを肩代わりする力</h3><div class="tags"><span class="tag law">コンプラ</span></div></div>
-  <p class="gaiyo"><b>概要</b>：ハイクラス法人の最大の関心である「雇用認定リスクの回避」を、契約・運用の設計で事業者が引き受けられるかが問われる。<br><b>理由</b>：常駐・継続的な業務委託で「偽装請負・実質雇用」と判断されるリスクが軽ければ需要は伸び、重ければ萎縮する。法律で守られる安心の比重が下がるハイクラスでは、買いたたき保護より、このリスクの回避と取引適正化の手続きの肩代わりが、法人にとっての選定軸になる。</p>
+  <div class="top"><div class="num">3</div><h3>コンプライアンスを代行する力</h3><div class="tags"><span class="tag law">コンプラ</span></div></div>
+  <p class="gaiyo"><b>概要</b>：ハイクラス法人の最大の関心である「雇用認定リスクの回避」を、契約・運用の設計で事業者が引き受けられるかが問われる。<br><b>理由</b>：常駐・継続的な業務委託で「偽装請負・実質雇用」と判断されるリスクが軽ければ需要は伸び、重ければ萎縮する。法律で守られる安心の比重が下がるハイクラスでは、買いたたき保護より、このリスクの回避と取引適正化の手続きの代行が、法人にとっての選定軸になる。</p>
   <div class="grid">
     <div><h5>構成要素</h5><ul>
       <li><b>雇用認定の回避設計</b>：指揮命令の実態を持たせない案件設計と運用を、案件の入口段階から管理すること。</li>
-      <li><b>取引適正化の肩代わり</b>：受領後60日以内の支払い・書面明示・協議・相談窓口といった義務を、事業者側で標準的に担保すること。</li>
+      <li><b>取引適正化の代行</b>：受領後60日以内の支払い・書面明示・協議・相談窓口といった義務を、事業者側で標準的に担保すること。</li>
       <li><b>人選AIの透明性</b>：AIで人選する場合の説明責任・人間の関与・追跡可能性を自主的に整えること。</li>
     </ul></div>
     <div><h5>打ち手</h5><div class="tebox">
-      <div class="te"><b>雇用認定リスクの肩代わり</b><span class="pr">優先◎</span><br>偽装請負・実質雇用と判断されない契約・運用設計を標準装備にし、取引適正化の手続きも肩代わりして、発注側が安心してハイクラスを使えるようにする。<span class="gr">根拠：EUプラットフォーム労働指令／フリーランス保護新法の是正指導128件（<a href="houmu-compliance/index.html" target="_blank" rel="noopener">法務</a>）</span></div>
+      <div class="te"><b>雇用認定リスクの引き受け</b><span class="pr">優先◎</span><br>偽装請負・実質雇用と判断されない契約・運用設計を標準装備にし、取引適正化の手続きも代行して、発注側が安心してハイクラス人材を活用できるようにする。<span class="gr">根拠：EUプラットフォーム労働指令／フリーランス保護新法の是正指導128件（<a href="houmu-compliance/index.html" target="_blank" rel="noopener">法務</a>）</span></div>
       <div class="te"><b>AIの透明性を自主整備</b><span class="pr">優先○</span><br>人選にAIを使う場合、説明責任・人間の関与・追跡可能性を整える。日本は規制が緩いが、EU AI法の域外適用と将来の規制強化に備える。<span class="gr">根拠：日本AI推進法（自主性）／EU AI法（高リスク・全世界売上7%・域外適用）（<a href="houmu-compliance/index.html" target="_blank" rel="noopener">法務</a>）</span></div>
     </div></div>
   </div>
 </div>
 
-<div class="layer-h"><span class="pill win">勝ち上がる条件（差別化）</span> ④ 成果実現・保証 ／ ⑤ AI運用・商品化 ／ ⑥ 供給力</div>
+<div class="layer-h"><span class="pill win">差を生む条件（差別化）</span> ④ 成果実現・保証 ／ ⑤ AI運用・商品化 ／ ⑥ 供給力</div>
 
 <div class="kfs">
   <div class="top"><div class="num">4</div><h3>成果を実現・保証する力（砂時計の両端）</h3><div class="tags"><span class="tag ai">生成AI</span><span class="tag comp">競合</span></div></div>
@@ -883,7 +885,7 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
 
 <div class="kfs">
   <div class="top"><div class="num">5</div><h3>AIの運用・商品化力</h3><div class="tags"><span class="tag ai">生成AI</span><span class="tag comp">競合</span></div></div>
-  <p class="gaiyo"><b>概要</b>：マッチングAIは「持っていないと負ける」標準装備であり、その先で担当者の知見をAIとして外販できるかが差を生む。<br><b>理由</b>：マッチング機能のAI化は差別化要因ではなく前提条件になりつつあり（サーキュレーション・ビザスク・INTLOOP・Upworkが実装済み）、新たな収益源の最前線は「知見・データのAI外販」にある。担当者が持つ人選ノウハウは、KFS②のデータ基盤を直接収益化する資産でもある。</p>
+  <p class="gaiyo"><b>概要</b>：マッチングAIは持たなければ戦えない標準装備であり、その先で担当者の知見をAIとして外販できるかが差を生む。<br><b>理由</b>：マッチング機能のAI化は差別化要因ではなく前提条件になりつつあり（サーキュレーション・ビザスク・INTLOOP・Upworkが実装済み）、新たな収益源の最前線は「知見・データのAI外販」にある。担当者が持つ人選ノウハウは、KFS②のデータ基盤を直接収益化する資産でもある。</p>
   <div class="grid">
     <div><h5>構成要素</h5><ul>
       <li><b>守り（マッチングAIの実装）</b>：候補探索・条件照合・一次提案をAIで標準的にこなせること。</li>
@@ -896,7 +898,7 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
 
 <div class="kfs">
   <div class="top"><div class="num">6</div><h3>需要に見合う供給を確保する力（供給力）</h3><div class="tags"><span class="tag labor">労働市場</span><span class="tag ai">生成AI</span></div></div>
-  <p class="gaiyo"><b>概要</b>：伸びる需要の受け皿である専業フリーランスに「選ばれる事業者」になれるかを軸に、需要に見合う供給を確保する力が新たな存在意義となる。育成はその一手段であり、主に副業者・若手に効く。<br><b>理由</b>：供給は兼業型の副業を中心に増えるが、高度化する需要の受け皿は専業フリーランスに偏る（需給の不一致）。実効供給は「頭数×稼働率×一人あたり生産性×受けられる案件の幅」で決まるため、獲得・定着・増幅・育成の4つのレバーを組み合わせる必要がある。優れた専業ほど事業者を選ぶ立場にあり、選ばれる理由（途切れない案件・実績の資産化）を作れるかが先に問われる。</p>
+  <p class="gaiyo"><b>概要</b>：伸びる需要の受け皿である専業フリーランスに「選ばれる事業者」になれるかを軸に、需要に見合う供給を確保する力が新たな存在意義となる。育成はその一手段であり、主に副業者・若手に有効。<br><b>理由</b>：供給は兼業型の副業を中心に増えるが、高度化する需要の受け皿は専業フリーランスに偏る（需給の不一致）。実効供給は「人数×稼働率×一人あたり生産性×受けられる案件の幅」で決まるため、獲得・定着・増幅・育成の4つのレバーを組み合わせる必要がある。優れた専業ほど事業者を選ぶ立場にあり、選ばれる理由（途切れない案件・実績の資産化）を作れるかが先に問われる。</p>
   <div class="grid">
     <div><h5>構成要素（供給力の4レバー）</h5><ul>
       <li><b>獲得（専業・独立予備軍）</b>：ファーム・SIer・事業会社の現役/OBを取り込むこと。独立を考える層に「最初の顧客」を用意し、独立の入口になること。</li>

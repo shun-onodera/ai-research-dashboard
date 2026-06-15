@@ -832,6 +832,8 @@
   var JI_REL = { high: "一次・主要", medium: "二次・専門", low: "要確認" };
   function jiShort(s) { return String(s || "").replace(/（.*?）/g, "").replace(/\(.*?\)/g, ""); }
 
+  // 要約マトリクスで各セルに優先表示する代表職種（全体メッセージ＝AXニーズ①〜④と▲を可視化）。詳細マトリクスは全件表示のため無関係
+  var JI_REP = { "AIエンジニア・機械学習エンジニア": 1, "情報セキュリティ": 1, "プロダクトマネージャー（PdM）": 1, "新規事業開発": 1, "データサイエンティスト": 1, "事業企画": 1, "マーケティング(デジタル)": 1, "人事企画（評価・配置・育成・組織設計）": 1, "ソフトウェアエンジニア（汎用）": 1, "法人営業(フィールドセールス)": 1, "カスタマーサクセス": 1, "人事（採用・労務）": 1 };
   // 2軸マトリクス（縦＝プロ人材需要、横＝業務変化）。opts.repMax で1セルの代表職種数を制限
   function jiMatrix(data, opts) {
     var jobs = data.jobs || [];
@@ -849,7 +851,8 @@
         h += '<td class="ji-cell ji-' + JI_DM[d] + '">';
         if (arr.length) {
           h += '<div class="ji-celln">' + arr.length + "件</div>";
-          var show = opts.repMax ? arr.slice(0, opts.repMax) : arr;
+          var show;
+          if (opts.repMax) { var reps = arr.filter(function (j) { return JI_REP[j.job]; }); var rest = arr.filter(function (j) { return !JI_REP[j.job]; }); show = reps.concat(rest).slice(0, opts.repMax); } else { show = arr; }
           show.forEach(function (j) {
             var up = (opts.arrows && JI_RANK[j.proDemand] > JI_RANK[j.demand]) ? '<span class="ji-arrow">▲</span>' : "";
             h += '<span class="ji-chip ji-' + JI_TC[t] + '">' + esc(jiShort(j.job)) + up + "</span>";
