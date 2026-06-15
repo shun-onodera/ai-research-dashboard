@@ -340,6 +340,37 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
 .esum-concl{font-size:13px;line-height:1.8;color:var(--color-ink-2);margin:10px 0 0;background:#fff;border:1px solid var(--color-line);border-left:4px solid var(--color-blue);border-radius:8px;padding:11px 14px}
 .esum-concl b{color:var(--color-blue)}
 .esum-concl a{color:var(--color-blue);font-weight:700;text-decoration:none}
+
+/* 5F 競争構造（5フォース） */
+.f5-ai{border:1px solid var(--color-blue);border-left-width:4px;border-radius:8px;padding:10px 14px;font-size:12.5px;color:var(--color-ink-2);line-height:1.7;margin:10px 0 12px}
+.f5-ai .tag{display:inline-block;font-size:11px;font-weight:800;color:var(--color-blue);border:1px solid var(--color-blue);border-radius:5px;padding:1px 7px;margin-right:8px}
+.f5-ai b{color:var(--color-blue)}
+.f5-leg{font-size:12px;color:var(--color-muted);margin:0 0 12px}
+.f5-leg b{color:var(--color-ink)}
+.f5seg{display:inline-flex;gap:2px;vertical-align:middle}
+.f5seg i{width:7px;height:11px;border-radius:1px;border:1px solid var(--color-blue);opacity:.4;display:inline-block}
+.f5seg i.on{background:var(--color-blue);opacity:1}
+.f5seg i.half{background:linear-gradient(90deg,var(--color-blue) 50%,transparent 50%);opacity:1}
+.f5grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;align-items:stretch}
+.f5grid .top{grid-area:1/2}.f5grid .left{grid-area:2/1}.f5grid .center{grid-area:2/2}.f5grid .right{grid-area:2/3}.f5grid .bottom{grid-area:3/2}
+.f5{display:flex;flex-direction:column;background:#fff;border:1px solid var(--color-line);border-radius:10px;padding:12px 14px}
+.f5.center{border:2px solid var(--color-blue)}
+.f5-h{display:flex;align-items:baseline;justify-content:space-between;gap:6px;margin-bottom:6px;flex-wrap:wrap}
+.f5-n{font-size:13.5px;font-weight:800;color:var(--color-ink)}.f5.center .f5-n{color:var(--color-blue)}
+.f5-s{font-size:11.5px;font-weight:700;color:var(--color-ink-2);white-space:nowrap}
+.f5-d{font-size:12px;color:var(--color-ink);line-height:1.7;margin:0 0 7px}
+.f5 ul{margin:0 0 7px;padding-left:1.1em}
+.f5 li{font-size:11.5px;color:var(--color-ink-2);line-height:1.65;margin:0 0 4px}
+.f5 li b{color:var(--color-ink)}
+.f5-src{font-size:10.5px;color:var(--color-muted);line-height:1.6;margin:0 0 8px}
+.f5-src a{color:var(--color-blue)}
+.f5-i{font-size:12px;color:var(--color-ink);line-height:1.7;margin:auto 0 0;border-left:3px solid var(--color-blue);padding:4px 0 4px 10px}
+.f5-i .l{display:inline-block;font-size:10px;font-weight:800;color:var(--color-blue);margin-right:7px}
+.f5-i b{color:var(--color-blue)}
+.f5-sum{margin-top:14px;border:1px solid var(--color-blue);border-radius:8px;padding:12px 15px;font-size:13px;line-height:1.75;color:var(--color-ink)}
+.f5-sum .l{display:inline-block;font-size:11px;font-weight:800;color:#fff;background:var(--color-blue);border-radius:5px;padding:2px 9px;margin-bottom:6px}
+.f5-sum p{margin:0 0 7px}.f5-sum p:last-child{margin-bottom:0}.f5-sum b{color:var(--color-blue)}
+@media(max-width:760px){.f5grid{grid-template-columns:1fr}.f5grid .top,.f5grid .left,.f5grid .center,.f5grid .right,.f5grid .bottom{grid-area:auto}}
 </style>
 </head>
 <body>
@@ -409,6 +440,7 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
   <a href="#s2">S2 影響（需要・供給・選定基準）</a>
   <a href="#shokushu">職種別のAI影響</a>
   <a href="#s3">S3 競合の動向</a>
+  <a href="#forces">競争構造（5フォース）</a>
   <a href="#s4">S4 KFSと打ち手</a>
   <a href="#s5">S5 まとめ</a>
 </div>
@@ -427,7 +459,7 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
       <li><b>② 課金の「時間→成果」シフト</b>：働いた時間で対価を取る前提（人月）が崩れ、定額・成果連動へ移る。</li>
       <li><b>③ 取引の入口のAI化</b>：専門人材の探索・一次選別・条件交渉という取引の入口をAIが担う。</li>
       <li><b>④ 価値の知見・データへの移動</b>：価値の源泉が、画面・手数料から知見・データへ移る。</li>
-      <li><b>⑤ （総括）マッチングの砂時計化</b>：中間工程（候補探索・絞り込み・要件翻訳）が縮み、価値が前段（業務設計）と後段（成果保証・データ）へ移る。本タブの中核メッセージであり、後段のKFSの起点。</li>
+      <li><b>⑤ （総括）マッチングの砂時計化</b>：中間工程（候補探索・絞り込み・要件翻訳）が縮み、価値が前段（関係構築・顧客理解）と後段（成果保証・データ）へ移る。本タブの中核メッセージであり、後段のKFSの起点。</li>
     </ul>
   </div>
   <div class="vf-box vf-fl"><span class="vf-lab">副業・フリーランス市場への影響</span>「AIに詳しい人」を当てるだけでは差別化にならず、外部に求められるのは「AIを前提に業務を再設計し、成果まで導ける人材」になる。マッチング事業も、単発の人選から、業務変革のテーマ単位での組成・成果保証・データ基盤へと価値の重心を移す必要がある。一方で定型案件はAI・社内に吸収され、その領域の単価・件数は縮みうる。</div>
@@ -658,7 +690,7 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
     <thead><tr><th style="width:16%">転換の対象</th><th style="width:36%">従来</th><th>今後</th></tr></thead>
     <tbody>
       <tr><td class="co">役割</td><td>案件を探して提案する</td><td class="co">高難度案件を見極め、成果を保証し、法人との関係を築く</td></tr>
-      <tr><td class="co">収益構造</td><td>成約手数料への一本足</td><td class="co">前段（業務再設計支援）と後段（成果保証・定着支援）へ分散</td></tr>
+      <tr><td class="co">収益構造</td><td>成約手数料への一本足</td><td class="co">前段（関係構築・業務再設計支援）と後段（成果保証・定着支援）へ分散</td></tr>
       <tr><td class="co">中核資産</td><td>登録人材の量と、人手の仲介力</td><td class="co">確認済みの実績データ基盤</td></tr>
       <tr><td class="co">保有機能</td><td>仲介機能</td><td class="co">仲介＋供給確保機能（専業に選ばれる案件供給・実績の資産化と、副業者・若手の育成）</td></tr>
       <tr><td class="co">評価指標</td><td>成約件数・単価・継続率</td><td class="co">上記に「成果達成率」を加え、主軸を成果へ</td></tr>
@@ -670,9 +702,9 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
 <!-- 2-6 影響の総括：砂時計化 -->
 <div class="selsec">
   <h3 class="sub-h"><span class="nchip">2-6</span>影響の総括 ― マッチングの「砂時計化」</h3>
-  <p class="lead">S2の変化を1枚に束ねると、マッチング事業の価値は「中間」から「両端」へ移る。中間工程（候補探索・絞り込み・要件翻訳＝情報のすき間を人手で埋める作業）はAIが自動化する。一方、前段（AIを活用した業務の再設計）と後段（事前に判別しにくい成果の不確実性の引き受け）はAIで代替しにくく、人と事業者の価値が残る。</p>
+  <p class="lead">S2の変化を1枚に束ねると、マッチング事業の価値は「中間」から「両端」へ移る。中間工程（候補探索・絞り込み・要件翻訳＝情報のすき間を人手で埋める作業）はAIが自動化する。一方、前段（顧客との関係構築・課題理解と、AIを活用した業務の再設計）と後段（事前に判別しにくい成果の不確実性の引き受け）はAIで代替しにくく、人と事業者の価値が残る。</p>
   <div class="hg">
-    <div class="row"><div class="side up">比重が高まる</div><div class="bar b1">前段：業務の定義・要件化（業務の再設計）</div></div>
+    <div class="row"><div class="side up">比重が高まる</div><div class="bar b1">前段：関係構築・顧客理解（業務の定義・要件化）</div></div>
     <div class="row"><div class="side dn">AIが代替し縮小</div><div class="bar b2">中間：候補探索・絞り込み</div></div>
     <div class="row"><div class="side up">比重が高まる</div><div class="bar b3">後段：成果の保証・定着支援（伴走・成果の確認）</div></div>
   </div>
@@ -853,6 +885,55 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
 </div>
 
 <!-- S4 -->
+<!-- 5F：競争構造（5フォース） -->
+<h2 class="section-title" id="forces"><span class="sn">5F</span>競争構造（5フォース）― ここまでを業界の力学として束ねる</h2>
+<p class="section-sub">S1（マクロ）・S2（需給）・S3（競合）を、業界の収益構造を決める5つの力に束ねる。各力に強さ・規定要因・示唆・出典を付す。確度「中」の数値（民間推計・比較メディア）も出典付きで併記する。</p>
+<div class="f5-ai"><span class="tag">横断ドライバー</span><b>AI（生成AI・エージェント）が根本の力。</b>1つの枠に収まらず、「代替品（マッチング・業務の代替）」と「買い手の自前調達（内製化）」を同時に押し上げる。脅威であると同時に、自社のマッチングに実装すれば差別化の武器にもなる“両刃”。</div>
+<p class="f5-leg">外側の4つの力が中央の<b>競争</b>に圧力をかける。強さ：<span class="f5seg"><i class="on"></i><i class="on"></i><i class="on"></i></span> 高 ／ <span class="f5seg"><i class="on"></i><i class="on"></i><i class="half"></i></span> 中→高 ／ <span class="f5seg"><i class="on"></i><i class="on"></i><i></i></span> 中 ／ <b>↑</b>＝上昇</p>
+<div class="f5grid">
+  <div class="f5 top">
+    <div class="f5-h"><span class="f5-n">新規参入の脅威</span><span class="f5-s"><span class="f5seg"><i class="on"></i><i class="on"></i><i></i></span> 中</span></div>
+    <p class="f5-d">市場成長が参入動機を高め、AI特化の新興・手数料を抑えた特化型・異業種（人材会社／SaaS／コンサル）の隣接参入が増える。一方、高単価帯では短期に追いつけない壁が残る。</p>
+    <ul><li><b>参入動機が高い</b>：市場が年10%超で伸び、AIを使えばマッチング機能を比較的少ない投資で立ち上げられるようになった。AI特化の新興、手数料を抑えた特化型、既存の人材会社・SaaS・コンサルなど異業種の隣接参入が増えている。</li><li><b>高単価帯の障壁は残る</b>：法人が重視するのは担当者個人の信頼・実績・人脈で、これは短期には積めない。加えて職業紹介・派遣との線引きなどの法規制と、フリーランス新法への対応コストが、参入の下限を引き上げている。</li></ul>
+    <p class="f5-src">出典：<a href="https://www.jftc.go.jp/freelancelaw_2025/" target="_blank" rel="noopener">公正取引委員会 フリーランス法 ↗</a>／参入動向は業界比較メディア（確度中）</p>
+    <p class="f5-i"><span class="l">示唆</span>高単価帯の堀は登録者数でなく<b>担当者個人の信頼・実績・人脈</b>。これを組織の資産（データ・育成）へ転換できるかが耐性を決める。</p>
+  </div>
+  <div class="f5 left">
+    <div class="f5-h"><span class="f5-n">売り手（プロ人材）の交渉力</span><span class="f5-s"><span class="f5seg"><i class="on"></i><i class="on"></i><i class="on"></i></span> 高</span></div>
+    <p class="f5-d">ハイクラスの高度人材は構造的に希少で売り手優位。仕事獲得は人脈・直接受注が主で、マッチング事業者経由は一部。複数事業者をかけ持ちし、特定先に縛られない。</p>
+    <ul><li><b>高度人材が希少</b>：IT分野では2030年に最大79万人が不足すると見込まれ（経産省2019年推計）、専門職の有効求人倍率は1.43倍と高止まりしている。供給が需要に追いつかず、売り手優位が続く。</li><li><b>事業者への依存が低い</b>：個人が最も稼げる仕事獲得経路は人脈（35.6%）と取引先からの直接受注（29.9%）で、マッチング事業者経由は12.4%にとどまる（フリーランス協会・全体平均。高単価帯ではこれより高い可能性）。</li><li><b>複数事業者をかけ持ち</b>：個人が複数のマッチング事業者に同時登録するのが普通で、条件を比べて選べるため、特定の事業者に縛られない。</li></ul>
+    <p class="f5-src">出典：<a href="https://www.nikkei.com/article/DGXZQOUC2425Y0U5A221C2000000/" target="_blank" rel="noopener">経済産業省 IT人材推計（日本経済新聞）↗</a>／<a href="https://blog.freelance-jp.org/20250331-23631/" target="_blank" rel="noopener">フリーランス協会 白書2025 ↗</a></p>
+    <p class="f5-i"><span class="l">示唆</span>個人は「選ぶ側」。案件数だけでは繋ぎ留められず、<b>実績の資産化・本人還元・成長機会</b>が鍵。ただし単価は相場に収れんし値上げ力は限定的＝<b>価格は相場・選択権は個人</b>の二層で捉える。</p>
+  </div>
+  <div class="f5 center">
+    <div class="f5-h"><span class="f5-n">業界内の競争</span><span class="f5-s"><span class="f5seg"><i class="on"></i><i class="on"></i><i class="half"></i></span> 中→高 <b>↑</b></span></div>
+    <p class="f5-d">400社超の多数分散で突出した最大手はいない。基本機能は標準化し差別化が効きにくく、撤退障壁も低いため新規が湧き続ける。</p>
+    <ul><li><b>多数分散・突出1社なし</b>：国内の事業者は400社を超え、上位（INTLOOP・クラウドワークス・TWOSTONE&amp;Sons・みらいワークス等）が並ぶものの、市場の過半を握る最大手はいない。中小が多数混在する乱戦型のため、価格や人材の取り合いが起きやすい。</li><li><b>同質化＋低い撤退障壁</b>：案件発掘・人選・契約代行・精算という基本機能は標準化しており、機能そのものでの差別化が難しい。設備をほとんど持たない事業のため撤退も容易で、退出と新規参入が常に入れ替わり、競争が薄まりにくい。</li><li><b>価格の不透明さ</b>：手数料率の多くが公開されていないため、価格競争の実態が外から見えにくく、相場が崩れても気づきにくい。</li></ul>
+    <p class="f5-src">出典：<a href="https://prtimes.jp/main/html/rd/p/000000024.000116595.html" target="_blank" rel="noopener">フリーランスエージェント市場白書2025（INSTANTROOM・確度中）↗</a>／<a href="https://coeteco.jp/articles/14312" target="_blank" rel="noopener">手数料相場（比較メディア・確度中）↗</a>／各社IR</p>
+    <p class="f5-i"><span class="l">示唆</span>今は市場成長（年10%超）が競争を緩衝。鈍化すれば手数料と人材の奪い合いに転じる。<b>成長の余白があるうちに価格以外の差別化を固められるか</b>が分岐点。</p>
+  </div>
+  <div class="f5 right">
+    <div class="f5-h"><span class="f5-n">買い手（法人）の交渉力</span><span class="f5-s"><span class="f5seg"><i class="on"></i><i class="on"></i><i></i></span> 中</span></div>
+    <p class="f5-d">外部プロ人材を使う法人は26.8%とまだ少なく分散。新法後は法人がリスク回避で事業者経由・企業外注を選好し、依存が増す方向にある。</p>
+    <ul><li><b>交渉力を抑える力</b>：要件整理・人選・稼働後の支援を事業者に委ねる構造のため、別の事業者へ乗り換えるには手間がかかる。さらにフリーランス新法の施行後は、リスク回避から法人の約84%が事業者経由・企業外注を選好し、依存が強まっている。</li><li><b>交渉力を押し上げる力</b>：内製やアルムナイ（退職者）採用といった自前調達の選択肢が広がっている。AIが社内人材だけで業務を回せる閾値を下げ、内製化を後押しする。</li><li><b>買い手の中の格差</b>：複数の高度人材を継続発注する大口の法人は手数料を個別に下げる力を持つ一方、単発の法人の交渉力は弱い。</li></ul>
+    <p class="f5-src">出典：<a href="https://prtimes.jp/main/html/rd/p/000000464.000016557.html" target="_blank" rel="noopener">みらいワークス 外部プロ人材活用実態調査2026 ↗</a>／<a href="https://www.persol-career.co.jp/newsroom/news/service/2025/20250522_1845/" target="_blank" rel="noopener">パーソルキャリア 副業・フリーランス人材白書2025 ↗</a></p>
+    <p class="f5-i"><span class="l">示唆</span>売り手は縛られないのに買い手は乗り換えに手間――<b>この非対称が事業者の数少ない交渉余地</b>。法人との継続関係を深め、乗り換えコストを成果・定着で裏打ちできるかが要。</p>
+  </div>
+  <div class="f5 bottom">
+    <div class="f5-h"><span class="f5-n">代替品の脅威</span><span class="f5-s"><span class="f5seg"><i class="on"></i><i class="on"></i><i></i></span> 中 <b>↑</b></span></div>
+    <p class="f5-d">「マッチングで外部人材を調達する」需要が複数手段に置き換わりつつある。中心はAI。加えてコンサル／SIerへの丸ごと受託も、同じ課題を別手段で解く代替。</p>
+    <ul><li><b>(i) AIがマッチングを代替</b>：AIが要件の聞き取りから候補の選別までを担い、事業者を介さず法人と個人が直接つながる。国内でもAIに特化したマッチング（クラウドワークス「AIクラウドワークス」2026年7月予定）が登場し始めた段階。</li><li><b>(ii) AIが業務を代替</b>：半ば定型の専門作業をAIがこなし、そもそも外部人材を呼ぶ必要が減る。ただしハイクラスの高難度・成果型の業務は人に残りやすく、当面この代替は限定的。</li><li><b>(iii) 別手段への流出</b>：コンサル／SIerへ課題を丸ごと委託する、あるいは法人が自前で抱える動き（アルムナイ採用制度のある企業は約7割）も、同じ用事を別の手段で満たす代替になる。</li></ul>
+    <p class="f5-src">出典：<a href="https://prtimes.jp/main/html/rd/p/000000311.000050142.html" target="_blank" rel="noopener">クラウドワークス（AIクラウドワークス）↗</a>／<a href="https://www.yano.co.jp/press-release/show/press_id/3732" target="_blank" rel="noopener">矢野経済 アルムナイ／リファラル市場 ↗</a>／<a href="https://www.nikkei.com/article/DGXZQOUC247EF0U5A021C2000000/" target="_blank" rel="noopener">アルムナイ約7割（日本経済新聞）↗</a></p>
+    <p class="f5-i"><span class="l">示唆</span>マッチングの「候補探し・選別」が最も代替されやすい。残る価値は<b>前段（関係構築・顧客理解）と後段（成果保証・定着）＝砂時計の両端</b>。AIは脅威だが自社実装すれば差別化にも。</p>
+  </div>
+</div>
+<div class="f5-sum">
+  <span class="l">総合示唆</span>
+  <p>この業界は、<b>競争が激しく（しかも強まる方向）</b>、<b>売り手であるプロ人材の交渉力が高く</b>、<b>AIなどによる代替も増えている</b>。そのため、ただ人を引き合わせるだけのマッチングでは、利益を確保しにくくなっていく。</p>
+  <p>いま利益を支えているのは、<b>市場が伸びていること</b>と、<b>フリーランス新法によって法人が事業者経由を選びやすくなっていること</b>の2つだが、これらは一時的な追い風にすぎない。</p>
+  <p>この追い風があるうちに、価格や登録者数の多さで競うのをやめ、<b>「得意分野を絞る・法人と個人の関係を深める・実績データを蓄える・成果まで責任を持つ」</b>という強みへ軸足を移せるかが、競争が本格的に厳しくなる前に優位を築けるかの分かれ目になる。これは後述のKFS（実績データ基盤・成果保証・供給力）と同じ方向である。</p>
+</div>
+
 <h2 class="section-title" id="s4"><span class="sn">S4</span>マッチング事業者のKFS（重要成功要因）と打ち手</h2>
 <p class="section-sub">分析の帰結。勝敗を分ける6要因と、各要因を満たす打ち手（マッチング事業者一般への含意）。</p>
 
@@ -877,7 +958,7 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
       <tr><td class="co">④ 成果の実現・保証</td><td><ul>
         <li><b>S1生成AI</b>：支払いが「働いた時間」から「成果」へ移る。</li>
         <li><b>S2法人需要</b>：一次選別をAIに委ねるほど「成果保証への要求」が強まる。</li>
-        <li><b>S3競合</b>：全社が前段（業務設計）・後段（成果保証）へ拡張している。</li>
+        <li><b>S3競合</b>：全社が前段（関係構築・業務設計）・後段（成果保証）へ拡張している。</li>
       </ul></td></tr>
       <tr><td class="co">⑤ AIの運用・商品化</td><td><ul>
         <li><b>S3競合</b>：AI活用は3層に分かれ、外販・商品化が新収益源の最前線になっている。</li>
@@ -944,11 +1025,11 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
   <p class="gaiyo"><b>概要</b>：中間のマッチングではなく、前段（業務の設計）と後段（成果の保証・定着）で価値を生み出せるかが問われる。<br><b>理由</b>：AIがマッチングの中間工程（候補探索・絞り込み・要件翻訳）を代替するため、価値は砂時計の両端に残る。前段はAIを活用した高度な業務再設計、後段は事前に判別しにくい成果の不確実性の引き受けで、いずれもAIで代替しにくい。競合各社もこの両端へ拡張しており、選定基準も「成果の確かさ」へ収束する。</p>
   <div class="grid">
     <div><h5>構成要素</h5><ul>
-      <li><b>前段（業務の再設計・要件定義）</b>：あいまいな要望を、設計フェーズの案件として切り出し、設計ができる上流人材を当てて実行体制まで束ねる力（自前で設計図を引く力ではなく、元請けとしての組成力）。</li>
+      <li><b>前段（関係構築・顧客理解と業務の再設計）</b>：顧客との信頼・課題理解を土台に、あいまいな要望を設計フェーズの案件として切り出し、設計ができる上流人材を当てて実行体制まで束ねる力（自前で設計図を引く力ではなく、元請けとしての組成力）。</li>
       <li><b>後段（成果保証・伴走・定着）</b>：事前には判別しにくい成果の不確実性を引き受け、提供後も伴走して成果と定着を見届ける力。</li>
     </ul></div>
     <div><h5>打ち手</h5><div class="tebox">
-      <div class="te"><b>砂時計化への対応</b><span class="pr">優先◎</span><br>前段（業務設計）と後段（成果保証・定着）のどちらで戦うかを定め、投資を集中する。中間工程に依存し続ける事業者は淘汰されるため、早期の選択が要る。<span class="gr">根拠：時間→成果課金（<a href="jigyo-henkaku/index.html" target="_blank" rel="noopener">AIと事業変革</a>）／競合全社が脱・純粋マッチング（<a href="kyogo-chosa/index.html" target="_blank" rel="noopener">競合調査</a>）</span></div>
+      <div class="te"><b>砂時計化への対応</b><span class="pr">優先◎</span><br>前段（関係構築・業務設計）と後段（成果保証・定着）のどちらで戦うかを定め、投資を集中する。中間工程に依存し続ける事業者は淘汰されるため、早期の選択が要る。<span class="gr">根拠：時間→成果課金（<a href="jigyo-henkaku/index.html" target="_blank" rel="noopener">AIと事業変革</a>）／競合全社が脱・純粋マッチング（<a href="kyogo-chosa/index.html" target="_blank" rel="noopener">競合調査</a>）</span></div>
       <div class="te"><b>KPIに「成果達成率」を加える</b><span class="pr">優先○</span><br>件数・単価・継続率に加え、約束した成果がどれだけ達成されたかを測る「成果達成率」を主軸に据える。まず検収基準（何をもって成果達成とするか）を定義し、営業評価・報酬まで連動させる。<span class="gr">根拠：市場が成果評価へ移行（<a href="jigyo-henkaku/index.html" target="_blank" rel="noopener">AIと事業変革</a>）</span></div>
     </div></div>
   </div>
@@ -985,7 +1066,7 @@ main.zv{max-width:var(--maxw);margin:0 auto;padding:6px 20px 56px}
   <h4>検討すべき論点 ― 事業者が自らに問うべき6つの問い</h4>
   <ol>
     <li>保有する実績データは、「AIが読める形」でどの程度整備されているか（データ基盤の現在地）。</li>
-    <li>前段（業務の再設計）と後段（成果保証・定着）の、どちらを優先的に強化するか（砂時計のどちら側で戦うか）。</li>
+    <li>前段（関係構築・業務の再設計）と後段（成果保証・定着）の、どちらを優先的に強化するか（砂時計のどちら側で戦うか）。</li>
     <li>専業フリーランスに選ばれる理由（途切れない案件供給・実績の資産化・AI装備）をどう作るか。増加する副業供給を需要水準まで引き上げる育成を、どこまで内製するか。</li>
     <li>成約件数・単価・継続率に「成果達成率」をどう加え、評価の主軸を成果へ移すか（定義・検収基準の設計を含む）。</li>
     <li>AI能力を内製・提携・買収のどれで獲得するか。知見のAI商品化（外販）をどの領域から試すか。</li>
