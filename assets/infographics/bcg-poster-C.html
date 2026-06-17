@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>BCG「AIは作り変える」要約ポスター 論理フロー型</title>
+<style>
+  :root{
+    --navy:#0b1f6b; --blue:#1a4fd6; --blueD:#0017c1; --green:#0a7a52; --orange:#cf6608;
+    --teal:#0a6b6b; --red:#bb3b2c; --lblue:#7aa0e0;
+    --ink:#14171c; --ink2:#3c424b; --muted:#727a86; --line:#dfe3ea; --line2:#f1f3f7;
+    --bg:#edf0f5; --card:#ffffff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{font-family:"Yu Gothic UI","Yu Gothic","Meiryo","Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  .poster{width:1720px;background:var(--bg);padding:24px 26px 18px}
+
+  /* header */
+  .hd{display:flex;gap:18px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 26px;margin-bottom:16px}
+  .bcg{font-weight:900;font-size:40px;letter-spacing:-1px;color:var(--green);line-height:1;border-right:2px solid var(--line);padding-right:22px}
+  .bcg small{display:block;font-size:10px;font-weight:700;color:var(--muted);letter-spacing:.6px;margin-top:5px}
+  .hd-titles{flex:1}
+  .hd-titles h1{font-size:30px;font-weight:900;color:var(--navy);line-height:1.16;letter-spacing:-.5px}
+  .hd-titles .sub{font-size:17px;font-weight:800;color:var(--blue);margin-top:6px}
+  .hd-titles .src{font-size:11.5px;color:var(--muted);margin-top:8px}
+  .hd-flow{display:flex;align-items:center;gap:9px;background:var(--line2);border:1px solid var(--line);border-radius:11px;padding:10px 14px}
+  .hd-flow .st{font-size:12px;font-weight:800;color:var(--navy);text-align:center;line-height:1.3}
+  .hd-flow .st span{display:block;font-size:9.5px;color:var(--muted);font-weight:700}
+  .hd-flow .ar{font-size:20px;color:var(--blue);font-weight:900}
+
+  /* 3 columns */
+  .cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:42px;position:relative}
+  .col{position:relative;display:flex;flex-direction:column;gap:12px}
+  .col:not(:first-child)::before{content:"→";position:absolute;left:-34px;top:30px;font-size:34px;font-weight:900;color:#b7c0d0}
+
+  .stagehd{border-radius:13px;padding:14px 18px;color:#fff}
+  .s1{background:linear-gradient(135deg,#0b1f6b,#1a3aa0)} .s2{background:linear-gradient(135deg,#0a6b6b,#138a7a)} .s3{background:linear-gradient(135deg,#0a7a52,#15945f)}
+  .stagehd .tag{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:800;color:rgba(255,255,255,.85);margin-bottom:5px}
+  .stagehd .tag b{width:21px;height:21px;border-radius:6px;background:rgba(255,255,255,.22);display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:900}
+  .stagehd h2{font-size:19px;font-weight:900;line-height:1.25}
+  .stagehd .so{font-size:12px;margin-top:4px;color:rgba(255,255,255,.92);line-height:1.45}
+
+  .blk{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:13px 15px}
+  .blk h3{font-size:13px;font-weight:800;color:var(--navy);margin-bottom:8px;display:flex;align-items:center;gap:8px}
+  .blk h3::before{content:"";width:5px;height:15px;border-radius:3px;background:var(--blue)}
+  .blk.t h3::before{background:var(--teal)} .blk.g h3::before{background:var(--green)} .blk.o h3::before{background:var(--orange)}
+
+  ul.b{list-style:none;display:flex;flex-direction:column;gap:6px}
+  ul.b li{position:relative;padding-left:16px;font-size:12px;line-height:1.5;color:var(--ink2)}
+  ul.b li::before{content:"";position:absolute;left:0;top:6px;width:7px;height:7px;border-radius:2px;background:var(--blue)}
+  ul.b.tk li::before{background:var(--green);border-radius:50%}
+  ul.b.rk li::before{background:var(--orange);border-radius:50%}
+  ul.b li b{color:var(--navy)}
+
+  /* contrast bar */
+  .cbar{display:flex;gap:8px;margin:2px 0 4px}
+  .cbar .seg{border-radius:8px;color:#fff;padding:9px 12px;min-height:64px;display:flex;flex-direction:column;justify-content:center}
+  .cbar .reshape{flex:0 0 60%;background:linear-gradient(135deg,#1a4fd6,#0a6b9c)}
+  .cbar .lose{flex:1;background:var(--red)}
+  .cbar .seg .big{font-size:25px;font-weight:900;line-height:1}
+  .cbar .seg .cap{font-size:11px;font-weight:700;margin-top:3px}
+  .cbar-note{font-size:10.5px;color:var(--muted);margin-top:5px}
+
+  /* stacked bar */
+  .stack{display:flex;height:34px;border-radius:7px;overflow:hidden;margin:2px 0 7px;border:1px solid var(--line)}
+  .stack .s{display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:12px}
+  .leg{display:flex;flex-direction:column;gap:4px}
+  .leg .it{display:flex;align-items:flex-start;gap:7px;font-size:10.5px;line-height:1.38;color:var(--ink2)}
+  .leg .sw{width:12px;height:12px;border-radius:3px;flex:0 0 12px;margin-top:1px}
+  .leg .it b{color:var(--navy)} .leg .it .p{font-weight:900;margin-left:auto;padding-left:6px}
+
+  .axes{display:flex;gap:6px;margin-top:4px}
+  .axis{flex:1;background:var(--line2);border:1px solid var(--line);border-radius:7px;padding:7px 5px;text-align:center}
+  .axis .t{font-weight:800;font-size:10.5px;color:var(--navy)} .axis .d{font-size:9px;color:var(--muted);margin-top:2px;line-height:1.3}
+
+  /* stats / gauge */
+  .stat{display:flex;align-items:baseline;gap:8px;margin:2px 0}
+  .stat .v{font-size:24px;font-weight:900;color:var(--blueD);line-height:1}
+  .stat .v.o{color:var(--orange)} .stat .v.g{color:var(--green)}
+  .stat .l{font-size:11px;color:var(--ink2);line-height:1.4}
+  .mini{font-size:10px;color:var(--muted);margin-top:1px}
+  .gauge{height:13px;background:var(--line2);border-radius:7px;overflow:hidden;margin:6px 0 2px;position:relative}
+  .gauge .fill{height:100%;border-radius:7px}
+  .gauge .mk{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--muted)}
+
+  .note{border-radius:9px;padding:8px 11px;font-size:11px;line-height:1.5;margin-top:9px}
+  .note.r{background:#fbeeea;border:1px solid #eccabf;color:#8a3a28}
+  .note.r b{color:var(--red)}
+
+  ol.acts{list-style:none;counter-reset:a;display:flex;flex-direction:column;gap:7px}
+  ol.acts li{counter-increment:a;position:relative;padding-left:26px;font-size:11.5px;line-height:1.45;color:var(--ink2)}
+  ol.acts li::before{content:counter(a);position:absolute;left:0;top:0;width:19px;height:19px;border-radius:50%;background:var(--green);color:#fff;font-size:11px;font-weight:900;display:flex;align-items:center;justify-content:center}
+  ol.acts li b{color:var(--navy)}
+
+  table{width:100%;border-collapse:collapse;margin-top:4px;font-size:10.5px}
+  th,td{border:1px solid var(--line);padding:5px 7px;text-align:left;line-height:1.4;vertical-align:top}
+  th{background:var(--navy);color:#fff;font-weight:700;font-size:10.5px}
+  td.cat{font-weight:800;white-space:nowrap}
+  tbody tr:nth-child(even){background:#f7f9fc}
+
+  .concl{background:linear-gradient(135deg,#0b1f6b,#1a3aa0);color:#fff;border-radius:12px;padding:15px 16px;text-align:center}
+  .concl .k{font-size:11px;color:#cdd9ff;font-weight:800;margin-bottom:6px}
+  .concl .m{font-size:16px;font-weight:900;line-height:1.45}
+  .concl .m b{color:#ffe07a}
+  .foot{font-size:10.5px;color:var(--muted);margin-top:14px;line-height:1.5;padding:0 4px}
+</style>
+</head>
+<body>
+<div class="poster">
+
+  <!-- HEADER -->
+  <div class="hd">
+    <div class="bcg">BCG<small>HENDERSON<br>INSTITUTE</small></div>
+    <div class="hd-titles">
+      <h1>「AIは置き換えるより多くの仕事を作り変える」要約と日本市場示唆</h1>
+      <div class="sub">AIで仕事がなくなるのではなく、AIを使えない仕事の進め方がなくなる</div>
+      <div class="src">出典: BCG Henderson Institute「AI Will Reshape More Jobs Than It Replaces」(2026-04)</div>
+    </div>
+    <div class="hd-flow">
+      <div class="st">①事実<span>BCGの分析</span></div>
+      <div class="ar">→</div>
+      <div class="st">②日本での意味<span>どう読むか</span></div>
+      <div class="ar">→</div>
+      <div class="st">③打ち手<span>何をするか</span></div>
+    </div>
+  </div>
+
+  <!-- 3 COLUMNS -->
+  <div class="cols">
+
+    <!-- ① 事実 -->
+    <div class="col">
+      <div class="stagehd s1">
+        <div class="tag"><b>1</b>事実 ― BCGが明らかにしたこと</div>
+        <h2>AIは「置き換える」より「作り変える」</h2>
+        <div class="so">米国1,500職種・1.65億人を分析。タスク自動化と雇用喪失は同義ではない。</div>
+      </div>
+
+      <div class="blk">
+        <h3>仕事の50〜55%は「再形成」、消失は10〜15%</h3>
+        <div class="cbar">
+          <div class="seg reshape"><span class="big">50–55%</span><span class="cap">中身が再形成（2〜3年）</span></div>
+          <div class="seg lose"><span class="big">10–15%</span><span class="cap">消失リスク（4〜5年）</span></div>
+        </div>
+        <div class="cbar-note">残りは影響が限定的／緩やかな組み替え。多くの仕事は「なくなる」のではなく「中身が変わる」。</div>
+      </div>
+
+      <div class="blk t">
+        <h3>職種6分類（米国雇用に占める比率）</h3>
+        <div class="stack">
+          <div class="s" style="flex:0 0 34%;background:#8a93a3">34%</div>
+          <div class="s" style="flex:0 0 23%;background:#7aa0e0">23%</div>
+          <div class="s" style="flex:0 0 14%;background:#1a4fd6">14%</div>
+          <div class="s" style="flex:0 0 12%;background:#0a6b6b">12%</div>
+          <div class="s" style="flex:0 0 12%;background:#cf6608">12%</div>
+          <div class="s" style="flex:0 0 5%;background:#0a7a52;font-size:9px">5%</div>
+        </div>
+        <div class="leg">
+          <div class="it"><span class="sw" style="background:#0a7a52"></span><span><b>能力拡張型</b>：AIが能力を拡張し需要も増（ソフト開発、高度な法律職）</span><span class="p" style="color:#0a7a52">5%</span></div>
+          <div class="it"><span class="sw" style="background:#1a4fd6"></span><span><b>再設計型</b>：定型減・役割が高付加価値へ（マーケ、研究）</span><span class="p" style="color:#1a4fd6">14%</span></div>
+          <div class="it"><span class="sw" style="background:#0a6b6b"></span><span><b>二極化型</b>：ジュニア定型は代替、シニア高度判断へ（IT支援、保険営業）</span><span class="p" style="color:#0a6b6b">12%</span></div>
+          <div class="it"><span class="sw" style="background:#cf6608"></span><span><b>代替型</b>：需要頭打ちでAI代替が雇用減に直結（コールセンター等）</span><span class="p" style="color:#cf6608">12%</span></div>
+          <div class="it"><span class="sw" style="background:#7aa0e0"></span><span><b>日常装備型</b>：本質は残るがAI利用が前提（医療補助、ラボ技術者）</span><span class="p" style="color:#5a7fbf">23%</span></div>
+          <div class="it"><span class="sw" style="background:#8a93a3"></span><span><b>影響限定型</b>：身体性・対人・現場性が強い（教師、医師）</span><span class="p" style="color:#727a86">34%</span></div>
+        </div>
+      </div>
+
+      <div class="blk">
+        <h3>AIの影響を3つの軸で判定</h3>
+        <div class="axes">
+          <div class="axis"><div class="t">自動化可能性</div><div class="d">どれだけ自動化できるか</div></div>
+          <div class="axis"><div class="t">代替 or 拡張</div><div class="d">人を代替か拡張か</div></div>
+          <div class="axis"><div class="t">需要の方向</div><div class="d">成果物の需要が増えるか</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ② 日本での意味 -->
+    <div class="col">
+      <div class="stagehd s2">
+        <div class="tag"><b>2</b>日本での意味 ― どう読むか</div>
+        <h2>脅威ではなく「供給制約の緩和」</h2>
+        <div class="so">日本は人が余るより足りない国。問題はAI導入の遅れと、使う企業との生産性格差。</div>
+      </div>
+
+      <div class="blk o">
+        <h3>日本は「人が足りない」国</h3>
+        <div class="stat"><span class="v">2.5%</span><span class="l">失業率（2025年5月・OECD）と低水準</span></div>
+        <div class="stat"><span class="v o">16%減</span><span class="l">生産年齢人口（1995年8,730万→2024年7,370万人）</span></div>
+        <div class="gauge"><div class="fill" style="width:84%;background:linear-gradient(90deg,#cf6608,#e08a3c)"></div></div>
+        <div class="stat"><span class="v g">384万人</span><span class="l">2035年の労働力不足（1日1,775万時間相当）</span></div>
+        <div class="mini">不足が大きい職種：事務・専門技術・サービス・販売</div>
+      </div>
+
+      <div class="blk o">
+        <h3>だがAI導入は遅い＝生産性格差が開く</h3>
+        <div class="stat"><span class="v o">23.5%</span><span class="l">中小企業の生成AI利用率＝<b>最低水準</b></span></div>
+        <div class="gauge"><div class="fill" style="width:23.5%;background:var(--orange)"></div><div class="mk" style="left:60%"></div></div>
+        <div class="mini">職場のAI利用者比率も調査国で最下位クラス（OECD）。目盛り線は上位国の目安。</div>
+      </div>
+
+      <div class="blk">
+        <h3>影響が大きい職種・領域</h3>
+        <ul class="b rk">
+          <li><b>代替・再設計</b>：事務・経理集計・営業事務・レポート作成、問い合わせ・一次調査・定型審査、議事録・契約書初期確認・求人票作成</li>
+        </ul>
+        <ul class="b tk" style="margin-top:6px">
+          <li><b>需要が増える</b>：AI企画・業務改革推進、データエンジニア・システム連携・AIエージェント設計、現場とITの橋渡し人材</li>
+        </ul>
+        <div class="note r"><b>最も危ういのは若手育成の崩壊</b>：ジュニアの定型タスクが先に自動化され、OJTが回らなくなる。育成体系を再設計しないと中長期でシニアが育たない。</div>
+      </div>
+    </div>
+
+    <!-- ③ 打ち手 -->
+    <div class="col">
+      <div class="stagehd s3">
+        <div class="tag"><b>3</b>打ち手 ― 何をするか</div>
+        <h2>再設計・再配置・外部プロ活用</h2>
+        <div class="so">削減ではなく業務再設計。浮いた時間を成果へ再投資し、不足は外部プロ人材で補う。</div>
+      </div>
+
+      <div class="blk g">
+        <h3>日本企業への6つのアクション</h3>
+        <ol class="acts">
+          <li><b>「業務再設計プロジェクト」として扱う</b></li>
+          <li><b>「削減人員」より「再配置できる時間」を見る</b></li>
+          <li><b>職種別にAI影響を分類し打ち手を変える</b></li>
+          <li><b>採用・育成・配置転換を一体で設計</b></li>
+          <li><b>KPIを「利用率」でなく「事業成果」へ</b></li>
+          <li><b>若手育成と配置転換の仕組みを作り直す</b></li>
+        </ol>
+      </div>
+
+      <div class="blk g">
+        <h3>副業・フリーランス市場の商機</h3>
+        <ul class="b tk">
+          <li>伸びるのは「AI人材」より<b>業務変革を実装できる越境人材</b></li>
+          <li>大企業ほど業務改革・システム連携・データ整備・現場定着で<b>外部プロ人材の余地</b>が大きい</li>
+        </ul>
+        <table>
+          <thead><tr><th style="width:42%">顧客課題</th><th>提供すべき人材・支援</th></tr></thead>
+          <tbody>
+            <tr><td class="cat">営業生産性</td><td>AI活用推進役、営業支援システム連携、データ分析</td></tr>
+            <tr><td class="cat">バックオフィス少人化</td><td>業務改革、AIエージェント設計、業務自動化</td></tr>
+            <tr><td class="cat">問い合わせ効率化</td><td>FAQ／AI回答基盤設計、AIチャットボット企画役</td></tr>
+            <tr><td class="cat">事業・経営企画の高度化</td><td>戦略推進事務局、AIリサーチ、KPI・予実設計</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="concl">
+        <div class="k">日本市場で一言にすると</div>
+        <div class="m">AIで仕事がなくなるのではなく、<br><b>AIを使えない仕事の進め方</b>がなくなる。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot">注: 本資料はBCGレポートおよび各種統計・調査（OECD・労働市場の未来推計2035・PwC Japan 2025等）をもとに作成した要約・示唆であり、日本の労働市場に直接数値を当てはめるものではありません。推測と事実を区別し、数値は出典とセットで記載しています。</div>
+
+</div>
+</body>
+</html>
