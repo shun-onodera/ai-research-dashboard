@@ -113,6 +113,17 @@ main{ max-width:var(--maxw); margin:0 auto; padding:28px 20px 64px; }
 .src-generic{ color:var(--color-blue); background:var(--color-blue-50); border-color:#cdd9f5; }
 .src-note{ font-size:11px; color:var(--color-muted); white-space:nowrap; }
 .cat-tag{ font-size:11px; color:var(--color-muted); background:var(--color-line-2); border-radius:5px; padding:2px 8px; }
+/* 戦略区分バッジ（2トーン：代替圧力＝注意色、他は中立の輪郭ピル） */
+.rel-tag{ font-size:11px; font-weight:600; color:var(--color-ink-2); background:#fff; border:1px solid var(--color-line); border-radius:5px; padding:1px 8px; }
+.rel-tag.rel-substitute{ color:#a23a3a; background:#fbeaea; border-color:#efc9c9; }
+.rel-tag.rel-sub{ color:var(--color-muted); background:transparent; border-style:dashed; }
+/* 読み方ボックス（4つの戦略区分の凡例） */
+.relguide{ background:var(--color-blue-50); border:1px solid #cdd9f5; border-radius:var(--radius-lg); padding:16px 18px; margin:0 0 16px; }
+.relguide-h{ margin:0 0 4px; font-size:14px; color:var(--color-blue); }
+.relguide-sub{ margin:0 0 10px; font-size:12px; color:var(--color-ink-2); }
+.relguide-list{ list-style:none; margin:0; padding:0; display:grid; gap:8px; }
+.relguide-list li{ font-size:12.5px; color:var(--color-ink-2); line-height:1.7; }
+.relguide-list .rel-tag{ margin-right:6px; white-space:nowrap; }
 .date-tags{ margin-left:auto; display:inline-flex; gap:6px; flex-wrap:wrap; justify-content:flex-end; }
 .collected-tag{ font-size:11px; color:var(--color-blue); background:var(--color-blue-50); border:1px solid #cdd9f5; border-radius:5px; padding:1px 7px; white-space:nowrap; }
 .published-tag{ font-size:11px; color:var(--color-ink-2); background:var(--color-line-2); border:1px solid var(--color-line); border-radius:5px; padding:1px 7px; white-space:nowrap; }

@@ -52,12 +52,15 @@
     return a.source != null ? a.source : (a.source_label || "");
   }
 
-  function articleCard(a, srcMap, catMap) {
+  function articleCard(a, srcMap, catMap, relMap) {
     var pub = a.published ? a.published : "";
     var col = a.collected ? a.collected : "";
     var label = srcLabelOf(a, srcMap);
     var srcKey = srcKeyOf(a);
     var catLabel = catMap[a.category] || a.category || "";
+    relMap = relMap || {};
+    var relLabel = relMap[a.relation] || "";
+    var relSubLabel = relMap[a.relation_sub] || "";
     var points = (a.points || []).map(function (pt) {
       return "<li>" + esc(pt) + "</li>";
     }).join("");
@@ -70,10 +73,12 @@
       ? '<a class="detail-link" href="../report/index.html?r=' + esc(a.deepdive) + '">詳細を読む（日本市場示唆つき）→</a>'
       : "";
     return (
-      '<article class="article" data-source="' + esc(srcKey) + '" data-category="' + esc(a.category || "") + '" data-collected="' + esc(col) + '" data-published="' + esc(pub) + '">' +
+      '<article class="article" data-source="' + esc(srcKey) + '" data-category="' + esc(a.category || "") + '" data-relation="' + esc(a.relation || "") + '" data-collected="' + esc(col) + '" data-published="' + esc(pub) + '">' +
         '<div class="top">' +
           '<span class="src-tag ' + srcClass + '">' + esc(label) + "</span>" +
           (catLabel ? '<span class="cat-tag">' + esc(catLabel) + "</span>" : "") +
+          (relLabel ? '<span class="rel-tag rel-' + esc(a.relation || "") + '">' + esc(relLabel) + "</span>" : "") +
+          (relSubLabel ? '<span class="rel-tag rel-sub">＋' + esc(relSubLabel) + "</span>" : "") +
           '<span class="date-tags">' +
             (pub ? '<span class="published-tag">公開 ' + esc(pub) + "</span>" : "") +
             (col ? '<span class="collected-tag">収集 ' + esc(col) + "</span>" : "") +
@@ -111,6 +116,13 @@
           return '<button class="chip" data-group="category" data-value="' + esc(c.key) + '">' + esc(c.label) + "</button>";
         }).join("") + "</div>";
     }
+    if ((data.relations || []).length) {
+      html += '<div class="grp"><span class="lbl">戦略区分</span>' +
+        '<button class="chip active" data-group="relation" data-value="all">すべて</button>' +
+        data.relations.map(function (c) {
+          return '<button class="chip" data-group="relation" data-value="' + esc(c.key) + '">' + esc(c.label) + "</button>";
+        }).join("") + "</div>";
+    }
     html += '<div class="grp sort-grp"><span class="lbl">並び替え</span>' +
       '<select id="sort-key" class="sort-select" aria-label="並び替えの基準">' +
       '<option value="collected">収集日</option><option value="published">公開日</option></select>' +
@@ -122,14 +134,15 @@
   function initFilters() {
     var chips = document.querySelectorAll(".chip");
     if (!chips.length) return;
-    var state = { source: "all", category: "all" };
+    var state = { source: "all", category: "all", relation: "all" };
     function apply() {
       var cards = document.querySelectorAll(".article");
       var shown = 0;
       cards.forEach(function (c) {
         var okS = state.source === "all" || c.getAttribute("data-source") === state.source;
         var okC = state.category === "all" || c.getAttribute("data-category") === state.category;
-        var ok = okS && okC;
+        var okR = state.relation === "all" || c.getAttribute("data-relation") === state.relation;
+        var ok = okS && okC && okR;
         c.style.display = ok ? "" : "none";
         if (ok) shown++;
       });
@@ -400,13 +413,14 @@
   function renderArticles(data) {
     var wrap = document.getElementById("articles");
     if (!wrap) return;
-    var srcMap = {}, catMap = {};
+    var srcMap = {}, catMap = {}, relMap = {};
     (data.sources || []).forEach(function (s) { srcMap[s.key] = s.label; });
     (data.categories || []).forEach(function (c) { catMap[c.key] = c.label; });
+    (data.relations || []).forEach(function (c) { relMap[c.key] = c.label; });
     var isKpi = data.type === "kpi";
     if (isKpi) { wrap.classList.add("kpi-grid"); renderKpiCharts(data.articles || []); renderKpiTimeseries(); }
     wrap.innerHTML = (data.articles || []).map(function (a) {
-      return isKpi ? kpiCard(a, catMap, data.usdjpy) : articleCard(a, srcMap, catMap);
+      return isKpi ? kpiCard(a, catMap, data.usdjpy) : articleCard(a, srcMap, catMap, relMap);
     }).join("");
     Array.prototype.slice.call(wrap.querySelectorAll(".article")).forEach(function (c, i) {
       c.dataset.idx = i;
