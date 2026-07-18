@@ -1048,10 +1048,16 @@
         function renderMonth(m) {
           if (!m) return;
           var lead = m.lead ? '<div class="hs-lead"><p>' + esc(m.lead) + "</p></div>" : "";
-          var insights = "";
-          if (m.topInsights && m.topInsights.length) {
-            insights = '<h3 class="mo-h3">今月の示唆</h3><ol class="mo-insights">' +
-              m.topInsights.map(function (t) { return "<li>" + moEmph(t) + "</li>"; }).join("") + "</ol>";
+          var summary = "";
+          if (m.summary && m.summary.length) {
+            summary = '<div class="mo-summary-box"><ul class="mo-summary">' +
+              m.summary.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ul></div>";
+          }
+          var picks = m.pickups || m.topInsights;
+          var pickHtml = "";
+          if (picks && picks.length) {
+            pickHtml = '<h3 class="mo-h3">今月のピックアップ</h3><ol class="mo-insights">' +
+              picks.map(function (t) { return "<li>" + moEmph(t) + "</li>"; }).join("") + "</ol>";
           }
           var cats = (m.categories || []).map(function (c) {
             var cards = (c.cards || []).map(function (card) {
@@ -1066,9 +1072,16 @@
                 (card.note ? '<p class="mo-card-note">' + esc(card.note) + "</p>" : "") +
                 '<div class="mo-card-foot">' + detail + src + "</div></article>";
             }).join("");
+            var intHtml = "";
+            if (c.integratedPoints && c.integratedPoints.length) {
+              intHtml = '<div class="mo-cat-int"><span class="mo-cat-int-label">統合示唆</span><ul class="mo-cat-plist">' +
+                c.integratedPoints.map(function (p) { return "<li>" + esc(p) + "</li>"; }).join("") + "</ul></div>";
+            } else if (c.integrated) {
+              intHtml = '<p class="mo-cat-int"><span class="mo-cat-int-label">統合示唆</span>' + esc(c.integrated) + "</p>";
+            }
             return '<div class="mo-cat"><div class="mo-cat-head"><h3>' + esc(c.name) + "</h3>" +
               (c.href ? '<a class="mo-cat-link" href="' + esc(c.href) + '">このテーマの全一覧へ →</a>' : "") + "</div>" +
-              (c.integrated ? '<p class="mo-cat-int"><span class="mo-cat-int-label">統合示唆</span>' + esc(c.integrated) + "</p>" : "") +
+              intHtml +
               '<div class="mo-card-grid">' + cards + "</div></div>";
           }).join("");
           var empty = "";
@@ -1077,7 +1090,7 @@
               m.emptyCategories.map(function (e) { return '<a href="' + esc(e.href) + '">' + esc(e.name) + "</a>"; }).join("・") +
               "（各テーマの全一覧へ）</p>";
           }
-          body.innerHTML = lead + insights + '<h3 class="mo-h3">カテゴリ別の重要動向</h3>' + cats + empty;
+          body.innerHTML = lead + summary + pickHtml + '<h3 class="mo-h3">カテゴリ別の重要動向</h3>' + cats + empty;
         }
         if (sel) {
           sel.innerHTML = months.map(function (m, i) {
