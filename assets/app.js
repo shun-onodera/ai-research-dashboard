@@ -1048,16 +1048,33 @@
         function renderMonth(m) {
           if (!m) return;
           var lead = m.lead ? '<div class="hs-lead"><p>' + esc(m.lead) + "</p></div>" : "";
+          // ①今月の要点（索引）
+          var keys = m.keypoints || m.summary;
           var summary = "";
-          if (m.summary && m.summary.length) {
+          if (keys && keys.length) {
             summary = '<div class="mo-summary-box"><ul class="mo-summary">' +
-              m.summary.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ul></div>";
+              keys.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ul></div>";
           }
-          var picks = m.pickups || m.topInsights;
-          var pickHtml = "";
-          if (picks && picks.length) {
-            pickHtml = '<h3 class="mo-h3">今月のピックアップ</h3><ol class="mo-insights">' +
-              picks.map(function (t) { return "<li>" + moEmph(t) + "</li>"; }).join("") + "</ol>";
+          // ②今月の示唆（横断テーマの統合）
+          var themesHtml = "";
+          if (m.themes && m.themes.length) {
+            themesHtml = '<h3 class="mo-h3">今月の示唆</h3>' + m.themes.map(function (t) {
+              function row(lab, txt) { return txt ? '<div class="mo-theme-row"><span class="mo-theme-lab">' + lab + '</span><span class="mo-theme-txt">' + esc(txt) + "</span></div>" : ""; }
+              return '<div class="mo-theme"><p class="mo-theme-title">' + esc(t.title) + "</p>" +
+                row("何が起きたか", t.what) + row("なぜ重要か", t.why) + row("市場への影響", t.move) + "</div>";
+            }).join("");
+          } else {
+            var picks = m.pickups || m.topInsights;
+            if (picks && picks.length) {
+              themesHtml = '<h3 class="mo-h3">今月の示唆</h3><ol class="mo-insights">' +
+                picks.map(function (t) { return "<li>" + moEmph(t) + "</li>"; }).join("") + "</ol>";
+            }
+          }
+          // ③論点・注視点（So What）
+          var watchHtml = "";
+          if (m.watchpoints && m.watchpoints.length) {
+            watchHtml = '<h3 class="mo-h3">論点・注視点</h3><ol class="mo-insights">' +
+              m.watchpoints.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ol>";
           }
           var cats = (m.categories || []).map(function (c) {
             var cards = (c.cards || []).map(function (card) {
@@ -1090,7 +1107,7 @@
               m.emptyCategories.map(function (e) { return '<a href="' + esc(e.href) + '">' + esc(e.name) + "</a>"; }).join("・") +
               "（各テーマの全一覧へ）</p>";
           }
-          body.innerHTML = lead + summary + pickHtml + '<h3 class="mo-h3">カテゴリ別の重要動向</h3>' + cats + empty;
+          body.innerHTML = lead + summary + themesHtml + watchHtml + '<h3 class="mo-h3">カテゴリ別の重要動向（一次情報）</h3>' + cats + empty;
         }
         if (sel) {
           sel.innerHTML = months.map(function (m, i) {
