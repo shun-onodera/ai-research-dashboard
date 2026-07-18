@@ -1080,7 +1080,7 @@
               watchHtml = '<h3 class="mo-h3">論点・注視点</h3>' + m.watchpoints.map(function (w) {
                 function row(lab, txt) { return txt ? '<div class="mo-theme-row"><span class="mo-theme-lab">' + lab + '</span><span class="mo-theme-txt">' + esc(txt) + "</span></div>" : ""; }
                 return '<div class="mo-theme"><p class="mo-theme-title">' + esc(w.question) + "</p>" +
-                  row("今の読み", w.read) + row("反証・分岐", w.branch) + row("注視指標", w.signal) + "</div>";
+                  row("今の読み", w.read) + row("分かれ目", w.branch) + row("見るべき指標", w.signal) + "</div>";
               }).join("");
             }
           }
