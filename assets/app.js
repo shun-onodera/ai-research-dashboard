@@ -1030,9 +1030,70 @@
       .catch(function () { /* 未配置でも無視 */ });
   }
 
+  // ---- 月次サマリー（トップpage の #mo-body・原典公開月ごと）----
+  function moEmph(t) {
+    var i = t.indexOf("―");
+    if (i > 1) return "<b>" + esc(t.slice(0, i).replace(/\s+$/, "")) + "</b> ― " + esc(t.slice(i + 1).replace(/^\s+/, ""));
+    return esc(t);
+  }
+  function renderHomeMonthly() {
+    var body = document.getElementById("mo-body");
+    var sel = document.getElementById("mo-month");
+    if (!body) return;
+    fetch("data/home-monthly.json")
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (data) {
+        if (!data || !data.months || !data.months.length) return;
+        var months = data.months.slice();
+        function renderMonth(m) {
+          if (!m) return;
+          var lead = m.lead ? '<div class="hs-lead"><p>' + esc(m.lead) + "</p></div>" : "";
+          var insights = "";
+          if (m.topInsights && m.topInsights.length) {
+            insights = '<h3 class="mo-h3">今月の示唆</h3><ol class="mo-insights">' +
+              m.topInsights.map(function (t) { return "<li>" + moEmph(t) + "</li>"; }).join("") + "</ol>";
+          }
+          var cats = (m.categories || []).map(function (c) {
+            var cards = (c.cards || []).map(function (card) {
+              var badge = card.grade === "S" ? '<span class="mo-grade">S</span>' : "";
+              var detail = card.deepdive
+                ? '<a class="detail-link" href="report/index.html?r=' + esc(card.deepdive) + '">詳細を読む →</a>' : "";
+              var src = card.url
+                ? '<a class="source-link" href="' + esc(card.url) + '" target="_blank" rel="noopener noreferrer">出典</a>' : "";
+              return '<article class="mo-card"><div class="mo-card-top">' + badge +
+                '<span class="cat-tag">' + esc(card.source_label || "") + "</span></div>" +
+                "<h4>" + esc(card.title) + "</h4>" +
+                (card.note ? '<p class="mo-card-note">' + esc(card.note) + "</p>" : "") +
+                '<div class="mo-card-foot">' + detail + src + "</div></article>";
+            }).join("");
+            return '<div class="mo-cat"><div class="mo-cat-head"><h3>' + esc(c.name) + "</h3>" +
+              (c.href ? '<a class="mo-cat-link" href="' + esc(c.href) + '">このテーマの全一覧へ →</a>' : "") + "</div>" +
+              (c.integrated ? '<p class="mo-cat-int"><span class="mo-cat-int-label">統合示唆</span>' + esc(c.integrated) + "</p>" : "") +
+              '<div class="mo-card-grid">' + cards + "</div></div>";
+          }).join("");
+          var empty = "";
+          if (m.emptyCategories && m.emptyCategories.length) {
+            empty = '<p class="mo-empty">' + esc(m.label || m.month) + "に原典公開された新規の重要記事がないカテゴリ：" +
+              m.emptyCategories.map(function (e) { return '<a href="' + esc(e.href) + '">' + esc(e.name) + "</a>"; }).join("・") +
+              "（各テーマの全一覧へ）</p>";
+          }
+          body.innerHTML = lead + insights + '<h3 class="mo-h3">カテゴリ別の重要動向</h3>' + cats + empty;
+        }
+        if (sel) {
+          sel.innerHTML = months.map(function (m, i) {
+            return '<option value="' + i + '">' + esc(m.label || m.month) + "</option>";
+          }).join("");
+          sel.addEventListener("change", function () { renderMonth(months[parseInt(sel.value, 10) || 0]); });
+        }
+        renderMonth(months[0]);
+      })
+      .catch(function () { /* 未配置でも無視 */ });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     initNav();
     initThemePage();
+    renderHomeMonthly();
     renderHomeSummary();
     renderSignalBoard();
     renderCompetitorAiMatrix();

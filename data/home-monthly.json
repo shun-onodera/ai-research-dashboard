@@ -1,0 +1,124 @@
+{
+  "updated": "2026-07-18",
+  "basis": "published",
+  "note": "原典の公開月ごとの重要動向ダイジェスト。各カテゴリはSランク（詳細分析つきの最重要）を優先し、無い場合はその月の注目記事で補完する。",
+  "months": [
+    {
+      "month": "2026-07",
+      "label": "2026年7月",
+      "lead": "2026年7月は、生成AIの担い手をめぐる動きが「大量失業」論から「配置転換・実装支援」の具体像へと移った月。海外ではAIベンダーやAI開発企業が人材の調達・供給に直接踏み込み、国内では地方創生・高度専門領域が競争軸として鮮明になった。",
+      "topInsights": [
+        "AIベンダー自身が「実装常駐支援」に参入 ― マイクロソフトがMicrosoft Frontier（25億ドル・6,000人常駐）を設立。Amazon・Anthropic・OpenAIも同種組織を相次ぎ立ち上げ、大手4社で同時多発。企業のAI実装ギャップを外部人材でなくベンダーが直接埋めにいく動き。",
+        "AI開発企業という新しい発注元の台頭 ― Mercorが評価額200億ドル（前回の2倍）で調達交渉、訓練環境のDeeptuneを買収。AI訓練データ向けの専門人材マッチングが桁違いの規模で立ち上がる。",
+        "「大量失業」ではなく「配置転換」 ― Goldman Sachsは米労働者の9%（約1,500万人）が10年で配置転換と試算しつつ、失業率の押し上げは1ポイント未満と大量失業論を否定。役割の再設計を支える人選ニーズが焦点に。",
+        "大手SIerの内製化で下流SES案件が縮小 ― コーディング中心の案件比率が24.8%から13.5%へ半減。一方で上流工程・AI活用・品質保証では新需要。外部人材市場は下流の定型業務から調整が進む。",
+        "AI導入の壁はスキル、それも基礎スキル ― OECDは高度AI人材が必要な労働者は1%未満と指摘。多くの労働者に要るのはデータを扱う基礎的スキルで、中小企業ほど壁が顕著。外部人材で補う裾野は広い。",
+        "AI・貿易の影響は地域で二極化 ― OECDが14カ国データで実証。製造業依存地域は雇用が持続的に減り、デジタル接点のある地域は非定型・サービス業が増える。地理的制約を外すオンライン型マッチングの機会。",
+        "国内競合は地方創生×高度専門領域で差別化 ― みらいワークスが民営化した富山エアポートと包括連携、サーキュレーションは登録3.5万名突破（IT・セキュリティ急伸）。競争軸は「登録者数」から「専門性の厚み×案件流入経路」へ。"
+      ],
+      "categories": [
+        {
+          "slug": "kyogo-chosa",
+          "name": "競合調査",
+          "href": "kyogo-chosa/index.html",
+          "integrated": "国内大手は地方創生の連携先拡大（みらいワークス＝民営化インフラ運営会社）と高度専門領域の人材の厚み（サーキュレーション＝IT・セキュリティ急伸）で差別化を進める。海外ではAI開発企業を発注元とする専門人材マッチング（Mercor）が急拡大。競争軸は「登録者数」から「特定領域の深さ×需要接点の継続性」へ移りつつある。",
+          "cards": [
+            {
+              "title": "Mercor、評価額200億ドルへの資金調達交渉とDeeptune買収",
+              "source_label": "Forbes／Fortune／TechCrunch",
+              "grade": null,
+              "deepdive": "mercor-20b-talent-ai-2026",
+              "url": "https://www.forbes.com/sites/richardnieva/2026/07/09/mercor-fundraise/",
+              "note": "AI訓練データ向け専門人材マッチングのMercorが評価額200億ドルで調達交渉、訓練環境のDeeptuneを買収。AI開発企業が新たな発注元に。"
+            },
+            {
+              "title": "みらいワークス、民営化した富山エアポートと包括連携協定を締結",
+              "source_label": "みらいワークス（PR TIMES）",
+              "grade": null,
+              "deepdive": "miraiworks-toyama-airport-2026",
+              "url": "https://prtimes.jp/main/html/rd/p/000000516.000016557.html",
+              "note": "民営化した富山エアポートと包括連携。地方展開の窓口が地域金融機関から民営化インフラ運営会社へ広がる。"
+            },
+            {
+              "title": "サーキュレーション 登録プロ人材35,000名突破、IT・セキュリティ領域が急伸",
+              "source_label": "サーキュレーション（2026年7月）",
+              "grade": null,
+              "deepdive": "circulation-pro-sharing-35k-2026",
+              "url": "https://circu.co.jp/news/20260708-6386/",
+              "note": "登録プロ人材35,000名突破（前年比140%超）、IT・セキュリティが急伸。専門性の厚みと案件流入経路を同時に強化。"
+            }
+          ]
+        },
+        {
+          "slug": "kansetsu-kyogo",
+          "name": "間接競合",
+          "href": "kansetsu-kyogo/index.html",
+          "integrated": "AIベンダー（Microsoft Frontier）とSIer（内製化）が「AI実装・生産性向上」で外部人材調達の一部を代替。ただし代替が及ぶのは定型コーディング中心で、上流工程・ドメイン特化・品質保証・短期の専門活用では新需要が残る。棲み分けは「置き換えにくい高難度・伴走型」へ寄る。",
+          "cards": [
+            {
+              "title": "マイクロソフト、AI実装支援会社「Microsoft Frontier」設立 ― 25億ドル・6,000人を顧客常駐へ",
+              "source_label": "CNBC（2026年7月2日）",
+              "grade": "S",
+              "deepdive": "microsoft-frontier-6000-2026",
+              "url": "https://www.cnbc.com/2026/07/02/microsoft-commits-2point5-billion-6000-employees-ai-implementation-unit.html",
+              "note": "AI実装支援の新会社を設立し25億ドル・6,000人を顧客常駐へ。Amazon・Anthropic・OpenAIも同種組織で、大手4社が外部人材調達を一部代替。"
+            },
+            {
+              "title": "大手SIer、AI生産性向上と内製化を加速 ― コーディング中心のSES案件は半年で45%縮小",
+              "source_label": "各社IR・調査（2026年）",
+              "grade": null,
+              "deepdive": "jp-sier-ai-dev-sourcing-2026",
+              "url": "https://freelance.findy-code.io/articles/market-report_202603",
+              "note": "大手SIerのAI内製化で、コーディング中心のSES案件比率が24.8%から13.5%に半減。上流・品質保証には新需要。"
+            }
+          ]
+        },
+        {
+          "slug": "koyo-hatarakikata",
+          "name": "AIと雇用",
+          "href": "koyo-hatarakikata/index.html",
+          "integrated": "主要調査が揃って「大量失業ではなく配置転換・役割再設計」を指す（Goldman＝9%配置転換、OECD＝地域二極化）。AI導入の律速はスキル、それも基礎的なデータ活用スキル。外部人材が担うのは「基礎スキルの補完」と「役割再設計の伴走」であり、定型代行の単価・件数には圧力がかかる。",
+          "cards": [
+            {
+              "title": "OECD「雇用アウトルック2026」― 貿易・AIショックが地域の雇用格差を広げる実態を14カ国データで実証",
+              "source_label": "OECD",
+              "grade": "S",
+              "deepdive": "oecd-employment-outlook-2026",
+              "url": "https://www.oecd.org/en/publications/oecd-employment-outlook-2026_7e710f54-en.html",
+              "note": "14カ国データで地域間の雇用二極化を実証。製造業依存地域は雇用減、デジタル接点地域は非定型・サービス業が増加。"
+            },
+            {
+              "title": "Goldman Sachs、AI移行で米労働者の9%（約1,500万人）が配置転換と試算 ― 失業率急増は否定",
+              "source_label": "Goldman Sachs Research",
+              "grade": "S",
+              "deepdive": "goldman-ai-labor-9pct-2026",
+              "url": "https://www.goldmansachs.com/insights/top-of-mind/an-ai-job-apocalypse",
+              "note": "AI移行で米労働者の9%（約1,500万人）が10年で配置転換と試算。ただし失業率押し上げは1ポイント未満で大量失業論は否定。"
+            },
+            {
+              "title": "米雇用統計（6月分）― 雇用者数+5.7万人、失業率4.2%も労働参加率低下が主因",
+              "source_label": "米労働統計局（BLS）",
+              "grade": "S",
+              "deepdive": "bls-employment-june-2026",
+              "url": "https://www.bls.gov/news.release/empsit.nr0.htm",
+              "note": "6月の米雇用は+5.7万人と予想を大幅に下回り、労働参加率は2021年3月以来の低水準。雇用減速が複数月確認。"
+            },
+            {
+              "title": "OECD「Skills in the AI age」― AI導入の壁はスキル不足、高度AI人材が必要な労働者は1%未満",
+              "source_label": "OECD「Skills in the AI age」",
+              "grade": null,
+              "deepdive": "oecd-skills-ai-age-2026",
+              "url": "https://www.oecd.org/en/topics/sub-issues/artificial-intelligence-and-education-and-skills.html",
+              "note": "AI導入の壁はスキル不足。高度AI人材が必要な労働者は1%未満で、多くに要るのは基礎的データ活用スキル。中小企業ほど壁が顕著。"
+            }
+          ]
+        }
+      ],
+      "emptyCategories": [
+        { "name": "AIと事業変革", "href": "jigyo-henkaku/index.html" },
+        { "name": "労働市場データ", "href": "roudou-shijo/index.html" },
+        { "name": "法務・コンプライアンス", "href": "houmu-compliance/index.html" }
+      ]
+    }
+  ]
+}

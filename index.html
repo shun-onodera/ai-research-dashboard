@@ -7,7 +7,7 @@
 <title>リサーチ・ダッシュボード｜人材・働き方の市場動向</title>
 <meta name="description" content="プロ人材・副業フリーランスのマッチングを取り巻く外部環境（競合の動き・労働市場・制度・生成AIの影響）を、公開情報のみで継続的に整理する外部環境モニター。">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230017c1'/%3E%3Ctext x='16' y='22' font-size='17' font-family='sans-serif' font-weight='700' fill='white' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/style.css?v=20260718">
 </head>
 <body>
 <a class="skip" href="#main">本文へスキップ</a>
@@ -35,14 +35,23 @@
   <div class="inner">
     <p class="eyebrow">リサーチ・ダッシュボード</p>
     <h1>人材・働き方の市場動向モニター</h1>
-    <p>プロ人材・副業フリーランスのマッチングを取り巻く外部環境（競合の動き・労働市場・制度・生成AIの影響）を、公開情報のみで継続的に整理する外部環境モニター。市場の変化を早く捉え、戦略を考える土台にすることを目的としている。各タブから、一次の事例・統計まで辿れる出典付きで確認できる。</p>
-    <p class="updated">掲載はすべて公開情報（公的統計・IR・公式リリース・報道）／ 各タブにデータ最終更新日を表示</p>
+    <p>プロ人材・副業フリーランスのマッチングを取り巻く外部環境（競合の動き・労働市場・制度・生成AIの影響）を、公開情報のみで継続的に整理する外部環境モニター。この画面は、原典が公開された月ごとに重要動向をまとめた月次サマリー。各カテゴリの詳細・全一覧は上部のタブから辿れる。</p>
+    <p class="updated">掲載はすべて公開情報（公的統計・IR・公式リリース・報道）／ 出典・詳細分析ページつき</p>
   </div>
 </section>
 
 <main id="main">
-  <h2 class="section-title">タブ一覧</h2>
-  <p class="section-sub">目的のテーマから入れます。各タブはカード一覧＋詳細分析ページ（出典・示唆つき）で構成しています。</p>
+  <div class="mo-head">
+    <div>
+      <h2 class="section-title">今月のサマリー</h2>
+      <p class="section-sub">原典が公開された月ごとに、示唆の要点・カテゴリ別の統合示唆・重要記事（Sランク優先）をまとめています。対象月を切り替えられます。</p>
+    </div>
+    <label class="mo-monthpick">対象月　<select id="mo-month" aria-label="対象月を選ぶ"></select></label>
+  </div>
+  <div id="mo-body" aria-live="polite"></div>
+
+  <h2 class="section-title" style="margin-top:44px;">全テーマの一覧</h2>
+  <p class="section-sub">各テーマの全記事・統計・制度の一覧と詳細分析ページへ。</p>
   <div class="theme-grid">
     <a class="theme-card" href="kyogo-chosa/index.html">
       <span class="ico">競</span>
@@ -103,6 +112,6 @@
   </div>
 </footer>
 
-<script src="assets/app.js" defer></script>
+<script src="assets/app.js?v=20260718" defer></script>
 </body>
 </html>
