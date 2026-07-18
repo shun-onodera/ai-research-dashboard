@@ -1073,8 +1073,22 @@
           // ③論点・注視点（So What）
           var watchHtml = "";
           if (m.watchpoints && m.watchpoints.length) {
-            watchHtml = '<h3 class="mo-h3">論点・注視点</h3><ol class="mo-insights">' +
-              m.watchpoints.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ol>";
+            if (typeof m.watchpoints[0] === "string") {
+              watchHtml = '<h3 class="mo-h3">論点・注視点</h3><ol class="mo-insights">' +
+                m.watchpoints.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ol>";
+            } else {
+              watchHtml = '<h3 class="mo-h3">論点・注視点</h3>' + m.watchpoints.map(function (w) {
+                function row(lab, txt) { return txt ? '<div class="mo-theme-row"><span class="mo-theme-lab">' + lab + '</span><span class="mo-theme-txt">' + esc(txt) + "</span></div>" : ""; }
+                return '<div class="mo-theme"><p class="mo-theme-title">' + esc(w.question) + "</p>" +
+                  row("今の読み", w.read) + row("反証・分岐", w.branch) + row("注視指標", w.signal) + "</div>";
+              }).join("");
+            }
+          }
+          // 追加の問い（次に考えるべき問い）
+          var qHtml = "";
+          if (m.openQuestions && m.openQuestions.length) {
+            qHtml = '<h3 class="mo-h3">さらに問う（次に考えるべき問い）</h3><ul class="mo-q">' +
+              m.openQuestions.map(function (q) { return "<li>" + esc(q) + "</li>"; }).join("") + "</ul>";
           }
           var cats = (m.categories || []).map(function (c) {
             var cards = (c.cards || []).map(function (card) {
@@ -1107,7 +1121,7 @@
               m.emptyCategories.map(function (e) { return '<a href="' + esc(e.href) + '">' + esc(e.name) + "</a>"; }).join("・") +
               "（各テーマの全一覧へ）</p>";
           }
-          body.innerHTML = lead + summary + themesHtml + watchHtml + '<h3 class="mo-h3">カテゴリ別の重要動向（一次情報）</h3>' + cats + empty;
+          body.innerHTML = lead + summary + themesHtml + watchHtml + '<h3 class="mo-h3">カテゴリ別の重要動向（一次情報）</h3>' + cats + empty + qHtml;
         }
         if (sel) {
           sel.innerHTML = months.map(function (m, i) {

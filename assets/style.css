@@ -675,5 +675,9 @@ table.cam-dt{width:100%;border-collapse:collapse;font-size:12px}
 .mo-theme-row:last-child{ margin-bottom:0; }
 .mo-theme-lab{ font-size:11px; font-weight:800; color:var(--color-blue); background:var(--color-blue-50); border-radius:6px; padding:4px 6px; text-align:center; white-space:nowrap; }
 .mo-theme-txt{ font-size:13px; line-height:1.8; color:var(--color-ink-2); }
+/* さらに問う（次に考えるべき問い） */
+.mo-q{ margin:0; padding:0; list-style:none; display:grid; gap:9px; }
+.mo-q li{ position:relative; padding:12px 16px 12px 44px; background:var(--color-blue-50); border:1px solid #cdd9f5; border-radius:var(--radius-lg); font-size:13.5px; line-height:1.75; color:var(--color-ink); }
+.mo-q li::before{ content:"Q"; position:absolute; left:13px; top:11px; width:22px; height:22px; border-radius:50%; background:var(--color-blue); color:#fff; font-size:12px; font-weight:800; display:flex; align-items:center; justify-content:center; }
 @media (max-width:760px){ .mo-card-grid{ grid-template-columns:1fr; } .mo-head{ align-items:flex-start; } }
 @media (max-width:600px){ .mo-theme-row{ grid-template-columns:1fr; gap:3px; } .mo-theme-lab{ justify-self:start; } }
