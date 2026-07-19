@@ -1,6 +1,6 @@
 {
   "theme": "AIと雇用",
-  "updated": "2026-07-16",
+  "updated": "2026-07-19",
   "description": "生成AIが雇用・職・スキルに与える影響に関する調査機関・研究機関の分析レポートを整理。国内（経済産業省・JILPT・NRI等）と海外（Stanford HAI・OpenAI・BCG・Goldman Sachs等）の分析を、出典付きで掲載しています。",
   "categories": [
     {
@@ -21,6 +21,23 @@
     }
   ],
   "articles": [
+    {
+      "title": "AIの使われ方は「補助」が「自動化」を再逆転 ― Anthropic Economic Index 1月版",
+      "source_label": "Anthropic（2026年1月）",
+      "category": "jobs",
+      "published": "2026-01",
+      "collected": "2026-07-19",
+      "summary": "Anthropicが2026年1月15日に公表したEconomic Indexの1月版で、Claude.ai上の会話のうち人の作業を補助する使い方が52%と、作業を肩代わりする自動化の45%を再び上回った（2025年11月時点）。AIによる米国の労働生産性の押し上げは、タスクの成功率などを割り引くと年1.0〜1.2ポイントと試算された。",
+      "points": [
+        "Claude.ai上で補助的な使い方52%が自動化45%を再逆転（2025年11月時点）",
+        "API経由は自動化寄り（自動化75%／補助25%）",
+        "生産性の押し上げは割引後で年1.0〜1.2ポイントと試算"
+      ],
+      "implication": "どの業務がAIで肩代わりされ、どの業務が人を補助しているかの粒度データは、専門業務の需要が消えるのか組み替わるのかを見極める基礎資料になる。マッチング市場が扱うプロ人材の需要構造の変化を、業務の自動化・補助の軸で読む材料になる。",
+      "url": "https://www.anthropic.com/research/anthropic-economic-index-january-2026-report",
+      "source": "Anthropic「The Anthropic Economic Index report: Economic primitives」（2026年1月15日）",
+      "deepdive": "anthropic-economic-index-2026-01"
+    },
     {
       "title": "OECD「雇用アウトルック2026」― 貿易・AIショックが地域の雇用格差を広げる実態を14カ国データで実証",
       "source_label": "OECD",

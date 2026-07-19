@@ -154,13 +154,66 @@
               "note": "AI導入の壁はスキル不足。高度AI人材が必要な労働者は1%未満で、多くに要るのは基礎的データ活用スキル。中小企業ほど壁が顕著。"
             }
           ]
+        },
+        {
+          "slug": "jigyo-henkaku",
+          "name": "AIと事業変革",
+          "href": "jigyo-henkaku/index.html",
+          "integratedPoints": [
+            "TCSがAI主導の変革案件へ軸足を移し、AI事業は年換算26億ドル規模・受注残95億ドルに達した。",
+            "単機能の工程受託から、AIを組み込んだ変革プログラムをまとめて請ける形へ。人月の積み上げから成果・変革単位の取引への転換を映す。"
+          ],
+          "cards": [
+            {
+              "title": "TCS、AI主導の変革案件へ軸足 ― 第1四半期でAI事業は年換算26億ドル規模、受注残95億ドル",
+              "source_label": "Tata Consultancy Services（2026年7月）",
+              "grade": null,
+              "url": "https://www.tcs.com/who-we-are/newsroom/press-release/tcs-financial-results-q1-fy-2027",
+              "note": "AI年換算売上26億ドル・受注残95億ドル。SKFとの大型AI変革案件を含み、成果・変革単位の取引への転換を示す。",
+              "deepdive": "tcs-q1fy27-ai-transformation"
+            }
+          ]
+        },
+        {
+          "slug": "roudou-shijo",
+          "name": "労働市場データ",
+          "href": "roudou-shijo/index.html",
+          "integratedPoints": [
+            "企業の人手不足感は根強い。日銀短観の雇用人員判断DIはマイナス37で、先行きはマイナス40とさらに不足感が強まる見通し。",
+            "恒常的な人手不足は、外部のプロ人材・副業フリーランスへの需要を支える最も直接的な追い風になる。"
+          ],
+          "cards": [
+            {
+              "title": "企業の人手不足感が続く ― 日銀短観、雇用人員判断DIはマイナス37で先行きも不足超過",
+              "source_label": "日本銀行（2026年7月）",
+              "grade": null,
+              "url": "https://www.boj.or.jp/statistics/tk/yoshi/tk2606.htm",
+              "note": "雇用人員判断DIはマイナス37、先行きマイナス40。恒常的な人手不足は外部人材需要の追い風になる。",
+              "deepdive": "boj-tankan-2026-06"
+            }
+          ]
+        },
+        {
+          "slug": "houmu-compliance",
+          "name": "法務・コンプライアンス",
+          "href": "houmu-compliance/index.html",
+          "integratedPoints": [
+            "改正個人情報保護法が成立・公布。個人データの違法な取扱いに初の課徴金を設ける一方、AI開発向けのデータ提供には本人同意の特例を置く。",
+            "個人と法人をつなぐ取引基盤では、データ保護の負担とAI活用の余地が同時に広がる。"
+          ],
+          "cards": [
+            {
+              "title": "改正個人情報保護法が成立・公布 ― 初の課徴金制度、AI開発向けデータ提供には同意の特例",
+              "source_label": "個人情報保護委員会／国会（2026年7月）",
+              "grade": null,
+              "url": "https://www.sangiin.go.jp/japanese/joho1/kousei/gian/221/meisai/m221080221054.htm",
+              "note": "個人データの違法な取扱いに初の課徴金、一方でAI開発向け提供は同意の特例。閣議決定（4月）に続く成立という節目。",
+              "deepdive": "pipa-amendment-enacted-2026"
+            }
+          ]
         }
       ],
-      "emptyCategories": [
-        { "name": "AIと事業変革", "href": "jigyo-henkaku/index.html" },
-        { "name": "労働市場データ", "href": "roudou-shijo/index.html" },
-        { "name": "法務・コンプライアンス", "href": "houmu-compliance/index.html" }
-      ]
+      "emptyCategories": []
     }
   ]
 }

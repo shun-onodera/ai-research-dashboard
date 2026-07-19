@@ -1,6 +1,6 @@
 {
   "theme": "AIと事業変革",
-  "updated": "2026-06-09",
+  "updated": "2026-07-19",
   "description": "生成AI・AIエージェントが他業種の事業モデル（顧客接点・提供形態・価値の所在・業界構造）を作り変える公開事例を、人材・能力流通市場への転用とあわせて整理。人材業界より先に起きている変化を先読みする。",
   "categories": [
     {
@@ -21,6 +21,40 @@
     }
   ],
   "articles": [
+    {
+      "title": "Zendesk、顧客対応AIを「確認できた解決にのみ課金」する成果課金へ",
+      "source_label": "Zendesk（2026年5月）",
+      "category": "model",
+      "published": "2026-05",
+      "collected": "2026-07-19",
+      "summary": "顧客対応ソフト大手のZendeskは2026年5月19日、年次イベントで新しい課金方式を発表した。AIエージェントが実際に解決し、かつ確認できた成果にのみ課金する方式で、解決の確認は解決したAIエージェント自身と、独立したAI評価モデルの二重で行うとする。",
+      "points": [
+        "課金の物差しを「利用人数」から「確認できた解決成果」へ転換",
+        "解決の確認はAIエージェント自身と独立したAI評価モデルの二重",
+        "IntercomやSierraなど先行する成果課金の潮流に、大手が「検証付き」で加わった"
+      ],
+      "implication": "「人数・工数を束ねて売る」前提が揺らぐ動き。稼働時間ではなく成果や解決の度合いで評価する取引設計と、成果が出たことを第三者的に確認する仕組み（検収・評価）の整備が、仲介事業者にも問われる。",
+      "url": "https://www.zendesk.com/newsroom/articles/relate-2026/",
+      "source": "Zendesk「Relate 2026」ニュースルーム（2026年5月19日）",
+      "deepdive": "zendesk-outcome-pricing-2026"
+    },
+    {
+      "title": "TCS、AI主導の変革案件へ軸足 ― 第1四半期でAI事業は年換算26億ドル規模、受注残95億ドル",
+      "source_label": "Tata Consultancy Services（2026年7月）",
+      "category": "model",
+      "published": "2026-07",
+      "collected": "2026-07-19",
+      "summary": "受託IT・システム構築大手のTCS（タタ・コンサルタンシー・サービシズ）は2026年7月9日、2027会計年度第1四半期の決算を発表した。AI事業の年換算売上は26億ドル規模（前四半期比+13.6%）、四半期の受注残（TCV）は95億ドルで、SKFとの大型AI変革案件を含む。単機能の工程受託でなく、AIを組み込んだ変革プログラムをまとめて請ける形へ移りつつある。",
+      "points": [
+        "AI事業の年換算売上は26億ドル規模（前四半期比+13.6%）",
+        "四半期の受注残（TCV）は95億ドル、SKFとの大型AI変革案件を締結",
+        "四半期売上は前年同期比+13.9%（₹72,275 crore、約76億ドル）"
+      ],
+      "implication": "「単機能の人を稼働時間で当てる」前提が弱まり、価値は複数領域をまたいで成果まで導く供給力と、人とAIを組み合わせた解決力へ移る。人月の積み上げから成果・変革単位の取引へ、という仲介設計の転換を先取りする事例。",
+      "url": "https://www.tcs.com/who-we-are/newsroom/press-release/tcs-financial-results-q1-fy-2027",
+      "source": "Tata Consultancy Services「TCS begins FY27 with continued growth; wins multiple AI transformation deals」（2026年7月9日）",
+      "deepdive": "tcs-q1fy27-ai-transformation"
+    },
     {
       "title": "Intercom Fin ― AIエージェントを「解決1件0.99ドル」の成果課金で売る",
       "source_label": "Intercom（Fin AI）公式",
