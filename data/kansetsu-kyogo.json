@@ -18,6 +18,44 @@
   ],
   "articles": [
     {
+      "title": "インフォシス、第1四半期は「企業向けAI」主導で大型受注38億ドル ― 顧客の発注先集約が進む",
+      "source_label": "Infosys（SEC提出・2025年7月）",
+      "category": "firm",
+      "relation": "complement",
+      "relation_sub": "substitute",
+      "published": "2025-07",
+      "collected": "2026-07-19",
+      "summary": "インド大手ITサービス・システム構築企業のインフォシスは2025年7月23日、2026会計年度第1四半期決算を発表した。売上は49億4,100万ドル（恒常為替で前年同期比+3.8%）、大型受注（TCV）は38億ドルで新規が55%。成長要因として、企業向けAI（enterprise AI）の導入能力と、顧客が複数の発注先を大手1社へ集約する動きを挙げた。",
+      "points": [
+        "四半期売上49億4,100万ドル（恒常為替で+3.8%）、営業利益率20.8%",
+        "大型受注38億ドル（うち新規55%）、企業向けAIが差別化要因",
+        "顧客が発注先を大手へ集約する動きを成長要因に明示"
+      ],
+      "implication": "大手ITサービス企業が「AI導入を軸に法人の発注を集約して受ける」構図は、法人が社内に持たない専門性を、個人のマッチングでなく大手へまとめて委託する代替圧力を示す。既存の間接競合（アクセンチュア・TCS）と同じ潮流の別事例。",
+      "url": "https://www.sec.gov/Archives/edgar/data/1067491/000106749125000022/exv99w02.htm",
+      "source": "Infosys Limited「Q1 FY26 Financial Results」（米SEC Form 6-K、2025年7月23日）",
+      "deepdive": "infosys-q1-fy26-2025"
+    },
+    {
+      "title": "MIXI、ChatGPT Enterprise全社活用で月間約1万7,600時間を削減 ― 社員が業務用AIを自作する内製文化",
+      "source_label": "MIXI（公式・2025年8月）",
+      "category": "insourcing",
+      "relation": "substitute",
+      "relation_sub": "complement",
+      "published": "2025-08",
+      "collected": "2026-07-19",
+      "summary": "MIXIは2025年8月21日、2025年3月から全従業員約2,000名へ導入したChatGPT Enterpriseの活用成果を公表した。全社で月間約1万7,600時間（1人あたり月約11時間）を削減する見込みで、社員が自作したカスタムGPTは1,800個超、AI関連プロジェクトは300件超に達した。全従業員のAI利用率は99%。",
+      "points": [
+        "全社で月間約1万7,600時間を削減見込み、AI利用率は99%",
+        "社員が自作したカスタムGPTは1,800個超、AI関連プロジェクト300件超",
+        "導入3か月で月次利用率90%超・週次80%と社内定着"
+      ],
+      "implication": "大企業が定型・補助業務をAIの社内活用で自己完結させる内製化は、これまで外部のプロ人材へ委託されてきた業務の一部を社内に取り込む代替圧力になる。マッチング市場では取り扱い案件の高度化圧力を示す事例とみられる。",
+      "url": "https://mixi.co.jp/news/2025/0821/44093/",
+      "source": "株式会社MIXI「ChatGPT Enterprise 全社活用の成果」（2025年8月21日）",
+      "deepdive": "mixi-chatgpt-enterprise-2025"
+    },
+    {
       "title": "アクセンチュア、第2四半期の受注が過去最高 ― AI変革需要が大手ファームへ集中",
       "source_label": "Accenture（2026年3月）",
       "category": "firm",

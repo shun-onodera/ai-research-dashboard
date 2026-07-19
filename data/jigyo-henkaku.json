@@ -22,6 +22,23 @@
   ],
   "articles": [
     {
+      "title": "Duolingo、第2四半期は増収41% ― AIの推論コストが原価に、上位課金が単価を押し上げ",
+      "source_label": "Duolingo（SEC提出・2025年8月）",
+      "category": "model",
+      "published": "2025-08",
+      "collected": "2026-07-19",
+      "summary": "語学学習アプリのDuolingoは2025年8月6日、第2四半期決算を発表した。総ブッキングは前年同期比+41%の2億6,800万ドル、純利益は4,480万ドル（+84%）と好調な一方、生成AIを使う上位課金「Duolingo Max」の拡大でAIの推論コストが原価に効き、粗利率は前年同期比で約100ベーシスポイント低下した。",
+      "points": [
+        "総ブッキング+41%（2億6,800万ドル）、四半期として過去最高益",
+        "上位課金Duolingo MaxのAIコストで粗利率が前年比約100bp低下",
+        "1人あたり平均課金額（ARPU）は+6%と、上位課金への移行が単価を押し上げ"
+      ],
+      "implication": "「AIを提供に組み込むほど、価値（上位課金による単価上昇）と原価（推論コスト）の両方が動く」という単価構造の変化を、他業種の一次データで確認できる。マッチング市場でも、AIを人選や提案に組み込むほど原価と課金設計を同時に見直す必要が生じることを先読みする素材になる。",
+      "url": "https://www.sec.gov/Archives/edgar/data/1562088/000156208825000165/q2fy25duolingo6-30x25press.htm",
+      "source": "Duolingo, Inc.「Second Quarter 2025 Financial Results」（米SEC Form 8-K、2025年8月6日）",
+      "deepdive": "duolingo-q2-2025"
+    },
+    {
       "title": "Zendesk、顧客対応AIを「確認できた解決にのみ課金」する成果課金へ",
       "source_label": "Zendesk（2026年5月）",
       "category": "model",

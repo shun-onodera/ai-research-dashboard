@@ -22,6 +22,57 @@
   ],
   "articles": [
     {
+      "title": "Microsoft「Working with AI」― 20万件のCopilot対話から職業別のAI適用度を測定",
+      "source_label": "Microsoft Research（2025年7月）",
+      "category": "jobs",
+      "published": "2025-07",
+      "collected": "2026-07-19",
+      "summary": "マイクロソフト・リサーチは2025年7月10日、匿名化した約20万件のCopilot対話を分析し、職業ごとに生成AIがどの作業にどれだけ使われ成功しているかを測る「AI適用度スコア」を算出した研究を公表した。適用度が高いのは知識労働（コンピューター・数学系、事務・管理サポート）や販売職で、情報の収集・執筆といった情報処理業務が中心だった。",
+      "points": [
+        "実際のAI対話ログ約20万件から職業別の「AI適用度」を算出",
+        "適用度が高いのは知識労働・事務・販売など情報処理を含む職種",
+        "著者は「適用度が高い＝その職が消える」ではないと明言"
+      ],
+      "implication": "どの職業のどの作業にAIが実際に入り込んでいるかを実データで示すため、プロ人材の需要が「消える」のか「組み替わる」のかを職務単位で読む基礎資料になるとみられる。",
+      "url": "https://www.microsoft.com/en-us/research/publication/working-with-ai-measuring-the-occupational-implications-of-generative-ai/",
+      "source": "Microsoft Research「Working with AI: Measuring the Occupational Implications of Generative AI」（2025年7月10日）",
+      "deepdive": "microsoft-working-with-ai-2025"
+    },
+    {
+      "title": "東京商工リサーチ 生成AI調査 ― 活用推進は企業の25.2%、最大の障壁は「専門人材の不在」",
+      "source_label": "東京商工リサーチ（2025年8月）",
+      "category": "productivity",
+      "published": "2025-08",
+      "collected": "2026-07-19",
+      "summary": "東京商工リサーチは2025年8月18日、6,645社への生成AIアンケート調査を公表した。生成AIの業務活用を推進している企業は25.2%（1,679社）にとどまり、50.9%は方針未定。大企業（43.3%）と中小企業（23.4%）で約20ポイントの差があり、推進しない最大の理由は「推進するための専門人材がいない」（55.1%）だった。",
+      "points": [
+        "活用を推進している企業は25.2%、半数は方針未定",
+        "大企業43.3%・中小企業23.4%で約20ポイントの差",
+        "推進しない最多理由は「専門人材がいない」55.1%"
+      ],
+      "implication": "「生成AIを使いたいが社内に専門人材がいない」という構図が定量で示された。とくに中小企業で、外部のAI活用プロ人材を短期・部分的に使うマッチング需要の裏づけになるとみられる。",
+      "url": "https://www.tsr-net.co.jp/data/detail/1201667_1527.html",
+      "source": "東京商工リサーチ「2025年『生成AIに関するアンケート』調査」（2025年8月18日）",
+      "deepdive": "tsr-genai-survey-2025"
+    },
+    {
+      "title": "Anthropic Economic Index（9月版）― Claude利用は高所得国に偏在、法人API利用の自動化率77%",
+      "source_label": "Anthropic（2025年9月）",
+      "category": "productivity",
+      "published": "2025-09",
+      "collected": "2026-07-19",
+      "summary": "Anthropicは2025年9月15日、自社AIの利用ログを地理と企業の2軸で分析した報告を公表した。Claude利用は高所得国に偏り、米国が世界利用の21.6%を占める。1人あたり利用指数はイスラエルが7.0で最上位。法人のAPI利用は自動化（作業の肩代わり）が77%と、消費者利用の約50%を大きく上回った。",
+      "points": [
+        "Claude利用は高所得国に偏在（米国が世界の21.6%）",
+        "法人API利用の自動化率は77%で消費者利用（約50%）を大きく上回る",
+        "地域・企業間で普及格差が大きい"
+      ],
+      "implication": "法人のAPI利用が業務の肩代わりに向かう一方、地域・企業間の普及格差が大きいことは、AI活用が進む企業と遅れる企業の二極化を示す。遅れる側に外部プロ人材が入り込む余地を示唆するとみられる。",
+      "url": "https://www.anthropic.com/research/anthropic-economic-index-september-2025-report",
+      "source": "Anthropic「Anthropic Economic Index (September 2025 report)」（2025年9月15日）",
+      "deepdive": "anthropic-economic-index-2025-09"
+    },
+    {
       "title": "AIの使われ方は「補助」が「自動化」を再逆転 ― Anthropic Economic Index 1月版",
       "source_label": "Anthropic（2026年1月）",
       "category": "jobs",

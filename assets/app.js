@@ -1058,7 +1058,7 @@
           // ②今月の示唆（横断テーマの統合）
           var themesHtml = "";
           if (m.themes && m.themes.length) {
-            themesHtml = '<h3 class="mo-h3">今月の示唆</h3>' + m.themes.map(function (t) {
+            themesHtml = '<h3 class="mo-h3">示唆（横断テーマ）</h3>' + m.themes.map(function (t) {
               function row(lab, txt) { return txt ? '<div class="mo-theme-row"><span class="mo-theme-lab">' + lab + '</span><span class="mo-theme-txt">' + esc(txt) + "</span></div>" : ""; }
               return '<div class="mo-theme"><p class="mo-theme-title">' + esc(t.title) + "</p>" +
                 row("何が起きたか", t.what) + row("なぜ重要か", t.why) + row("市場への影響", t.move) + "</div>";
@@ -1066,7 +1066,7 @@
           } else {
             var picks = m.pickups || m.topInsights;
             if (picks && picks.length) {
-              themesHtml = '<h3 class="mo-h3">今月の示唆</h3><ol class="mo-insights">' +
+              themesHtml = '<h3 class="mo-h3">示唆（横断テーマ）</h3><ol class="mo-insights">' +
                 picks.map(function (t) { return "<li>" + moEmph(t) + "</li>"; }).join("") + "</ol>";
             }
           }
