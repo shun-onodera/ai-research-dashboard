@@ -62,7 +62,7 @@
             {
               "title": "Mercor、評価額200億ドルへの資金調達交渉とDeeptune買収",
               "source_label": "Forbes／Fortune／TechCrunch",
-              "grade": null,
+              "grade": "A",
               "deepdive": "mercor-20b-talent-ai-2026",
               "url": "https://www.forbes.com/sites/richardnieva/2026/07/09/mercor-fundraise/",
               "note": "AI訓練データ向け専門人材マッチングのMercorが評価額200億ドルで調達交渉、訓練環境のDeeptuneを買収。AI開発企業が新たな発注元に。"
@@ -70,7 +70,7 @@
             {
               "title": "みらいワークス、民営化した富山エアポートと包括連携協定を締結",
               "source_label": "みらいワークス（PR TIMES）",
-              "grade": null,
+              "grade": "A",
               "deepdive": "miraiworks-toyama-airport-2026",
               "url": "https://prtimes.jp/main/html/rd/p/000000516.000016557.html",
               "note": "民営化した富山エアポートと包括連携。地方展開の窓口が地域金融機関から民営化インフラ運営会社へ広がる。"
@@ -78,7 +78,7 @@
             {
               "title": "サーキュレーション 登録プロ人材35,000名突破、IT・セキュリティ領域が急伸",
               "source_label": "サーキュレーション（2026年7月）",
-              "grade": null,
+              "grade": "A",
               "deepdive": "circulation-pro-sharing-35k-2026",
               "url": "https://circu.co.jp/news/20260708-6386/",
               "note": "登録プロ人材35,000名突破（前年比140%超）、IT・セキュリティが急伸。専門性の厚みと案件流入経路を同時に強化。"
@@ -101,7 +101,7 @@
             {
               "title": "大手SIer、AI生産性向上と内製化を加速 ― コーディング中心のSES案件は半年で45%縮小",
               "source_label": "各社IR・調査（2026年）",
-              "grade": null,
+              "grade": "A",
               "deepdive": "jp-sier-ai-dev-sourcing-2026",
               "url": "https://freelance.findy-code.io/articles/market-report_202603",
               "note": "大手SIerのAI内製化で、コーディング中心のSES案件比率が24.8%から13.5%に半減。上流・品質保証には新需要。"
@@ -140,7 +140,7 @@
             {
               "title": "OECD「Skills in the AI age」― AI導入の壁はスキル不足、高度AI人材が必要な労働者は1%未満",
               "source_label": "OECD「Skills in the AI age」",
-              "grade": null,
+              "grade": "A",
               "deepdive": "oecd-skills-ai-age-2026",
               "url": "https://www.oecd.org/en/topics/sub-issues/artificial-intelligence-and-education-and-skills.html",
               "note": "AI導入の壁はスキル不足。高度AI人材が必要な労働者は1%未満で、多くに要るのは基礎的データ活用スキル。中小企業ほど壁が顕著。"
@@ -159,7 +159,7 @@
             {
               "title": "TCS、AI主導の変革案件へ軸足 ― 第1四半期でAI事業は年換算26億ドル規模、受注残95億ドル",
               "source_label": "Tata Consultancy Services（2026年7月）",
-              "grade": null,
+              "grade": "A",
               "url": "https://www.tcs.com/who-we-are/newsroom/press-release/tcs-financial-results-q1-fy-2027",
               "note": "AI年換算売上26億ドル・受注残95億ドル。SKFとの大型AI変革案件を含み、成果・変革単位の取引への転換を示す。",
               "deepdive": "tcs-q1fy27-ai-transformation"
@@ -178,7 +178,7 @@
             {
               "title": "企業の人手不足感が続く ― 日銀短観、雇用人員判断DIはマイナス37で先行きも不足超過",
               "source_label": "日本銀行（2026年7月）",
-              "grade": null,
+              "grade": "A",
               "url": "https://www.boj.or.jp/statistics/tk/yoshi/tk2606.htm",
               "note": "雇用人員判断DIはマイナス37、先行きマイナス40。恒常的な人手不足は外部人材需要の追い風になる。",
               "deepdive": "boj-tankan-2026-06"
@@ -197,7 +197,7 @@
             {
               "title": "改正個人情報保護法が成立・公布 ― 初の課徴金制度、AI開発向けデータ提供には同意の特例",
               "source_label": "個人情報保護委員会／国会（2026年7月）",
-              "grade": null,
+              "grade": "A",
               "url": "https://www.sangiin.go.jp/japanese/joho1/kousei/gian/221/meisai/m221080221054.htm",
               "note": "個人データの違法な取扱いに初の課徴金、一方でAI開発向け提供は同意の特例。閣議決定（4月）に続く成立という節目。",
               "deepdive": "pipa-amendment-enacted-2026"
@@ -272,14 +272,14 @@
             {
               "title": "Upwork、Claudeと連携 ― 1,800万人の専門人材プールをAIチャット内で検索・発注可能に",
               "source_label": "Upwork（GlobeNewswire、2026年6月17日）",
-              "grade": null,
+              "grade": "A",
               "deepdive": "upwork-claude-connector-2026",
               "note": "法人がClaudeのチャットで内容を伝えるだけで候補者リストの提示を受けられる連携として設計した。"
             },
             {
               "title": "INTLOOP、「AIセントリックカンパニー」を実行フェーズへ",
               "source_label": "INTLOOP（PR TIMES）",
-              "grade": null,
+              "grade": "A",
               "deepdive": "intloop-ai-centric",
               "note": "マッチングの中核機能をAI化しつつ、社内で効果を確かめた業務特化AIを外部法人へ外販する二段構えを示した。"
             }
@@ -298,7 +298,7 @@
             {
               "title": "中途採用実施率が過去最高84.4% ― 即戦力の専門人材ニーズが構造化",
               "source_label": "リクルートワークス研究所",
-              "grade": null,
+              "grade": "A",
               "deepdive": "recruit-works-midcareer-2026",
               "note": "採用対象を広げても充足しない状況が、正社員では賄えない専門性の外部調達を後押しする。"
             }
@@ -343,7 +343,7 @@
             {
               "title": "Intercom Fin ― AIエージェントを「解決1件0.99ドル」の成果課金で売る",
               "source_label": "Intercom（Fin AI）公式",
-              "grade": null,
+              "grade": "A",
               "deepdive": "intercom-fin-outcome-pricing",
               "note": "問い合わせを最後まで解決できたときだけ課金する成果課金へ振り切った。"
             }
@@ -362,14 +362,14 @@
             {
               "title": "ITフリーランス市場、2026年に1兆2,209億円へ拡大予測 生成AI活用は9割超が前向き",
               "source_label": "エン・ジャパン(2026年6月10日)",
-              "grade": null,
+              "grade": "A",
               "deepdive": "en-japan-it-freelance-market-2026",
               "note": "ITフリーランス市場を1兆2,209億円と推計し、開発現場の生成AI活用に9割超が前向きと示した。"
             },
             {
               "title": "連合2026春闘、賃上げ5.02%・ベア3.52%（第6回集計）",
               "source_label": "連合 春季生活闘争2026",
-              "grade": null,
+              "grade": "A",
               "deepdive": "rengo-shunto-2026",
               "note": "平均賃上げ率5.02%・基本給の底上げ（ベア）3.52%で、3年連続の5%台が射程に入った。"
             }
@@ -388,7 +388,7 @@
             {
               "title": "フリーランス法、施行後初の通年運用状況 ― 令和7年度は勧告10件・指導1,542件、支払期日違反が4割超",
               "source_label": "公正取引委員会（2026年6月）",
-              "grade": null,
+              "grade": "A",
               "deepdive": "jftc-freelance-fy2025-status",
               "note": "施行後初の通年で勧告10件・指導1,542件の措置に達し、支払期日違反が4割超を占めた。"
             }
@@ -468,7 +468,7 @@
             {
               "title": "クラウドワークス、AI特化マッチング「AIクラウドワークス」発表",
               "source_label": "クラウドワークス公式",
-              "grade": null,
+              "grade": "A",
               "deepdive": "crowdworks-ai-crowdworks",
               "note": "AIを扱える個人と外注したい法人を、汎用の基盤とは別建てで結ぶ専門マッチングとして設計した。"
             }
@@ -494,7 +494,7 @@
             {
               "title": "富士通、OpenAIと連携開始 ― ChatGPT Enterprise・Codex活用とFDEモデル強化",
               "source_label": "富士通 プレスリリース（2026年5月）",
-              "grade": null,
+              "grade": "A",
               "deepdive": "fujitsu-fde-outcome-pricing-2026",
               "note": "OpenAIと連携し、顧客現場でAI実装を担う技術者を置く体制（FDE）を強化・展開する方針を示した。"
             }
@@ -520,7 +520,7 @@
             {
               "title": "Bain：求人は二極化、AI関連だけ別の動き",
               "source_label": "Bain & Company",
-              "grade": null,
+              "grade": "A",
               "deepdive": "bain-global-job-trends",
               "note": "世界の求人が広く減るなかAI関連の採用だけが回復し、求人市場が二極化していると分析した。"
             }
@@ -539,7 +539,7 @@
             {
               "title": "Zendesk、顧客対応AIを「確認できた解決にのみ課金」する成果課金へ",
               "source_label": "Zendesk（2026年5月）",
-              "grade": null,
+              "grade": "A",
               "deepdive": "zendesk-outcome-pricing-2026",
               "note": "AIエージェントが実際に解決し確認できた成果にのみ課金する方式へ切り替えた。"
             }
@@ -558,14 +558,14 @@
             {
               "title": "有効求人倍率1.18倍で横ばい、正社員は0.99倍（2026年4月）",
               "source_label": "一般職業紹介状況 令和8年4月分",
-              "grade": null,
+              "grade": "A",
               "deepdive": "mhlw-kyujin-2026-04",
               "note": "正社員に限った有効求人倍率が0.99倍と1倍を割り、採用の慎重化がうかがえる。"
             },
             {
               "title": "完全失業率2.5%を維持、就業者6,860万人（2026年4月）",
               "source_label": "労働力調査 2026年4月分",
-              "grade": null,
+              "grade": "A",
               "deepdive": "soumu-roudouryoku-2026-04",
               "note": "失業率2.5%と就業者の増加が並び、働き手が増えてもなお人手が足りない状態が続く。"
             }
@@ -584,14 +584,14 @@
             {
               "title": "EU、AI法簡素化で政治合意 — 高リスク義務を2027年末へ延期",
               "source_label": "European Commission",
-              "grade": null,
+              "grade": "A",
               "deepdive": "eu-ai-act-omnibus",
               "note": "高リスクAI義務の適用を2027年末へ延期する一方、透明性義務と罰則は予定どおり残した。"
             },
             {
               "title": "SSBJ、有報での基準「準拠」表現に注意喚起",
               "source_label": "サステナビリティ基準委員会（SSBJ）",
-              "grade": null,
+              "grade": "A",
               "deepdive": "ssbj-disclosure-notice",
               "note": "全項目を満たさない企業が「準拠」と記すのは誤認を招くとし、達成時期や未準拠の明示を求めた。"
             }
@@ -664,14 +664,14 @@
             {
               "title": "ビザスク×博報堂「エキスパートAI」共同開発・資本業務提携",
               "source_label": "ビザスク プレスリリース（2026年4月）",
-              "grade": null,
+              "grade": "A",
               "deepdive": "visasq-hakuhodo-expert-ai-2026",
               "note": "AIによる初期分析から実専門家インタビューへ接続する「AI先行型」設計で、AIと人の補完を収益モデルに組み込んだ。"
             },
             {
               "title": "Upwork、ワークマーケットプレイスをChatGPTに提供 ― OpenAIアプリでAIの中から人材を発注",
               "source_label": "Upwork（プレスリリース）",
-              "grade": null,
+              "grade": "A",
               "deepdive": "upwork-chatgpt-marketplace-2026",
               "note": "発注側は対話の中で「@Upwork」と呼びかけ、人材の発見から求人票の下書きまでをChatGPT上で完結できる。"
             }
@@ -689,14 +689,14 @@
             {
               "title": "ベイカレントFY26：生成AI・DX需要でファームが実装まで取り込む",
               "source_label": "ベイカレント・コンサルティング（6532）",
-              "grade": null,
+              "grade": "A",
               "deepdive": "baycurrent-fy26-ai-growth",
               "note": "FY26通期で売上収益1,483億円（前期比+27.8%）・営業利益509億円を達成し、戦略立案から実装・定着まで一貫して担う体制を強めた。"
             },
             {
               "title": "人手不足倒産441件・年度初の400件超（2025年度）",
               "source_label": "株式会社帝国データバンク",
-              "grade": null,
+              "grade": "A",
               "deepdive": "tdb-labor-shortage-bankruptcy-fy2025",
               "note": "専門人材の退職が引き金の「従業員退職型」が118件と初めて100件を超え、4年連続で増加した。"
             }
@@ -739,14 +739,14 @@
             {
               "title": "AIの無料回答が学習支援Cheggの月額モデルを崩壊させた",
               "source_label": "Higher Ed Dive",
-              "grade": null,
+              "grade": "A",
               "deepdive": "chegg-ai-answer-collapse",
               "note": "解答の無料化と検索結果への答え直接表示という二重の打撃で、時価総額はピークの約147億ドルから99%近くが消えた。"
             },
             {
               "title": "Cognizant ― AI込みレートカードで工数課金から成果課金へ",
               "source_label": "People Matters（報道）",
-              "grade": null,
+              "grade": "A",
               "deepdive": "cognizant-ai-rate-card",
               "note": "人の労働とAIの労働を段階で並べ、請求の物差しを働いた時間から固定価格・成果連動へ移した。"
             }
@@ -764,7 +764,7 @@
             {
               "title": "人手不足関連倒産442件で過去最多（2025年度）",
               "source_label": "東京商工リサーチ",
-              "grade": null,
+              "grade": "A",
               "deepdive": "tsr-jinde-bankruptcy-fy2025",
               "note": "賃上げが資金繰りを圧迫する「人件費高騰」型が195件（前年度比77.2%増）と急増した。"
             },
@@ -788,7 +788,7 @@
             {
               "title": "個人情報保護法の改正法案を閣議決定（令和8年4月7日）、課徴金制度を新設・統計作成等で本人同意を不要化",
               "source_label": "個人情報保護委員会",
-              "grade": null,
+              "grade": "A",
               "deepdive": "personal-info-amendment-2026",
               "note": "統計作成やAI開発に向けたデータ提供は同意なしで進めやすくなる一方、金銭的制裁が初めて導入される。"
             }
@@ -861,7 +861,7 @@
             {
               "title": "ビザスク、候補者発掘から契約まで全工程をAIで支援",
               "source_label": "ビザスク",
-              "grade": null,
+              "grade": "A",
               "deepdive": "visasq-ai-fullprocess",
               "note": "「AI Scout」は5分以内に適合度リストを提示し、人選の初動を自動化する。"
             }
@@ -879,7 +879,7 @@
             {
               "title": "アクセンチュア、第2四半期の受注が過去最高 ― AI変革需要が大手ファームへ集中",
               "source_label": "Accenture（2026年3月）",
-              "grade": null,
+              "grade": "A",
               "deepdive": "accenture-2qfy26",
               "note": "四半期受注は221.1億ドル（前年同期比+6%）で、受注1億ドル超の顧客は過去最多の41社に達した。"
             }
@@ -898,14 +898,14 @@
             {
               "title": "帝国データバンク：生成AI活用34.5%・効果実感86.7%",
               "source_label": "帝国データバンク",
-              "grade": null,
+              "grade": "A",
               "deepdive": "tdb-genai-companies-2026",
               "note": "活用企業の18.8%が能力・成果の格差拡大を認識し、最大の懸念は情報の正確性（50.4%）だった。"
             },
             {
               "title": "HBS／HBR、自動化親和性の高い職種で求人13%減・分析/技術/創造系で20%増",
               "source_label": "HBR",
-              "grade": null,
+              "grade": "A",
               "deepdive": "hbr-ai-labor-market",
               "note": "生成AI登場後の求人データで、労働需要が職種によって逆方向に動く構造シフトが確認された。"
             }
@@ -923,14 +923,14 @@
             {
               "title": "Hiscox ― AIが特殊保険の見積りを3日→3分に短縮",
               "source_label": "hyperexponential（Hiscox公式等を併記）",
-              "grade": null,
+              "grade": "A",
               "deepdive": "hiscox-agentic-underwriting",
               "note": "AIが申込整理・リスク評価・価格付けを下準備し、引受担当者は最終確認に集中する分業へ移った。"
             },
             {
               "title": "AIが暴いた「時間課金」コンサルの構造的欠陥 ― 成果課金への移行",
               "source_label": "Consulting Success",
-              "grade": null,
+              "grade": "A",
               "deepdive": "consulting-billable-hour-shift",
               "note": "成果・価値ベースへ移ったコンサルの単価が上がり、時間課金が成り立たなくなる流れが加速した。"
             }
@@ -965,14 +965,14 @@
             {
               "title": "AI推進法が2025年9月全面施行、AI事業者ガイドラインは第1.2版へ更新（罰則なしの自主規制型）",
               "source_label": "経済産業省・総務省／内閣府",
-              "grade": null,
+              "grade": "A",
               "deepdive": "japan-ai-promotion-law-guideline-2026",
               "note": "事業者には国の施策への協力など努力義務を課すにとどまり、事前規制ではなく自主的なガバナンスが中心となる。"
             },
             {
               "title": "有価証券報告書での人的資本3指標開示が義務化（2023年3月期から、大手約4,000社が対象）",
               "source_label": "金融庁・厚生労働省・内閣官房",
-              "grade": null,
+              "grade": "B",
               "deepdive": "human-capital-disclosure-2026",
               "note": "女性管理職比率・男性育児休業取得率・男女賃金差異の3指標が開示対象となった。"
             }
@@ -1047,14 +1047,14 @@
             {
               "title": "クラウドワークス、AI技術系子会社の吸収合併など事業ポートフォリオ再編",
               "source_label": "クラウドワークス",
-              "grade": null,
+              "grade": "A",
               "deepdive": "crowdworks-portfolio",
               "note": "AI技術系子会社の吸収合併など、複数サービスの撤退・統合を含む事業ポートフォリオ再編を公表した。"
             },
             {
               "title": "ランサーズ、「AIでアップデートするAXカンパニー」への進化を表明",
               "source_label": "ランサーズ",
-              "grade": null,
+              "grade": "A",
               "deepdive": "lancers-ax-company",
               "note": "プラットフォーム・AIプロダクト・コンサルを統合した一気通貫の「AXカンパニー」への進化を掲げた。"
             }
@@ -1072,7 +1072,7 @@
             {
               "title": "アビーム「AI-Native BPX」提供開始 ― NEC連携・コミットメント型",
               "source_label": "アビームコンサルティング PR（2026年2月）",
-              "grade": null,
+              "grade": "A",
               "deepdive": "abeam-ai-native-bpo-2026",
               "note": "NEC連携で業務を再設計するコミットメント型の「AI-Native BPX」を開始した。"
             }
@@ -1091,14 +1091,14 @@
             {
               "title": "生成AIの業務利用は約1,840万人・利用率32.4%",
               "source_label": "パーソル総合研究所",
-              "grade": null,
+              "grade": "A",
               "deepdive": "persol-genai-work-2026",
               "note": "生成AIの業務利用人口は約1,840万人だが、業務時間を減らせた人は利用者の約4人に1人にとどまる。"
             },
             {
               "title": "AIが奪うのは職ではなくタスク（WAITS調査）",
               "source_label": "リクルートワークス研究所",
-              "grade": null,
+              "grade": "A",
               "deepdive": "rworks-waits-2026",
               "note": "AIが直接奪うのは職ではなく職を構成するタスクだと示し、業務を組み替える猶予があると結論づけた。"
             }
@@ -1118,14 +1118,14 @@
             {
               "title": "KPMGがAI効率化を理由に自社監査報酬を14%値下げさせた",
               "source_label": "Financial Times（The Irish Times 経由）",
-              "grade": null,
+              "grade": "A",
               "deepdive": "kpmg-ai-audit-fees",
               "note": "監査法人にAI効率化を理由とした値下げを求め、自社の監査報酬を14%引き下げさせた。"
             },
             {
               "title": "AmazonがAI「Rufus」を法人購買の入口に",
               "source_label": "Digital Commerce 360",
-              "grade": null,
+              "grade": "A",
               "deepdive": "amazon-business-rufus-agent",
               "note": "AI「Rufus」を法人購買の入口に据え、繰り返し発注をAIが代行する購買へ動いた。"
             }
@@ -1143,7 +1143,7 @@
             {
               "title": "正規雇用が11期連続で増加、転職希望者は男女とも増加 ― 労働力調査 詳細集計",
               "source_label": "総務省統計局（2026年2月）",
-              "grade": null,
+              "grade": "A",
               "deepdive": "soumu-roudouryoku-detail-2025q4",
               "note": "正規雇用が3,740万人と11期連続で増加し、転職希望者は男女ともに増えた。"
             }
@@ -1161,7 +1161,7 @@
             {
               "title": "フリーランス法違反で公取委が勧告 ― 共同通信社に取引条件の明示・支払期日の不備を指摘",
               "source_label": "公正取引委員会（2026年2月）",
-              "grade": null,
+              "grade": "A",
               "deepdive": "jftc-freelance-kyodo-2026",
               "note": "共同通信社にフリーランス法違反で勧告し、取引条件の明示・支払期日の不備を指摘した。"
             }
@@ -1228,7 +1228,7 @@
             {
               "title": "TWOSTONE&Sons、ロールアップM&A戦略で「WEBIer」ポジション確立を目指す",
               "source_label": "TWOSTONE&Sons",
-              "grade": null,
+              "grade": "A",
               "deepdive": "twostone-rollup-ma",
               "note": "エンジニアマッチングを起点に、ロールアップM&Aで上流コンサル・受託開発へ川上展開する成長戦略を公表した。"
             }
@@ -1247,14 +1247,14 @@
             {
               "title": "TCS：6か月で3万人超削減——AIエージェントと人員数の同等化へ",
               "source_label": "Tata Consultancy Services（TCS）",
-              "grade": null,
+              "grade": "A",
               "deepdive": "tcs-ai-30000-headcount-cut-agent-parity",
               "note": "半年で3万人超を削減し、将来的にAIエージェント数を従業員数と同水準にする目標を掲げた。"
             },
             {
               "title": "AI求人1,000万円超が3年比4.2倍―企業はAI専門人材の正社員採用へ本格移行",
               "source_label": "株式会社ビズリーチ",
-              "grade": null,
+              "grade": "A",
               "deepdive": "bizreach-ai-job-1000man-4x",
               "note": "年収1,000万円超のAI求人が3年前比4.2倍に増え、AI専門人材の正社員採用が本格化した。"
             }
@@ -1272,7 +1272,7 @@
             {
               "title": "AIの使われ方は「補助」が「自動化」を再逆転 ― Anthropic Economic Index 1月版",
               "source_label": "Anthropic（2026年1月）",
-              "grade": null,
+              "grade": "A",
               "deepdive": "anthropic-economic-index-2026-01",
               "note": "Claude上の会話で補助的な使い方（52%）が自動化（45%）を再逆転したと報告した。"
             }
@@ -1291,14 +1291,14 @@
             {
               "title": "AIで顧客対応の外部委託（BPO）大手の株価が崩壊",
               "source_label": "Concentrix IR / Nearshore Americas",
-              "grade": null,
+              "grade": "A",
               "deepdive": "bpo-contact-center-collapse",
               "note": "顧客対応の外部委託大手2社の株価が、生成AIによる代替懸念で大きく崩れた。"
             },
             {
               "title": "AIの後直し化で翻訳業界の人月モデルが崩壊",
               "source_label": "CNN Business",
-              "grade": null,
+              "grade": "A",
               "deepdive": "translation-industry-collapse",
               "note": "人が原文から訳す仕事がAI出力の後直しへ置き換わり、後直しの単価が半減した。"
             }
@@ -1333,7 +1333,7 @@
             {
               "title": "下請法が2026年1月「取適法」へ全面改正 — 従業員基準追加・手形払禁止・一方的な代金決定の禁止で取引適正化を強化",
               "source_label": "公正取引委員会",
-              "grade": null,
+              "grade": "A",
               "deepdive": "toriteki-law-2026",
               "note": "下請法が「取適法」へ全面改正され、従業員基準追加・手形払禁止など受注側保護が強化された。"
             }
@@ -1422,14 +1422,14 @@
             {
               "title": "PKSHA、サーキュレーションを完全子会社化へTOB ― マッチング大手がAI企業の傘下に",
               "source_label": "PKSHA／サーキュレーション（2025年7月）",
-              "grade": null,
+              "grade": "A",
               "deepdive": "circu-pksha-tob-2025",
               "note": "AI企業のPKSHAがマッチング大手を完全子会社化。AIとマッチングの資本統合の象徴。"
             },
             {
               "title": "クラウドワークス、マッチングからDXコンサルへ事業転換を加速",
               "source_label": "クラウドワークス（2025年11月）",
-              "grade": null,
+              "grade": "A",
               "deepdive": "crowdworks-dx-pivot",
               "note": "クラウドソーシング最大手が、マッチングからDXコンサルへ事業の軸足を移す。"
             }
@@ -1448,14 +1448,14 @@
             {
               "title": "コンサル大手：AI時代の成果連動課金と組織縮小",
               "source_label": "コンサル大手（マッキンゼー・BCG等）（2025年11月）",
-              "grade": null,
+              "grade": "A",
               "deepdive": "consulting-outcome-pricing-2025",
               "note": "大手コンサルがAI時代の成果連動課金へ移り、組織を縮小。時間から成果へ。"
             },
             {
               "title": "三井不動産：ChatGPT Enterprise全社展開とAI内製開発体制の構築",
               "source_label": "三井不動産（2025年12月）",
-              "grade": null,
+              "grade": "A",
               "deepdive": "mitsui-fudosan-ai-insourcing-2025",
               "note": "全社でChatGPT Enterpriseを展開しAIを内製。定型業務を社内へ取り込む内製化の代表例。"
             }
@@ -1474,14 +1474,14 @@
             {
               "title": "AI普及で若手初級層の雇用が16%減（米実データ）",
               "source_label": "スタンフォード大学 Digital Economy Lab（2025年11月）",
-              "grade": null,
+              "grade": "A",
               "deepdive": "stanford-canaries-2025",
               "note": "AIに影響されやすい職種の若手（22〜25歳）で雇用が16%減と米実データで示された。"
             },
             {
               "title": "生成AI活用は企業の25.2%、最大の障壁は「専門人材の不在」",
               "source_label": "東京商工リサーチ（2025年8月）",
-              "grade": null,
+              "grade": "A",
               "deepdive": "tsr-genai-survey-2025",
               "note": "6,645社調査で活用推進は25.2%、推進しない最多理由は専門人材の不在（55.1%）。"
             }
@@ -1500,14 +1500,14 @@
             {
               "title": "Sierra ― 顧客サポートを「解決1件ごとの成果課金」で売る",
               "source_label": "Sierra（報道）（2025年11月）",
-              "grade": null,
+              "grade": "A",
               "deepdive": "sierra-outcome-agent",
               "note": "顧客サポートAIを解決1件ごとの成果課金で提供。課金単位が人数・時間から成果へ。"
             },
             {
               "title": "報道コンテンツがAIの回答原資に ― NYT×Amazonの権利ライセンス",
               "source_label": "各社公式・大手報道（2025年12月）",
-              "grade": null,
+              "grade": "A",
               "deepdive": "nyt-amazon-content-licensing",
               "note": "報道コンテンツをAIへ供給して対価を得るライセンスが、来訪で稼ぐモデルに代わる収益源に。"
             }
@@ -1552,14 +1552,14 @@
             {
               "title": "フリーランス保護新法、発注側に7つの義務 報酬は受領後60日以内、施行1年で128事業者を指導",
               "source_label": "公正取引委員会・厚生労働省ほか（2025年12月）",
-              "grade": null,
+              "grade": "A",
               "deepdive": "freelance-protection-law-2025",
               "note": "発注側に取引条件の明示・支払期日など7つの義務。施行1年で128事業者を指導。"
             },
             {
               "title": "公取委、取適法・フリーランス法の規則・運用基準の最終版を公表 ― 意見124件を反映",
               "source_label": "公正取引委員会（2025年10月）",
-              "grade": null,
+              "grade": "A",
               "deepdive": "jftc-toriteki-rules-final-2025",
               "note": "改正法の実務ルールが確定（施行2026年1月）。個人への委託の細目が固まる。"
             }

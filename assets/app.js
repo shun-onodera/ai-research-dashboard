@@ -1074,10 +1074,10 @@
           var watchHtml = "";
           if (m.watchpoints && m.watchpoints.length) {
             if (typeof m.watchpoints[0] === "string") {
-              watchHtml = '<h3 class="mo-h3">論点・注視点</h3><ol class="mo-insights">' +
+              watchHtml = '<h3 class="mo-h3">主要な論点</h3><ol class="mo-insights">' +
                 m.watchpoints.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ol>";
             } else {
-              watchHtml = '<h3 class="mo-h3">論点・注視点</h3>' + m.watchpoints.map(function (w) {
+              watchHtml = '<h3 class="mo-h3">主要な論点</h3>' + m.watchpoints.map(function (w) {
                 function row(lab, txt) { return txt ? '<div class="mo-theme-row"><span class="mo-theme-lab">' + lab + '</span><span class="mo-theme-txt">' + esc(txt) + "</span></div>" : ""; }
                 return '<div class="mo-theme"><p class="mo-theme-title">' + esc(w.question) + "</p>" +
                   row("今の読み", w.read) + row("分かれ目", w.branch) + row("見るべき指標", w.signal) + "</div>";
@@ -1092,7 +1092,7 @@
           }
           var cats = (m.categories || []).map(function (c) {
             var cards = (c.cards || []).map(function (card) {
-              var badge = card.grade === "S" ? '<span class="mo-grade">S</span>' : "";
+              var badge = (card.grade === "S" || card.grade === "A") ? '<span class="mo-grade mo-grade-' + card.grade.toLowerCase() + '">' + card.grade + "</span>" : "";
               var detail = card.deepdive
                 ? '<a class="detail-link" href="report/index.html?r=' + esc(card.deepdive) + '">詳細を読む →</a>' : "";
               var src = card.url
@@ -1121,7 +1121,7 @@
               m.emptyCategories.map(function (e) { return '<a href="' + esc(e.href) + '">' + esc(e.name) + "</a>"; }).join("・") +
               "（各テーマの全一覧へ）</p>";
           }
-          body.innerHTML = lead + summary + themesHtml + watchHtml + '<h3 class="mo-h3">カテゴリ別の重要動向（一次情報）</h3>' + cats + empty + qHtml;
+          body.innerHTML = lead + summary + themesHtml + watchHtml + '<h3 class="mo-h3">カテゴリ別の重要動向</h3>' + cats + empty + qHtml;
         }
         if (sel) {
           sel.innerHTML = months.map(function (m, i) {

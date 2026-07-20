@@ -653,6 +653,7 @@ table.cam-dt{width:100%;border-collapse:collapse;font-size:12px}
 .mo-card{ background:var(--color-card); border:1px solid var(--color-line); border-radius:var(--radius-lg); padding:16px 18px; box-shadow:var(--shadow); display:flex; flex-direction:column; gap:8px; }
 .mo-card-top{ display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
 .mo-grade{ font-size:11px; font-weight:800; color:#fff; background:var(--color-blue); border-radius:5px; padding:2px 9px; letter-spacing:.02em; }
+.mo-grade-a{ background:var(--color-blue-50); color:var(--color-blue); border:1px solid #cdd9f5; }
 .mo-card h4{ margin:0; font-size:14.5px; line-height:1.5; color:var(--color-ink); }
 .mo-card-note{ margin:0; font-size:12.5px; line-height:1.7; color:var(--color-ink-2); }
 .mo-card-foot{ margin-top:auto; display:flex; align-items:center; gap:14px; padding-top:8px; border-top:1px solid var(--color-line-2); }
