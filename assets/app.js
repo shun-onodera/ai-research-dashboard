@@ -1061,7 +1061,7 @@
             themesHtml = '<h3 class="mo-h3">示唆（横断テーマ）</h3>' + m.themes.map(function (t) {
               function row(lab, txt) { return txt ? '<div class="mo-theme-row"><span class="mo-theme-lab">' + lab + '</span><span class="mo-theme-txt">' + esc(txt) + "</span></div>" : ""; }
               return '<div class="mo-theme"><p class="mo-theme-title">' + esc(t.title) + "</p>" +
-                row("何が起きたか", t.what) + row("なぜ重要か", t.why) + row("市場への影響", t.move) + "</div>";
+                row("事象", t.what) + row("意義", t.why) + row("市場への影響", t.move) + "</div>";
             }).join("");
           } else {
             var picks = m.pickups || m.topInsights;
@@ -1080,7 +1080,7 @@
               watchHtml = '<h3 class="mo-h3">主要な論点</h3>' + m.watchpoints.map(function (w) {
                 function row(lab, txt) { return txt ? '<div class="mo-theme-row"><span class="mo-theme-lab">' + lab + '</span><span class="mo-theme-txt">' + esc(txt) + "</span></div>" : ""; }
                 return '<div class="mo-theme"><p class="mo-theme-title">' + esc(w.question) + "</p>" +
-                  row("今の読み", w.read) + row("分かれ目", w.branch) + row("見るべき指標", w.signal) + "</div>";
+                  row("現状認識", w.read) + row("分岐点", w.branch) + row("注視指標", w.signal) + "</div>";
               }).join("");
             }
           }

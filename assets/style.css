@@ -669,7 +669,7 @@ table.cam-dt{width:100%;border-collapse:collapse;font-size:12px}
 .mo-cat-plist{ margin:8px 0 0; padding:0; list-style:none; display:grid; gap:6px; }
 .mo-cat-plist li{ position:relative; padding-left:16px; font-size:13px; line-height:1.7; color:var(--color-ink-2); }
 .mo-cat-plist li::before{ content:""; position:absolute; left:0; top:8px; width:6px; height:6px; border-radius:50%; background:var(--color-blue); }
-/* 今月の示唆（横断テーマ：何が起きたか→なぜ重要か→市場への影響） */
+/* 今月の示唆（横断テーマ：事象→意義→市場への影響） */
 .mo-theme{ background:var(--color-card); border:1px solid var(--color-line); border-left:3px solid var(--color-blue); border-radius:var(--radius-lg); padding:16px 18px; box-shadow:var(--shadow); margin-bottom:12px; }
 .mo-theme-title{ font-size:15px; font-weight:800; color:var(--color-ink); margin:0 0 11px; line-height:1.5; }
 .mo-theme-row{ display:grid; grid-template-columns:104px 1fr; gap:12px; align-items:start; margin-bottom:8px; }
