@@ -1,6 +1,6 @@
 {
   "theme": "AIと雇用",
-  "updated": "2026-08-05",
+  "updated": "2026-08-31",
   "description": "生成AIが雇用・職・スキルに与える影響に関する調査機関・研究機関の分析レポートを整理。国内（経済産業省・JILPT・NRI等）と海外（Stanford HAI・OpenAI・BCG・Goldman Sachs等）の分析を、出典付きで掲載しています。",
   "categories": [
     {
@@ -21,6 +21,96 @@
     }
   ],
   "articles": [
+    {
+      "title": "ILO若者雇用趨勢2026 ― 世界の若年失業率12.4%に上昇",
+      "source_label": "ILO",
+      "category": "jobs",
+      "published": "2026-08",
+      "collected": "2026-08-31",
+      "summary": "国際労働機関（ILO）が2026年8月11日に公表した年次報告書。2025年の世界の若年（15〜24歳）失業率は12.4%（約6,700万人）で、複数の地域で前年から上昇した。景気の停滞と事務・販売・製造など中間スキル職の減少に加え、AIによる職業構造の変化が若年層の就業の壁になっていると指摘する。",
+      "points": [
+        "世界の若年失業率は12.4%（2025年、15〜24歳、約6,700万人）。ILO公表資料に基づく",
+        "就学・就労・職業訓練のいずれにも属さない若者（NEET）の割合は20%、257百万人超に増加",
+        "若年労働者（15〜29歳）が就く職業のうち、AIによる業務変化の影響が大きいものは6.1%",
+        "アラブ諸国26.2%、北アフリカ22.6%など、地域別では中東・北アフリカで若年失業率が特に高い"
+      ],
+      "url": "https://www.ilo.org/publications/major-publications/global-employment-trends-youth-2026",
+      "source": "国際労働機関（ILO）「Global Employment Trends for Youth 2026: Back to the future」",
+      "deepdive": "ilo-org-major-global-2026-08",
+      "implication": "先進国以上に途上国・新興国の若年層は非正規雇用への依存が強く、AIによる中間スキル職の縮小が進むほど正規の入口が細る構図が続く。日本の副業・フリーランス市場でも、新卒・若手が「経験を積む場」としてどう機能するかは同じ論点であり、若手向け案件設計の参考になる。"
+    },
+    {
+      "title": "米雇用統計7月分 ― 非農業雇用2.3万人減、失業率4.1%に低下",
+      "source_label": "米BLS雇用統計",
+      "category": "jobs",
+      "published": "2026-08",
+      "collected": "2026-08-31",
+      "summary": "米労働省労働統計局（BLS）が2026年8月7日に公表した7月分雇用統計。非農業部門雇用者数は前月比2.3万人減と市場予想に反して減少し、失業率は4.1%（6月4.2%から低下）となった。減少は政府部門の5.3万人減が主因で、民間部門は3.0万人の増加だった。",
+      "points": [
+        "非農業部門雇用者数は前月比2万3,000人減で、市場予想（8万3,000人増）に反して減少した（米労働統計局、2026年8月7日公表）",
+        "失業率は4.1%と6月の4.2%から低下したが、労働参加率が61.4%へ下がり5年超ぶりの低水準となったことが主因である（同）",
+        "5月分・6月分が合計10万3,000人下方修正され、過去1年の月平均増加数は3万4,000人にとどまる（同）",
+        "政府部門が5万人超、宿泊・飲食サービス業が4万人の減少となった（同）"
+      ],
+      "url": "https://www.cnbc.com/2026/08/07/jobs-report-july-2026.html",
+      "source": "米労働統計局（BLS）「Employment Situation, July 2026」2026年8月7日公表（報道: CNBC）",
+      "deepdive": "cnbc-07-jobs-report-2026-08",
+      "implication": "雇用者数の減少と失業率の小幅な低下が同時に起きているのは、労働参加率の低下（求職活動をやめる人の増加）が背景にある可能性が高く、「数字は改善、実態は停滞」という解釈が必要になる。日本の副業・フリーランス市場を米国の雇用動向と比較する際は、失業率だけでなく労働参加率の動きも合わせて見る必要がある。"
+    },
+    {
+      "title": "Stanford「Canaries」8月版 ― 若手AI雇用ギャップ19%に拡大",
+      "source_label": "Stanford Digital Economy Lab",
+      "category": "jobs",
+      "published": "2026-08",
+      "collected": "2026-08-31",
+      "summary": "スタンフォード大学デジタル経済研究所が2026年8月12日に公表した追跡調査の更新版。ADPの給与データ（2022年11月〜2026年6月中旬、米国の数百万人規模）を用いた分析で、経済全体での広範な雇用破壊は確認されない一方、AIに強くさらされる職業に就く若手（22〜25歳）の雇用は、非該当層と比べたギャップが2025年7月時点の15%から2026年6月時点で19%へ拡大したと報告した。",
+      "points": [
+        "ADP給与データ（2022年11月〜2026年6月中旬、米国数百万人規模）を用いた分析",
+        "「経済全体での広範な雇用破壊は見られない」と明記",
+        "AI高露出職業に就く若手（22〜25歳）の雇用は、非該当の若手と比べたギャップが2025年7月の15%から2026年6月の19%へ拡大",
+        "経験豊富な労働者にはこのギャップは見られず、若手のみで拡大が進行"
+      ],
+      "url": "https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/",
+      "source": "Stanford Digital Economy Lab「Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence」2026年8月更新版",
+      "deepdive": "digitaleconomy-stanford-edu-canaries-2026-08",
+      "implication": "若手の雇用ギャップは「解雇の増加」ではなく「新規採用の抑制」を通じて生じている点が重要で、既存社員より新規参入者に影響が偏る構図は日本の新卒・若手フリーランス市場にも当てはまりうる。案件のエントリーポイントをどう設計するかが、若手の市場参入機会を左右する。"
+    },
+    {
+      "title": "Goldman Sachs ― コールセンター求人トレンド比39%減、新規層に打撃",
+      "source_label": "Goldman Sachs Research",
+      "category": "jobs",
+      "published": "2026-08",
+      "collected": "2026-08-31",
+      "summary": "ゴールドマン・サックス・リサーチが2026年8月19日前後に公表した分析。800を超える職業を対象に2022年後半以降の求人動向を調べたところ、AIへの露出度が高い業種ほど求人の伸びがトレンドを下回っており、特に新規参入者（entry-level workers）への影響が大きいとした。コールセンターの雇用は米国でトレンド比39%減、カナダ33%減、ドイツ27%減だった。",
+      "points": [
+        "800を超える職業を対象に2022年後半以降の求人動向を分析",
+        "コールセンターの雇用はトレンド比で米国39%減、カナダ33%減、ドイツ27%減",
+        "AI露出度の高い業種（コールセンター、ソフトウェア出版、経営コンサルティング、広告等）で求人の伸びがトレンドを下回る",
+        "新規参入者（entry-level workers）への影響が最も顕著。段階的な移行が10年かけて進む場合、失業率を0.6ポイント押し上げると試算"
+      ],
+      "url": "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-us-labor-market",
+      "source": "ゴールドマン・サックス・リサーチ「How Will AI Affect the US Labor Market?」",
+      "deepdive": "goldmansachs-insights-how-will-2026-08",
+      "implication": "定型的な問い合わせ対応や情報整理業務を担うコールセンター等の職種で新規採用が細っており、これは日本の副業・フリーランス市場が担ってきた「未経験者の実務経験の場」の一部と重なる。若手向けの間口をどう再設計するかが今後の論点になる。"
+    },
+    {
+      "title": "WEF ― AIでジュニア開発者の役割侵食、シニア人材枯渇に懸念",
+      "source_label": "WEF",
+      "category": "skills",
+      "published": "2026-08",
+      "collected": "2026-08-31",
+      "summary": "世界経済フォーラム（WEF）が2026年8月17日に公表した記事。77カ国1,500人超の開発者を対象にした「Dev Barometer 2026年第2四半期」調査で、シニア開発者の54%が「AIによってジュニアの役割の重要性が下がった」と回答したと紹介し、若手が現場経験を積みながらシニアへ育つ「人材の階段」が細っていくリスクを指摘する。",
+      "points": [
+        "「Dev Barometer 2026年第2四半期」調査（77カ国、開発者1,500人超が対象）に基づく",
+        "シニア開発者の54%が「AIによってジュニアの役割の重要性が下がった」と回答",
+        "ジュニアからシニアへの育成パイプラインが細り、組織の人材更新力が失われるリスクを指摘",
+        "エントリーレベルの職務を単純に減らすと、数四半期は効率的に見えても人材が硬直化する懸念を提示"
+      ],
+      "url": "https://www.weforum.org/stories/artificial-intelligence/as-ai-reshapes-entry-level-software-jobs-where-will-senior-developers-come-from/",
+      "source": "世界経済フォーラム（WEF）「How AI is reshaping the path from junior to senior developer」",
+      "deepdive": "weforum-org-artificial-intelligence-2026-08",
+      "implication": "ソフトウェア開発は「AIで代替されにくい高スキル職」の代表例だったが、その内部でも若手の育成経路が細る動きが出ている。副業・フリーランス市場が担ってきた「実務を通じた育成の場」としての役割は、開発分野でも一段と重要になる可能性がある。"
+    },
     {
       "title": "令和8年版情報通信白書 ― 生成AI利用58.8%も業務変革は3割弱が未着手",
       "source_label": "総務省",

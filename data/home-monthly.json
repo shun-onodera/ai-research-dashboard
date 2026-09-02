@@ -1,8 +1,439 @@
 {
-  "updated": "2026-07-19",
+  "updated": "2026-08-31",
   "basis": "published",
   "note": "原典の公開月ごとの重要動向ダイジェスト。〔今月の要点（索引）→ 今月の示唆（横断テーマの統合）→ 論点・注視点（So What）→ カテゴリ別の重要記事（一次情報）〕の順。各カテゴリはSランク優先、無い場合はその月の注目記事で補完する。",
   "months": [
+    {
+      "month": "2026-08",
+      "label": "2026年8月",
+      "keypoints": [
+        "Upworkの2026年第2四半期は売上高1億9,170万ドルで前年同期比2%減、発注法人数は76万3,000社へ4%減り、通期売上高ガイダンスを7億3,000万〜7億5,000万ドルへ引き下げた。",
+        "クラウドワークスの2026年9月期第3四半期累計は営業利益2億6,400万円で前年同期比79.0%減、ランサーズの2027年3月期第1四半期は売上高13億6,600万円で同15.5%増と、国内の決算は分かれた。",
+        "Upworkは8月10日、Claude・ChatGPT・CursorなどのAIツールから求人の投稿と候補の絞り込みまでを実行できる接続口を、追加費用なしで公開した。",
+        "アクセンチュアは中堅企業向けにSAP・CRMの実装を手がけるCOMWAREの買収を発表し、NECは部門長から担当者までの役割をAIが担う社内組織を新設した。",
+        "米労働統計局の2026年7月分雇用統計は非農業部門雇用者数が前月比2万3,000人減、5月分・6月分は合計10万3,000人下方修正された一方、日本の7月の完全失業率は2.4%、有効求人倍率は1.18倍だった。",
+        "EU AI法第50条の透明性義務が8月2日に適用開始となり、厚生労働省はAIが業務の指示を行う働き方を踏まえた労働者性の検討に着手した。"
+      ],
+      "themes": [
+        {
+          "title": "仲介の取引は件数が減り単価が上がった",
+          "what": "Upworkの2026年第2四半期は売上高1億9,170万ドルで前年同期比2%減、発注法人数は76万3,000社で4%減った一方、法人1社あたりの年間取引総額は8四半期連続で最高の5,230ドルとなり、通期売上高ガイダンスは7億3,000万〜7億5,000万ドルへ引き下げられた。国内ではクラウドワークスの2026年9月期第3四半期累計の営業利益が2億6,400万円で前年同期比79.0%減となる一方、ランサーズの2027年3月期第1四半期は売上高13億6,600万円で同15.5%増、経常利益4,400万円で同261.5%増だった。ギークスの案件倍率レポートでは、2026年4〜6月期の案件数が前年同期の約8割にとどまる一方、AI関連の案件数は2024年度と2025年度の比較で約2倍に伸びた。",
+          "why": "同じ市場の中で、扱う件数と1件あたりの金額が逆の方向に動いている。件数だけを見れば縮小、単価だけを見れば拡大に見えるため、どちらか一方の数字では事業の状態を判断できない。全体の案件が減る中でAI関連だけが伸びていることは、需要が消えたのではなく移ったことを示している。",
+          "move": "取扱高を保つには、減った件数を単価で補えるだけの依頼を扱う必要がある。国内で減益と増収増益が同じ月に並んだことは、AI関連の依頼をどれだけ受け止められたかで結果が分かれる段階に入ったことを意味する。"
+        },
+        {
+          "title": "法人のAI実装が大手への一括委託と社内内製へ向かった",
+          "what": "アクセンチュアは2026年8月27日、中堅企業向けにSAP・CRMの実装を手がけるCOMWAREの買収を発表し、180名超の専門人材を中堅企業向け組織へ統合すると説明した。NTTデータグループの第1四半期の受注高は1兆4,603億円で前年同期比29.7%増、野村総合研究所とデロイト トーマツ グループは構想から実装・運用までを続けて担うサービスを新たに始め、ウィプロはGoogle Cloudとの提携拡大でAI認定人材1万人超の育成を打ち出した。同じ月に、NECは部門長から担当者までの役割をAIが担う社内組織を新設し、日立ソリューションズは対話だけで業務アプリケーションを作れる基盤の提供を始めた。",
+          "why": "専門性を外から調達する場面が二つの方向から狭まっている。大手が中堅企業のIT実装まで守備範囲を広げたことで一括して任せる選択肢が増え、同時に現場が自ら作れる道具が整ったことで社内で完結する範囲も広がった。",
+          "move": "個々のプロ人材を選んで発注する場面は、一括委託の単価や期間に合わない領域と、社内の道具では届かない専門領域に絞られていく。仲介事業者にとっては、大手の提供範囲と社内内製の境目にどれだけの仕事が残るかが取扱量を決める。"
+        },
+        {
+          "title": "AIとの対話が発注と購買の入口になり始めた",
+          "what": "Upworkは8月10日、AIツールの接続規格MCPに対応した接続口を公開し、Claude・ChatGPT・Cursorなどから求人の投稿、候補の絞り込み、オファーの草案作成までを実行できるようにした。小売では、ウォルマートがAIアシスタント「Sparky」の利用者数が前年同期比70%増え、Sparky経由で買い物をする顧客の1回あたり支出が40%多いと説明し、ターゲットは外部のAIプラットフォーム経由のデジタル集客が業界平均の3.5倍のペースで伸びていると述べた。セールスフォースとアンソロピックは、営業担当者が対話型AIの中で顧客管理システムの照会・更新・行動実行まで完結できる仕組みの提供を始めた。",
+          "why": "自社の画面に人を集めて操作させるという前提が崩れ始めている。検索や一覧から選ぶ経路ではなく、AIとの対話がそのまま発注や購買の行為になる経路が、企業の決算の数値として確かめられる段階に入った。",
+          "move": "案件や人材が見つかる経路が自社の画面の外へ移れば、集客の方法も課金の単位も見直しが要る。画面を使わせることで対価を得る設計から、成立や成果に応じて対価を得る設計への切り替えが問われる。"
+        }
+      ],
+      "watchpoints": [
+        {
+          "question": "仲介の取扱高は件数の回復で戻るか、単価の上昇で支えるか",
+          "read": "単価で支える形に寄っている。根拠は、Upworkの第2四半期で発注法人数が76万3,000社へ4%減る一方、法人1社あたりの年間取引総額が5,230ドルへ5%増えて8四半期連続で最高を更新したこと、ギークスの2026年4〜6月期の案件数が前年同期の約8割にとどまる一方で案件倍率が5.09倍と高い水準にあることである。",
+          "branch": "AI関連など高い単価を説明できる依頼を扱える範囲が広がれば、減った件数を単価で補える（上振れ）。定型的な依頼の減少が続き高単価の依頼が増えなければ、取扱高そのものが縮む（下振れ）。決め手は、AI関連の依頼が全体の依頼数に占める割合がどこまで上がるかである。",
+          "signal": "Upworkの法人1社あたり年間取引総額と発注法人数の増減。ギークスの案件数の前年比とAI案件の構成比。クラウドワークスの通期営業利益が予想レンジの0〜3億円のどこに着地するか。"
+        },
+        {
+          "question": "法人のAI実装の予算は大手への一括委託に固まるか、外部の個人にも回るか",
+          "read": "一括委託と社内内製に寄っている。根拠は、アクセンチュアが中堅企業のIT実装を担うCOMWAREを買収して180名超の専門人材を取り込んだこと、NTTデータグループの第1四半期受注高が1兆4,603億円で前年同期比29.7%増だったこと、NECがAIに役割を担わせる社内組織を新設し、日立ソリューションズが対話だけで業務アプリを作れる基盤を提供し始めたことである。",
+          "branch": "大手の供給が届かない中堅・中小の領域が広く残れば、外部の個人への直接の発注は伸びる（上振れ）。アクセンチュアの中堅企業向け組織のような受け皿が広がれば、直接の発注の余地は狭まる（下振れ）。決め手は、中堅企業が一括委託の費用を負担できるかどうかである。",
+          "signal": "大手ファーム・SIerによる中堅企業向け組織の増強とM&Aの件数。NTTデータグループの受注高の伸び率が二桁を保つか。自社環境に閉じてAIエージェントを構築できる基盤の導入件数。"
+        },
+        {
+          "question": "若手が仕事に入る経路は日本でも細るか、人手不足が支え続けるか",
+          "read": "米国では細り、日本では支えが残っている。米国側の根拠は、スタンフォード大学の追跡調査でAIの影響を強く受ける職業に就く22〜25歳の雇用ギャップが2025年7月の15%から2026年6月の19%へ広がったこと、ゴールドマン・サックスがコールセンターの雇用を米国でトレンド比39%減と示したことである。日本側の根拠は、2026年7月の完全失業率が2.4%、有効求人倍率が1.18倍で、6月分の実質賃金が前年同月比2.2%増だったことである。",
+          "branch": "人手不足が続き、経験の浅い人材にも仕事が回り続ければ、若手の入口は保たれる（上振れ）。省力化が進む業種で新規求人の減少が他業種へ広がれば、日本でも入口が細る（下振れ）。決め手は、日本で新規採用の抑制がAIの影響を受けやすい職種にも及ぶかどうかである。",
+          "signal": "有効求人倍率と正社員有効求人倍率の推移。宿泊・飲食サービス業と製造業の新規求人の前年比の開き。スタンフォード大学の追跡調査が示す若手の雇用ギャップが19%からさらに広がるか。"
+        }
+      ],
+      "categories": [
+        {
+          "slug": "kyogo-chosa",
+          "name": "競合調査",
+          "href": "kyogo-chosa/index.html",
+          "integratedPoints": [
+            "Upworkは発注法人数が76万3,000社へ4%減る一方で法人1社あたりの年間取引総額が8四半期連続の最高となり、通期売上高ガイダンスを引き下げた。",
+            "クラウドワークスは第3四半期累計の営業利益が79.0%減、ランサーズは第1四半期が15.5%増収と国内でも決算の方向が分かれ、両社ともAI関連の受け皿づくりを進めた。",
+            "UpworkはAIツールから直接発注できる接続口を開き、ビザスクは専門家への調査と生成AIを組み合わせた将来予測を売り出すなど、提供形態がAIを前提に動いた。"
+          ],
+          "cards": [
+            {
+              "title": "Upwork、2026年2Q決算で通期売上高ガイダンスを下方修正",
+              "source_label": "Upwork IR",
+              "grade": "S",
+              "deepdive": "investors-upwork-releases-details-2026-08",
+              "note": "AI関連業務の取引総額は前年比22%超増え、うちAI戦略・コンサルティング分野は50%超伸びた。",
+              "url": "https://investors.upwork.com/news-releases/news-release-details/upwork-reports-second-quarter-2026-financial-results"
+            },
+            {
+              "title": "Upwork、AIツールから直接発注できるMCPサーバーを公開",
+              "source_label": "Upwork公式リリース",
+              "grade": "A",
+              "deepdive": "globenewswire-10-3342153-0-2026-08",
+              "note": "接続規格MCPに対応するAIツールであれば利用でき、全ての法人・個人が追加費用なしで使える。",
+              "url": "https://www.globenewswire.com/news-release/2026/08/10/3342153/0/en/upwork-talent-is-now-everywhere-ai-works.html"
+            },
+            {
+              "title": "Mercor、Nvidiaが評価額200億ドルで出資交渉",
+              "source_label": "海外テック報道",
+              "grade": "S",
+              "deepdive": "techstartups-19-nvidia-in-2026-08",
+              "note": "2025年10月時点の評価額100億ドルから1年足らずで倍増する水準で、Nvidiaは自社モデル「Nemotron」向けの専門知見の調達を狙うとされる。",
+              "url": "https://techstartups.com/2026/08/19/nvidia-in-talks-to-invest-in-ai-data-startup-mercor-at-20-billion-valuation/"
+            },
+            {
+              "title": "INTLOOP、アンダーワークス子会社化と持株会社体制へ",
+              "source_label": "PR TIMES",
+              "grade": "S",
+              "deepdive": "000000199-000023636-2026-08",
+              "note": "8月17日付でITコンサルティングを担う会社とプロフェッショナル人材サービスを担う会社の2社を新設し、後者は登録者5万7,000名超の基盤を持つ。",
+              "url": "https://prtimes.jp/main/html/rd/p/000000199.000023636.html"
+            },
+            {
+              "title": "クラウドワークス、3Q大幅減益下でAIマッチング正式始動",
+              "source_label": "決算短信・報道",
+              "grade": "A",
+              "deepdive": "media-ir-179261-2026-08",
+              "note": "「AIクラウドワークス」の事前登録は1万人を超え、延べ2万7,000件超のスキル登録のうち専門職とAI活用を組み合わせた分野が6割を占めた。",
+              "url": "https://www.media-ir.com/news/?p=179261"
+            },
+            {
+              "title": "ランサーズ、1Q増収増益とAIカテゴリー31新設",
+              "source_label": "決算短信・公式情報",
+              "grade": "A",
+              "deepdive": "tdnet-info-inbs-140120260812518301-2026-08",
+              "note": "通期予想は売上高63億円・営業利益3億円で、8月5日には生成AI関連の依頼を31の仕事カテゴリーに細分化した。",
+              "url": "https://www.release.tdnet.info/inbs/140120260812518301.pdf"
+            },
+            {
+              "title": "ギークス、案件倍率5.09倍も案件数は前年8割に減少",
+              "source_label": "PR TIMES",
+              "grade": "A",
+              "deepdive": "geechs-newsrelease-20260807-ankenbairitsu-2026-08",
+              "note": "案件倍率は4月5.56倍から6月4.86倍へ下がり、AI案件の中では生成AI・LLM関連が最大の割合を占める。",
+              "url": "https://www.geechs.com/newsrelease/20260807_ankenbairitsu/"
+            },
+            {
+              "title": "ビザスク、専門家知見×生成AIで将来予測サービス開始",
+              "source_label": "日本インタビュ新聞",
+              "grade": "A",
+              "deepdive": "media-ir-178459-2026-08",
+              "note": "数十名の専門家から集めた一次情報を生成AIが統合し、標準化時期の見立てと専門家間の合意度を表示する。",
+              "url": "https://www.media-ir.com/news/?p=178459"
+            }
+          ]
+        },
+        {
+          "slug": "kansetsu-kyogo",
+          "name": "間接競合",
+          "href": "kansetsu-kyogo/index.html",
+          "integratedPoints": [
+            "NTTデータグループの第1四半期受注高は前年同期比29.7%増の1兆4,603億円で、アクセンチュアは中堅企業のIT実装を担うCOMWAREの買収を決めた。",
+            "野村総合研究所とデロイト トーマツ グループは構想から実装・運用までを続けて担うサービスを新設し、ウィプロはAI認定人材1万人超の育成を打ち出した。",
+            "NECはAIが役割を担う社内組織を新設し、日立ソリューションズは対話だけで業務アプリを作れる基盤を提供するなど、社内で完結できる範囲が広がった。"
+          ],
+          "cards": [
+            {
+              "title": "NTTデータG第1四半期、受注高3割増でAI需要を取り込む",
+              "source_label": "NTTデータG決算発表",
+              "grade": "S",
+              "deepdive": "nttdata-global-080600-2026-08",
+              "note": "データセンター投資は第1四半期で1,012億円と前年同期比41.1%増え、2026年度通期計画は5,050億円である。",
+              "url": "https://www.nttdata.com/global/ja/news/release/2026/080600/"
+            },
+            {
+              "title": "野村総合研究所、構想から実装まで伴走するAI変革支援を開始",
+              "source_label": "NRI公式リリース",
+              "grade": "A",
+              "deepdive": "nri-newsrelease-20260803-1-2026-08",
+              "note": "初期段階はコンサルティングとして提供し、体制人数・料金・数値目標は公表されていない。",
+              "url": "https://www.nri.com/jp/news/newsrelease/20260803_1.html"
+            },
+            {
+              "title": "NEC、役割をすべてAIが担う社内組織を新設",
+              "source_label": "NEC発表・報道",
+              "grade": "A",
+              "deepdive": "jpn-nec-202608-20260810-2026-08",
+              "note": "AI部門長・AIボード・AI管理部門・AI実行機能の4階層で構成し、人は評価・意思決定・品質の統制に回る。",
+              "url": "https://jpn.nec.com/press/202608/20260810_01.html"
+            },
+            {
+              "title": "ウィプロ、Google Cloudと提携拡大しAI認定人材1万人超を育成へ",
+              "source_label": "Wipro公式リリース",
+              "grade": "A",
+              "deepdive": "wipro-releases-wipro-and-2026-08",
+              "note": "育成する1万人超のうち1,500人を顧客先に常駐して実装を担う技術者とする。",
+              "url": "https://www.wipro.com/newsroom/press-releases/2026/wipro-and-google-cloud-expand-partnership-to-scale-ai-into-core-enterprise-operations/"
+            },
+            {
+              "title": "デロイトトーマツ、AIオントロジー構築サービスを提供開始",
+              "source_label": "デロイトトーマツ公式",
+              "grade": "A",
+              "deepdive": "deloitte-about-room-nr20260825-2026-08",
+              "note": "業務知見を概念・属性・関係・制約として整理し、現場常駐型のエンジニアが構築から改善まで続けて支援する。",
+              "url": "https://www.deloitte.com/jp/ja/about/press-room/nr20260825.html"
+            },
+            {
+              "title": "アクセンチュア、COMWARE買収で中堅企業支援を強化",
+              "source_label": "Accenture Newsroom",
+              "grade": "S",
+              "deepdive": "accenture-accenture-to-acquire-2026-08",
+              "note": "COMWAREは180名超の専門人材を擁し、2026年6月に立ち上げた中堅企業向け組織へ統合される。",
+              "url": "https://newsroom.accenture.com/news/2026/accenture-to-acquire-comware-to-strengthen-accenture-edge-and-accelerate-digital-core-reinvention-for-mid-market-companies-in-japan"
+            },
+            {
+              "title": "NTTドコモビジネス×エクサウィザーズ、クローズドAIエージェント提供",
+              "source_label": "エクサウィザーズ発表",
+              "grade": "A",
+              "deepdive": "000000483-000030192-2026-08",
+              "note": "国産の大規模言語モデル「tsuzumi 2」などに対応し、プライベートクラウド版とオンプレミス版で自社環境内に閉じて運用できる。",
+              "url": "https://prtimes.jp/main/html/rd/p/000000483.000030192.html"
+            },
+            {
+              "title": "日立ソリューションズ、チャットで業務アプリ生成の基盤提供",
+              "source_label": "日立ソリューションズ発表",
+              "grade": "A",
+              "deepdive": "000000394-000053429-2026-08",
+              "note": "生成したアプリは脆弱性診断や操作権限設定、利用状況の可視化といった管理機能を標準で備える。",
+              "url": "https://prtimes.jp/main/html/rd/p/000000394.000053429.html"
+            }
+          ]
+        },
+        {
+          "slug": "koyo-hatarakikata",
+          "name": "AIと雇用",
+          "href": "koyo-hatarakikata/index.html",
+          "integratedPoints": [
+            "スタンフォード大学の追跡調査で、AIの影響を強く受ける職業に就く22〜25歳の雇用ギャップは2025年7月の15%から2026年6月の19%へ広がった。",
+            "ゴールドマン・サックスはコールセンターの雇用が米国でトレンド比39%減ったとし、影響が新規参入者に最も強く出ていると分析した。",
+            "ILOは2025年の世界の若年失業率を12.4%と公表し、世界経済フォーラムはシニア開発者の54%がジュニアの役割の重要性が下がったと答えた調査を紹介した。"
+          ],
+          "cards": [
+            {
+              "title": "ILO若者雇用趨勢2026 ― 世界の若年失業率12.4%に上昇",
+              "source_label": "ILO",
+              "grade": "S",
+              "deepdive": "ilo-org-major-global-2026-08",
+              "note": "就学・就労・職業訓練のいずれにも属さない若者の割合は20%、2億5,700万人超に増えた。",
+              "url": "https://www.ilo.org/publications/major-publications/global-employment-trends-youth-2026"
+            },
+            {
+              "title": "米雇用統計7月分 ― 非農業雇用2.3万人減、失業率4.1%に低下",
+              "source_label": "米BLS雇用統計",
+              "grade": "S",
+              "deepdive": "cnbc-07-jobs-report-2026-08",
+              "note": "失業率の低下は労働参加率が61.4%へ下がり5年超ぶりの低水準になったことが主因で、政府部門が5万人超減った。",
+              "url": "https://www.cnbc.com/2026/08/07/jobs-report-july-2026.html"
+            },
+            {
+              "title": "Stanford「Canaries」8月版 ― 若手AI雇用ギャップ19%に拡大",
+              "source_label": "Stanford Digital Economy Lab",
+              "grade": "S",
+              "deepdive": "digitaleconomy-stanford-edu-canaries-2026-08",
+              "note": "経済全体での広範な雇用破壊は見られないと明記したうえで、同じ広がりは経験豊富な労働者には確認されなかった。",
+              "url": "https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/"
+            },
+            {
+              "title": "Goldman Sachs ― コールセンター求人トレンド比39%減、新規層に打撃",
+              "source_label": "Goldman Sachs Research",
+              "grade": "A",
+              "deepdive": "goldmansachs-insights-how-will-2026-08",
+              "note": "800を超える職業を対象にした分析で、段階的な移行が10年かけて進む場合は失業率を0.6ポイント押し上げると試算した。",
+              "url": "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-us-labor-market"
+            },
+            {
+              "title": "WEF ― AIでジュニア開発者の役割侵食、シニア人材枯渇に懸念",
+              "source_label": "WEF",
+              "grade": "A",
+              "deepdive": "weforum-org-artificial-intelligence-2026-08",
+              "note": "77カ国の開発者1,500人超を対象にした調査に基づき、入口の職務を減らすと数四半期は効率的に見えても人材が硬直化すると指摘した。",
+              "url": "https://www.weforum.org/stories/artificial-intelligence/as-ai-reshapes-entry-level-software-jobs-where-will-senior-developers-come-from/"
+            }
+          ]
+        },
+        {
+          "slug": "jigyo-henkaku",
+          "name": "AIと事業変革",
+          "href": "jigyo-henkaku/index.html",
+          "integratedPoints": [
+            "ウォルマートはAIアシスタント経由で買い物をする顧客の1回あたり支出が40%多いとし、ターゲットはAIプラットフォーム経由の集客が業界平均の3.5倍で伸びていると説明した。",
+            "アデコはAIエージェントが支える売上の割合を年末までに50%から70%へ引き上げる方針を示し、OpenAIは法務分野の業務代行ツールの週間利用者が2月比108倍に伸びたと公表した。",
+            "セールスフォースは対話型AIの中で顧客管理システムを操作できる仕組みを提供し、アリババは企業向けAIエージェントを束ねる新しい事業区分を設けた。"
+          ],
+          "cards": [
+            {
+              "title": "セールスフォース×アンソロピック、AIエージェント常駐のCRMへ",
+              "source_label": "Salesforce×Anthropic発表",
+              "grade": "S",
+              "deepdive": "salesforce-releases-26-salesforce-2026-08",
+              "note": "商談準備や案件健全性確認など37種類の事前構築スキルを備え、2026年9月に公開ベータへ移す予定である。",
+              "url": "https://www.salesforce.com/news/press-releases/2026/08/26/salesforce-and-anthropic-announce-claudeforce/"
+            },
+            {
+              "title": "アデコ、AIエージェント業務化で売上7割を目標に",
+              "source_label": "Adecco決算発表",
+              "grade": "A",
+              "deepdive": "tipranks-company-announcements-adecco-2026-08",
+              "note": "AIエージェントは月間220万件の会話に対応し、求人充足率は10%改善、候補者提出までの所要時間は40%短縮した。",
+              "url": "https://www.tipranks.com/news/company-announcements/adecco-group-earnings-call-highlights-ai-fueled-turnaround"
+            },
+            {
+              "title": "ウォルマート、AIアシスタント利用者は購買単価4割増",
+              "source_label": "Walmart決算発表",
+              "grade": "S",
+              "deepdive": "finance-yahoo-technology-ai-2026-08",
+              "note": "「Sparky」の利用者数は前年同期比70%増えたが、eコマース売上の23%増が市場予想に届かず株価は9%下落した。",
+              "url": "https://finance.yahoo.com/technology/ai/articles/walmart-says-ai-assistant-sparky-163000558.html"
+            },
+            {
+              "title": "ターゲット、AI経由の集客が業界平均の3.5倍に",
+              "source_label": "Target決算発表",
+              "grade": "A",
+              "deepdive": "pymnts-earnings-target-touts-2026-08",
+              "note": "四半期の純売上高は265億ドルで前年比5.3%増、あわせてロウズ出身の人物を初代の最高AI責任者に任命した。",
+              "url": "https://www.pymnts.com/earnings/2026/target-touts-traffic-jump-from-ai-platforms-sales-climb/"
+            },
+            {
+              "title": "AIネイティブ保険Corgi、26億ドル評価で追加調達",
+              "source_label": "fintech.global報道",
+              "grade": "A",
+              "deepdive": "fintech-global-31-corgi-2026-08",
+              "note": "保険引受業の認可を取得しており、代理店を介さずAIが直接引受の主体として機能する体制を築いている。",
+              "url": "https://fintech.global/2026/08/31/corgi-raises-40-7m-as-ai-insurer-builds-on-2-6bn-valuation/"
+            },
+            {
+              "title": "OpenAI企業データ、AI活用が『代行』段階に加速",
+              "source_label": "OpenAI Enterprise Signals",
+              "grade": "S",
+              "deepdive": "openai-signals-enterprise-data-2026-08",
+              "note": "利用量上位10%の企業と中央値の企業の1人あたりトークン消費量の差は、2026年1月の2.6倍から8.3倍へ広がった。",
+              "url": "https://openai.com/signals/enterprise-data/"
+            },
+            {
+              "title": "アリババ、AI事業が四半期売上を牽引し45%成長",
+              "source_label": "Alibaba決算発表",
+              "grade": "A",
+              "deepdive": "finance-yahoo-markets-stocks-2026-08",
+              "note": "AI関連製品の売上は123.8億元で12四半期連続の3桁成長となり、企業向けAI人材エージェント「QwenWork」を新区分へ統合した。",
+              "url": "https://finance.yahoo.com/markets/stocks/articles/alibaba-group-announces-june-quarter-093100015.html"
+            }
+          ]
+        },
+        {
+          "slug": "roudou-shijo",
+          "name": "労働市場データ",
+          "href": "roudou-shijo/index.html",
+          "integratedPoints": [
+            "2026年7月の完全失業率は2.4%、有効求人倍率は1.18倍で、就業者数6,850万人と完全失業者数169万人はいずれも前年同月と同数だった。",
+            "6月分の毎月勤労統計確報は現金給与総額が前年同月比4.0%増、実質賃金が2.2%増と速報から上方修正され、4-6月期の実質雇用者報酬も9四半期連続のプラスとなった。",
+            "最低賃金は東京都1,280円・大阪府1,231円などの答申が出そろい、従業員の退職が要因となる倒産は1〜7月で83件と5年連続で増えた。"
+          ],
+          "cards": [
+            {
+              "title": "完全失業率2.4%に低下、就業者数は前年同月と横ばい（2026年7月）",
+              "source_label": "総務省労働力調査",
+              "grade": "A",
+              "deepdive": "soumu-go-menu-s-2026-08",
+              "note": "日本経済新聞は宿泊・飲食サービス業の求人が省力化・デジタル化の進展で前年同月比10.7%減ったと報じた。",
+              "url": "https://www.soumu.go.jp/menu_news/s-news/01toukei04_01000304.html"
+            },
+            {
+              "title": "有効求人倍率1.18倍で横ばい、正社員も1.00倍を維持（2026年7月）",
+              "source_label": "厚労省職業紹介状況",
+              "grade": "A",
+              "deepdive": "mhlw-go-stf-newpage-2026-08",
+              "note": "新規求人倍率は2.10倍へ0.06ポイント下がり、製造業の新規求人はAI・半導体需要を背景に前年同月比6.8%増えた。",
+              "url": "https://www.mhlw.go.jp/stf/newpage_75707.html"
+            },
+            {
+              "title": "毎月勤労統計確報、名目賃金4.0%増・実質賃金2.2%増（2026年6月）",
+              "source_label": "厚労省毎勤統計確報",
+              "grade": "A",
+              "deepdive": "mhlw-go-toukei-itiran-2026-08",
+              "note": "規模30人以上では現金給与総額が651,179円で前年同月比4.1%増だった。",
+              "url": "https://www.mhlw.go.jp/toukei/itiran/roudou/monthly/r08/2606r/2606r.html"
+            },
+            {
+              "title": "最低賃金2026年度、東京1,280円・大阪1,231円など答申確定進む",
+              "source_label": "地方最低賃金審議会",
+              "grade": "S",
+              "deepdive": "nikkei-dgxzqocc074z10x00c26a8000000-2026-08",
+              "note": "北海道は1,131円へ56円、鹿児島県は64円と、地方の道府県ほど国の目安を上回る答申が相次いだ。",
+              "url": "https://www.nikkei.com/article/DGXZQOCC074Z10X00C26A8000000/"
+            },
+            {
+              "title": "従業員退職型倒産83件、5年連続増加（2026年1〜7月）",
+              "source_label": "帝国データバンク",
+              "grade": "A",
+              "deepdive": "tdb-report-economic-20260807-2026-08",
+              "note": "業種別ではサービス業が22件で最多、建設業は20件と1〜7月累計として初めて20件台になった。",
+              "url": "https://www.tdb.co.jp/report/economic/20260807-taisyoku2026y1-7/"
+            },
+            {
+              "title": "4-6月期の雇用者報酬、実質2.3%増で9期連続プラス",
+              "source_label": "内閣府GDP速報",
+              "grade": "A",
+              "deepdive": "esri-cao-go-sna-2026-08",
+              "note": "同時に公表された実質GDP成長率は前期比0.3%増・年率換算1.1%増で、3四半期連続のプラス成長だった。",
+              "url": "https://www.esri.cao.go.jp/jp/sna/data/data_list/sokuhou/files/2026/qe262/gdemenuja.html"
+            }
+          ]
+        },
+        {
+          "slug": "houmu-compliance",
+          "name": "法務・コンプライアンス",
+          "href": "houmu-compliance/index.html",
+          "integratedPoints": [
+            "EU AI法第50条の透明性義務が2026年8月2日に適用開始となり、対話型AIの告知やAI生成物の表示の義務が域外の日本企業にも及び得る状態になった。",
+            "厚生労働省は、AIが業務の指示を行う働き方を踏まえ、労働基準法上の労働者の判断基準の見直し検討に着手した。",
+            "公正取引委員会はフリーランス法の報酬減額禁止に基づく勧告を行い、最低賃金では静岡県が国の目安を12年ぶりに上回る答申を出した。"
+          ],
+          "cards": [
+            {
+              "title": "EU AI法第50条の透明性義務、8月2日に適用開始",
+              "source_label": "欧州委員会",
+              "grade": "S",
+              "deepdive": "ec-europa-eu-commission-2026-08",
+              "note": "違反時の制裁金は最大1,500万ユーロまたは全世界年間売上高3%のいずれか高い方で、既存システムの機械可読な表示のみ12月2日まで猶予される。",
+              "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1714"
+            },
+            {
+              "title": "公取委、報酬から振込手数料控除でフリーランス法違反の勧告",
+              "source_label": "公正取引委員会",
+              "grade": "A",
+              "deepdive": "jftc-go-houdou-pressrelease-2026-08",
+              "note": "特定受託事業者138名から実際の振込手数料を超える計481,031円を差し引いており、勧告前の8月5日までに返金済みである。",
+              "url": "https://www.jftc.go.jp/houdou/pressrelease/2026/aug/260826_jtop.html"
+            },
+            {
+              "title": "静岡県最低賃金57円引上げ答申、12年ぶり国の目安上回る",
+              "source_label": "静岡労働局",
+              "grade": "A",
+              "deepdive": "jsite-mhlw-go-shizuoka-2026-08",
+              "note": "引上げ額57円・引上げ率5.20%で時間額1,154円となり、発効予定日は2026年10月15日である。",
+              "url": "https://jsite.mhlw.go.jp/shizuoka-roudoukyoku/news_topics/newpage_00035.html"
+            },
+            {
+              "title": "厚労省、AI業務指示下のギグワーカーの労働者性を検討",
+              "source_label": "日本経済新聞",
+              "grade": "S",
+              "deepdive": "nikkei-dgxzqoua055yy0v00c26a8000000-2026-08",
+              "note": "規制改革実施計画には、AI上の指示も使用者の指示と同様である旨を明確化する検討方針が盛り込まれている。",
+              "url": "https://www.nikkei.com/article/DGXZQOUA055YY0V00C26A8000000/"
+            }
+          ]
+        }
+      ],
+      "emptyCategories": []
+    },
     {
       "month": "2026-07",
       "label": "2026年7月",
@@ -1442,7 +1873,7 @@
           "signal": "外部委託・翻訳など該当業界の単価・課金方式の変化、成果連動契約の採用事例。"
         },
         {
-          "question": "高付加価値のAI人材は、正社員採用とマッチングのどちらが主戦場になるのか。",
+          "question": "高付加価値のAI人材は、正社員採用とマッチングのどちらが中心になるのか。",
           "read": "年収1,000万円超のAI求人が4.2倍でまず正社員採用が動いており、当面は採用が主導すると考えられる。",
           "branch": "上振れ（マッチング側）＝速さ・柔軟性を求める短期プロジェクト需要が拡大。下振れ＝コア人材の囲い込みで正社員採用に需要が集中。決め手はAI専門性の陳腐化速度と外部活用のリスク許容度。",
           "signal": "AI関連の業務委託・副業案件数の推移、AI求人の年収水準、専門・技術分野の外国人労働者数。"
