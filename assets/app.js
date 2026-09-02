@@ -13,10 +13,12 @@
     });
   }
 
-  /* data属性で読み込むJSONパスを解決 */
+  /* data属性で読み込むJSONパスを解決（更新時に確実に最新を読むためversionを付す） */
   function dataPath() {
     var el = document.querySelector("[data-json]");
-    return el ? el.getAttribute("data-json") : null;
+    if (!el) return null;
+    var p = el.getAttribute("data-json");
+    return p ? p + (p.indexOf("?") < 0 ? "?v=20260831" : "") : null;
   }
 
   /* 情報源キー→配色クラス（AI活用は社名、他テーマは汎用色） */
@@ -446,7 +448,7 @@
   function renderSignalBoard() {
     var box = document.getElementById("signal-board");
     if (!box) return;
-    fetch("data/signals.json")
+    fetch("data/signals.json?v=20260831")
       .then(function (r) { return r.ok ? r.json() : null; })
       .then(function (data) {
         if (!data) return;
@@ -633,7 +635,7 @@
   function renderHomeSummary() {
     var box = document.getElementById("home-summary");
     if (!box) return;
-    fetch("data/home-summary.json")
+    fetch("data/home-summary.json?v=20260831")
       .then(function (r) { return r.ok ? r.json() : null; })
       .then(function (d) {
         if (!d) return;
@@ -774,7 +776,7 @@
       box.innerHTML = '<p class="empty" style="display:block">レポートが指定されていません。</p>';
       return;
     }
-    fetch("../data/deep-dives/" + slug + ".json")
+    fetch("../data/deep-dives/" + slug + ".json?v=20260831")
       .then(function (r) { if (!r.ok) throw new Error("not found"); return r.json(); })
       .then(function (d) {
         var gradeBadge = d.grade ? '<span class="rd-grade rd-grade-' + esc(String(d.grade).toLowerCase()) + '">重要度 ' + esc(d.grade) + "</span>" : "";
@@ -1040,7 +1042,7 @@
     var body = document.getElementById("mo-body");
     var sel = document.getElementById("mo-month");
     if (!body) return;
-    fetch("data/home-monthly.json")
+    fetch("data/home-monthly.json?v=20260831")
       .then(function (r) { return r.ok ? r.json() : null; })
       .then(function (data) {
         if (!data || !data.months || !data.months.length) return;
