@@ -1,7 +1,7 @@
 {
   "theme": "競合KPI",
   "type": "kpi",
-  "updated": "2026-06-05",
+  "updated": "2026-11-15",
   "usdjpy": 155,
   "fx_note": "海外2社の円換算は 1USD=155円 で算出した参考値（決算期の実勢レートとは異なる）。",
   "source_note": "数値はNotion「競合業績データ」DB（各社IR・決算短信ベース、出典: irbank等）から取得。各社の直近の確定通期実績。決算期は会社ごとに異なります。海外2社（Upwork/Fiverr）はNotion DB対象外のためIR資料ベースの参考値。",
@@ -14,12 +14,12 @@
   "articles": [
     {
       "title": "INTLOOP", "source_label": "INTLOOP", "category": "growth",
-      "published": "2025年7月期", "collected": "2026-06-05",
-      "fiscalPeriod": "2025年7月期 通期", "securitiesCode": "9556",
-      "revenue": 33551, "revenueUnit": "百万円", "yoyPct": 23.9, "opYoyPct": 45.1, "opMargin": 6.5, "opProfit": 2186, "opProfitUnit": "百万円",
-      "background": "企業のDX投資拡大とIT人材不足を背景にコンサル需要が継続拡大し、売上+23.9%・営業利益+45.1%の高成長。営業利益率も改善。登録フリーランス約52,000名のネットワークとグループ会社による事業領域拡充が寄与。",
+      "published": "2026年7月期", "collected": "2026-11-15",
+      "fiscalPeriod": "2026年7月期 通期", "securitiesCode": "9556",
+      "revenue": 40399, "revenueUnit": "百万円", "yoyPct": 20.4, "opYoyPct": -38.8, "opMargin": 3.3, "opProfit": 1337, "opProfitUnit": "百万円",
+      "background": "売上は40,399百万円（+20.4%）と2割成長を維持した一方、営業利益は前期2,186→1,337百万円（▲38.8%）と大きく減少し、営業利益率は6.5%から3.3%へ低下した。四半期ごとに見ると第3四半期累計の営業利益が610百万円にとどまっており、増収の中で利益が伸び悩んだ1年だった。",
       "extra": "中期計画 VISION2030：FY2030 売上1,000億円・営業利益150億円",
-      "source": "Notion競合業績データDB（IR: irbank.net/9556、2025年7月期通期）"
+      "source": "Notion競合業績データDB（IR: irbank.net/9556、2026年7月期通期）"
     },
     {
       "title": "クラウドワークス", "source_label": "クラウドワークス", "category": "scale",
@@ -50,21 +50,21 @@
     },
     {
       "title": "ココナラ", "source_label": "ココナラ", "category": "growth",
-      "published": "2025年8月期", "collected": "2026-06-05",
-      "fiscalPeriod": "2025年8月期 通期", "securitiesCode": "4176",
-      "revenue": 9411, "revenueUnit": "百万円", "yoyPct": 42.8, "opYoyPct": null, "opMargin": 2.7, "opProfit": 256, "opProfitUnit": "百万円",
-      "background": "ITフリーランス仲介「ココナラテック」の子会社化（2024年6月）が通年寄与し売上+42.8%の高成長。一方、エージェント事業の売上原価が通年計上され売上総利益率が低下、営業利益率は2.7%。エージェント事業は先行投資段階。",
-      "extra": "流通総額 17,228百万円、テイクレート29.1%、会員590万人超",
-      "source": "Notion競合業績データDB（IR: irbank.net/4176、2025年8月期通期）"
+      "published": "2026年8月期", "collected": "2026-11-15",
+      "fiscalPeriod": "2026年8月期 通期", "securitiesCode": "4176",
+      "revenue": 10317, "revenueUnit": "百万円", "yoyPct": 9.6, "opYoyPct": 92.1, "opMargin": 4.8, "opProfit": 492, "opProfitUnit": "百万円",
+      "background": "前期の子会社化による押し上げが一巡し、売上は10,317百万円（+9.6%）と成長が1桁台に落ち着いた。一方で営業利益は256→492百万円（+92.1%）とほぼ倍増し、営業利益率は2.7%から4.8%に改善した。2027年8月期は売上13,000百万円（+26.0%）・営業利益600百万円（+22.0%）を見込む。",
+      "extra": "2027年8月期の会社予想：売上13,000百万円・営業利益600百万円（IRBank掲載の業績予想）。参考：2025年8月期の流通総額17,228百万円・テイクレート29.1%",
+      "source": "Notion競合業績データDB（IR: irbank.net/4176、2026年8月期通期）"
     },
     {
       "title": "みらいワークス", "source_label": "みらいワークス", "category": "scale",
-      "published": "2025年9月期", "collected": "2026-06-05",
-      "fiscalPeriod": "2025年9月期 通期", "securitiesCode": "6563",
-      "revenue": 11144, "revenueUnit": "百万円", "yoyPct": 5.0, "opYoyPct": -53.6, "opMargin": 2.5, "opProfit": 284, "opProfitUnit": "百万円",
-      "background": "14期連続増収で売上+5.0%・過去最高。一方、成長に向けた人材採用の先行投資で人件費が増え、営業利益は前年比▲53.6%と大きく減少。地方創生事業・ソリューション事業が増収増益で全社を下支え。",
-      "extra": "プロ人材登録9万名超。中期計画 FY2027 売上16,000百万円・営業利益1,000百万円",
-      "source": "Notion競合業績データDB（IR: irbank.net/6563、2025年9月期通期）"
+      "published": "2026年9月期", "collected": "2026-11-15",
+      "fiscalPeriod": "2026年9月期 通期", "securitiesCode": "6563",
+      "revenue": 11630, "revenueUnit": "百万円", "yoyPct": 4.4, "opYoyPct": 30.6, "opMargin": 3.2, "opProfit": 371, "opProfitUnit": "百万円",
+      "background": "売上は11,630百万円（+4.4%）と増収を続け、前期に人材採用の先行投資で落ち込んだ営業利益は284→371百万円（+30.6%）と回復、営業利益率は2.5%から3.2%に改善した。着地は期中に修正した会社予想（売上11,650百万円・営業利益370百万円）とほぼ同水準。2027年9月期は売上12,500百万円（+7.5%）・営業利益600百万円（+61.7%）を見込む。",
+      "extra": "2027年9月期の会社予想：売上12,500百万円・営業利益600百万円（IRBank掲載の業績予想）。中期計画 FY2027 売上16,000百万円・営業利益1,000百万円",
+      "source": "Notion競合業績データDB（IR: irbank.net/6563、2026年9月期通期）"
     },
     {
       "title": "サーキュレーション", "source_label": "サーキュレーション", "category": "growth",
@@ -77,12 +77,12 @@
     },
     {
       "title": "TWOSTONE&Sons", "source_label": "TWOSTONE&Sons", "category": "growth",
-      "published": "2025年8月期", "collected": "2026-06-05",
-      "fiscalPeriod": "2025年8月期 通期", "securitiesCode": "7352",
-      "revenue": 18077, "revenueUnit": "百万円", "yoyPct": 26.5, "opYoyPct": 72.7, "opMargin": 4.5, "opProfit": 819, "opProfitUnit": "百万円",
-      "background": "エンジニアマッチング事業が創業以来の最高値を更新し続け、売上+26.5%・営業利益+72.7%の高成長。コンサル・幹部人材・正社員エンジニアの採用投資（前年比+155%）を継続しつつ営業利益率4.5%。2026年8月期は営業利益+61.6%を見込む。",
-      "extra": "FY2026 1Qはエンジニア登録63,397名・稼働5,553名（過去最高）。FY2026予想 売上24,182百万円（+33.8%）",
-      "source": "Notion競合業績データDB（IR: irbank.net/7352、2025年8月期通期）"
+      "published": "2026年8月期", "collected": "2026-11-15",
+      "fiscalPeriod": "2026年8月期 通期", "securitiesCode": "7352",
+      "revenue": 21805, "revenueUnit": "百万円", "yoyPct": 20.6, "opYoyPct": -1.2, "opMargin": 3.7, "opProfit": 810, "opProfitUnit": "百万円",
+      "background": "売上は21,805百万円（+20.6%）と2割増収を続けたが、営業利益は810百万円（▲1.2%）と前期並みにとどまり、営業利益率は4.5%から3.7%に低下した。期中（2026年10月6日）に連結業績予想を修正している。2027年8月期は売上25,198百万円（+15.6%）・営業利益1,531百万円（+89.0%）と大幅増益を見込む。",
+      "extra": "2027年8月期の会社予想：売上25,198百万円・営業利益1,531百万円（IRBank掲載の業績予想）",
+      "source": "Notion競合業績データDB（IR: irbank.net/7352、2026年8月期通期）"
     },
     {
       "title": "ランサーズ", "source_label": "ランサーズ", "category": "growth",
